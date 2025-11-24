@@ -12,14 +12,6 @@ import Lenis from "lenis";
 import { useEffect } from "react";
 
 const Home = () => {
-  // const lenis = new Lenis({
-  //   autoRaf: true,
-  // });
-
-  // lenis.on("scroll", (e) => {
-  //   console.log(e);
-  // });
-
   useEffect(() => {
     const lenis = new Lenis({
       autoRaf: true,

@@ -4,7 +4,7 @@ const IntroSection = () => {
   return (
     <div className="h-screen w-full flex flex-col justify-center items-center bg-gri p-20">
       <div>
-        <h1 className="text-[100px] text-center font-extrabold text-white">
+        <h1 className="text-[80px] text-center font-extrabold text-white">
           İVO BİO İLE TANIŞIN
         </h1>
       </div>

@@ -12,9 +12,9 @@ const AdvertiseHeader = () => {
             <Image
               src="/ivo_bio_logoSVG_v2.svg"
               alt="Picture of the author"
-              width={180}
-              height={180}
-              className="px-6 py-3"
+              width={160}
+              height={160}
+              className="px-4 py-2"
             />
 
             {/* <svg
@@ -29,7 +29,7 @@ const AdvertiseHeader = () => {
             </svg> */}
           </div>
 
-          <div className="bg-white/10 backdrop-blur-xl shadow-lg rounded-3xl border border-white/20 p-5 text-black">
+          <div className="bg-white/10 backdrop-blur-xl shadow-lg rounded-3xl border border-white/20 p-4 text-black">
             Yolculugumuz
           </div>
         </div>
