@@ -15,13 +15,22 @@ const BasicSection1 = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Timeline oluştur
+      // Pin animasyonu
+      ScrollTrigger.create({
+        trigger: sectionRef.current,
+        start: "top top",
+        end: "+=100%",
+        pin: true,
+        pinSpacing: true,
+      });
+
+      // Timeline oluştur - pin sırasında oynar
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top 80%",
-          end: "top 20%",
-          toggleActions: "play none none reverse",
+          start: "top top",
+          end: "+=100%",
+          scrub: 1,
         },
       });
 
@@ -30,21 +39,10 @@ const BasicSection1 = () => {
         leftLineRef.current,
         {
           width: 0,
-          duration: 2,
+          duration: 1,
           ease: "power3.out",
         },
         0
-      );
-
-      // Sağ çizgi - sağdan sola açılarak geliyor
-      tl.from(
-        rightLineRef.current,
-        {
-          width: 0,
-          duration: 2,
-          ease: "power3.out",
-        },
-        2
       );
 
       // İlk başlık - fade in ve yukarıdan gelme
@@ -53,10 +51,10 @@ const BasicSection1 = () => {
         {
           opacity: 0,
           y: 60,
-          duration: 2,
+          duration: 1,
           ease: "power2.out",
         },
-        1
+        0.3
       );
 
       // İkinci başlık - fade in ve yukarıdan gelme
@@ -65,10 +63,21 @@ const BasicSection1 = () => {
         {
           opacity: 0,
           y: 60,
-          duration: 2,
+          duration: 1,
           ease: "power2.out",
         },
-        1.5
+        0.5
+      );
+
+      // Sağ çizgi - sağdan sola açılarak geliyor
+      tl.from(
+        rightLineRef.current,
+        {
+          width: 0,
+          duration: 1,
+          ease: "power3.out",
+        },
+        0.7
       );
     }, sectionRef);
 
