@@ -12,8 +12,7 @@ const HorizontalScroll = () => {
       id: 1,
       title: "TrekDrive",
       subtitle: "Twice the Efficiency. All the Freedom.",
-      image:
-        "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800",
+      image: "/base.webp",
       video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       description:
         "Experience ultimate freedom with TrekDrive. Our innovative technology delivers twice the efficiency while maintaining complete independence on the road. Perfect for adventurers who demand both performance and sustainability.",
@@ -23,8 +22,7 @@ const HorizontalScroll = () => {
       id: 2,
       title: "CampQuiet",
       subtitle: "Quiet Comes Standard.",
-      image:
-        "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800",
+      image: "/brown.webp",
       video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       description:
         "CampQuiet revolutionizes outdoor living with whisper-quiet operation. Enjoy nature without the noise, featuring advanced sound dampening technology and eco-friendly design for the perfect camping experience.",
@@ -34,8 +32,7 @@ const HorizontalScroll = () => {
       id: 3,
       title: "Aero-Electric",
       subtitle: "Built to Win. Ready to Transform.",
-      image:
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+      image: "/blue.webp",
       video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       description:
         "Aero-Electric combines cutting-edge aerodynamics with electric power. Engineered for peak performance and designed to transform the way you travel. Victory is in every detail.",
@@ -45,8 +42,27 @@ const HorizontalScroll = () => {
       id: 4,
       title: "UrbanFlow",
       subtitle: "City Living. Redefined.",
-      image:
-        "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800",
+      image: "/base.webp",
+      video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      description:
+        "Navigate urban landscapes with unprecedented ease. UrbanFlow brings smart mobility to city streets with compact design and intelligent features.",
+      features: ["Compact Design", "Smart Navigation", "Urban Ready"],
+    },
+    {
+      id: 5,
+      title: "Aero-Electric",
+      subtitle: "Built to Win. Ready to Transform.",
+      image: "/blue.webp",
+      video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      description:
+        "Aero-Electric combines cutting-edge aerodynamics with electric power. Engineered for peak performance and designed to transform the way you travel. Victory is in every detail.",
+      features: ["Aerodynamic Design", "High Performance", "Smart Technology"],
+    },
+    {
+      id: 6,
+      title: "UrbanFlow",
+      subtitle: "City Living. Redefined.",
+      image: "/base.webp",
       video: "https://www.youtube.com/embed/dQw4w9WgXcQ",
       description:
         "Navigate urban landscapes with unprecedented ease. UrbanFlow brings smart mobility to city streets with compact design and intelligent features.",
@@ -85,7 +101,7 @@ const HorizontalScroll = () => {
   }, [selectedIndex]);
 
   return (
-    <div className="w-full py-20 overflow-hidden">
+    <div className="w-full py-20 ml-10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-8">
         <div className="mb-12 text-center">
           <h2 className="text-5xl font-bold text-white mb-4">
@@ -108,12 +124,12 @@ const HorizontalScroll = () => {
               ref={(el) => (cardRefs.current[index] = el)}
               className={`shrink-0 transition-all duration-700 ease-out ${
                 selectedIndex === index
-                  ? "w-[850px] snap-center"
-                  : "w-[380px] snap-start"
+                  ? "w-[600px] snap-center"
+                  : "w-[400px] snap-start"
               }`}
             >
               <div
-                className={`relative rounded-3xl overflow-hidden shadow-2xl border border-slate-700/50 transition-all duration-700 ${
+                className={`relative rounded-3xl overflow-hidden border border-slate-700/50 transition-all duration-700 ${
                   selectedIndex === index
                     ? "h-[550px]"
                     : "h-[500px] cursor-pointer hover:shadow-blue-500/20"
@@ -124,7 +140,7 @@ const HorizontalScroll = () => {
               >
                 {selectedIndex === index ? (
                   // Expanded View - Üst Üste
-                  <div className="bg-slate-900 h-full flex flex-col">
+                  <div className="h-full flex flex-col">
                     <div className="relative">
                       <button
                         onClick={(e) => {
@@ -224,7 +240,7 @@ const HorizontalScroll = () => {
                         {item.subtitle}
                       </h3>
 
-                      <div className="flex items-center gap-2 text-blue-400 font-medium group-hover:gap-4 transition-all">
+                      <div className="flex items-center gap-2 text-bej font-medium group-hover:gap-4 transition-all">
                         <span>Explore</span>
                         <svg
                           className="w-5 h-5 transform group-hover:translate-x-2 transition-transform"

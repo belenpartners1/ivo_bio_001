@@ -112,17 +112,17 @@ const FaqSection = () => {
       className="relative h-screen w-ful bg-gri flex items-center justify-center overflow-hidden"
     >
       {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      {/* <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 -left-20 w-72 h-72 bg-kahverengi rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
         <div className="absolute top-1/3 -right-20 w-72 h-72 bg-sari rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-700"></div>
         <div className="absolute -bottom-20 left-1/3 w-72 h-72 bg-yesil rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-1000"></div>
-      </div>
+      </div> */}
 
       <div className="relative z-10 max-w-4xl w-full px-6 md:px-8">
         {/* Title */}
-        <h2 className="faq-title text-4xl md:text-6xl font-bold text-white text-center mb-12 md:mb-16">
+        <h2 className="faq-title text-4xl md:text-6xl font-bold text-white/90 text-center mb-12 md:mb-16">
           Sıkça Sorulan
-          <span className="bg-clip-text">Sorular</span>
+          <span className="bg-clip-text"> Sorular</span>
         </h2>
 
         {/* FAQ Items */}
@@ -130,13 +130,13 @@ const FaqSection = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="faq-item bg-white/20 backdrop-blur-lg border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:bg-white/10 hover:border-purple-400/30"
+              className="faq-item bg-white/20 backdrop-blur-lg border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:bg-white/10 hover:border-kahverengi"
             >
               <button
                 onClick={() => toggleFaq(index)}
                 className="w-full px-6 md:px-8 py-5 md:py-6 text-left flex items-center justify-between group cursor-pointer"
               >
-                <span className="text-lg md:text-xl font-semibold text-white group-hover:text-sari transition-colors">
+                <span className="text-lg md:text-xl font-semibold text-kahverengi group-hover:text-kahverengi transition-colors">
                   {faq.question}
                 </span>
                 <div
