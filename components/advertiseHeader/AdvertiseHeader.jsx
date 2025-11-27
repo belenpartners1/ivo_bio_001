@@ -9,7 +9,14 @@ const AdvertiseHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   // Menü içeriği (görseldeki Türkçe kelimeler)
-  const menuItems = ["Hakkımızda", "Ekibimiz", "Vizyon", "İletişim"];
+  const menuItems = [
+    "İVO BİO Nedir?",
+    "Tanıtım Filmi",
+    "İVO BİO Teknik",
+    "Galeri",
+    "Sıkça Sorulan Sorular",
+    "İletişim",
+  ];
 
   // Menü kapsayıcısı için useRef
   const menuRef = useRef(null);

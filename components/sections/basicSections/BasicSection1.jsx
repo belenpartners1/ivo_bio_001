@@ -96,7 +96,7 @@ const BasicSection1 = () => {
         >
           Doğayla Bütünleş
         </p>
-        <p ref={title2Ref} className="text-[80px] font-quicksand">
+        <p ref={title2Ref} className="text-[80px] font-quicksand text-white">
           Yeni Nesil Yaşam Alanlarını Keşfet
         </p>
       </div>

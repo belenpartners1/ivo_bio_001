@@ -96,7 +96,7 @@ const BasicSection1 = () => {
         >
           Yaşama Dair Herşey
         </p>
-        <p ref={title2Ref} className="text-[80px] font-quicksand">
+        <p ref={title2Ref} className="text-[80px] font-quicksand text-white">
           Farkındalık Mutluluk Huzur
         </p>
       </div>

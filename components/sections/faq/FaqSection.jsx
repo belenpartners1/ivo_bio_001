@@ -109,15 +109,8 @@ const FaqSection = () => {
   return (
     <div
       ref={sectionRef}
-      className="relative h-screen w-ful bg-gri flex items-center justify-center overflow-hidden"
+      className="relative h-screen w-ful bg-gri flex items-center justify-center overflow-hidden font-quicksand"
     >
-      {/* Background decorative elements */}
-      {/* <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -left-20 w-72 h-72 bg-kahverengi rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-        <div className="absolute top-1/3 -right-20 w-72 h-72 bg-sari rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-700"></div>
-        <div className="absolute -bottom-20 left-1/3 w-72 h-72 bg-yesil rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse delay-1000"></div>
-      </div> */}
-
       <div className="relative z-10 max-w-4xl w-full px-6 md:px-8">
         {/* Title */}
         <h2 className="faq-title text-4xl md:text-6xl font-bold text-white/90 text-center mb-12 md:mb-16">

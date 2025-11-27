@@ -136,7 +136,10 @@ const TechnicalSection = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="h-screen w-full p-2 relative bg-gri">
+    <div
+      ref={sectionRef}
+      className="h-screen w-full p-2 relative bg-gri font-quicksand"
+    >
       {technicalData.map((item, index) => (
         <div
           key={item.id}

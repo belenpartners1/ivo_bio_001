@@ -64,6 +64,7 @@ import TechnicalSection from "../../components/sections/introSection/TechnicalSe
 import HorizontalScroll from "../../components/sections/introSection/HorizontalScroll";
 import FaqSection from "../../components/sections/faq/FaqSection";
 import GallerySection from "../../components/sections/gallery/GallerySection";
+import Footer from "../../components/footer/Footer";
 
 const Home = () => {
   useEffect(() => {
@@ -100,11 +101,7 @@ const Home = () => {
       <GallerySection />
       <ProductColorSelector />
       <FaqSection />
-      <div className="min-h-screen w-full bg-bej"></div>
-      <div className="min-h-screen w-full bg-yesil"></div>
-      <div className="min-h-screen w-full bg-gri"></div>
-      <div className="min-h-screen w-full bg-kahverengi"></div>
-      <div className="min-h-screen w-full bg-sari"></div>
+      <Footer />
     </div>
   );
 };
