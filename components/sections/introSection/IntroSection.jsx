@@ -53,38 +53,59 @@ const IntroSection = () => {
   const sections = [
     {
       title: "Doğayı Dinle",
-      subtitle: "Eşsiz Tasarımla Doğayla İç İçe Bir Yaşam",
-      image: "/base.webp",
+      subtitle:
+        "Sizin için tasarlanan modern yaşam alanları ile, doğal çevreyle uyum içinde yaşayın.Göz alıcı peyzaj düzenlemeleriyle, evinizin her köşesi doğanın sesiyle dolacak.",
+      image: "/info1/1.webp",
       position: "left",
     },
     {
       title: "Sürdürülebilir Yaşam",
-      subtitle: "Geleceğe Duyarlı, Doğa Dostu Çözümler",
-      image: "/blue.webp",
+      subtitle:
+        "Enerji verimliliği ve çevre dostu tasarımlarla geleceği bugünden inşa ediyoruz.Doğal kaynakları verimli kullanarak, sağlıklı ve dengeli bir yaşam alanı yaratıyoruz.",
+      image: "/info1/2.webp",
       position: "right",
     },
     {
       title: "Yenilikçi Tasarım",
-      subtitle: "Modern Mimari ve Doğal Uyum",
-      image: "/brown.webp",
+      subtitle:
+        "Eşsiz mimarisiyle dikkat çeken BİO EVO, estetik ve fonksiyonelliği bir araya getiriyor.Her ayrıntı, kullanıcı deneyimini zenginleştirerek yaşam alanlarınıza şıklık katıyor.",
+      image: "/info1/3.webp",
       position: "left",
     },
     {
-      title: "Enerji Verimliliği",
-      subtitle: "Akıllı Sistemlerle Tasarruf",
-      image: "/base.webp",
+      title: "Sadelik & Konfor",
+      subtitle:
+        "Ferah ve sade bir yaşam alanı, minimalist tasarım ve sessiz bir atmosfer, İVO BİO'da konforlu bir yaşam deneyimi sizleri bekliyor.",
+      image: "/info1/4.webp",
       position: "right",
     },
     {
-      title: "Sağlıklı Yaşam",
-      subtitle: "Doğal Malzemeler, Temiz Hava",
-      image: "/blue.webp",
+      title: "Doğal ve Sağlıklı Yaşam",
+      subtitle:
+        "Temiz hava ve doğallık, sağlıklı bir yaşamın temelini oluşturur. İVO BİO, yaz ve kış dengesini mükemmel bir şekilde kurarak her mevsimde konforu garanti ediyor.",
+      image: "/info1/5.webp",
       position: "left",
     },
     {
-      title: "Geleceğe Yatırım",
-      subtitle: "Değer Kazanan, Sürdürülebilir Mülkler",
-      image: "/brown.webp",
+      title: "Doğal İç Mekanlar",
+      subtitle:
+        "Doğal malzemelerle tasarlanmış iç mekanlar, sıcak ve davetkar bir atmosfer sunar. Her detayında doğallık hissi, İVO BİO'da yaşam alanlarınızı benzersiz kılar.",
+      image: "/info1/8.webp",
+      position: "right",
+    },
+    {
+      title: "Akıllı Yaşam, Akıllı Ev",
+      subtitle:
+        "İVO BİO’nun akıllı ev sistemi, yaşamınızı daha konforlu ve kontrollü hale getirir. Tek dokunuşla eviniz, sizin ihtiyaçlarınıza uyum sağlar ve günlük hayatınızı kolaylaştırır.",
+      image: "/info1/7.webp",
+      position: "left",
+    },
+
+    {
+      title: "Modüler ve Hızlı Çözümler",
+      subtitle:
+        "İVO BİO, modüler yapılar ve genişletilebilir tasarımlarla her ihtiyaca mükemmel uyum sağlar.Hızlı teslimat ve kurulum ile hayalinizdeki yaşam alanına hemen kavuşun.",
+      image: "/info1/6.webp",
       position: "right",
     },
   ];
@@ -105,15 +126,15 @@ const IntroSection = () => {
         <div
           key={index}
           ref={(el) => (sectionsRef.current[index] = el)}
-          className="h-screen w-full flex items-center justify-between px-20 gap-10 relative z-20"
+          className="h-screen w-full flex items-center justify-between px-10 gap-6 relative z-20"
         >
           {/* Sol Kısım */}
           {section.position === "left" && (
-            <div className="flex-1 flex flex-col gap-6">
-              <h2 className="text-6xl font-bold text-white font-quicksand">
+            <div className="flex-2 flex flex-col gap-6">
+              <h2 className="text-6xl font-bold text-white font-quicksand text-center">
                 {section.title}
               </h2>
-              <p className="text-3xl text-white/80 font-quicksand">
+              <p className="text-2xl text-white/80 font-quicksand font-semibold">
                 {section.subtitle}
               </p>
             </div>
@@ -133,9 +154,13 @@ const IntroSection = () => {
           {/* Sağ Kısım */}
 
           {section.position === "right" && (
-            <div className="flex-1 flex flex-col gap-6">
-              <h2 className="text-6xl font-bold text-white">{section.title}</h2>
-              <p className="text-3xl text-white/80">{section.subtitle}</p>
+            <div className="flex-2 flex flex-col gap-6">
+              <h2 className="text-6xl font-bold text-white font-quicksand text-center">
+                {section.title}
+              </h2>
+              <p className="text-2xl text-white/80 font-quicksand font-semibold">
+                {section.subtitle}
+              </p>
             </div>
           )}
         </div>

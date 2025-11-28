@@ -94,10 +94,10 @@ const BasicSection1 = () => {
           ref={title1Ref}
           className="text-[120px] text-sari font-quicksand font-medium selection:bg-yesil"
         >
-          Doğayla Bütünleş
+          İVO BİO
         </p>
         <p ref={title2Ref} className="text-[80px] font-quicksand text-white">
-          Yeni Nesil Yaşam Alanlarını Keşfet
+          Ekonomik Villa Yaşamı
         </p>
       </div>
 
