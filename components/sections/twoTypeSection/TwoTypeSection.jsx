@@ -139,9 +139,10 @@ const TwoTypeSection = () => {
                 YAZ
               </h2> */}
               <p className="text-white/90 font-bold leading-relaxed drop-shadow-md">
-                Sıcak günlerin tadını çıkarın. Güneşin altında yeni anılar
-                biriktirin, denizin serinliğinde kaybolun. Yaz, hayatın en canlı
-                renklerle dans ettiği mevsimdir.
+                İVO BİO’nun modüler yaşam alanları, geniş açıklıkları ve doğal
+                hava akışıyla yazın ferahlığını en üst seviyeye taşır. Enerji
+                dostu tasarımıyla güneşten aldığı verimi konfora dönüştürerek
+                doğayla bütünleşen bir yaşam sunar.
               </p>
             </div>
           </div>
@@ -173,9 +174,10 @@ const TwoTypeSection = () => {
                 KIŞ
               </h2> */}
               <p className="text-white/90 font-bold leading-relaxed drop-shadow-md">
-                Beyaz örtünün altında saklanan huzuru keşfedin. Kar tanelerinin
-                sessizliğinde içsel bir yolculuğa çıkın. Kış, sıcaklığın en
-                değerli olduğu zamandır.
+                Yüksek yalıtımlı yapısı ve akıllı iklimlendirme çözümleriyle İVO
+                BİO, kış aylarında sıcaklığı koruyarak ideal bir yaşam dengesi
+                oluşturur. Dış koşullar ne olursa olsun konforlu, güvenli ve
+                sürdürülebilir bir kış deneyimi sağlar.
               </p>
             </div>
           </div>

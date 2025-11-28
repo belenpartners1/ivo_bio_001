@@ -126,11 +126,11 @@ const IntroSection = () => {
         <div
           key={index}
           ref={(el) => (sectionsRef.current[index] = el)}
-          className="h-screen w-full flex items-center justify-between px-10 gap-6 relative z-20"
+          className="h-screen w-full flex items-center justify-between px-20 gap-4 relative z-20"
         >
           {/* Sol Kısım */}
           {section.position === "left" && (
-            <div className="flex-2 flex flex-col gap-6">
+            <div className="flex-1 flex flex-col gap-6">
               <h2 className="text-6xl font-bold text-white font-quicksand text-center">
                 {section.title}
               </h2>
@@ -154,7 +154,7 @@ const IntroSection = () => {
           {/* Sağ Kısım */}
 
           {section.position === "right" && (
-            <div className="flex-2 flex flex-col gap-6">
+            <div className="flex-1 flex flex-col gap-6">
               <h2 className="text-6xl font-bold text-white font-quicksand text-center">
                 {section.title}
               </h2>
