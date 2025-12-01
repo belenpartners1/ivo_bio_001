@@ -10,54 +10,54 @@ const FaqSection = () => {
   const sectionRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(null);
 
-  const faqs = [
-    {
-      question: "İVO BİO nedir ?",
-      answer:
-        "İVO BİO doğayla uyumlu, modüler, enerji dostu ve dört mevsim kullanılabilir yaşam alanları sunan modern bir konut çözümüdür. Eşsiz mimarisi ve sürdürülebilir yapısı ile konforlu yeni nesil bir yaşam alanı deneyimi sunar.",
-    },
-    {
-      question: "İVO BİO yapıları hangi malzemelerle üretiliyor ?",
-      answer:
-        "İVO BİO modülleri; çelik konstrüksiyon, yüksek yalıtımlı paneller, Low-E camlar, doğa dostu iç kaplamalar ve geri dönüşümlü dış cephe malzemeleri ile üretilir.",
-    },
-    {
-      question: "Dört mevsim kullanım için uygun mu ?",
-      answer:
-        "Evet, yaz kış ayrımı yapmadan İVO BİO'da yaşayabilirsiniz. Isı pompası, yüksek yalıtım, Low-E camlar ve isteğe bağlı yerden ısıtma ile yılın 12 ayı konforlu kullanım sağlar.  ",
-    },
-    {
-      question: "Taşınabilir mi ?",
-      answer:
-        "Evet. Modüler yapısı sayesinde hem tekli hem çoklu modüller taşınabilir. Taşıma ve nakil süreçleri oldukça hızlıdır.",
-    },
+  // const faqs = [
+  //   {
+  //     question: "İVO BİO nedir ?",
+  //     answer:
+  //       "İVO BİO doğayla uyumlu, modüler, enerji dostu ve dört mevsim kullanılabilir yaşam alanları sunan modern bir konut çözümüdür. Eşsiz mimarisi ve sürdürülebilir yapısı ile konforlu yeni nesil bir yaşam alanı deneyimi sunar.",
+  //   },
+  //   {
+  //     question: "İVO BİO yapıları hangi malzemelerle üretiliyor ?",
+  //     answer:
+  //       "İVO BİO modülleri; çelik konstrüksiyon, yüksek yalıtımlı paneller, Low-E camlar, doğa dostu iç kaplamalar ve geri dönüşümlü dış cephe malzemeleri ile üretilir.",
+  //   },
+  //   {
+  //     question: "Dört mevsim kullanım için uygun mu ?",
+  //     answer:
+  //       "Evet, yaz kış ayrımı yapmadan İVO BİO'da yaşayabilirsiniz. Isı pompası, yüksek yalıtım, Low-E camlar ve isteğe bağlı yerden ısıtma ile yılın 12 ayı konforlu kullanım sağlar.  ",
+  //   },
+  //   {
+  //     question: "Taşınabilir mi ?",
+  //     answer:
+  //       "Evet. Modüler yapısı sayesinde hem tekli hem çoklu modüller taşınabilir. Taşıma ve nakil süreçleri oldukça hızlıdır.",
+  //   },
 
-    {
-      question: "Enerji ihtiyacı nasıl karşılanıyor ?",
-      answer:
-        "İVO BİO güneş panelleri, akıllı inverter sistemleri ve lityum batarya depolama ile enerji ihtiyacını kendi üretebilen bir yapıdır. Elektrik şebekesine bağlanmadan off-grid olarak da çalışabilir. Geleneksel yapılara göre %40–70 arası enerji tasarrufu sağlayabilir.",
-    },
-    {
-      question: "Akıllı ev teknolojisine uyumlu mu ?",
-      answer:
-        "Evet uyumludur. Işıklar, ısıtma-soğutma sistemleri, enerji tüketimi, güvenlik kameraları ve kapı kontrolleri mobil uygulama üzerinden yönetilebilir.",
-    },
-    {
-      question: "İVO BİO projeleri ne kadar sürede teslim edilir ?",
-      answer:
-        "Proje süreleri, projenin kapsamına göre değişiklik gösterir. İVO BİO'nun projeleri 3-4 hafta arasında teslim edilir.",
-    },
-    // {
-    //   question: "Proje yasal izin gerektiriyor mu ?",
-    //   answer:
-    //     "Kullanım alanı ve belediye yönetmeliklerine göre değişir. Hafif yapı sınıfına girdiği için çoğu bölgede izin süreçleri kolaydır.",
-    // },
-    {
-      question: "Destek hizmeti sunuyor musunuz ? Garanti süresi var mı ?",
-      answer:
-        "Evet, proje tesliminden sonraki 1 yıl boyunca ücretsiz destek ve bakım hizmeti sunuyoruz. Yapısal garanti 5 yıl, elektrik–mekanik sistemler için 2 yıl garanti sunulmaktadır. Destek hizmeti ile ilgili daha fazla bilgi almak isterseniz bize e-posta veya telefona yazabilirsiniz.",
-    },
-  ];
+  //   {
+  //     question: "Enerji ihtiyacı nasıl karşılanıyor ?",
+  //     answer:
+  //       "İVO BİO güneş panelleri, akıllı inverter sistemleri ve lityum batarya depolama ile enerji ihtiyacını kendi üretebilen bir yapıdır. Elektrik şebekesine bağlanmadan off-grid olarak da çalışabilir. Geleneksel yapılara göre %40–70 arası enerji tasarrufu sağlayabilir.",
+  //   },
+  //   {
+  //     question: "Akıllı ev teknolojisine uyumlu mu ?",
+  //     answer:
+  //       "Evet uyumludur. Işıklar, ısıtma-soğutma sistemleri, enerji tüketimi, güvenlik kameraları ve kapı kontrolleri mobil uygulama üzerinden yönetilebilir.",
+  //   },
+  //   {
+  //     question: "İVO BİO projeleri ne kadar sürede teslim edilir ?",
+  //     answer:
+  //       "Proje süreleri, projenin kapsamına göre değişiklik gösterir. İVO BİO'nun projeleri 3-4 hafta arasında teslim edilir.",
+  //   },
+  //   // {
+  //   //   question: "Proje yasal izin gerektiriyor mu ?",
+  //   //   answer:
+  //   //     "Kullanım alanı ve belediye yönetmeliklerine göre değişir. Hafif yapı sınıfına girdiği için çoğu bölgede izin süreçleri kolaydır.",
+  //   // },
+  //   {
+  //     question: "Destek hizmeti sunuyor musunuz ? Garanti süresi var mı ?",
+  //     answer:
+  //       "Evet, proje tesliminden sonraki 1 yıl boyunca ücretsiz destek ve bakım hizmeti sunuyoruz. Yapısal garanti 5 yıl, elektrik–mekanik sistemler için 2 yıl garanti sunulmaktadır. Destek hizmeti ile ilgili daha fazla bilgi almak isterseniz bize e-posta veya telefona yazabilirsiniz.",
+  //   },
+  // ];
 
   // useEffect(() => {
   //   const section = sectionRef.current;
@@ -124,6 +124,49 @@ const FaqSection = () => {
   //     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
   //   };
   // }, []);
+
+  const faqs = [
+    {
+      question: "İVO BİO nedir?",
+      answer:
+        "İVO BİO, doğayla uyumlu, modüler ve enerji dostu bir yaşam alanı sunan modern konut çözümüdür. Eşsiz mimarisi ve sürdürülebilir yapısıyla dört mevsim konforlu bir deneyim sağlar.",
+    },
+    {
+      question: "İVO BİO yapıları hangi malzemelerle üretiliyor?",
+      answer:
+        "İVO BİO modülleri; çelik konstrüksiyon, yüksek yalıtımlı paneller, Low-E camlar, organik kompozit malzemeler ve doğa dostu iç-dış kaplamalar ile üretilir.",
+    },
+    {
+      question: "Dört mevsim kullanım için uygun mu?",
+      answer:
+        "Evet. Isı pompası, yüksek yalıtım ve Low-E camlar sayesinde yılın 12 ayı konforlu kullanım sunar.",
+    },
+    {
+      question: "Taşınabilir mi?",
+      answer:
+        "Evet. Modüler yapısı sayesinde tekli veya çoklu modüller kolayca taşınabilir ve hızlı kurulum imkânı sunar.",
+    },
+    {
+      question: "Enerji ihtiyacı nasıl karşılanıyor?",
+      answer:
+        "İVO BİO, güneş panelleri, akıllı inverter ve lityum batarya sistemleriyle enerji ihtiyacını kendi karşılar. Elektrik şebekesine bağlanmadan off-grid olarak da çalışabilir. Geleneksel yapılara göre %40–70 enerji tasarrufu sağlar.",
+    },
+    {
+      question: "Akıllı ev teknolojisine uyumlu mu?",
+      answer:
+        "Evet. Işıklar, ısıtma-soğutma, enerji yönetimi, güvenlik sistemleri ve kapı kontrolleri mobil uygulama üzerinden yönetilebilir.",
+    },
+    {
+      question: "İVO BİO projeleri ne kadar sürede teslim edilir?",
+      answer:
+        "Projelerin teslim süresi, kapsamına göre değişir. İVO BİO modülleri genellikle 3-4 hafta içinde hazır hale gelir.",
+    },
+    {
+      question: "Destek hizmeti sunuyor musunuz? Garanti süresi var mı?",
+      answer:
+        "Evet. Proje tesliminden sonra 1 yıl ücretsiz destek ve bakım hizmeti sunulmaktadır. Yapısal garanti 5 yıl, elektrik ve mekanik sistemler için 2 yıl garanti mevcuttur.",
+    },
+  ];
 
   useEffect(() => {
     const section = sectionRef.current;
