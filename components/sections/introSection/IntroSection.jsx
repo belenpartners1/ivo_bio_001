@@ -126,39 +126,39 @@ const IntroSection = () => {
         <div
           key={index}
           ref={(el) => (sectionsRef.current[index] = el)}
-          className="h-screen w-full flex items-center justify-between px-20 gap-4 relative z-20"
+          className="h-screen w-full flex items-center px-20 gap-10 relative z-20"
         >
           {/* Sol Kısım */}
           {section.position === "left" && (
-            <div className="flex-1 flex flex-col gap-6">
-              <h2 className="text-6xl font-bold text-white font-quicksand text-center">
+            <div className="flex-2 flex flex-col gap-6">
+              <h2 className="text-6xl font-bold text-white font-quicksand text-left">
                 {section.title}
               </h2>
-              <p className="text-2xl text-white/80 font-quicksand font-semibold">
+              <p className="text-xl text-white font-quicksand font-semibold ">
                 {section.subtitle}
               </p>
             </div>
           )}
 
           {/* Orta - Card */}
-          <div className="flex-10 flex justify-center">
+          <div className="flex-8 flex justify-center">
             <Image
               src={section.image}
               alt="Picture of the author"
               width={1920}
               height={1080}
-              className="object-cover rounded-2xl shadow-2xl w-6xl"
+              className="object-cover rounded-4xl shadow-2xl w-6xl"
             />
           </div>
 
           {/* Sağ Kısım */}
 
           {section.position === "right" && (
-            <div className="flex-1 flex flex-col gap-6">
-              <h2 className="text-6xl font-bold text-white font-quicksand text-center">
+            <div className="flex-2 flex flex-col gap-6">
+              <h2 className="text-6xl font-bold text-white font-quicksand text-left">
                 {section.title}
               </h2>
-              <p className="text-2xl text-white/80 font-quicksand font-semibold">
+              <p className="text-xl text-white font-quicksand font-semibold">
                 {section.subtitle}
               </p>
             </div>

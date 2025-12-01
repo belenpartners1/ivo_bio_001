@@ -10,121 +10,6 @@ const FaqSection = () => {
   const sectionRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(null);
 
-  // const faqs = [
-  //   {
-  //     question: "İVO BİO nedir ?",
-  //     answer:
-  //       "İVO BİO doğayla uyumlu, modüler, enerji dostu ve dört mevsim kullanılabilir yaşam alanları sunan modern bir konut çözümüdür. Eşsiz mimarisi ve sürdürülebilir yapısı ile konforlu yeni nesil bir yaşam alanı deneyimi sunar.",
-  //   },
-  //   {
-  //     question: "İVO BİO yapıları hangi malzemelerle üretiliyor ?",
-  //     answer:
-  //       "İVO BİO modülleri; çelik konstrüksiyon, yüksek yalıtımlı paneller, Low-E camlar, doğa dostu iç kaplamalar ve geri dönüşümlü dış cephe malzemeleri ile üretilir.",
-  //   },
-  //   {
-  //     question: "Dört mevsim kullanım için uygun mu ?",
-  //     answer:
-  //       "Evet, yaz kış ayrımı yapmadan İVO BİO'da yaşayabilirsiniz. Isı pompası, yüksek yalıtım, Low-E camlar ve isteğe bağlı yerden ısıtma ile yılın 12 ayı konforlu kullanım sağlar.  ",
-  //   },
-  //   {
-  //     question: "Taşınabilir mi ?",
-  //     answer:
-  //       "Evet. Modüler yapısı sayesinde hem tekli hem çoklu modüller taşınabilir. Taşıma ve nakil süreçleri oldukça hızlıdır.",
-  //   },
-
-  //   {
-  //     question: "Enerji ihtiyacı nasıl karşılanıyor ?",
-  //     answer:
-  //       "İVO BİO güneş panelleri, akıllı inverter sistemleri ve lityum batarya depolama ile enerji ihtiyacını kendi üretebilen bir yapıdır. Elektrik şebekesine bağlanmadan off-grid olarak da çalışabilir. Geleneksel yapılara göre %40–70 arası enerji tasarrufu sağlayabilir.",
-  //   },
-  //   {
-  //     question: "Akıllı ev teknolojisine uyumlu mu ?",
-  //     answer:
-  //       "Evet uyumludur. Işıklar, ısıtma-soğutma sistemleri, enerji tüketimi, güvenlik kameraları ve kapı kontrolleri mobil uygulama üzerinden yönetilebilir.",
-  //   },
-  //   {
-  //     question: "İVO BİO projeleri ne kadar sürede teslim edilir ?",
-  //     answer:
-  //       "Proje süreleri, projenin kapsamına göre değişiklik gösterir. İVO BİO'nun projeleri 3-4 hafta arasında teslim edilir.",
-  //   },
-  //   // {
-  //   //   question: "Proje yasal izin gerektiriyor mu ?",
-  //   //   answer:
-  //   //     "Kullanım alanı ve belediye yönetmeliklerine göre değişir. Hafif yapı sınıfına girdiği için çoğu bölgede izin süreçleri kolaydır.",
-  //   // },
-  //   {
-  //     question: "Destek hizmeti sunuyor musunuz ? Garanti süresi var mı ?",
-  //     answer:
-  //       "Evet, proje tesliminden sonraki 1 yıl boyunca ücretsiz destek ve bakım hizmeti sunuyoruz. Yapısal garanti 5 yıl, elektrik–mekanik sistemler için 2 yıl garanti sunulmaktadır. Destek hizmeti ile ilgili daha fazla bilgi almak isterseniz bize e-posta veya telefona yazabilirsiniz.",
-  //   },
-  // ];
-
-  // useEffect(() => {
-  //   const section = sectionRef.current;
-
-  //   ScrollTrigger.create({
-  //     trigger: section,
-  //     start: "top top",
-  //     end: "+=100%",
-  //     pin: true,
-  //     pinSpacing: true,
-  //     anticipatePin: 1,
-  //   });
-
-  //   const faqItems = section.querySelectorAll(".faq-item");
-  //   faqItems.forEach((item, index) => {
-  //     gsap.fromTo(
-  //       item,
-  //       {
-  //         opacity: 0,
-  //         y: 50,
-  //         scale: 0.95,
-  //       },
-  //       {
-  //         opacity: 1,
-  //         y: 0,
-  //         scale: 1,
-  //         duration: 0.8,
-  //         ease: "power3.out",
-  //         scrollTrigger: {
-  //           trigger: section,
-  //           start: "top top",
-  //           end: "bottom top",
-  //           scrub: 1,
-  //           onEnter: () => {
-  //             gsap.to(item, {
-  //               opacity: 1,
-  //               y: 0,
-  //               scale: 1,
-  //               duration: 0.6,
-  //               delay: index * 0.1,
-  //             });
-  //           },
-  //         },
-  //       }
-  //     );
-  //   });
-
-  //   gsap.fromTo(
-  //     section.querySelector(".faq-title"),
-  //     { opacity: 0, y: -30 },
-  //     {
-  //       opacity: 1,
-  //       y: 0,
-  //       duration: 1,
-  //       ease: "power3.out",
-  //       scrollTrigger: {
-  //         trigger: section,
-  //         start: "top center",
-  //       },
-  //     }
-  //   );
-
-  //   return () => {
-  //     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-  //   };
-  // }, []);
-
   const faqs = [
     {
       question: "İVO BİO nedir?",
@@ -159,7 +44,7 @@ const FaqSection = () => {
     {
       question: "İVO BİO projeleri ne kadar sürede teslim edilir?",
       answer:
-        "Projelerin teslim süresi, kapsamına göre değişir. İVO BİO modülleri genellikle 3-4 hafta içinde hazır hale gelir.",
+        "Projelerin teslim süresi kapsam ve özelliklere göre değişmekle birlikte, İVO BİO 7–10 gün içinde üretilip, 1 günde montajı yapılabilir.",
     },
     {
       question: "Destek hizmeti sunuyor musunuz? Garanti süresi var mı?",

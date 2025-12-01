@@ -142,7 +142,8 @@ const TwoTypeSection = () => {
                 İVO BİO’nun modüler yaşam alanları, geniş açıklıkları ve doğal
                 hava akışıyla yazın ferahlığını en üst seviyeye taşır. Enerji
                 dostu tasarımıyla güneşten aldığı verimi konfora dönüştürerek
-                doğayla bütünleşen bir yaşam sunar.
+                +60°C’ye kadar yaşanabilir bir iç ortam sunar ve doğayla
+                bütünüyle uyumlu bir yaşam sağlar.
               </p>
             </div>
           </div>
@@ -176,8 +177,9 @@ const TwoTypeSection = () => {
               <p className="text-white/90 font-bold leading-relaxed drop-shadow-md">
                 Yüksek yalıtımlı yapısı ve akıllı iklimlendirme çözümleriyle İVO
                 BİO, kış aylarında sıcaklığı koruyarak ideal bir yaşam dengesi
-                oluşturur. Dış koşullar ne olursa olsun konforlu, güvenli ve
-                sürdürülebilir bir kış deneyimi sağlar.
+                oluşturur. –50°C’ye kadar dayanıklı yapısıyla dış koşullar ne
+                kadar sert olursa olsun konforlu, güvenli ve sürdürülebilir bir
+                kış deneyimi sunar.
               </p>
             </div>
           </div>

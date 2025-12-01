@@ -92,7 +92,7 @@ const BasicSection1 = () => {
       <div className="flex flex-col gap-2 text-center">
         <p
           ref={title1Ref}
-          className="text-[120px] text-sari font-quicksand font-medium selection:bg-yesil"
+          className="text-[120px] text-yesil font-quicksand font-medium"
         >
           İVO BİO
         </p>
@@ -104,7 +104,7 @@ const BasicSection1 = () => {
       {/* Sol çizgi - soldan sağa açılıyor */}
       <div
         ref={leftLineRef}
-        className="absolute bg-yesil w-[400px] h-4 rounded-r-full left-0 top-[20%] origin-left"
+        className="absolute bg-sari w-[400px] h-4 rounded-r-full left-0 top-[20%] origin-left"
       ></div>
 
       {/* Sağ çizgi - sağdan sola açılıyor */}

@@ -18,7 +18,7 @@ const TechnicalSection = () => {
       id: 1,
       title: "İVO BİO Teknik",
       description:
-        "Doğal çevreyle uyumlu, organik kompozit yapı teknolojisiyle üretilen İVO BİO 75 m² büyüklüğünde, modern ve fonksiyonel bir 2+1 yaşam alanı sunar. <br /> <br />  1-) 1700 cm uzunluk      <br /> 2-) 530 cm genişlik      <br /> 3-) 360 cm yükseklik",
+        "Doğal çevreyle uyumlu, organik kompozit yapı teknolojisiyle üretilen İVO BİO 85 m² büyüklüğünde, modern ve fonksiyonel bir 2+1 yaşam alanı sunar. <br /> <br />  1-) 1700 cm uzunluk      <br /> 2-) 530 cm genişlik      <br /> 3-) 360 cm yükseklik",
       video: "/infography/01.mp4",
       // image: "https://images.unsplash.com/photo-1558002038-1055907df827?w=1200&h=800&fit=crop",
       videoUrl: "https://www.youtube.com/watch?v=I1unv9CqMNA",

@@ -241,7 +241,7 @@ const AdvertiseHeader = () => {
                 ${isOpen ? "bg-white/20 border-white/40" : "hover:bg-white/15"} 
                 focus:outline-none focus:ring-2 focus:ring-gri`}
             >
-              <TiThMenu size={20} color="gray" />
+              <TiThMenu size={20} className="text-black/80" />
             </button>
 
             {/* Animasyonlu Menü İçeriği */}

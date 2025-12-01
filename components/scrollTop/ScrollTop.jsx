@@ -151,7 +151,7 @@ const ScrollTop = () => {
       aria-label="Yukarı git"
     >
       <FiArrowUp
-        className=" text-white transform group-hover:-translate-y-1 transition-transform duration-300 rounded-3xl"
+        className="text-black/80 transform group-hover:-translate-y-1 transition-transform duration-300 rounded-3xl"
         size={20}
       />
     </button>
