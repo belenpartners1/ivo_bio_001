@@ -104,7 +104,7 @@ const IntroSection = () => {
     {
       title: "Modüler ve Hızlı Çözümler",
       subtitle:
-        "İVO BİO, modüler yapılar ve genişletilebilir tasarımlarla her ihtiyaca mükemmel uyum sağlar.Hızlı teslimat ve kurulum ile hayalinizdeki yaşam alanına hemen kavuşun.",
+        "İVO BİO, farklı yaşam tarzlarına uyum sağlayan esnek tasarımıyla ihtiyaçlarınıza tam olarak karşılık verir. Hızlı teslimat ve kurulum sayesinde hayalinizdeki yaşam alanına kısa sürede kavuşun.",
       image: "/info1/6.webp",
       position: "right",
     },

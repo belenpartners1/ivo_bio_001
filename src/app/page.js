@@ -16,6 +16,7 @@ import GallerySection from "../../components/sections/gallery/GallerySection";
 import Footer from "../../components/footer/Footer";
 import ContactForm from "../../components/formSection/ContactForm";
 import ScrollTop from "../../components/scrollTop/ScrollTop";
+import ScrollVideo from "../../components/scrollVideo/ScrollVideo";
 
 const Home = () => {
   useEffect(() => {
@@ -43,6 +44,7 @@ const Home = () => {
     <div className="bg-gri flex flex-col">
       <HeaderSection />
       <IntroSection />
+      <ScrollVideo />
       <VideoIntroSection />
       <BasicSection1 />
       <TechnicalSection />
