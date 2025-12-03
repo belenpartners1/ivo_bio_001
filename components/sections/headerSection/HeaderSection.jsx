@@ -102,10 +102,11 @@ const HeaderSection = () => {
         className="object-cover z-20 foreground"
         priority
       />
-      <div className="absolute top-[20vh] left-1/2 -translate-x-1/2 text-center z-10 container mx-auto">
+      <div className="absolute top-2/6 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-10 container mx-auto">
         <p
           ref={textRef}
-          className="text-[130px] font-semibold tracking-wide leading-32 text-kahverengi select-none font-quicksand"
+          className="text-[14vw] md:text-[8vw] lg:text-[130px]
+ font-semibold tracking-wide leading-32 text-kahverengi select-none font-quicksand"
         >
           Doğal yaşam <br /> çizginiz...
         </p>
