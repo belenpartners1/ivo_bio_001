@@ -49,12 +49,12 @@ const HeaderSection = () => {
         y: 0,
       },
       {
-        y: -50,
+        y: -40,
         scrollTrigger: {
           trigger: headerRef.current,
           start: "top top",
           end: "bottom top",
-          scrub: 0.5,
+          scrub: 0.2,
         },
         ease: "power2.out",
       }
@@ -102,7 +102,7 @@ const HeaderSection = () => {
         className="object-cover z-20 foreground"
         priority
       />
-      <div className="absolute top-[17vh] left-1/2 -translate-x-1/2 text-center z-10 container mx-auto">
+      <div className="absolute top-[20vh] left-1/2 -translate-x-1/2 text-center z-10 container mx-auto">
         <p
           ref={textRef}
           className="text-[130px] font-semibold tracking-wide leading-32 text-kahverengi select-none font-quicksand"
