@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 import {
   FaTwitter,
@@ -93,7 +94,7 @@ const Footer = () => {
     >
       <div className="relative max-w-7xl mx-auto">
         {/* Ana içerik grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-8">
           {/* Sol taraf - Marka ve açıklama */}
           <div className="lg:col-span-5 space-y-6">
             <div>
@@ -101,6 +102,9 @@ const Footer = () => {
                 BELEN & PARTNERS
               </h2>
               <p className="text-white text-4xl mb-4 font-quicksand">İVO Bio</p>
+              <p className="text-white text-base leading-relaxed max-w-md">
+                İVO Bio bir Belen & Partners markasıdır.
+              </p>
               <p className="text-gray-400 text-base leading-relaxed max-w-md">
                 Modern mimari çözümler ve sürdürülebilir tasarımlarla geleceği
                 birlikte inşa ediyoruz. Her projede estetik, işlevsellik ve
@@ -165,6 +169,17 @@ const Footer = () => {
               })}
             </div>
           </div>
+        </div>
+
+        <div className="flex justify-center items-center gap-20 mb-8">
+          <Image src="/belen_logo.png" alt="Logo" width={300} height={100} />
+          <div className="h-40 w-[0.2px] bg-white"></div>
+          <Image
+            src="/icons/full_icon.png"
+            alt="Logo"
+            width={300}
+            height={100}
+          />
         </div>
 
         {/* Alt çizgi */}

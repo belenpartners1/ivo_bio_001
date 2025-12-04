@@ -75,19 +75,19 @@ const IntroSection = () => {
     {
       title: "Sadelik & Konfor",
       subtitle:
-        "Ferah ve sade bir yaşam alanı, minimalist tasarım ve sessiz bir atmosfer, İVO Bio'da konforlu bir yaşam deneyimi sizleri bekliyor.",
+        "Ferah ve dingin bir yaşam alanı, sade tasarım detayları ve huzurlu bir atmosferle İVO Bio’da konforlu bir yaşam deneyimi sizleri bekliyor.",
       image: "/info1/4.webp",
       position: "right",
     },
     {
-      title: "Doğal ve Sağlıklı Yaşam",
+      title: "Doğallık ve Sağlık",
       subtitle:
         "Temiz hava ve doğallık, sağlıklı bir yaşamın temelini oluşturur. İVO Bio, yaz ve kış dengesini mükemmel bir şekilde kurarak her mevsimde konforu garanti ediyor.",
       image: "/info1/5.webp",
       position: "left",
     },
     {
-      title: "Doğal İç Mekanlar",
+      title: "Zarif İç Mekanlar",
       subtitle:
         "Doğal malzemelerle tasarlanmış iç mekanlar, sıcak ve davetkar bir atmosfer sunar. Her detayında doğallık hissi, İVO Bio'da yaşam alanlarınızı benzersiz kılar.",
       image: "/info1/8.webp",
@@ -117,7 +117,7 @@ const IntroSection = () => {
         ref={titleRef}
         className="h-screen flex flex-col items-center justify-center gap-10 sticky top-0 z-10 p-20"
       >
-        <h1 className="font-quicksand text-[170px] font-bold text-center leading-tight">
+        <h1 className="font-quicksand text-[170px] font-bold text-center leading-tight text-white">
           <span className="text-yesil">İVO Bio</span> <br /> İle Tanışın
         </h1>
         {/* <p className=" max-w-4xl text-justify font-quicksand text-2xl font-bold text-kahverengi">
@@ -147,7 +147,7 @@ const IntroSection = () => {
               <h2 className="text-6xl font-bold text-white font-quicksand text-left">
                 {section.title}
               </h2>
-              <p className="text-xl text-white font-quicksand font-semibold ">
+              <p className="text-2xl text-white font-quicksand font-semibold ">
                 {section.subtitle}
               </p>
             </div>
@@ -163,9 +163,7 @@ const IntroSection = () => {
               className="object-cover rounded-4xl shadow-2xl w-6xl"
             />
           </div>
-
           {/* Sağ Kısım */}
-
           {section.position === "right" && (
             <div className="flex-2 flex flex-col gap-6">
               <h2 className="text-6xl font-bold text-white font-quicksand text-left">
