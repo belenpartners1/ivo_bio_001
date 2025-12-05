@@ -100,7 +100,7 @@ const AdvertiseHeader = () => {
   return (
     <div className="w-full flex flex-col fixed top-0 z-50">
       <div className="w-full">
-        <div className="flex justify-between items-center p-6">
+        <div className="flex justify-between items-center px-6 py-2">
           {/* Sol Kısım: Logo */}
           {/* <div className="bg-white/10 backdrop-blur-xl shadow-lg rounded-3xl border border-white/20">
             <Image
