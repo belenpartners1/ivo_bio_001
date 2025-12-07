@@ -19,6 +19,7 @@ import ScrollTop from "../../components/scrollTop/ScrollTop";
 import ScrollVideo from "../../components/scrollVideo/ScrollVideo";
 import PricingSection from "../../components/sections/pricing/PricingSection";
 import PlanSection from "../../components/sections/planSection/PlanSection";
+import ManipulateModel from "../../components/3dmodel/ManipulateModel";
 
 const Home = () => {
   useEffect(() => {
@@ -45,6 +46,7 @@ const Home = () => {
   return (
     <div className="bg-gri flex flex-col">
       <HeaderSection />
+      <ManipulateModel />
       <IntroSection />
       <ScrollVideo />
       <VideoIntroSection />
