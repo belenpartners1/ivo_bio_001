@@ -52,7 +52,7 @@ const PricingSection = () => {
 
   const plans = [
     {
-      name: "Basic",
+      name: "Başlangıç",
       price: "$9",
       period: "/ay",
       description:
@@ -67,7 +67,7 @@ const PricingSection = () => {
       image: "/icons/empty_icon.png",
     },
     {
-      name: "Lite",
+      name: "Ekonomik",
       price: "$29",
       period: "/ay",
       description:
@@ -82,7 +82,7 @@ const PricingSection = () => {
       image: "/icons/light_icon.png",
     },
     {
-      name: "Full",
+      name: "Lüks",
       price: "$99",
       period: "/ay",
       description: "Tam donanımlı, yaşamaya hazır premium İVO Bio deneyimi.",
@@ -98,17 +98,14 @@ const PricingSection = () => {
   ];
 
   return (
-    <div
-      className="min-h-screen w-full bg-gri flex items-center justify-center p-10 font-quicksand font-bold"
-      id="modeller"
-    >
+    <div className="min-h-screen w-full bg-gri flex items-center justify-center p-10 font-quicksand font-bold">
       <div ref={sectionRef} className="max-w-7xl w-full">
-        <div className="text-center mb-16 text-white">
+        {/* <div className="text-center mb-16 text-white">
           <h2 className="text-5xl md:text-[100px] font-bold mb-4">
             <span className="text-yesil">İVO Bio</span> Modelleri
           </h2>
           <p className="text-4xl">Size en uygun planı seçebilirsiniz</p>
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {plans.map((plan, index) => (

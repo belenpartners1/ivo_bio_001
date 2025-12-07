@@ -102,7 +102,7 @@ const AdvertiseHeader = () => {
       <div className="w-full">
         <div className="flex justify-between items-center px-6 py-2">
           {/* Sol Kısım: Logo */}
-          {/* <div className="bg-white/10 backdrop-blur-xl shadow-lg rounded-3xl border border-white/20">
+          <div className="bg-white/10 backdrop-blur-xl shadow-lg rounded-3xl border border-white/20">
             <Image
               src="/ivo_bio_logoSVG_v2.svg"
               alt="Logo"
@@ -110,14 +110,14 @@ const AdvertiseHeader = () => {
               height={160}
               className="px-4 py-2"
             />
-          </div> */}
-          <Image
+          </div>
+          {/* <Image
             src="/icons/light_icon.png"
             alt="Logo"
             width={240}
             height={160}
             className="px-4 py-2 bg-blend-difference"
-          />
+          /> */}
 
           {/* Sağ Kısım: Menü Butonu */}
           <div className="flex flex-col items-end relative">
