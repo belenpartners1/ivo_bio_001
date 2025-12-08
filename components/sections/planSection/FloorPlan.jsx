@@ -178,26 +178,26 @@ export default function FloorPlan() {
         <div className="absolute -translate-x-1/2 -translate-y-1/2 top-5/6 left-1/2 text-gray-800 font-quicksand font-bold">
           <ul className="grid grid-cols-1 md:grid-cols-3 gap-1 rounded-2xl p-2">
             <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
-              1-) Salon 28.8 m²
+              1-) Salon 28.30 m²
             </li>
 
             <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
-              2-) Giriş Salonu 9.18 m²
+              2-) Giriş Koridoru 8.75 m²
             </li>
 
             <li className="p-2 flex items-center justify-center">
-              3-) Yatak odası 6.83 m²
+              3-) Yatak Odası 6.90 m²
             </li>
 
             <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
-              4-) Banyo 5.89 m²
+              4-) Banyo 5.90 m²
             </li>
 
             <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
-              5-) Ebeveyn Y.Odası 13.3 m²
+              5-) Ebeveyn Y.Odası 13.20 m²
             </li>
             <li className="p-2 flex items-center justify-center ">
-              6-) Tesisat Odası 3.25 m²
+              6-) Tesisat Odası 3.00 m²
             </li>
           </ul>
         </div>
