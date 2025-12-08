@@ -52,7 +52,7 @@ const PricingSection = () => {
 
   const plans = [
     {
-      name: "Başlangıç",
+      name: "Temel",
       price: "$9",
       period: "/ay",
       description:
@@ -82,7 +82,7 @@ const PricingSection = () => {
       image: "/icons/light_icon.png",
     },
     {
-      name: "Lüks",
+      name: "Konfor",
       price: "$99",
       period: "/ay",
       description: "Tam donanımlı, yaşamaya hazır premium İVO Bio deneyimi.",

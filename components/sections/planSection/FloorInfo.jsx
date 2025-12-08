@@ -12,22 +12,22 @@ const FloorInfo = () => {
   const floorData = [
     {
       id: 1,
-      image: "/kesitler/ORTOGRAFİK-1 arkaplansız.webp",
-      title: "İVO Bio Başlangıç",
+      image: "/kesitler/ortografik-1-arkaplansiz.webp",
+      title: "İVO Bio Temel",
       description:
         "Kendi tarzını oluşturmak isteyenler için tasarlanmış bu başlangıç paketi, kullanıcılara özgür bir alan sunar. Dış kabuğu tamamlanmış ve elektrik ile su tesisatları hazır bir şekilde teslim edilen yapı, tamamen boş iç hacmi sayesinde dilediğiniz gibi düzenlenebilir. Böylece dekorasyondan oda yerleşimine kadar her detayı kendi zevkinize göre şekillendirme fırsatı elde edersiniz. Uygun maliyetiyle hem pratik hem de kişiselleştirilebilir bir başlangıç arayanlar için ideal bir çözümdür.",
     },
     {
       id: 2,
-      image: "/kesitler/ORTOGRAFİK-2 arkaplansız.webp",
+      image: "/kesitler/ortografik-2-arkaplansiz.webp",
       title: "İVO Bio Ekonomik",
       description:
         "Hızlı bir şekilde yerleşmek isteyenler için tasarlanan bu paket, pratik ve konforlu bir çözüm sunar. Elektrik ve su tesisatlarının eksiksiz olması, boya, alçı ve duvar işlemlerinin tamamlanması sayesinde zaman kaybetmeden kullanıma hazır bir yaşam alanı elde edersiniz. Mutfak bölümü ve sabit mobilyaların kurulmuş olması, kendi hareketli mobilyalarınızı getirip hemen yerleşmenize imkân tanır. Böylece zahmetsiz, düzenli ve dengeli bir yaşam ortamına hızlıca kavuşabilirsiniz.",
     },
     {
       id: 3,
-      image: "/kesitler/ORTOGRAFİK-3 arkaplansız.webp",
-      title: "İVO Bio Lüks",
+      image: "/kesitler/ortografik-3-arkaplansiz.webp",
+      title: "İVO Bio Konfor",
       description:
         "Tam donanımlı ve yaşamaya tamamen hazır bu premium paket, en yüksek konforu arayanlar için tasarlanmıştır. Tüm tesisatlar ve iç işçilik özenle tamamlanmış olup, sabit ve hareketli mobilyalar dâhil eksiksiz bir yaşam alanı sunar. Modern mutfağı ve özenle düzenlenmiş iç mekânıyla hemen taşınıp zahmetsizce yaşamaya başlayabilirsiniz. Konforu, kaliteyi ve hazır bir yaşam deneyimini bir arada isteyenler için ideal bir çözümdür.",
     },

@@ -15,14 +15,14 @@ export default function FloorPlan() {
       id: 1,
       top: "55%",
       left: "28%",
-      title: "Salon - 28.8 m²",
+      title: "Yaşam Alanı - 28.8 m²",
       desc: "Geniş ve ferah yaşam alanı, doğal ışığın hâkim olduğu konforlu bir atmosfer sunar.",
     },
     {
       id: 2,
       top: "45%",
       left: "50%",
-      title: "Giriş Salonu - 9.18 m²",
+      title: "Giriş Koridoru - 9.18 m²",
       desc: "Evin ilk izlenimini güçlendiren fonksiyonel ve rahat bir karşılama alanıdır.",
     },
     {
@@ -44,6 +44,13 @@ export default function FloorPlan() {
       top: "48%",
       left: "78%",
       title: "Ebeveyn Yatak Odası - 13.30 m²",
+      desc: "Geniş kullanım alanı ve düzenli depolama fırsatlarıyla konforlu bir özel yaşam odasıdır.",
+    },
+    {
+      id: 6,
+      top: "42%",
+      left: "68%",
+      title: "Tesisat Odası - 3,25 m²",
       desc: "Geniş kullanım alanı ve düzenli depolama fırsatlarıyla konforlu bir özel yaşam odasıdır.",
     },
   ];
@@ -94,7 +101,7 @@ export default function FloorPlan() {
       >
         {/* Container'a aspect-ratio ekleyerek responsive boyutlandırma */}
         <Image
-          src="/kesitler/PLAN-3 arkaplansız.webp"
+          src="/kesitler/plan-3-arkaplansiz.webp"
           alt="İç mimari plan"
           fill
           className="object-contain"
@@ -179,6 +186,9 @@ export default function FloorPlan() {
 
             <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
               5-) Ebeveyn Y.Odası 13.3 m²
+            </li>
+            <li className="p-2 flex items-center justify-center ">
+              6-) Tesisat Odası 3.25 m²
             </li>
           </ul>
         </div>
