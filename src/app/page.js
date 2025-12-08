@@ -48,7 +48,7 @@ const Home = () => {
       <HeaderSection />
       <ManipulateModel />
       <IntroSection />
-      <ScrollVideo />
+      {/* <ScrollVideo /> */}
       <VideoIntroSection />
       <BasicSection1 />
       <TechnicalSection />
