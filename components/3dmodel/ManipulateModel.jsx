@@ -10,42 +10,21 @@ function Model() {
 }
 
 export default function ManipulateModel() {
-  // const sections = [
-  //   {
-  //     highlight: "İNOVASYON",
-  //     title: "Biyoteknoloji Çözümleri",
-  //     description:
-  //       "Modern biyoteknoloji ile doğayı bir araya getiren yenilikçi çözümlerimiz, sürdürülebilir bir gelecek için tasarlandı.",
-  //   },
-  //   {
-  //     highlight: "TEKNOLOJİ",
-  //     title: "İleri Düzey Araştırma",
-  //     description:
-  //       "Laboratuvarlarımızda geliştirdiğimiz son teknoloji ürünler, endüstride yeni standartlar belirliyor.",
-  //   },
-  //   {
-  //     highlight: "SÜRDÜRÜLEBİLİRLİK",
-  //     title: "Çevre Dostu Üretim",
-  //     description:
-  //       "Doğaya saygılı üretim süreçlerimizle, gelecek nesillere yaşanabilir bir dünya bırakıyoruz.",
-  //   },
-  // ];
-
   const sections = [
     {
       title: "Modern Tasarım",
       description:
-        "IVO Bio’nun çağdaş mimarisi, estetik çizgileri ile fonksiyonelliği bir araya getiriyor.",
+        "İVO Bio’nun çağdaş mimarisi, estetik çizgileri ile fonksiyonelliği bir araya getiriyor.",
     },
     {
-      title: "Modüler Yapı Sistemi",
+      title: "Modüler Sistem",
       description:
-        "Akıllı modüler yapısı sayesinde IVO Bio, farklı ihtiyaçlara hızla uyum sağlayan esnek bir yaşam alanı sunar.",
+        "Akıllı modüler yapısı sayesinde İVO Bio, farklı ihtiyaçlara hızla uyum sağlayan esnek bir yaşam alanı sunar.",
     },
     {
-      title: "Yapısal Akıl ve Teknoloji",
+      title: "Yüksek Teknoloji",
       description:
-        "Mükemmel mühendislik yaklaşımıyla geliştirilen IVO Bio, yalın mimariyi modern yapısal çözümlerle birleştiriyor.",
+        "Mükemmel mühendislik yaklaşımıyla geliştirilen İVO Bio, yalın mimariyi modern yapısal çözümlerle birleştiriyor.",
     },
   ];
 
@@ -87,16 +66,16 @@ export default function ManipulateModel() {
 
       {/* Sidebar - Sağ taraf (1/4) */}
       <div className="w-1/4 h-full rounded-l-[3rem] shadow-2xl overflow-y-auto bg-gri font-quicksand">
-        <div className="min-h-full flex flex-col justify-center p-8 py-16 space-y-12">
+        <div className="min-h-full flex flex-col justify-center p-8 py-8 space-y-8">
           {sections.map((section, index) => (
             <div key={index}>
               {/* Title */}
-              <h2 className="text-white text-2xl font-bold mb-4 leading-tight">
+              <h2 className="text-white text-3xl font-bold mb-2 leading-tight">
                 {section.title}
               </h2>
 
               {/* Description */}
-              <p className=" leading-relaxed text-kahverengi">
+              <p className="leading-relaxed text-xl text-kahverengi">
                 {section.description}
               </p>
 
