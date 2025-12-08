@@ -5,10 +5,12 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const HeaderSection = () => {
+  const t = useTranslations("header");
   const headerRef = useRef(null);
   const textRef = useRef(null);
   const backgroundRef = useRef(null);
@@ -108,7 +110,18 @@ const HeaderSection = () => {
           className="text-[14vw] md:text-[8vw] lg:text-[130px]
  font-semibold tracking-wide leading-32 text-kahverengi select-none font-quicksand"
         >
-          Doğal yaşam <br /> çizginiz...
+          {t("tagline")
+            .split(" ")
+            .map((word, index, array) =>
+              index === Math.floor(array.length / 2) ? (
+                <span key={index}>
+                  <br />
+                  {word}{" "}
+                </span>
+              ) : (
+                <span key={index}>{word} </span>
+              )
+            )}
         </p>
       </div>
     </div>

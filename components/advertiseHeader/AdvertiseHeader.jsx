@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { TiThMenu } from "react-icons/ti";
-import LanguageToggle from "../languageToogle/LanguageToogle";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 
 const AdvertiseHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -126,7 +126,7 @@ const AdvertiseHeader = () => {
 
           {/* Sağ Kısım: Menü Butonu */}
           <div className="flex items-center justify-center gap-4">
-            <LanguageToggle />
+            <LanguageSwitcher />
             <div className="flex flex-col items-end relative">
               <button
                 onClick={toggleMenu}

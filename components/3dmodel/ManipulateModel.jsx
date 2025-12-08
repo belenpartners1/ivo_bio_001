@@ -3,6 +3,7 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF, Environment } from "@react-three/drei";
 import { Suspense } from "react";
+import { useTranslations } from "next-intl";
 
 function Model() {
   const { scene } = useGLTF("/3dmodels/ivo_bio_3d2.glb");
@@ -10,21 +11,19 @@ function Model() {
 }
 
 export default function ManipulateModel() {
+  const t = useTranslations("manipulateModel");
   const sections = [
     {
-      title: "Modern Tasarım",
-      description:
-        "İVO Bio’nun çağdaş mimarisi, estetik çizgileri ile fonksiyonelliği bir araya getiriyor.",
+      titleKey: "modernDesign.title",
+      descriptionKey: "modernDesign.description",
     },
     {
-      title: "Modüler Sistem",
-      description:
-        "Akıllı modüler yapısı sayesinde İVO Bio, farklı ihtiyaçlara hızla uyum sağlayan esnek bir yaşam alanı sunar.",
+      titleKey: "modularSystem.title",
+      descriptionKey: "modularSystem.description",
     },
     {
-      title: "Yüksek Teknoloji",
-      description:
-        "Mükemmel mühendislik yaklaşımıyla geliştirilen İVO Bio, yalın mimariyi modern yapısal çözümlerle birleştiriyor.",
+      titleKey: "highTechnology.title",
+      descriptionKey: "highTechnology.description",
     },
   ];
 
@@ -71,12 +70,12 @@ export default function ManipulateModel() {
             <div key={index}>
               {/* Title */}
               <h2 className="text-white text-4xl font-bold mb-2 leading-tight">
-                {section.title}
+                {t(section.titleKey)}
               </h2>
 
               {/* Description */}
               <p className="leading-relaxed text-2xl text-kahverengi">
-                {section.description}
+                {t(section.descriptionKey)}
               </p>
 
               {/* Decorative line */}

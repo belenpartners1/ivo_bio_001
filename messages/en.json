@@ -1,0 +1,19 @@
+{
+  "header": {
+    "tagline": "Your natural life line..."
+  },
+  "manipulateModel": {
+    "modernDesign": {
+      "title": "Modern Design",
+      "description": "IVO Bio's contemporary architecture combines aesthetic lines with functionality."
+    },
+    "modularSystem": {
+      "title": "Modular System",
+      "description": "Thanks to its intelligent modular structure, IVO Bio offers a flexible living space that quickly adapts to different needs."
+    },
+    "highTechnology": {
+      "title": "High Technology",
+      "description": "Developed with a perfect engineering approach, IVO Bio combines minimalist architecture with modern structural solutions."
+    }
+  }
+}
