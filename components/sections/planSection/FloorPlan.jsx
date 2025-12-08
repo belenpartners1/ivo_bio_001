@@ -102,7 +102,7 @@ export default function FloorPlan() {
         {/* <p className="text-4xl">Yerleşim Planı</p> */}
       </div>
 
-      <div className="text-center text-kahverengi text-2xl font-quicksand max-w-4xl mt-10">
+      <div className="text-center text-kahverengi text-4xl font-quicksand max-w-4xl mt-10">
         <p>
           72.00 m² net kullanım alanına sahip İVO Bio, 90.00 m² brüt alana
           sahiptir. 2+1 açık mutfak konseptinde özenle tasarlanmıştır. Ferah

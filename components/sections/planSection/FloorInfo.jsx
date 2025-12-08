@@ -122,10 +122,10 @@ const FloorInfo = () => {
                 className="w-full lg:w-1/5"
               >
                 <div className="space-y-4">
-                  <h3 className="text-3xl lg:text-4xl font-bold text-yesil text-center">
+                  <h3 className="text-3xl lg:text-6xl font-bold text-yesil text-center">
                     {floor.title}
                   </h3>
-                  <p className="text-lg text-kahverengi text-balance ">
+                  <p className="text-2xl text-kahverengi text-balance ">
                     {floor.description}
                   </p>
                 </div>
