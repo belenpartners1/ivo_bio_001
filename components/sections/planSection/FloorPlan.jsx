@@ -94,6 +94,15 @@ export default function FloorPlan() {
         </h2>
         {/* <p className="text-4xl">Yerleşim Planı</p> */}
       </div>
+
+      <div className="text-center text-kahverengi text-2xl font-quicksand max-w-4xl mt-10">
+        <p>
+          67.25 m2 alana sahip İVO Bio 2+1 açık mutfak konseptinde özenle
+          tasarlanmıştır. Geniş oturma hacmi ve depolama alanlarıyla birlikte 4
+          kişilik bir ailenin günlük tüm ihtiyaçlarını karşılayacak bir şekilde
+          dizayn edilmiştir.
+        </p>
+      </div>
       <div
         ref={containerRef}
         className="relative w-full mx-auto aspect-[3/2] flex flex-col justify-center items-center"
