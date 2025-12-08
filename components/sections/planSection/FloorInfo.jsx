@@ -84,7 +84,11 @@ const FloorInfo = () => {
   }, []);
 
   return (
-    <div ref={sectionRef} className="w-full bg-gri py-10 font-quicksand">
+    <div
+      ref={sectionRef}
+      className="w-full bg-gri py-10 font-quicksand"
+      id="modeller"
+    >
       <div className="max-w-10/12 mx-auto px-2">
         <div className="text-center mb-16 text-white">
           <h2 className="text-5xl md:text-[100px] font-bold mb-4">

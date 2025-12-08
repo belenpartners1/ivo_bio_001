@@ -23,12 +23,16 @@ const AdvertiseHeader = () => {
       id: "teknik",
     },
     {
-      name: "İVO Bio Kişisel",
-      id: "kisisel",
+      name: "İVO Bio Plan",
+      id: "plan",
     },
     {
       name: "İVO Bio Modelleri",
       id: "modeller",
+    },
+    {
+      name: "İVO Bio Kişisel",
+      id: "kisisel",
     },
     {
       name: "İletişim",

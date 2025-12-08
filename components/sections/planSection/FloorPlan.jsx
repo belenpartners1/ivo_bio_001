@@ -15,43 +15,50 @@ export default function FloorPlan() {
       id: 1,
       top: "55%",
       left: "28%",
-      title: "Yaşam Alanı - 28.30 m²",
+      title: "Yaşam Alanı - 28.50 m²",
       desc: "Geniş ve ferah yaşam alanı, doğal ışığın hâkim olduğu konforlu bir atmosfer sunar.",
     },
     {
       id: 2,
       top: "45%",
       left: "50%",
-      title: "Giriş Koridoru - 8.75 m²",
+      title: "Giriş Holü, Koridor - 8.50 m²",
       desc: "Evin ilk izlenimini güçlendiren fonksiyonel ve rahat bir karşılama alanıdır.",
     },
     {
       id: 3,
       top: "65%",
       left: "52%",
-      title: "Yatak Odası - 6.90 m²",
+      title: "Yatak Odası - 7.00 m²",
       desc: "Dinlenme odaklı kompakt yapısıyla düzenli ve sakin bir yaşam alanı oluşturur.",
     },
     {
       id: 4,
       top: "65%",
       left: "68%",
-      title: "Banyo - 5.90 m²",
+      title: "Banyo - 6.00 m²",
       desc: "Modern ve ergonomik tasarımıyla günlük ihtiyaçlara pratik çözümler sunar.",
     },
     {
       id: 5,
       top: "48%",
       left: "78%",
-      title: "Ebeveyn Yatak Odası - 13.20 m²",
+      title: "Ebeveyn Yatak Odası - 13.00 m²",
       desc: "Geniş kullanım alanı ve düzenli depolama fırsatlarıyla konforlu bir özel yaşam odasıdır.",
     },
     {
       id: 6,
       top: "42%",
       left: "68%",
-      title: "Tesisat Odası - 3.00 m²",
+      title: "Teknik Odası - 3.00 m²",
       desc: "Erişime uygun teknik alan.",
+    },
+    {
+      id: 7,
+      top: "32%",
+      left: "58%",
+      title: "Giriş Sahanlığı - 6.00 m²",
+      desc: "",
     },
   ];
 
@@ -87,7 +94,7 @@ export default function FloorPlan() {
   );
 
   return (
-    <div className="flex flex-col justify-center items-center ">
+    <div className="flex flex-col justify-center items-center" id="plan">
       <div className="text-center text-white font-quicksand">
         <h2 className="text-5xl md:text-[100px] font-bold mb-4">
           <span className="text-yesil">İVO Bio</span> Yerleşim Planı
@@ -97,19 +104,19 @@ export default function FloorPlan() {
 
       <div className="text-center text-kahverengi text-2xl font-quicksand max-w-4xl mt-10">
         <p>
-          66.05 m² alana sahip İVO Bio, 2+1 açık mutfak konseptinde özenle
-          tasarlanmıştır. Ferah oturma alanı ve işlevsel depolama çözümleriyle
-          konforlu bir yaşam sunacak şekilde planlanmıştır.
+          72.00 m² net kullanım alanına sahip İVO Bio, 90.00 m² brüt alana
+          sahiptir. 2+1 açık mutfak konseptinde özenle tasarlanmıştır. Ferah
+          oturma alanı ve işlevsel depolama çözümleriyle konforlu bir yaşam
+          sunacak şekilde planlanmıştır.
         </p>
       </div>
       <div
         ref={containerRef}
         className="relative w-full mx-auto aspect-[3/2] flex flex-col justify-center items-center"
-        id="modeller"
       >
         {/* Container'a aspect-ratio ekleyerek responsive boyutlandırma */}
         <Image
-          src="/kesitler/plan-3-arkaplansiz.webp"
+          src="/kesitler/plan-3-arkaplansiz2.webp"
           alt="İç mimari plan"
           fill
           className="object-contain"
@@ -174,14 +181,14 @@ export default function FloorPlan() {
           </div>
         ))}
 
-        <div className="absolute -translate-x-1/2 -translate-y-1/2 top-5/6 left-1/2 text-gray-800 font-quicksand font-bold">
+        <div className="absolute -translate-x-1/2 -translate-y-1/2 top-5/6 left-1/2 text-gray-800 font-quicksand font-bold mt-2">
           <ul className="grid grid-cols-1 md:grid-cols-3 gap-1 rounded-2xl p-2">
             <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
-              1-) Salon 28.30 m²
+              1-) Yaşam Alanı 28.50 m²
             </li>
 
             <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
-              2-) Giriş Koridoru 8.75 m²
+              2-) Giriş Holü - Koridor 8.50 m²
             </li>
 
             <li className="p-2 flex items-center justify-center">
@@ -189,14 +196,23 @@ export default function FloorPlan() {
             </li>
 
             <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
-              4-) Banyo 5.90 m²
+              4-) Banyo 6.00 m²
             </li>
 
             <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
-              5-) Ebeveyn Y.Odası 13.20 m²
+              5-) Ebeveyn Y.Odası 13.00 m²
             </li>
             <li className="p-2 flex items-center justify-center ">
-              6-) Tesisat Odası 3.00 m²
+              6-) Teknik Odası 3.00 m²
+            </li>
+            <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
+              7-) Giriş Sahanlığı 6.00 m²
+            </li>
+            <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
+              8-) Net 72.00 m²
+            </li>
+            <li className="p-2 flex items-center justify-center ">
+              9-) Brüt 90.00 m²
             </li>
           </ul>
         </div>
