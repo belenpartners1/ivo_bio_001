@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { TiThMenu } from "react-icons/ti";
+import LanguageToggle from "../languageToogle/LanguageToogle";
 
 const AdvertiseHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -120,32 +121,35 @@ const AdvertiseHeader = () => {
           /> */}
 
           {/* Sağ Kısım: Menü Butonu */}
-          <div className="flex flex-col items-end relative">
-            <button
-              onClick={toggleMenu}
-              className={`bg-white/10 backdrop-blur-xl shadow-lg rounded-3xl border border-gri p-4 text-black cursor-pointer transition-colors duration-200 
+          <div className="flex items-center justify-center gap-4">
+            <LanguageToggle />
+            <div className="flex flex-col items-end relative">
+              <button
+                onClick={toggleMenu}
+                className={`bg-white/10 backdrop-blur-xl shadow-lg rounded-3xl border border-gri p-4 text-black cursor-pointer transition-colors duration-200 
                 ${isOpen ? "bg-white/20 border-white/40" : "hover:bg-white/15"} 
                 focus:outline-none focus:ring-2 focus:ring-gri`}
-            >
-              <TiThMenu size={20} className="text-black/80" />
-            </button>
+              >
+                <TiThMenu size={20} className="text-black/80" />
+              </button>
 
-            {/* Animasyonlu Menü İçeriği */}
-            <div
-              ref={menuRef}
-              style={{ height: 0, opacity: 0 }}
-              className="absolute top-full mt-2 w-auto min-w-[160px] overflow-hidden 
+              {/* Animasyonlu Menü İçeriği */}
+              <div
+                ref={menuRef}
+                style={{ height: 0, opacity: 0 }}
+                className="absolute top-full mt-2 w-auto min-w-[160px] overflow-hidden 
                          bg-white/10 backdrop-blur-xl shadow-2xl rounded-3xl border border-white/20"
-            >
-              {menuItems.map((item, index) => (
-                <div
-                  key={index}
-                  onClick={() => handleScrollToSection(item.id)}
-                  className="p-4 text-black font-quicksand font-semibold text-center cursor-pointer whitespace-nowrap hover:bg-white/20 transition-colors duration-150 border-b last:border-b-0 border-black"
-                >
-                  {item.name}
-                </div>
-              ))}
+              >
+                {menuItems.map((item, index) => (
+                  <div
+                    key={index}
+                    onClick={() => handleScrollToSection(item.id)}
+                    className="p-4 text-black font-quicksand font-semibold text-center cursor-pointer whitespace-nowrap hover:bg-white/20 transition-colors duration-150 border-b last:border-b-0 border-black"
+                  >
+                    {item.name}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
