@@ -5,7 +5,7 @@ import { OrbitControls, useGLTF, Environment } from "@react-three/drei";
 import { Suspense } from "react";
 
 function Model() {
-  const { scene } = useGLTF("/3dmodels/ivo_bio_3d.glb");
+  const { scene } = useGLTF("/3dmodels/ivo_bio_3d2.glb");
   return <primitive object={scene} scale={1} />;
 }
 
@@ -37,7 +37,7 @@ export default function ManipulateModel() {
           e.stopPropagation();
         }}
       >
-        <Canvas camera={{ position: [-10, 4, 8], fov: 60 }}>
+        <Canvas camera={{ position: [-8, 6, 14], fov: 60 }}>
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 5]} intensity={1} />
 
