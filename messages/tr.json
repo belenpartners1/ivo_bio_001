@@ -16,6 +16,50 @@
       "description": "Mükemmel mühendislik yaklaşımıyla geliştirilen İVO Bio, yalın mimariyi modern yapısal çözümlerle birleştiriyor."
     }
   },
-
-  "": {}
+  "introduceIvoBio": {
+    "header1": "İVO Bio",
+    "header2": "İle Tanışın",
+    "section1": {
+      "header": "Doğayı Dinle",
+      "title": "Sizin için tasarlanan modern yaşam alanları ile, doğal çevreyle uyum içinde yaşayın.Göz alıcı peyzaj düzenlemeleriyle, evinizin her köşesi doğanın sesiyle dolacak."
+    },
+    "section2": {
+      "header": "Sürdürülebilir Yaşam",
+      "title": "Enerji verimliliği ve çevre dostu tasarımlarla geleceği bugünden inşa ediyoruz.Doğal kaynakları verimli kullanarak, sağlıklı ve dengeli bir yaşam alanı yaratıyoruz."
+    },
+    "section3": {
+      "header": "Yenilikçi Tasarım",
+      "title": "Eşsiz mimarisiyle dikkat çeken İVO Bio, estetik ve fonksiyonelliği bir araya getiriyor.Her ayrıntı, kullanıcı deneyimini zenginleştirerek yaşam alanlarınıza şıklık katıyor."
+    },
+    "section4": {
+      "header": "Sadelik & Konfor",
+      "title": "Ferah ve dingin bir yaşam alanı, sade tasarım detayları ve huzurlu bir atmosferle İVO Bio’da konforlu bir yaşam deneyimi sizleri bekliyor."
+    },
+    "section5": {
+      "header": "Doğallık ve Sağlık",
+      "title": "Temiz hava ve doğallık, sağlıklı bir yaşamın temelini oluşturur. İVO Bio, yaz ve kış dengesini mükemmel bir şekilde kurarak her mevsimde konforu garanti ediyor."
+    },
+    "section6": {
+      "header": "Zarif İç Mekanlar",
+      "title": "Doğal malzemelerle tasarlanmış iç mekanlar, sıcak ve davetkar bir atmosfer sunar. Her detayında doğallık hissi, İVO Bio'da yaşam alanlarınızı benzersiz kılar."
+    },
+    "section7": {
+      "header": "Akıllı Yaşam, Akıllı Ev",
+      "title": "İVO Bio’nun akıllı ev sistemi, yaşamınızı daha konforlu ve kontrollü hale getirir. Tek dokunuşla eviniz, sizin ihtiyaçlarınıza uyum sağlar ve günlük hayatınızı kolaylaştırır."
+    },
+    "section8": {
+      "header": "Modüler ve Hızlı Çözümler",
+      "title": "İVO Bio, farklı yaşam tarzlarına uyum sağlayan esnek tasarımıyla ihtiyaçlarınıza tam olarak karşılık verir. Hızlı teslimat ve kurulum sayesinde hayalinizdeki yaşam alanına kısa sürede kavuşun."
+    }
+  },
+  "basicSection": {
+    "firstOne": {
+      "header": "İVO Bio",
+      "title": "Ekonomik Villa Yaşamı"
+    },
+    "secondOne": {
+      "header": "Yaşama Dair Herşey",
+      "title": "Farkındalık Mutluluk Huzur"
+    }
+  }
 }

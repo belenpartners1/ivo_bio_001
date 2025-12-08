@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -12,6 +13,8 @@ const BasicSection1 = () => {
   const title2Ref = useRef(null);
   const leftLineRef = useRef(null);
   const rightLineRef = useRef(null);
+
+  const t = useTranslations("basicSection.firstOne");
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -92,12 +95,12 @@ const BasicSection1 = () => {
       <div className="flex flex-col gap-2 text-center">
         <p
           ref={title1Ref}
-          className="text-[120px] text-yesil font-quicksand font-medium"
+          className="text-[120px] text-yesil font-quicksand font-bold"
         >
-          İVO Bio
+          {t("header")}
         </p>
         <p ref={title2Ref} className="text-[80px] font-quicksand text-white">
-          Ekonomik Villa Yaşamı
+          {t("title")}
         </p>
       </div>
 

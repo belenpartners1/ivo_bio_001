@@ -15,5 +15,51 @@
       "title": "High Technology",
       "description": "Developed with a perfect engineering approach, IVO Bio combines minimalist architecture with modern structural solutions."
     }
+  },
+  "introduceIvoBio": {
+    "header1": "IVO Bio",
+    "header2": "Meet The Future",
+    "section1": {
+      "header": "Listen to Nature",
+      "title": "Live in harmony with the natural environment through modern living spaces designed just for you. With stunning landscape arrangements, every corner of your home will be filled with the sound of nature."
+    },
+    "section2": {
+      "header": "Sustainable Living",
+      "title": "We build the future today with energy-efficient and eco-friendly designs. By using natural resources efficiently, we create a healthy and balanced living environment."
+    },
+    "section3": {
+      "header": "Innovative Design",
+      "title": "Standing out with its unique architecture, İVO Bio brings aesthetics and functionality together. Every detail enriches the user experience, adding elegance to your living spaces."
+    },
+    "section4": {
+      "header": "Simplicity & Comfort",
+      "title": "A spacious and serene living area, combined with minimal design details and a peaceful atmosphere, awaits you at İVO Bio for a comfortable lifestyle."
+    },
+    "section5": {
+      "header": "Nature & Well-Being",
+      "title": "Clean air and natural surroundings form the foundation of a healthy life. İVO Bio perfectly balances summer and winter conditions, guaranteeing comfort in every season."
+    },
+    "section6": {
+      "header": "Elegant Interiors",
+      "title": "Interiors designed with natural materials offer a warm and inviting atmosphere. The feeling of naturalness in every detail makes your living spaces at İVO Bio truly unique."
+    },
+    "section7": {
+      "header": "Smart Living, Smart Home",
+      "title": "İVO Bio’s smart home system makes your life more comfortable and controlled. With a single touch, your home adapts to your needs and simplifies your daily routine."
+    },
+    "section8": {
+      "header": "Modular and Fast Solutions",
+      "title": "With its flexible design that adapts to different lifestyles, İVO Bio meets your needs perfectly. Thanks to fast delivery and installation, you can reach your dream living space in no time."
+    }
+  },
+  "basicSection": {
+    "firstOne": {
+      "header": "IVO Bio",
+      "title": "Affordable Villa Living"
+    },
+    "secondOne": {
+      "header": "Everything About Living",
+      "title": "Awareness Happiness Peace"
+    }
   }
 }

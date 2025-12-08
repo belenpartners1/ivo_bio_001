@@ -2,12 +2,15 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const IntroSection = () => {
   const sectionsRef = useRef([]);
   const titleRef = useRef(null);
+
+  const t = useTranslations("introduceIvoBio");
 
   useEffect(() => {
     // Başlık animasyonu - ilk card geldiğinde kaybolsun
@@ -52,59 +55,51 @@ const IntroSection = () => {
 
   const sections = [
     {
-      title: "Doğayı Dinle",
-      subtitle:
-        "Sizin için tasarlanan modern yaşam alanları ile, doğal çevreyle uyum içinde yaşayın.Göz alıcı peyzaj düzenlemeleriyle, evinizin her köşesi doğanın sesiyle dolacak.",
+      title: "section1.header",
+      subtitle: "section1.title",
       image: "/info1/1.webp",
       position: "left",
     },
     {
-      title: "Sürdürülebilir Yaşam",
-      subtitle:
-        "Enerji verimliliği ve çevre dostu tasarımlarla geleceği bugünden inşa ediyoruz.Doğal kaynakları verimli kullanarak, sağlıklı ve dengeli bir yaşam alanı yaratıyoruz.",
+      title: "section2.header",
+      subtitle: "section2.title",
       image: "/info1/2.webp",
       position: "right",
     },
     {
-      title: "Yenilikçi Tasarım",
-      subtitle:
-        "Eşsiz mimarisiyle dikkat çeken İVO Bio, estetik ve fonksiyonelliği bir araya getiriyor.Her ayrıntı, kullanıcı deneyimini zenginleştirerek yaşam alanlarınıza şıklık katıyor.",
+      title: "section3.header",
+      subtitle: "section3.title",
       image: "/info1/3.webp",
       position: "left",
     },
     {
-      title: "Sadelik & Konfor",
-      subtitle:
-        "Ferah ve dingin bir yaşam alanı, sade tasarım detayları ve huzurlu bir atmosferle İVO Bio’da konforlu bir yaşam deneyimi sizleri bekliyor.",
+      title: "section4.header",
+      subtitle: "section4.title",
       image: "/info1/4.webp",
       position: "right",
     },
     {
-      title: "Doğallık ve Sağlık",
-      subtitle:
-        "Temiz hava ve doğallık, sağlıklı bir yaşamın temelini oluşturur. İVO Bio, yaz ve kış dengesini mükemmel bir şekilde kurarak her mevsimde konforu garanti ediyor.",
+      title: "section5.header",
+      subtitle: "section5.title",
       image: "/info1/5.webp",
       position: "left",
     },
     {
-      title: "Zarif İç Mekanlar",
-      subtitle:
-        "Doğal malzemelerle tasarlanmış iç mekanlar, sıcak ve davetkar bir atmosfer sunar. Her detayında doğallık hissi, İVO Bio'da yaşam alanlarınızı benzersiz kılar.",
+      title: "section6.header",
+      subtitle: "section6.title",
       image: "/info1/8.webp",
       position: "right",
     },
     {
-      title: "Akıllı Yaşam, Akıllı Ev",
-      subtitle:
-        "İVO Bio’nun akıllı ev sistemi, yaşamınızı daha konforlu ve kontrollü hale getirir. Tek dokunuşla eviniz, sizin ihtiyaçlarınıza uyum sağlar ve günlük hayatınızı kolaylaştırır.",
+      title: "section7.header",
+      subtitle: "section7.title",
       image: "/info1/7.webp",
       position: "left",
     },
 
     {
-      title: "Modüler ve Hızlı Çözümler",
-      subtitle:
-        "İVO Bio, farklı yaşam tarzlarına uyum sağlayan esnek tasarımıyla ihtiyaçlarınıza tam olarak karşılık verir. Hızlı teslimat ve kurulum sayesinde hayalinizdeki yaşam alanına kısa sürede kavuşun.",
+      title: "section8.header",
+      subtitle: "section8.title",
       image: "/info1/6.webp",
       position: "right",
     },
@@ -118,7 +113,8 @@ const IntroSection = () => {
         className="h-screen flex flex-col items-center justify-center gap-10 sticky top-0 z-10 p-20"
       >
         <h1 className="font-quicksand text-[170px] font-bold text-center leading-tight text-white">
-          <span className="text-yesil">İVO Bio</span> <br /> İle Tanışın
+          <span className="text-yesil"> {t("header1")}</span> <br />
+          {t("header2")}
         </h1>
         {/* <p className=" max-w-4xl text-justify font-quicksand text-2xl font-bold text-kahverengi">
           İVO Bio, ister şehir merkezinde ister kırsalda, isterse ekstrem iklim
@@ -145,10 +141,10 @@ const IntroSection = () => {
           {section.position === "left" && (
             <div className="flex-2 flex flex-col gap-6">
               <h2 className="text-6xl font-bold text-white font-quicksand text-left">
-                {section.title}
+                {t(section.title)}
               </h2>
               <p className="text-2xl text-white font-quicksand font-semibold ">
-                {section.subtitle}
+                {t(section.subtitle)}
               </p>
             </div>
           )}
@@ -167,10 +163,10 @@ const IntroSection = () => {
           {section.position === "right" && (
             <div className="flex-2 flex flex-col gap-6">
               <h2 className="text-6xl font-bold text-white font-quicksand text-left">
-                {section.title}
+                {t(section.title)}
               </h2>
               <p className="text-xl text-white font-quicksand font-semibold">
-                {section.subtitle}
+                {t(section.subtitle)}
               </p>
             </div>
           )}
