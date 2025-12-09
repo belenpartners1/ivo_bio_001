@@ -105,9 +105,9 @@ const FloorInfo = () => {
               {/* Resim - Sol taraf (2/3) */}
               <div
                 ref={(el) => (imagesRef.current[index] = el)}
-                className="w-full lg:w-4/5"
+                className="w-full lg:w-4/5 "
               >
-                <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-white">
                   <img
                     src={floor.image}
                     alt={floor.title}

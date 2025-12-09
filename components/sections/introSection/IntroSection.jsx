@@ -165,7 +165,7 @@ const IntroSection = () => {
               <h2 className="text-6xl font-bold text-white font-quicksand text-left">
                 {t(section.title)}
               </h2>
-              <p className="text-xl text-white font-quicksand font-semibold">
+              <p className="text-2xl text-white font-quicksand font-semibold">
                 {t(section.subtitle)}
               </p>
             </div>

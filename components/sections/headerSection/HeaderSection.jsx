@@ -112,8 +112,8 @@ const HeaderSection = () => {
         >
           {t("tagline")
             .split(" ")
-            .map((word, index, array) =>
-              index === Math.floor(array.length / 2) ? (
+            .map((word, index) =>
+              index === 2 ? (
                 <span key={index}>
                   <br />
                   {word}{" "}

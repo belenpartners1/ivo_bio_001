@@ -5,8 +5,35 @@ import { useRouter, usePathname } from "@/i18n/routing";
 import { useState, useTransition } from "react";
 
 const languages = [
-  { code: "tr", name: "Türkçe", flag: "🇹🇷" },
-  { code: "en", name: "English", flag: "🇬🇧" },
+  {
+    code: "tr",
+    name: "Türkçe",
+    flag: (
+      <svg className="w-6 h-4" viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+        <rect width="36" height="24" fill="#E30A17"/>
+        <circle cx="12" cy="12" r="5" fill="white"/>
+        <circle cx="13.5" cy="12" r="4" fill="#E30A17"/>
+        <polygon points="19,9 17,11 18.5,13 16,12 15,14.5 14,12 11.5,13 13,11 12,9 14,10.5" fill="white"/>
+      </svg>
+    )
+  },
+  {
+    code: "en",
+    name: "English",
+    flag: (
+      <svg className="w-6 h-4" viewBox="0 0 60 30" xmlns="http://www.w3.org/2000/svg">
+        <clipPath id="s"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
+        <clipPath id="t"><path d="M30,15 h30 v15 z v-30 h-30 z h-30 v15 z v-30 h30 z"/></clipPath>
+        <g clipPath="url(#s)">
+          <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+          <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" strokeWidth="6"/>
+          <path d="M0,0 L60,30 M60,0 L0,30" clipPath="url(#t)" stroke="#C8102E" strokeWidth="4"/>
+          <path d="M30,0 v30 M0,15 h60" stroke="#fff" strokeWidth="10"/>
+          <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" strokeWidth="6"/>
+        </g>
+      </svg>
+    )
+  },
   // { code: 'ar', name: 'العربية', flag: '🇸🇦' }
 ];
 
@@ -34,7 +61,7 @@ export default function LanguageSwitcher() {
         disabled={isPending}
         className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-200 border border-white/20"
       >
-        <span className="text-xl">{currentLanguage?.flag}</span>
+        <span className="flex items-center">{currentLanguage?.flag}</span>
         <span className="text-gray-800  ">{currentLanguage?.name}</span>
         <svg
           className={`w-4 h-4 transition-transform ${
@@ -71,7 +98,7 @@ export default function LanguageSwitcher() {
                     : ""
                 }`}
               >
-                <span className="text-xl">{language.flag}</span>
+                <span className="flex items-center">{language.flag}</span>
                 <span className="text-sm text-gray-800">{language.name}</span>
                 {currentLocale === language.code && (
                   <svg

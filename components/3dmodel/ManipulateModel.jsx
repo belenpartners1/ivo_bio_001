@@ -69,12 +69,12 @@ export default function ManipulateModel() {
           {sections.map((section, index) => (
             <div key={index}>
               {/* Title */}
-              <h2 className="text-white text-4xl font-bold mb-2 leading-tight">
+              <h2 className="text-white text-3xl font-bold mb-2 leading-tight">
                 {t(section.titleKey)}
               </h2>
 
               {/* Description */}
-              <p className="leading-relaxed text-2xl text-kahverengi">
+              <p className="leading-relaxed text-xl text-kahverengi">
                 {t(section.descriptionKey)}
               </p>
 

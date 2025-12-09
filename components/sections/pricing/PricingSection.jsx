@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 
 const PricingSection = () => {
@@ -65,6 +66,7 @@ const PricingSection = () => {
         "Uygun maliyetli başlangıç seviyesi",
       ],
       image: "/icons/empty_icon.png",
+      planImage: "/kesitler/plan-1-arkaplansiz.webp",
     },
     {
       name: "Ekonomik",
@@ -80,6 +82,7 @@ const PricingSection = () => {
         "Konforlu ve dengeli yaşam paketi",
       ],
       image: "/icons/light_icon.png",
+      planImage: "/kesitler/plan-2-arkaplansiz.webp",
     },
     {
       name: "Konfor",
@@ -94,6 +97,7 @@ const PricingSection = () => {
         "En yüksek konfor seviyesinde tam hazır yaşam çözümü",
       ],
       image: "/icons/full_icon.png",
+      planImage: "/kesitler/plan-3-arkaplansiz.webp",
     },
   ];
 
@@ -133,6 +137,16 @@ const PricingSection = () => {
                   <p className="h-12 text-xl text-center mt-2">
                     {plan.description}
                   </p>
+
+                  <div>
+                    <Image
+                      src={plan.planImage}
+                      alt="arrow"
+                      width={1920}
+                      height={1080}
+                      className="w-96"
+                    />
+                  </div>
 
                   <ul className="space-y-1 text-left">
                     {plan.features.map((feature, i) => (
