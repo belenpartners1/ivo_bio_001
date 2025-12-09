@@ -2,12 +2,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ProductColorSelector = () => {
   const [color, setColor] = useState("blue");
   const containerRef = useRef(null);
+  const t = useTranslations("colorSelector");
 
   const variants = {
     blue: "/blue.webp",
@@ -48,17 +50,11 @@ const ProductColorSelector = () => {
       <div className="h-screen flex flex-col gap-4 text-center items-center justify-between col-span-1 text-gray-500 px-4 py-60">
         {/* Product Name */}
         <h1 className="text-4xl font-bold ">
-          İVO Bio'yu Kendi Zevkine Göre Baştan Yarat <br /> İVO Bio'nu
-          Özelleştir
+          {t("title")} <br /> {t("subtitle")}
         </h1>
         <div className="bg-white w-full h-[1px]"></div>
-        <p className="text-2xl text-left font-medium">
-          Lütfen Kabin Renginizi Seciniz
-        </p>
-        <p className="text-lg text-left">
-          Yaşadığınız yeri renklendirin, ruhunuzu ortaya koyun. Kabin renginiz,
-          iç dünyanızı dışa yansıtan bir dokunuş olsun.
-        </p>
+        <p className="text-2xl text-left font-medium">{t("selectColor")}</p>
+        <p className="text-lg text-left">{t("description")}</p>
 
         {/* Color Options */}
         <div className="flex gap-4">

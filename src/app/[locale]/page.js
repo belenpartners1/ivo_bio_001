@@ -20,6 +20,7 @@ import ScrollVideo from "../../../components/scrollVideo/ScrollVideo";
 import PricingSection from "../../../components/sections/pricing/PricingSection";
 import PlanSection from "../../../components/sections/planSection/PlanSection";
 import ManipulateModel from "../../../components/3dmodel/ManipulateModel";
+import Yekpare from "../../../components/sections/yekpareSection/Yekpare";
 
 const Home = () => {
   useEffect(() => {
@@ -53,6 +54,7 @@ const Home = () => {
       <BasicSection1 />
       <TechnicalSection />
       <TwoTypeSection />
+      <Yekpare />
       <BasicSection2 />
       {/* <HorizontalScroll /> */}
       <PlanSection />

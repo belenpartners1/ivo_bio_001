@@ -61,5 +61,276 @@
       "header": "Everything About Living",
       "title": "Awareness Happiness Peace"
     }
+  },
+  "technicalData": [
+    {
+      "id": 1,
+      "title": "IVO Bio Technical",
+      "description": "Produced with organic composite building technology compatible with the natural environment, IVO Bio offers an 85 m² modern and functional 2+1 living space. <br /> <br />  • 1700 cm length <br /> • 530 cm width <br /> • 360 cm height",
+      "video": "/infography/001.mp4",
+      "videoUrl": "https://www.youtube.com/watch?v=I1unv9CqMNA"
+    },
+    {
+      "id": 2,
+      "title": "Infrastructure Systems",
+      "description": "IVO Bio stands out with fully equipped and self-sustaining infrastructure systems. With strong water management, high-capacity waste solutions, and renewable energy production, it offers users an independent living experience.<br /><br />• 10-ton clean water capacity<br />• 10-ton septic storage system<br />• 10 kW solar energy production capacity",
+      "video": "/infography/002.mp4",
+      "videoUrl": "https://www.youtube.com/watch?v=I1unv9CqMNA"
+    },
+    {
+      "id": 3,
+      "title": "Structural Features",
+      "description": "IVO Bio offers year-round comfort and reliability with durable carrier systems, advanced insulation solutions, and premium exterior materials.<br /><br />• 14-ton heavy steel construction<br />• Heat-insulated joinery systems<br /> • Roof window installation<br /> • Built-in venetian blind system<br /> • Fire-resistant 30-density exterior wall foam<br /> • Natural stone exterior cladding",
+      "video": "/infography/003.mp4",
+      "videoUrl": "https://www.youtube.com/watch?v=I1unv9CqMNA"
+    },
+    {
+      "id": 4,
+      "title": "Smart Home Systems",
+      "description": "IVO Bio offers a modern and practical lifestyle by allowing all systems—from security to climate control—to be managed from a single point with integrated smart home technologies.<br /><br /> • A-class energy consumption <br /> • Lighting control<br /> • Security and camera systems<br /> • Intercom integration<br /> • Curtain and shutter control<br /> • Fire detection system<br /> • Insect detection sensors<br /> • Heating and cooling management",
+      "image": "/infography/04.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=I1unv9CqMNA"
+    }
+  ],
+  "twoType": {
+    "summer": "With its modular living spaces, wide openings, and natural airflow, IVO Bio maximizes summer comfort. Its energy-efficient design transforms solar gain into comfort, providing a livable interior environment up to +60°C while offering a lifestyle fully harmonized with nature.",
+    "winter": "With its highly insulated structure and smart climate-control solutions, IVO Bio maintains warmth during winter, creating an ideal living balance. Its durability down to –50°C ensures a comfortable, safe, and sustainable winter experience, no matter how harsh the external conditions are."
+  },
+  "yekpare": {
+    "yekpareFirst": "With its monolithic body, İVO Bio",
+    "yekpareSecond": "offers a seamless living concept."
+  },
+  "floorPlan": {
+    "header1": "IVO Bio",
+    "header2": "Floor Plan",
+    "description": "With 72.00 m² of net usable area, IVO Bio has a total gross area of 90.00 m². It is meticulously designed in a 2+1 open-kitchen concept, featuring a spacious living area and functional storage solutions for comfortable living.",
+    "hotspots": [
+      {
+        "id": 1,
+        "title": "Living Area",
+        "area": "28.50 m²",
+        "desc": "A spacious and airy living area offering a comfortable atmosphere dominated by natural light."
+      },
+      {
+        "id": 2,
+        "title": "Entrance Hallway",
+        "area": "8.50 m²",
+        "desc": "A functional and comfortable welcoming area that strengthens the home's first impression."
+      },
+      {
+        "id": 3,
+        "title": "Bedroom",
+        "area": "7.00 m²",
+        "desc": "Creates an organized and peaceful living space with its compact, rest-oriented structure."
+      },
+      {
+        "id": 4,
+        "title": "Bathroom",
+        "area": "6.00 m²",
+        "desc": "Offers practical solutions to daily needs with its modern and ergonomic design."
+      },
+      {
+        "id": 5,
+        "title": "Master Bedroom",
+        "area": "13.00 m²",
+        "desc": "A comfortable private living room with a spacious usage area and organized storage opportunities."
+      },
+      {
+        "id": 6,
+        "title": "Installation Room",
+        "area": "3.00 m²",
+        "desc": "Accessible technical area."
+      },
+      {
+        "id": 7,
+        "title": "Entrance Shelf",
+        "area": "6.00 m²",
+        "desc": ""
+      }
+    ],
+    "list": [
+      {
+        "id": 1,
+        "label": "Living Area",
+        "area": "28.50 m²"
+      },
+      {
+        "id": 2,
+        "label": "Entrance Hallway",
+        "area": "8.50 m²"
+      },
+      {
+        "id": 3,
+        "label": "Bedroom",
+        "area": "6.90 m²"
+      },
+      {
+        "id": 4,
+        "label": "Bathroom",
+        "area": "6.00 m²"
+      },
+      {
+        "id": 5,
+        "label": "Master Bedroom",
+        "area": "13.00 m²"
+      },
+      {
+        "id": 6,
+        "label": "Installation Room",
+        "area": "3.00 m²"
+      },
+      {
+        "id": 7,
+        "label": "Entrance Shelf",
+        "area": "6.00 m²"
+      },
+      {
+        "id": 8,
+        "label": "Net",
+        "area": "72.00 m²"
+      },
+      {
+        "id": 9,
+        "label": "Gross",
+        "area": "90.00 m²"
+      }
+    ]
+  },
+  "floorInfo": {
+    "header1": "IVO Bio",
+    "header2": "Models",
+    "subheader": "You can choose the plan that suits you best",
+    "models": [
+      {
+        "id": 1,
+        "title": "IVO Bio Basic",
+        "description": "Designed for those who want to create their own style, this starter package offers users a free space. The structure is delivered with the exterior shell completed and electricity and water installations ready, allowing you to arrange it as you wish thanks to the completely empty interior. This way, you have the opportunity to shape every detail from decoration to room layout according to your own taste. With its affordable cost, it is an ideal solution for those seeking a practical and customizable start."
+      },
+      {
+        "id": 2,
+        "title": "IVO Bio Economy",
+        "description": "Designed for those who want to settle in quickly, this package offers a practical and comfortable solution. Thanks to the complete electricity and water installations, and the completion of painting, plastering, and wall treatments, you get a living space ready to use without wasting time. With the kitchen area and fixed furniture installed, you can bring your own movable furniture and settle in immediately. Thus, you can quickly achieve an effortless, organized, and balanced living environment."
+      },
+      {
+        "id": 3,
+        "title": "IVO Bio Comfort",
+        "description": "Fully equipped and completely ready to live in, this premium package is designed for those seeking the highest comfort. All installations and interior work are meticulously completed, offering a complete living space including fixed and movable furniture. With its modern kitchen and carefully arranged interior, you can move in and start living effortlessly right away. It is an ideal solution for those who want comfort, quality, and a ready-to-live experience all in one."
+      }
+    ]
+  },
+  "pricing": {
+    "plans": [
+      {
+        "name": "Basic",
+        "price": "$9",
+        "period": "/month",
+        "description": "The ideal starter package for users who want to create their own style.",
+        "features": [
+          "Structure with completed exterior shell",
+          "Electricity & water installations laid",
+          "Completely empty interior space",
+          "Personalization and unique decoration opportunities",
+          "Affordable entry level"
+        ]
+      },
+      {
+        "name": "Economy",
+        "price": "$29",
+        "period": "/month",
+        "description": "Practical solution with main living areas ready for those who want quick settlement.",
+        "features": [
+          "Complete electricity & water installations",
+          "Painting, plastering and wall treatments completed",
+          "Kitchen area and fixed furniture ready",
+          "Ability to bring your own movable furniture and settle in immediately",
+          "Comfortable and balanced living package"
+        ]
+      },
+      {
+        "name": "Comfort",
+        "price": "$99",
+        "period": "/month",
+        "description": "Fully equipped, ready-to-live premium IVO Bio experience.",
+        "features": [
+          "All installations and interior work completed to the highest standards",
+          "Fixed and movable furniture included",
+          "Modern kitchen and living area",
+          "Ability to move in and start living immediately",
+          "Fully ready living solution at the highest comfort level"
+        ]
+      }
+    ]
+  },
+  "colorSelector": {
+    "title": "Recreate IVO Bio According to Your Own Taste",
+    "subtitle": "Customize Your IVO Bio",
+    "selectColor": "Please Select Your Cabin Color",
+    "description": "Colorize the place you live, reveal your spirit. Let your cabin color be a touch that reflects your inner world to the outside."
+  },
+  "contactForm": {
+    "title": "Get In",
+    "subtitle": "Touch",
+    "description1": "Contact us for information about IVO Bio or if you have any questions about IVO Bio.",
+    "description2": "We will get back to you as soon as possible.",
+    "firstName": "First Name",
+    "firstNamePlaceholder": "Your first name",
+    "lastName": "Last Name",
+    "lastNamePlaceholder": "Your last name",
+    "email": "Email",
+    "emailPlaceholder": "example@mail.com",
+    "phone": "Phone",
+    "phonePlaceholder": "+90 (XXX) XXX XX XX",
+    "submit": "Submit"
+  },
+  "faq": {
+    "title": "Frequently Asked",
+    "subtitle": "Questions",
+    "questions": [
+      {
+        "question": "What is IVO Bio?",
+        "answer": "IVO Bio is a modern housing solution that offers a nature-friendly, modular, and energy-efficient living space. With its unique architecture and sustainable structure, it provides a comfortable experience in all four seasons."
+      },
+      {
+        "question": "What materials are IVO Bio structures made of?",
+        "answer": "IVO Bio modules are produced with steel construction, highly insulated panels, Low-E glass, organic composite materials, and eco-friendly interior-exterior cladding."
+      },
+      {
+        "question": "Is it suitable for use in all four seasons?",
+        "answer": "Yes. Thanks to the heat pump, high insulation, and Low-E glass, it offers comfortable use for all 12 months of the year."
+      },
+      {
+        "question": "Is it portable?",
+        "answer": "Yes. Thanks to its modular structure, single or multiple modules can be easily transported and offer quick installation."
+      },
+      {
+        "question": "How is the energy requirement met?",
+        "answer": "IVO Bio meets its own energy needs with solar panels, smart inverter, and lithium battery systems. It can also operate off-grid without being connected to the electricity grid. It provides 40–70% energy savings compared to traditional structures."
+      },
+      {
+        "question": "Is it compatible with smart home technology?",
+        "answer": "Yes. Lights, heating-cooling, energy management, security systems, and door controls can be managed via mobile application."
+      },
+      {
+        "question": "How long does it take to deliver IVO Bio projects?",
+        "answer": "While the delivery time of projects varies depending on scope and features, IVO Bio can be produced in 7–10 days and assembled in 1 day."
+      },
+      {
+        "question": "Do you provide support services? Is there a warranty period?",
+        "answer": "Yes. 1 year of free support and maintenance service is offered after project delivery. There is a 5-year structural warranty and a 2-year warranty for electrical and mechanical systems."
+      }
+    ]
+  },
+  "footer": {
+    "company": "BELEN & PARTNERS",
+    "brandTitle": "IVO Bio",
+    "brandDescription": "IVO Bio is a Belen & Partners brand.",
+    "description": "We build the future together with modern architectural solutions and sustainable designs. In every project, we bring together aesthetics, functionality, and an environmentally friendly approach.",
+    "contactTitle": "Contact",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "copyright": "© 2025 Belen & Partners. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
   }
 }

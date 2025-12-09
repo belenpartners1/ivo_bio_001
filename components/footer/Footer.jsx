@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import { useTranslations } from "next-intl";
 import {
   FaTwitter,
   FaLinkedinIn,
@@ -11,6 +12,7 @@ import {
 } from "react-icons/fa";
 
 const Footer = () => {
+  const t = useTranslations("footer");
   const footerRef = useRef(null);
   const ovalRefs = useRef([]);
 
@@ -62,22 +64,22 @@ const Footer = () => {
 
   const footerLinks = [
     {
-      title: "İletişim",
+      title: t("contactTitle"),
       links: [
         {
-          label: "Telefon",
+          label: t("phone"),
           value: contactInfo.phone,
           href: `tel:${contactInfo.phone.replace(/\s/g, "")}`,
           Icon: FaPhone,
         },
         {
-          label: "Mail",
+          label: t("email"),
           value: contactInfo.email,
           href: `mailto:${contactInfo.email}`,
           Icon: FaEnvelope,
         },
         {
-          label: "Adres",
+          label: t("address"),
           value: contactInfo.address,
           href: "https://www.google.com/maps/place/Belen%26Partners/@39.9124167,32.7728327,17z/data=!3m1!4b1!4m6!3m5!1s0x14d3496981290a1d:0x81835b7af381540e!8m2!3d39.9124168!4d32.7777036!16s%2Fg%2F11h_6j5m_z?entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D",
           Icon: FaMapMarkerAlt,
@@ -99,16 +101,14 @@ const Footer = () => {
           <div className="lg:col-span-5 space-y-6">
             <div>
               <h2 className="text-4xl font-bold text-white mb-2 tracking-tight">
-                BELEN & PARTNERS
+                {t("company")}
               </h2>
-              <p className="text-white text-4xl mb-4 font-quicksand">İVO Bio</p>
+              <p className="text-white text-4xl mb-4 font-quicksand">{t("brandTitle")}</p>
               <p className="text-white text-base leading-relaxed max-w-md">
-                İVO Bio bir Belen & Partners markasıdır.
+                {t("brandDescription")}
               </p>
               <p className="text-gray-400 text-base leading-relaxed max-w-md">
-                Modern mimari çözümler ve sürdürülebilir tasarımlarla geleceği
-                birlikte inşa ediyoruz. Her projede estetik, işlevsellik ve
-                çevre dostu yaklaşımı bir araya getiriyoruz.
+                {t("description")}
               </p>
             </div>
 
@@ -186,14 +186,14 @@ const Footer = () => {
         <div className="border-t border-white pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm">
-              © 2025 Belen & Partners. Tüm hakları saklıdır.
+              {t("copyright")}
             </p>
             <div className="flex gap-6 text-sm text-gray-500">
               <span className="hover:text-gray-300 cursor-pointer transition-colors">
-                Gizlilik Politikası
+                {t("privacy")}
               </span>
               <span className="hover:text-gray-300 cursor-pointer transition-colors">
-                Kullanım Koşulları
+                {t("terms")}
               </span>
             </div>
           </div>

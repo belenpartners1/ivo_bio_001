@@ -3,55 +3,19 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const FaqSection = () => {
   const sectionRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(null);
+  const t = useTranslations("faq");
 
-  const faqs = [
-    {
-      question: "İVO Bio nedir?",
-      answer:
-        "İVO Bio, doğayla uyumlu, modüler ve enerji dostu bir yaşam alanı sunan modern konut çözümüdür. Eşsiz mimarisi ve sürdürülebilir yapısıyla dört mevsim konforlu bir deneyim sağlar.",
-    },
-    {
-      question: "İVO Bio yapıları hangi malzemelerle üretiliyor?",
-      answer:
-        "İVO Bio modülleri; çelik konstrüksiyon, yüksek yalıtımlı paneller, Low-E camlar, organik kompozit malzemeler ve doğa dostu iç-dış kaplamalar ile üretilir.",
-    },
-    {
-      question: "Dört mevsim kullanım için uygun mu?",
-      answer:
-        "Evet. Isı pompası, yüksek yalıtım ve Low-E camlar sayesinde yılın 12 ayı konforlu kullanım sunar.",
-    },
-    {
-      question: "Taşınabilir mi?",
-      answer:
-        "Evet. Modüler yapısı sayesinde tekli veya çoklu modüller kolayca taşınabilir ve hızlı kurulum imkânı sunar.",
-    },
-    {
-      question: "Enerji ihtiyacı nasıl karşılanıyor?",
-      answer:
-        "İVO Bio, güneş panelleri, akıllı inverter ve lityum batarya sistemleriyle enerji ihtiyacını kendi karşılar. Elektrik şebekesine bağlanmadan off-grid olarak da çalışabilir. Geleneksel yapılara göre %40–70 enerji tasarrufu sağlar.",
-    },
-    {
-      question: "Akıllı ev teknolojisine uyumlu mu?",
-      answer:
-        "Evet. Işıklar, ısıtma-soğutma, enerji yönetimi, güvenlik sistemleri ve kapı kontrolleri mobil uygulama üzerinden yönetilebilir.",
-    },
-    {
-      question: "İVO Bio projeleri ne kadar sürede teslim edilir?",
-      answer:
-        "Projelerin teslim süresi kapsam ve özelliklere göre değişmekle birlikte, İVO Bio 7–10 gün içinde üretilip, 1 günde montajı yapılabilir.",
-    },
-    {
-      question: "Destek hizmeti sunuyor musunuz? Garanti süresi var mı?",
-      answer:
-        "Evet. Proje tesliminden sonra 1 yıl ücretsiz destek ve bakım hizmeti sunulmaktadır. Yapısal garanti 5 yıl, elektrik ve mekanik sistemler için 2 yıl garanti mevcuttur.",
-    },
-  ];
+  const faqs = Array.from({ length: 8 }, (_, i) => ({
+    question: t(`questions.${i}.question`),
+    answer: t(`questions.${i}.answer`),
+  }));
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -125,8 +89,8 @@ const FaqSection = () => {
       <div className="relative z-10 max-w-7xl w-full px-5 md:px-7">
         {/* Title */}
         <h2 className="faq-title text-3xl md:text-5xl font-bold text-white/90 text-center mb-6 md:mb-8">
-          Sıkça Sorulan
-          <span className="bg-clip-text"> Sorular</span>
+          {t("title")}
+          <span className="bg-clip-text"> {t("subtitle")}</span>
         </h2>
 
         {/* FAQ Items */}

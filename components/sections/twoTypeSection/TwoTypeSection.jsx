@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,6 +15,8 @@ const TwoTypeSection = () => {
   const leftTextRef = useRef(null);
   const rightTextRef = useRef(null);
   const [activeHover, setActiveHover] = useState(null);
+
+  const t = useTranslations("twoType");
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -139,11 +142,7 @@ const TwoTypeSection = () => {
                 YAZ
               </h2> */}
               <p className="text-white/90 font-bold leading-relaxed drop-shadow-md">
-                İVO Bio’nun modüler yaşam alanları, geniş açıklıkları ve doğal
-                hava akışıyla yazın ferahlığını en üst seviyeye taşır. Enerji
-                dostu tasarımıyla güneşten aldığı verimi konfora dönüştürerek
-                +60°C’ye kadar yaşanabilir bir iç ortam sunar ve doğayla
-                bütünüyle uyumlu bir yaşam sağlar.
+                {t("summer")}
               </p>
             </div>
           </div>
@@ -175,11 +174,7 @@ const TwoTypeSection = () => {
                 KIŞ
               </h2> */}
               <p className="text-white/90 font-bold leading-relaxed drop-shadow-md">
-                Yüksek yalıtımlı yapısı ve akıllı iklimlendirme çözümleriyle İVO
-                Bio, kış aylarında sıcaklığı koruyarak ideal bir yaşam dengesi
-                oluşturur. –50°C’ye kadar dayanıklı yapısıyla dış koşullar ne
-                kadar sert olursa olsun konforlu, güvenli ve sürdürülebilir bir
-                kış deneyimi sunar.
+                {t("winter")}
               </p>
             </div>
           </div>

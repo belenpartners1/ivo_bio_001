@@ -1,8 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
+import { useTranslations } from "next-intl";
 
 const ContactForm = () => {
+  const t = useTranslations("contactForm");
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -33,15 +35,14 @@ const ContactForm = () => {
         <div className="space-y-6">
           <div className="space-y-4">
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900">
-              İletişime
-              <span className="block text-gray-500">Geçin</span>
+              {t("title")}
+              <span className="block text-gray-500">{t("subtitle")}</span>
             </h2>
             <p className="text-lg text-gray-500 leading-relaxed">
-              İVO Bio hakkında bilgi almak için veya İVO Bio ile ilgili
-              sorularınız için bizimle iletişime geçin.
+              {t("description1")}
             </p>
             <p className="text-lg text-gray-500 leading-relaxed">
-              Size en kısa sürede dönüş yapalım.
+              {t("description2")}
             </p>
           </div>
 
@@ -95,7 +96,7 @@ const ContactForm = () => {
                 htmlFor="firstName"
                 className="block font-medium text-gray-700 ml-1"
               >
-                Ad
+                {t("firstName")}
               </label>
               <input
                 type="text"
@@ -105,7 +106,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 required
                 className="w-full px-5 py-4 rounded-2xl border border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100 outline-none transition-all duration-200 text-gray-800"
-                placeholder="Adınız"
+                placeholder={t("firstNamePlaceholder")}
               />
             </div>
 
@@ -115,7 +116,7 @@ const ContactForm = () => {
                 htmlFor="lastName"
                 className="block ml-1 font-medium text-gray-700"
               >
-                Soyad
+                {t("lastName")}
               </label>
               <input
                 type="text"
@@ -125,7 +126,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 required
                 className="w-full px-5 py-4 rounded-2xl border border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100 outline-none transition-all duration-200 text-gray-800"
-                placeholder="Soyadınız"
+                placeholder={t("lastNamePlaceholder")}
               />
             </div>
 
@@ -135,7 +136,7 @@ const ContactForm = () => {
                 htmlFor="email"
                 className="block ml-1 font-medium text-gray-700"
               >
-                E-posta
+                {t("email")}
               </label>
               <input
                 type="email"
@@ -145,7 +146,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 required
                 className="w-full px-5 py-4 rounded-2xl border border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100 outline-none transition-all duration-200 text-gray-800"
-                placeholder="ornek@mail.com"
+                placeholder={t("emailPlaceholder")}
               />
             </div>
 
@@ -155,7 +156,7 @@ const ContactForm = () => {
                 htmlFor="phone"
                 className="block ml-1 font-medium text-gray-700"
               >
-                Telefon
+                {t("phone")}
               </label>
               <input
                 type="tel"
@@ -165,7 +166,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 required
                 className="w-full px-5 py-4 rounded-2xl border border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100 outline-none transition-all duration-200 text-gray-800"
-                placeholder="+90 (XXX) XXX XX XX"
+                placeholder={t("phonePlaceholder")}
               />
             </div>
 
@@ -174,7 +175,7 @@ const ContactForm = () => {
               type="submit"
               className="w-full bg-gray-800 text-white py-4 rounded-2xl font-semibold text-lg hover:bg-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
             >
-              Gönder
+              {t("submit")}
             </button>
           </form>
         </div>

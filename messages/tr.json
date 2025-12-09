@@ -61,5 +61,276 @@
       "header": "Yaşama Dair Herşey",
       "title": "Farkındalık Mutluluk Huzur"
     }
+  },
+  "technicalData": [
+    {
+      "id": 1,
+      "title": "İVO Bio Teknik",
+      "description": "Doğal çevreyle uyumlu, organik kompozit yapı teknolojisiyle üretilen İVO Bio 85 m² büyüklüğünde, modern ve fonksiyonel bir 2+1 yaşam alanı sunar. <br /> <br />  • 1700 cm uzunluk      <br /> • 530 cm genişlik      <br /> • 360 cm yükseklik",
+      "video": "/infography/001.mp4",
+      "videoUrl": "https://www.youtube.com/watch?v=I1unv9CqMNA"
+    },
+    {
+      "id": 2,
+      "title": "Altyapı Sistemleri",
+      "description": "İVO Bio, tam donanımlı ve kendi kendine yetebilen altyapı sistemleriyle öne çıkar. Güçlü su yönetimi, yüksek kapasiteli atık çözümü ve yenilenebilir enerji üretimi sayesinde kullanıcıya bağımsız bir yaşam deneyimi sunar.<br /><br />• 10 ton temiz su kapasitesi<br />• 10 ton foseptik depolama sistemi<br />• 10 kW güneş enerjisi üretim kapasitesi",
+      "video": "/infography/002.mp4",
+      "videoUrl": "https://www.youtube.com/watch?v=I1unv9CqMNA"
+    },
+    {
+      "id": 3,
+      "title": "Yapı Özellikleri",
+      "description": "İVO Bio, dayanıklı taşıyıcı sistemler, gelişmiş yalıtım çözümleri ve premium dış cephe malzemeleriyle dört mevsim konfor ve güvenilirlik sunar.<br /><br />• 14 ton ağır çelik konstrüksiyon<br />• Isı yalıtımlı doğrama sistemleri<br /> • Çatı penceresi uygulaması<br /> • Cam içi jaluzi sistemi<br /> • Alev almaz 30 density dış duvar köpüğü<br /> • Doğal taş kaplama dış cephe ",
+      "video": "/infography/003.mp4",
+      "videoUrl": "https://www.youtube.com/watch?v=I1unv9CqMNA"
+    },
+    {
+      "id": 4,
+      "title": "Akıllı Ev Sistemleri",
+      "description": "İVO Bio, entegre akıllı ev teknolojileriyle güvenlikten iklimlendirmeye tüm sistemleri tek noktadan kontrol ederek modern ve pratik bir yaşam sunar.<br /><br /> • A Sınıfı enerji tüketimi <br /> • Aydınlatma kontrolü<br /> • Güvenlik ve kamera sistemleri<br /> • İntercom entegrasyonu<br /> • Perde ve panjur kontrolü<br /> • Yangın algılama sistemi<br /> • Böcek algılama sensörleri<br /> • Isıtma ve soğutma yönetimi ",
+      "image": "/infography/04.webp",
+      "videoUrl": "https://www.youtube.com/watch?v=I1unv9CqMNA"
+    }
+  ],
+  "twoType": {
+    "summer": "İVO Bio’nun modüler yaşam alanları, geniş açıklıkları ve doğal hava akışıyla yazın ferahlığını en üst seviyeye taşır. Enerji dostu tasarımıyla güneşten aldığı verimi konfora dönüştürerek +60°C’ye kadar yaşanabilir bir iç ortam sunar ve doğayla bütünüyle uyumlu bir yaşam sağlar.",
+    "winter": "Yüksek yalıtımlı yapısı ve akıllı iklimlendirme çözümleriyle İVO Bio, kış aylarında sıcaklığı koruyarak ideal bir yaşam dengesi oluşturur. –50°C’ye kadar dayanıklı yapısıyla dış koşullar ne kadar sert olursa olsun konforlu, güvenli ve sürdürülebilir bir kış deneyimi sunar."
+  },
+  "yekpare": {
+    "yekpareFirst": "İVO Bio yekpare gövdesiyle",
+    "yekpareSecond": "kesintisiz bir yaşam konsepti sunar."
+  },
+  "floorPlan": {
+    "header1": "İVO Bio",
+    "header2": "Yerleşim Planı",
+    "description": "72.00 m² net kullanım alanına sahip İVO Bio, 90.00 m² brüt alana sahiptir. 2+1 açık mutfak konseptinde özenle tasarlanmıştır. Ferah oturma alanı ve işlevsel depolama çözümleriyle konforlu bir yaşam sunacak şekilde planlanmıştır.",
+    "hotspots": [
+      {
+        "id": 1,
+        "title": "Yaşam Alanı",
+        "area": "28.50 m²",
+        "desc": "Geniş ve ferah yaşam alanı, doğal ışığın hâkim olduğu konforlu bir atmosfer sunar."
+      },
+      {
+        "id": 2,
+        "title": "Giriş Holü - Koridor",
+        "area": "8.50 m²",
+        "desc": "Evin ilk izlenimini güçlendiren fonksiyonel ve rahat bir karşılama alanıdır."
+      },
+      {
+        "id": 3,
+        "title": "Yatak Odası",
+        "area": "7.00 m²",
+        "desc": "Dinlenme odaklı kompakt yapısıyla düzenli ve sakin bir yaşam alanı oluşturur."
+      },
+      {
+        "id": 4,
+        "title": "Banyo",
+        "area": "6.00 m²",
+        "desc": "Modern ve ergonomik tasarımıyla günlük ihtiyaçlara pratik çözümler sunar."
+      },
+      {
+        "id": 5,
+        "title": "Ebeveyn Yatak Odası",
+        "area": "13.00 m²",
+        "desc": "Geniş kullanım alanı ve düzenli depolama fırsatlarıyla konforlu bir özel yaşam odasıdır."
+      },
+      {
+        "id": 6,
+        "title": "Tesisat Odası",
+        "area": "3.00 m²",
+        "desc": "Erişime uygun teknik alan."
+      },
+      {
+        "id": 7,
+        "title": "Giriş Sahanlığı",
+        "area": "6.00 m²",
+        "desc": ""
+      }
+    ],
+    "list": [
+      {
+        "id": 1,
+        "label": "Yaşam Alanı",
+        "area": "28.50 m²"
+      },
+      {
+        "id": 2,
+        "label": "Giriş Holü - Koridor",
+        "area": "8.50 m²"
+      },
+      {
+        "id": 3,
+        "label": "Yatak Odası",
+        "area": "6.90 m²"
+      },
+      {
+        "id": 4,
+        "label": "Banyo",
+        "area": "6.00 m²"
+      },
+      {
+        "id": 5,
+        "label": "Ebeveyn Y.Odası",
+        "area": "13.00 m²"
+      },
+      {
+        "id": 6,
+        "label": "Tesisat Odası",
+        "area": "3.00 m²"
+      },
+      {
+        "id": 7,
+        "label": "Giriş Sahanlığı",
+        "area": "6.00 m²"
+      },
+      {
+        "id": 8,
+        "label": "Net",
+        "area": "72.00 m²"
+      },
+      {
+        "id": 9,
+        "label": "Brüt",
+        "area": "90.00 m²"
+      }
+    ]
+  },
+  "floorInfo": {
+    "header1": "İVO Bio",
+    "header2": "Modelleri",
+    "subheader": "Size en uygun planı seçebilirsiniz",
+    "models": [
+      {
+        "id": 1,
+        "title": "İVO Bio Temel",
+        "description": "Kendi tarzını oluşturmak isteyenler için tasarlanmış bu başlangıç paketi, kullanıcılara özgür bir alan sunar. Dış kabuğu tamamlanmış ve elektrik ile su tesisatları hazır bir şekilde teslim edilen yapı, tamamen boş iç hacmi sayesinde dilediğiniz gibi düzenlenebilir. Böylece dekorasyondan oda yerleşimine kadar her detayı kendi zevkinize göre şekillendirme fırsatı elde edersiniz. Uygun maliyetiyle hem pratik hem de kişiselleştirilebilir bir başlangıç arayanlar için ideal bir çözümdür."
+      },
+      {
+        "id": 2,
+        "title": "İVO Bio Ekonomik",
+        "description": "Hızlı bir şekilde yerleşmek isteyenler için tasarlanan bu paket, pratik ve konforlu bir çözüm sunar. Elektrik ve su tesisatlarının eksiksiz olması, boya, alçı ve duvar işlemlerinin tamamlanması sayesinde zaman kaybetmeden kullanıma hazır bir yaşam alanı elde edersiniz. Mutfak bölümü ve sabit mobilyaların kurulmuş olması, kendi hareketli mobilyalarınızı getirip hemen yerleşmenize imkân tanır. Böylece zahmetsiz, düzenli ve dengeli bir yaşam ortamına hızlıca kavuşabilirsiniz."
+      },
+      {
+        "id": 3,
+        "title": "İVO Bio Konfor",
+        "description": "Tam donanımlı ve yaşamaya tamamen hazır bu premium paket, en yüksek konforu arayanlar için tasarlanmıştır. Tüm tesisatlar ve iç işçilik özenle tamamlanmış olup, sabit ve hareketli mobilyalar dâhil eksiksiz bir yaşam alanı sunar. Modern mutfağı ve özenle düzenlenmiş iç mekânıyla hemen taşınıp zahmetsizce yaşamaya başlayabilirsiniz. Konforu, kaliteyi ve hazır bir yaşam deneyimini bir arada isteyenler için ideal bir çözümdür."
+      }
+    ]
+  },
+  "pricing": {
+    "plans": [
+      {
+        "name": "Temel",
+        "price": "$9",
+        "period": "/ay",
+        "description": "Kendi tarzını yaratmak isteyen kullanıcılar için ideal başlangıç paketi.",
+        "features": [
+          "Dış kabuğu tamamlanmış yapı",
+          "Elektrik & su tesisatları döşenmiş",
+          "Tamamen boş iç alan",
+          "Kişiselleştirme ve özgün dekorasyon imkânı",
+          "Uygun maliyetli başlangıç seviyesi"
+        ]
+      },
+      {
+        "name": "Ekonomik",
+        "price": "$29",
+        "period": "/ay",
+        "description": "Hızlı yerleşim isteyenler için ana yaşam alanları hazır, pratik çözüm.",
+        "features": [
+          "Elektrik & su tesisatları eksiksiz",
+          "Boya, alçı ve duvar işlemleri tamamlanmış",
+          "Mutfak alanı ve sabit mobilyalar hazır",
+          "Kendi hareketli mobilyalarını getirip hemen yerleşebilme",
+          "Konforlu ve dengeli yaşam paketi"
+        ]
+      },
+      {
+        "name": "Konfor",
+        "price": "$99",
+        "period": "/ay",
+        "description": "Tam donanımlı, yaşamaya hazır premium İVO Bio deneyimi.",
+        "features": [
+          "Tüm tesisatlar ve iç işçilik üst düzey tamamlanmış",
+          "Sabit ve hareketli mobilyalar dahil",
+          "Modern mutfak ve yaşam alanı",
+          "Direkt taşınıp hemen yaşama başlama imkânı",
+          "En yüksek konfor seviyesinde tam hazır yaşam çözümü"
+        ]
+      }
+    ]
+  },
+  "colorSelector": {
+    "title": "İVO Bio'yu Kendi Zevkine Göre Baştan Yarat",
+    "subtitle": "İVO Bio'nu Özelleştir",
+    "selectColor": "Lütfen Kabin Renginizi Seciniz",
+    "description": "Yaşadığınız yeri renklendirin, ruhunuzu ortaya koyun. Kabin renginiz, iç dünyanızı dışa yansıtan bir dokunuş olsun."
+  },
+  "contactForm": {
+    "title": "İletişime",
+    "subtitle": "Geçin",
+    "description1": "İVO Bio hakkında bilgi almak için veya İVO Bio ile ilgili sorularınız için bizimle iletişime geçin.",
+    "description2": "Size en kısa sürede dönüş yapalım.",
+    "firstName": "Ad",
+    "firstNamePlaceholder": "Adınız",
+    "lastName": "Soyad",
+    "lastNamePlaceholder": "Soyadınız",
+    "email": "E-posta",
+    "emailPlaceholder": "ornek@mail.com",
+    "phone": "Telefon",
+    "phonePlaceholder": "+90 (XXX) XXX XX XX",
+    "submit": "Gönder"
+  },
+  "faq": {
+    "title": "Sıkça Sorulan",
+    "subtitle": "Sorular",
+    "questions": [
+      {
+        "question": "İVO Bio nedir?",
+        "answer": "İVO Bio, doğayla uyumlu, modüler ve enerji dostu bir yaşam alanı sunan modern konut çözümüdür. Eşsiz mimarisi ve sürdürülebilir yapısıyla dört mevsim konforlu bir deneyim sağlar."
+      },
+      {
+        "question": "İVO Bio yapıları hangi malzemelerle üretiliyor?",
+        "answer": "İVO Bio modülleri; çelik konstrüksiyon, yüksek yalıtımlı paneller, Low-E camlar, organik kompozit malzemeler ve doğa dostu iç-dış kaplamalar ile üretilir."
+      },
+      {
+        "question": "Dört mevsim kullanım için uygun mu?",
+        "answer": "Evet. Isı pompası, yüksek yalıtım ve Low-E camlar sayesinde yılın 12 ayı konforlu kullanım sunar."
+      },
+      {
+        "question": "Taşınabilir mi?",
+        "answer": "Evet. Modüler yapısı sayesinde tekli veya çoklu modüller kolayca taşınabilir ve hızlı kurulum imkânı sunar."
+      },
+      {
+        "question": "Enerji ihtiyacı nasıl karşılanıyor?",
+        "answer": "İVO Bio, güneş panelleri, akıllı inverter ve lityum batarya sistemleriyle enerji ihtiyacını kendi karşılar. Elektrik şebekesine bağlanmadan off-grid olarak da çalışabilir. Geleneksel yapılara göre %40–70 enerji tasarrufu sağlar."
+      },
+      {
+        "question": "Akıllı ev teknolojisine uyumlu mu?",
+        "answer": "Evet. Işıklar, ısıtma-soğutma, enerji yönetimi, güvenlik sistemleri ve kapı kontrolleri mobil uygulama üzerinden yönetilebilir."
+      },
+      {
+        "question": "İVO Bio projeleri ne kadar sürede teslim edilir?",
+        "answer": "Projelerin teslim süresi kapsam ve özelliklere göre değişmekle birlikte, İVO Bio 7–10 gün içinde üretilip, 1 günde montajı yapılabilir."
+      },
+      {
+        "question": "Destek hizmeti sunuyor musunuz? Garanti süresi var mı?",
+        "answer": "Evet. Proje tesliminden sonra 1 yıl ücretsiz destek ve bakım hizmeti sunulmaktadır. Yapısal garanti 5 yıl, elektrik ve mekanik sistemler için 2 yıl garanti mevcuttur."
+      }
+    ]
+  },
+  "footer": {
+    "company": "BELEN & PARTNERS",
+    "brandTitle": "İVO Bio",
+    "brandDescription": "İVO Bio bir Belen & Partners markasıdır.",
+    "description": "Modern mimari çözümler ve sürdürülebilir tasarımlarla geleceği birlikte inşa ediyoruz. Her projede estetik, işlevsellik ve çevre dostu yaklaşımı bir araya getiriyoruz.",
+    "contactTitle": "İletişim",
+    "phone": "Telefon",
+    "email": "Mail",
+    "address": "Adres",
+    "copyright": "© 2025 Belen & Partners. Tüm hakları saklıdır.",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları"
   }
 }

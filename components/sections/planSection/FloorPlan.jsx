@@ -4,61 +4,70 @@ import Image from "next/image";
 import { useState, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useTranslations } from "next-intl";
 
 export default function FloorPlan() {
   const [hovered, setHovered] = useState(null);
   const infoRef = useRef([]);
   const containerRef = useRef(null);
+  const t = useTranslations("floorPlan");
 
   const hotspots = [
     {
       id: 1,
       top: "55%",
       left: "28%",
-      title: "Yaşam Alanı - 28.50 m²",
-      desc: "Geniş ve ferah yaşam alanı, doğal ışığın hâkim olduğu konforlu bir atmosfer sunar.",
+      title: t("hotspots.0.title"),
+      area: t("hotspots.0.area"),
+      desc: t("hotspots.0.desc"),
     },
     {
       id: 2,
       top: "45%",
       left: "50%",
-      title: "Giriş Holü, Koridor - 8.50 m²",
-      desc: "Evin ilk izlenimini güçlendiren fonksiyonel ve rahat bir karşılama alanıdır.",
+      title: t("hotspots.1.title"),
+      area: t("hotspots.1.area"),
+      desc: t("hotspots.1.desc"),
     },
     {
       id: 3,
       top: "65%",
       left: "52%",
-      title: "Yatak Odası - 7.00 m²",
-      desc: "Dinlenme odaklı kompakt yapısıyla düzenli ve sakin bir yaşam alanı oluşturur.",
+      title: t("hotspots.2.title"),
+      area: t("hotspots.2.area"),
+      desc: t("hotspots.2.desc"),
     },
     {
       id: 4,
       top: "65%",
       left: "68%",
-      title: "Banyo - 6.00 m²",
-      desc: "Modern ve ergonomik tasarımıyla günlük ihtiyaçlara pratik çözümler sunar.",
+      title: t("hotspots.3.title"),
+      area: t("hotspots.3.area"),
+      desc: t("hotspots.3.desc"),
     },
     {
       id: 5,
       top: "48%",
       left: "78%",
-      title: "Ebeveyn Yatak Odası - 13.00 m²",
-      desc: "Geniş kullanım alanı ve düzenli depolama fırsatlarıyla konforlu bir özel yaşam odasıdır.",
+      title: t("hotspots.4.title"),
+      area: t("hotspots.4.area"),
+      desc: t("hotspots.4.desc"),
     },
     {
       id: 6,
       top: "42%",
       left: "68%",
-      title: "Teknik Odası - 3.00 m²",
-      desc: "Erişime uygun teknik alan.",
+      title: t("hotspots.5.title"),
+      area: t("hotspots.5.area"),
+      desc: t("hotspots.5.desc"),
     },
     {
       id: 7,
       top: "32%",
       left: "58%",
-      title: "Giriş Sahanlığı - 6.00 m²",
-      desc: "",
+      title: t("hotspots.6.title"),
+      area: t("hotspots.6.area"),
+      desc: t("hotspots.6.desc"),
     },
   ];
 
@@ -94,21 +103,19 @@ export default function FloorPlan() {
   );
 
   return (
-    <div className="flex flex-col justify-center items-center" id="plan">
+    <div
+      className="flex flex-col justify-center items-center font-quicksand"
+      id="plan"
+    >
       <div className="text-center text-white font-quicksand">
         <h2 className="text-5xl md:text-[100px] font-bold mb-4">
-          <span className="text-yesil">İVO Bio</span> Yerleşim Planı
+          <span className="text-yesil"> {t("header1")} </span>
+          {t("header2")}
         </h2>
-        {/* <p className="text-4xl">Yerleşim Planı</p> */}
       </div>
 
       <div className="text-center text-kahverengi text-4xl font-quicksand max-w-4xl mt-10">
-        <p>
-          72.00 m² net kullanım alanına sahip İVO Bio, 90.00 m² brüt alana
-          sahiptir. 2+1 açık mutfak konseptinde özenle tasarlanmıştır. Ferah
-          oturma alanı ve işlevsel depolama çözümleriyle konforlu bir yaşam
-          sunacak şekilde planlanmıştır.
-        </p>
+        <p className="font-quicksand">{t("description")}</p>
       </div>
       <div
         ref={containerRef}
@@ -184,35 +191,35 @@ export default function FloorPlan() {
         <div className="absolute -translate-x-1/2 -translate-y-1/2 top-5/6 left-1/2 text-gray-800 font-quicksand font-bold mt-2">
           <ul className="grid grid-cols-1 md:grid-cols-3 gap-1 rounded-2xl p-2">
             <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
-              1-) Yaşam Alanı 28.50 m²
+              1-) {t("list.0.label")} {t("list.0.area")}
             </li>
 
             <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
-              2-) Giriş Holü - Koridor 8.50 m²
+              2-) {t("list.1.label")} {t("list.1.area")}
             </li>
 
             <li className="p-2 flex items-center justify-center">
-              3-) Yatak Odası 6.90 m²
+              3-) {t("list.2.label")} {t("list.2.area")}
             </li>
 
             <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
-              4-) Banyo 6.00 m²
+              4-) {t("list.3.label")} {t("list.3.area")}
             </li>
 
             <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
-              5-) Ebeveyn Y.Odası 13.00 m²
+              5-) {t("list.4.label")} {t("list.4.area")}
             </li>
             <li className="p-2 flex items-center justify-center ">
-              6-) Teknik Odası 3.00 m²
+              6-) {t("list.5.label")} {t("list.5.area")}
             </li>
             <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
-              7-) Giriş Sahanlığı 6.00 m²
+              7-) {t("list.6.label")} {t("list.6.area")}
             </li>
             <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
-              8-) Net 72.00 m²
+              8-) {t("list.7.label")} {t("list.7.area")}
             </li>
             <li className="p-2 flex items-center justify-center ">
-              9-) Brüt 90.00 m²
+              9-) {t("list.8.label")} {t("list.8.area")}
             </li>
           </ul>
         </div>

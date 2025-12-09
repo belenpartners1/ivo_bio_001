@@ -49,7 +49,7 @@ export default function LanguageSwitcher() {
 
   function onSelectChange(nextLocale) {
     startTransition(() => {
-      router.replace(pathname, { locale: nextLocale });
+      router.replace(pathname, { locale: nextLocale, scroll: false });
       setIsOpen(false);
     });
   }

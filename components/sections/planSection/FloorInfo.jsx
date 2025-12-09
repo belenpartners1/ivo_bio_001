@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -8,28 +9,26 @@ const FloorInfo = () => {
   const sectionRef = useRef(null);
   const imagesRef = useRef([]);
   const textsRef = useRef([]);
+  const t = useTranslations("floorInfo");
 
   const floorData = [
     {
       id: 1,
       image: "/kesitler/ortografik-1-arkaplansiz.webp",
-      title: "İVO Bio Temel",
-      description:
-        "Kendi tarzını oluşturmak isteyenler için tasarlanmış bu başlangıç paketi, kullanıcılara özgür bir alan sunar. Dış kabuğu tamamlanmış ve elektrik ile su tesisatları hazır bir şekilde teslim edilen yapı, tamamen boş iç hacmi sayesinde dilediğiniz gibi düzenlenebilir. Böylece dekorasyondan oda yerleşimine kadar her detayı kendi zevkinize göre şekillendirme fırsatı elde edersiniz. Uygun maliyetiyle hem pratik hem de kişiselleştirilebilir bir başlangıç arayanlar için ideal bir çözümdür.",
+      title: t("models.0.title"),
+      description: t("models.0.description"),
     },
     {
       id: 2,
       image: "/kesitler/ortografik-2-arkaplansiz.webp",
-      title: "İVO Bio Ekonomik",
-      description:
-        "Hızlı bir şekilde yerleşmek isteyenler için tasarlanan bu paket, pratik ve konforlu bir çözüm sunar. Elektrik ve su tesisatlarının eksiksiz olması, boya, alçı ve duvar işlemlerinin tamamlanması sayesinde zaman kaybetmeden kullanıma hazır bir yaşam alanı elde edersiniz. Mutfak bölümü ve sabit mobilyaların kurulmuş olması, kendi hareketli mobilyalarınızı getirip hemen yerleşmenize imkân tanır. Böylece zahmetsiz, düzenli ve dengeli bir yaşam ortamına hızlıca kavuşabilirsiniz.",
+      title: t("models.1.title"),
+      description: t("models.1.description"),
     },
     {
       id: 3,
       image: "/kesitler/ortografik-3-arkaplansiz.webp",
-      title: "İVO Bio Konfor",
-      description:
-        "Tam donanımlı ve yaşamaya tamamen hazır bu premium paket, en yüksek konforu arayanlar için tasarlanmıştır. Tüm tesisatlar ve iç işçilik özenle tamamlanmış olup, sabit ve hareketli mobilyalar dâhil eksiksiz bir yaşam alanı sunar. Modern mutfağı ve özenle düzenlenmiş iç mekânıyla hemen taşınıp zahmetsizce yaşamaya başlayabilirsiniz. Konforu, kaliteyi ve hazır bir yaşam deneyimini bir arada isteyenler için ideal bir çözümdür.",
+      title: t("models.2.title"),
+      description: t("models.2.description"),
     },
   ];
 
@@ -92,9 +91,9 @@ const FloorInfo = () => {
       <div className="max-w-10/12 mx-auto px-2">
         <div className="text-center mb-16 text-white">
           <h2 className="text-5xl md:text-[100px] font-bold mb-4">
-            <span className="text-yesil">İVO Bio</span> Modelleri
+            <span className="text-yesil">{t("header1")}</span> {t("header2")}
           </h2>
-          <p className="text-4xl">Size en uygun planı seçebilirsiniz</p>
+          <p className="text-4xl">{t("subheader")}</p>
         </div>
         <div className="space-y-12">
           {floorData.map((floor, index) => (

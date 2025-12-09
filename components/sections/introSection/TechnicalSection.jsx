@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import VideoModal from "../../video/VideoModal";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,41 +14,17 @@ const TechnicalSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState(null);
 
-  const technicalData = [
-    {
-      id: 1,
-      title: "İVO Bio Teknik",
-      description:
-        "Doğal çevreyle uyumlu, organik kompozit yapı teknolojisiyle üretilen İVO Bio 85 m² büyüklüğünde, modern ve fonksiyonel bir 2+1 yaşam alanı sunar. <br /> <br />  1-) 1700 cm uzunluk      <br /> 2-) 530 cm genişlik      <br /> 3-) 360 cm yükseklik",
-      video: "/infography/001.mp4",
-      // image: "https://images.unsplash.com/photo-1558002038-1055907df827?w=1200&h=800&fit=crop",
-      videoUrl: "https://www.youtube.com/watch?v=I1unv9CqMNA",
-    },
-    {
-      id: 2,
-      title: "Altyapı Sistemleri",
-      description:
-        "İVO Bio, tam donanımlı ve kendi kendine yetebilen altyapı sistemleriyle öne çıkar. Güçlü su yönetimi, yüksek kapasiteli atık çözümü ve yenilenebilir enerji üretimi sayesinde kullanıcıya bağımsız bir yaşam deneyimi sunar.<br /><br />• 10 ton temiz su kapasitesi<br />• 10 ton foseptik depolama sistemi<br />• 10 kW güneş enerjisi üretim kapasitesi",
-      video: "/infography/002.mp4",
-      videoUrl: "https://www.youtube.com/watch?v=I1unv9CqMNA",
-    },
-    {
-      id: 3,
-      title: "Yapı Özellikleri",
-      description:
-        "İVO Bio, dayanıklı taşıyıcı sistemler, gelişmiş yalıtım çözümleri ve premium dış cephe malzemeleriyle dört mevsim konfor ve güvenilirlik sunar.<br /><br />• 14 ton ağır çelik konstrüksiyon<br />• Isı yalıtımlı doğrama sistemleri<br /> • Çatı penceresi uygulaması<br /> • Cam içi jaluzi sistemi<br /> • Alev almaz 30 density dış duvar köpüğü<br /> • Doğal taş kaplama dış cephe ",
-      video: "/infography/003.mp4",
-      videoUrl: "https://www.youtube.com/watch?v=I1unv9CqMNA",
-    },
-    {
-      id: 4,
-      title: "Akıllı Ev Sistemleri",
-      description:
-        "İVO Bio, entegre akıllı ev teknolojileriyle güvenlikten iklimlendirmeye tüm sistemleri tek noktadan kontrol ederek modern ve pratik bir yaşam sunar.<br /><br /> • A Sınıfı enerji tüketimi <br /> • Aydınlatma kontrolü<br /> • Güvenlik ve kamera sistemleri<br /> • İntercom entegrasyonu<br /> • Perde ve panjur kontrolü<br /> • Yangın algılama sistemi<br /> • Böcek algılama sensörleri<br /> • Isıtma ve soğutma yönetimi ",
-      image: "/infography/04.webp",
-      videoUrl: "https://www.youtube.com/watch?v=I1unv9CqMNA",
-    },
-  ];
+  // JSON'dan tüm technicalData array'ini çek
+  const t = useTranslations();
+  const technicalDataRaw = t.raw("technicalData");
+
+  // Array'e dönüştür ve id ekle
+  const technicalData = Array.isArray(technicalDataRaw)
+    ? technicalDataRaw.map((item, index) => ({
+        ...item,
+        id: index + 1,
+      }))
+    : [];
 
   useEffect(() => {
     const ctx = gsap.context(() => {

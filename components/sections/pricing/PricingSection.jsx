@@ -1,10 +1,13 @@
 "use client";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 
 const PricingSection = () => {
   const sectionRef = useRef(null);
   const cardsRef = useRef([]);
+
+  const t = useTranslations("pricing");
 
   useEffect(() => {
     // GSAP animasyonları için hazırlık
@@ -51,53 +54,21 @@ const PricingSection = () => {
     };
   }, []);
 
-  const plans = [
+  const plansData = [
     {
-      name: "Temel",
-      price: "$9",
-      period: "/ay",
-      description:
-        "Kendi tarzını yaratmak isteyen kullanıcılar için ideal başlangıç paketi.",
-      features: [
-        "Dış kabuğu tamamlanmış yapı",
-        "Elektrik & su tesisatları döşenmiş",
-        "Tamamen boş iç alan",
-        "Kişiselleştirme ve özgün dekorasyon imkânı",
-        "Uygun maliyetli başlangıç seviyesi",
-      ],
       image: "/icons/empty_icon.png",
       planImage: "/kesitler/plan-1-arkaplansiz.webp",
+      index: 0,
     },
     {
-      name: "Ekonomik",
-      price: "$29",
-      period: "/ay",
-      description:
-        "Hızlı yerleşim isteyenler için ana yaşam alanları hazır, pratik çözüm.",
-      features: [
-        "Elektrik & su tesisatları eksiksiz",
-        "Boya, alçı ve duvar işlemleri tamamlanmış",
-        "Mutfak alanı ve sabit mobilyalar hazır",
-        "Kendi hareketli mobilyalarını getirip hemen yerleşebilme",
-        "Konforlu ve dengeli yaşam paketi",
-      ],
       image: "/icons/light_icon.png",
       planImage: "/kesitler/plan-2-arkaplansiz.webp",
+      index: 1,
     },
     {
-      name: "Konfor",
-      price: "$99",
-      period: "/ay",
-      description: "Tam donanımlı, yaşamaya hazır premium İVO Bio deneyimi.",
-      features: [
-        "Tüm tesisatlar ve iç işçilik üst düzey tamamlanmış",
-        "Sabit ve hareketli mobilyalar dahil",
-        "Modern mutfak ve yaşam alanı",
-        "Direkt taşınıp hemen yaşama başlama imkânı",
-        "En yüksek konfor seviyesinde tam hazır yaşam çözümü",
-      ],
       image: "/icons/full_icon.png",
       planImage: "/kesitler/plan-3-arkaplansiz.webp",
+      index: 2,
     },
   ];
 
@@ -112,7 +83,7 @@ const PricingSection = () => {
         </div> */}
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {plans.map((plan, index) => (
+          {plansData.map((plan, index) => (
             <div
               key={index}
               ref={(el) => (cardsRef.current[index] = el)}
@@ -122,20 +93,22 @@ const PricingSection = () => {
                 <div className="w-full flex justify-center items-center overflow-hidden">
                   <img
                     src={plan.image}
-                    alt={plan.name}
+                    alt={t(`plans.${plan.index}.name`)}
                     className="max-w-80 object-cover"
                   />
                 </div>
 
-                <h3 className="text-3xl font-bold text-center">{plan.name}</h3>
+                <h3 className="text-3xl font-bold text-center">
+                  {t(`plans.${plan.index}.name`)}
+                </h3>
                 {/* <div className="mb-2">
-                      <span className="text-5xl font-bold">{plan.price}</span>
-                      <span className="text-lg">{plan.period}</span>
+                      <span className="text-5xl font-bold">{t(`plans.${plan.index}.price`)}</span>
+                      <span className="text-lg">{t(`plans.${plan.index}.period`)}</span>
                     </div> */}
 
                 <div className="flex flex-col gap-6">
                   <p className="h-12 text-xl text-center mt-2">
-                    {plan.description}
+                    {t(`plans.${plan.index}.description`)}
                   </p>
 
                   <div>
@@ -149,12 +122,12 @@ const PricingSection = () => {
                   </div>
 
                   <ul className="space-y-1 text-left">
-                    {plan.features.map((feature, i) => (
+                    {[0, 1, 2, 3, 4].map((i) => (
                       <li key={i} className="flex items-center">
                         <span className="text-yesil mr-3 text-xl font-bold">
                           ✓
                         </span>
-                        {feature}
+                        {t(`plans.${plan.index}.features.${i}`)}
                       </li>
                     ))}
                   </ul>
