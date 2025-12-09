@@ -320,6 +320,10 @@
       }
     ]
   },
+  "gallery": {
+    "title": "İVO Bio'yu Keşfet",
+    "imageAlt": "Galeri Görseli"
+  },
   "footer": {
     "company": "BELEN & PARTNERS",
     "brandTitle": "İVO Bio",

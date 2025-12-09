@@ -1,176 +1,176 @@
+"use client";
+
 import React, { useState, useEffect, useRef } from "react";
-import { IoClose, IoChevronBack, IoChevronForward } from "react-icons/io5";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const GallerySection = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const galleryRef = useRef(null);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const thumbnailRef = useRef(null);
+  const t = useTranslations("gallery");
 
-  // Pinterest tarzı farklı yüksekliklerde görseller
-  const images = Array.from({ length: 66 }, (_, i) => {
-    const heights = [250, 300, 350, 400, 320, 380, 280];
-    return {
-      id: i,
-      url: `/gallery/1 (${i + 1}).webp`,
-      height: heights[i % heights.length],
-    };
-  });
+  // 66 adet görsel
+  const images = Array.from({ length: 66 }, (_, i) => ({
+    id: i,
+    url: `/gallery/1 (${i + 1}).webp`,
+  }));
 
-  useEffect(() => {
-    if (galleryRef.current) {
-      const items = galleryRef.current.querySelectorAll(".gallery-item");
-      items.forEach((item, index) => {
-        item.style.opacity = "0";
-        item.style.transform = "translateY(30px) scale(0.95)";
-
-        setTimeout(() => {
-          item.style.transition = "all 0.6s cubic-bezier(0.4, 0, 0.2, 1)";
-          item.style.opacity = "1";
-          item.style.transform = "translateY(0) scale(1)";
-        }, index * 50);
-      });
+  // Thumbnail'a tıklayınca otomatik scroll
+  const scrollToThumbnail = (index) => {
+    if (thumbnailRef.current) {
+      const thumbnail = thumbnailRef.current.children[index];
+      if (thumbnail) {
+        thumbnail.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "center",
+        });
+      }
     }
-  }, []);
-
-  useEffect(() => {
-    if (isModalOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [isModalOpen]);
-
-  const openModal = (image) => {
-    setSelectedImage(image);
-    setIsModalOpen(true);
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setTimeout(() => setSelectedImage(null), 300);
+  const handleThumbnailClick = (index) => {
+    setSelectedIndex(index);
+    scrollToThumbnail(index);
   };
 
-  const navigateImage = (direction) => {
-    const currentIndex = images.findIndex((img) => img.id === selectedImage.id);
-    let newIndex;
-
-    if (direction === "next") {
-      newIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
-    } else {
-      newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
-    }
-
-    setSelectedImage(images[newIndex]);
-  };
-
+  // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (!isModalOpen) return;
-
-      if (e.key === "Escape") closeModal();
-      if (e.key === "ArrowRight") navigateImage("next");
-      if (e.key === "ArrowLeft") navigateImage("prev");
+      if (e.key === "ArrowRight") {
+        setSelectedIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+      } else if (e.key === "ArrowLeft") {
+        setSelectedIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+      }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isModalOpen, selectedImage]);
+  }, [images.length]);
 
   return (
-    <div className="py-20 px-4 font-quicksand" id="galeri">
+    <div className="py-20 px-4 font-quicksand bg-gradient-to-b from-white to-gray-50" id="galeri">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h1 className="text-[120px] font-bold text-yesil mb-4">
-            İVO Bio'yu Keşfet
+        {/* Title */}
+        <div className="text-center mb-12">
+          <h1 className="text-5xl md:text-[100px] font-bold text-yesil mb-4">
+            {t("title")}
           </h1>
         </div>
 
-        <div
-          ref={galleryRef}
-          className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4"
-        >
-          {images.map((image) => (
-            <div
-              key={image.id}
-              className="gallery-item break-inside-avoid mb-4 group cursor-pointer"
-              onClick={() => openModal(image)}
-              style={{ marginBottom: "16px" }}
+        {/* Main Image Container */}
+        <div className="relative w-full aspect-video mb-6 bg-gray-100 rounded-3xl overflow-hidden shadow-2xl">
+          <Image
+            src={images[selectedIndex].url}
+            alt={`${t("imageAlt")} ${selectedIndex + 1}`}
+            fill
+            className="object-cover transition-opacity duration-500"
+            priority={selectedIndex === 0}
+            sizes="(max-width: 1280px) 100vw, 1280px"
+          />
+
+          {/* Image Counter */}
+          <div className="absolute bottom-4 right-4 bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium">
+            {selectedIndex + 1} / {images.length}
+          </div>
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={() =>
+              setSelectedIndex((prev) =>
+                prev === 0 ? images.length - 1 : prev - 1
+              )
+            }
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white p-3 rounded-full transition-all duration-300 border border-white/30"
+            aria-label="Previous"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500">
-                <img
-                  src={image.url}
-                  alt={`Gallery ${image.id + 1}`}
-                  className="w-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-                  style={{ height: `${image.height}px`, display: "block" }}
-                />
-              </div>
-            </div>
-          ))}
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+          </button>
+
+          <button
+            onClick={() =>
+              setSelectedIndex((prev) =>
+                prev === images.length - 1 ? 0 : prev + 1
+              )
+            }
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white p-3 rounded-full transition-all duration-300 border border-white/30"
+            aria-label="Next"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </button>
         </div>
-      </div>
 
-      {/* Modal */}
-      {isModalOpen && selectedImage && (
-        <div
-          className={`fixed inset-0 z-50 flex items-center justify-center bg-gri/50 backdrop-blur-sm transition-opacity duration-300 ${
-            isModalOpen ? "opacity-100" : "opacity-0"
-          }`}
-          onClick={closeModal}
-        >
-          {/* Close Button */}
-          <button
-            onClick={closeModal}
-            className="absolute top-6 right-6 z-50 p-3 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-md transition-all duration-300 group border-2 border-white cursor-pointer "
-            aria-label="Kapat"
-          >
-            <IoClose className="w-6 h-6 text-white group-hover:rotate-90 transition-transform duration-300" />
-          </button>
-
-          {/* Previous Button */}
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              navigateImage("prev");
-            }}
-            className="absolute left-6 z-50 p-4 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-md transition-all duration-300 group border-2 border-white cursor-pointer"
-            aria-label="Önceki"
-          >
-            <IoChevronBack className="w-8 h-8 text-white group-hover:-translate-x-1 transition-transform duration-300" />
-          </button>
-
-          {/* Next Button */}
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              navigateImage("next");
-            }}
-            className="absolute right-6 z-50 p-4 bg-white/10 hover:bg-white/20 rounded-full backdrop-blur-md transition-all duration-300 group border-2 border-white cursor-pointer"
-            aria-label="Sonraki"
-          >
-            <IoChevronForward className="w-8 h-8 text-white group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
-
-          {/* Image Container */}
+        {/* Thumbnails Container */}
+        <div className="relative">
           <div
-            className="relative max-w-6xl max-h-[90vh] mx-4"
-            onClick={(e) => e.stopPropagation()}
+            ref={thumbnailRef}
+            className="flex gap-3 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 pb-4 px-2"
+            style={{
+              scrollbarWidth: "thin",
+              scrollbarColor: "#9ca3af #e5e7eb",
+            }}
           >
-            <img
-              src={selectedImage.url}
-              alt={`Gallery ${selectedImage.id + 1}`}
-              className="max-w-full max-h-[90vh] object-contain rounded-4xl shadow-2xl animate-in fade-in zoom-in duration-500"
-            />
-            <div className="absolute -bottom-16 left-0 right-0 text-center">
-              <p className="text-white text-lg font-medium bg-black/50 backdrop-blur-sm rounded-full px-6 py-2 inline-block">
-                {selectedImage.id + 1} / {images.length}
-              </p>
-            </div>
+            {images.map((image, index) => (
+              <button
+                key={image.id}
+                onClick={() => handleThumbnailClick(index)}
+                className={`relative flex-shrink-0 w-28 h-20 rounded-xl overflow-hidden transition-all duration-300 ${
+                  selectedIndex === index
+                    ? "ring-4 ring-yesil scale-105 shadow-xl"
+                    : "ring-2 ring-gray-300 hover:ring-gray-400 opacity-70 hover:opacity-100"
+                }`}
+              >
+                <Image
+                  src={image.url}
+                  alt={`${t("imageAlt")} ${index + 1}`}
+                  fill
+                  className="object-cover"
+                  sizes="112px"
+                />
+                {selectedIndex === index && (
+                  <div className="absolute inset-0 bg-yesil/20 flex items-center justify-center">
+                    <svg
+                      className="w-8 h-8 text-white drop-shadow-lg"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                )}
+              </button>
+            ))}
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 };
