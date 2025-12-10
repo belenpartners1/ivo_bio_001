@@ -4,46 +4,49 @@ import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { TiThMenu } from "react-icons/ti";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
+import { useTranslations } from "next-intl";
 
 const AdvertiseHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const t = useTranslations("header.menu");
+
   // Menü öğeleri - artık obje formatında ve id içeriyor
   const menuItems = [
     {
-      name: "İVO Bio Nedir?",
+      name: t("whatIsIvoBio"),
       id: "intro",
     },
     {
-      name: "Tanıtım Filmi",
+      name: t("promotionalFilm"),
       id: "tanitim-filmi",
     },
     {
-      name: "İVO Bio Teknik",
+      name: t("ivoBioTechnical"),
       id: "teknik",
     },
     {
-      name: "İVO Bio Plan",
+      name: t("ivoBioPlan"),
       id: "plan",
     },
     {
-      name: "İVO Bio Modelleri",
+      name: t("ivoBioModels"),
       id: "modeller",
     },
     {
-      name: "İVO Bio Kişisel",
+      name: t("ivoBioPersonal"),
       id: "kisisel",
     },
     {
-      name: "İletişim",
+      name: t("contact"),
       id: "iletisim",
     },
     {
-      name: "Galeri",
+      name: t("gallery"),
       id: "galeri",
     },
     {
-      name: "Sıkça Sorulan Sorular",
+      name: t("faq"),
       id: "sss",
     },
   ];

@@ -1,20 +1,21 @@
 {
   "header": {
-    "tagline": "Your natural life line..."
+    "tagline": "Your natural life line...",
+    "menu": {
+      "whatIsIvoBio": "What is IVO Bio?",
+      "promotionalFilm": "Promotional Film",
+      "ivoBioTechnical": "IVO Bio Technical",
+      "ivoBioPlan": "IVO Bio Plan",
+      "ivoBioModels": "IVO Bio Models",
+      "ivoBioPersonal": "IVO Bio Personal",
+      "contact": "Contact",
+      "gallery": "Gallery",
+      "faq": "Frequently Asked Questions"
+    }
   },
   "manipulateModel": {
-    "modernDesign": {
-      "title": "Modern Design",
-      "description": "IVO Bio's contemporary architecture combines aesthetic lines with functionality."
-    },
-    "modularSystem": {
-      "title": "Modular System",
-      "description": "Thanks to its intelligent modular structure, IVO Bio offers a flexible living space that quickly adapts to different needs."
-    },
-    "highTechnology": {
-      "title": "High Technology",
-      "description": "Developed with a perfect engineering approach, IVO Bio combines minimalist architecture with modern structural solutions."
-    }
+    "zoomIn": "Zoom In",
+    "zoomOut": "Zoom Out"
   },
   "introduceIvoBio": {
     "header1": "IVO Bio",

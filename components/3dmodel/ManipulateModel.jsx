@@ -15,21 +15,6 @@ export default function ManipulateModel() {
   const controlsRef = useRef();
   const [zoomLevel, setZoomLevel] = useState(1);
 
-  const sections = [
-    {
-      titleKey: "modernDesign.title",
-      descriptionKey: "modernDesign.description",
-    },
-    {
-      titleKey: "modularSystem.title",
-      descriptionKey: "modularSystem.description",
-    },
-    {
-      titleKey: "highTechnology.title",
-      descriptionKey: "highTechnology.description",
-    },
-  ];
-
   const handleZoomChange = (e) => {
     const newZoom = parseFloat(e.target.value);
     setZoomLevel(newZoom);
@@ -63,9 +48,9 @@ export default function ManipulateModel() {
         </Canvas>
 
         {/* Zoom Control Slider */}
-        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex items-center gap-4 bg-white/90 backdrop-blur-sm rounded-full shadow-lg px-6 py-4">
-          <span className="text-sm font-semibold text-gray-700 whitespace-nowrap">
-            Uzaklaş
+        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex items-center gap-4 bg-white/90 backdrop-blur-sm rounded-full shadow-lg px-6 py-4 font-quicksand">
+          <span className="font-quicksand font-semibold text-gray-700 whitespace-nowrap">
+            {t("zoomOut")}
           </span>
           <div className="relative flex items-center">
             <input
@@ -77,20 +62,22 @@ export default function ManipulateModel() {
               onChange={handleZoomChange}
               className="w-48 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
               style={{
-                background: `linear-gradient(to right, #1f2937 0%, #1f2937 ${((zoomLevel - 0.5) / 2.5) * 100}%, #e5e7eb ${((zoomLevel - 0.5) / 2.5) * 100}%, #e5e7eb 100%)`
+                background: `linear-gradient(to right, #a4b49f 0%, #a4b49f ${
+                  ((zoomLevel - 0.5) / 2.5) * 100
+                }%, #e5e7eb ${((zoomLevel - 0.5) / 2.5) * 100}%, #e5e7eb 100%)`,
               }}
             />
             <div
-              className="absolute w-5 h-5 bg-gray-800 rounded-full shadow-md pointer-events-none"
+              className="absolute w-5 h-5 bg-yesil rounded-full shadow-md pointer-events-none"
               style={{
                 left: `calc(${((zoomLevel - 0.5) / 2.5) * 100}% - 10px)`,
-                top: '50%',
-                transform: 'translateY(-50%)'
+                top: "50%",
+                transform: "translateY(-50%)",
               }}
             />
           </div>
-          <span className="text-sm font-semibold text-gray-700 whitespace-nowrap">
-            Yakınlaş
+          <span className="font-quicksand font-semibold text-gray-700 whitespace-nowrap">
+            {t("zoomIn")}
           </span>
         </div>
 

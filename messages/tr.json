@@ -1,20 +1,21 @@
 {
   "header": {
-    "tagline": "Doğal yaşam çizginiz..."
+    "tagline": "Doğal yaşam çizginiz...",
+    "menu": {
+      "whatIsIvoBio": "İVO Bio Nedir?",
+      "promotionalFilm": "Tanıtım Filmi",
+      "ivoBioTechnical": "İVO Bio Teknik",
+      "ivoBioPlan": "İVO Bio Plan",
+      "ivoBioModels": "İVO Bio Modelleri",
+      "ivoBioPersonal": "İVO Bio Kişisel",
+      "contact": "İletişim",
+      "gallery": "Galeri",
+      "faq": "Sıkça Sorulan Sorular"
+    }
   },
   "manipulateModel": {
-    "modernDesign": {
-      "title": "Modern Tasarım",
-      "description": "İVO Bio'nun çağdaş mimarisi, estetik çizgileri ile fonksiyonelliği bir araya getiriyor."
-    },
-    "modularSystem": {
-      "title": "Modüler Sistem",
-      "description": "Akıllı modüler yapısı sayesinde İVO Bio, farklı ihtiyaçlara hızla uyum sağlayan esnek bir yaşam alanı sunar."
-    },
-    "highTechnology": {
-      "title": "Yüksek Teknoloji",
-      "description": "Mükemmel mühendislik yaklaşımıyla geliştirilen İVO Bio, yalın mimariyi modern yapısal çözümlerle birleştiriyor."
-    }
+    "zoomIn": "Yakınlaş",
+    "zoomOut": "Uzaklaş"
   },
   "introduceIvoBio": {
     "header1": "İVO Bio",
