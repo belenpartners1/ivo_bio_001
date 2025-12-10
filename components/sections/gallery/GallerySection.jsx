@@ -10,7 +10,7 @@ const GallerySection = () => {
   const t = useTranslations("gallery");
 
   // 66 adet görsel
-  const images = Array.from({ length: 66 }, (_, i) => ({
+  const images = Array.from({ length: 42 }, (_, i) => ({
     id: i,
     url: `/gallery/1 (${i + 1}).webp`,
   }));
@@ -49,7 +49,10 @@ const GallerySection = () => {
   }, [images.length]);
 
   return (
-    <div className="py-20 px-4 font-quicksand bg-gradient-to-b from-white to-gray-50" id="galeri">
+    <div
+      className="py-20 px-4 font-quicksand bg-gradient-to-b from-white to-gray-50"
+      id="galeri"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <div className="text-center mb-12">
