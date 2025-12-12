@@ -52,6 +52,24 @@
     "success": "تم إرسال رسالتك بنجاح",
     "error": "حدث خطأ"
   },
+  "contactForm": {
+    "title": "تواصل",
+    "subtitle": "معنا",
+    "description1": "اتصل بنا للحصول على معلومات حول IVO Bio أو إذا كانت لديك أي أسئلة حول IVO Bio.",
+    "description2": "سنعود إليك في أقرب وقت ممكن.",
+    "firstName": "الاسم الأول",
+    "firstNamePlaceholder": "اسمك الأول",
+    "lastName": "اسم العائلة",
+    "lastNamePlaceholder": "اسم عائلتك",
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "example@mail.com",
+    "phone": "الهاتف",
+    "phonePlaceholder": "+90 (XXX) XXX XX XX",
+    "message": "تعليقاتك",
+    "messagePlaceholder": "شارك أفكارك معنا... (اختياري)",
+    "submit": "إرسال",
+    "submitting": "جاري الإرسال..."
+  },
   "faq": {
     "title": "الأسئلة الشائعة",
     "question1": "ما هو IVO Bio؟",

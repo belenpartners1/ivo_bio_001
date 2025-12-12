@@ -10,27 +10,139 @@ const ContactForm = () => {
     lastName: "",
     email: "",
     phone: "",
+    message: "",
+    websiteUrl: "", // Honeypot field - should remain empty
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+  const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value,
     });
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors({
+        ...errors,
+        [name]: "",
+      });
+    }
   };
 
-  const handleSubmit = (e) => {
+  const validateForm = () => {
+    const newErrors = {};
+
+    // Ad validasyonu
+    if (!formData.firstName.trim()) {
+      newErrors.firstName = "Ad alanı zorunludur";
+    } else if (formData.firstName.trim().length < 2) {
+      newErrors.firstName = "Ad en az 2 karakter olmalıdır";
+    } else if (!/^[a-zA-ZğüşıöçĞÜŞİÖÇ\s]+$/.test(formData.firstName)) {
+      newErrors.firstName = "Ad sadece harf içermelidir";
+    }
+
+    // Soyad validasyonu
+    if (!formData.lastName.trim()) {
+      newErrors.lastName = "Soyad alanı zorunludur";
+    } else if (formData.lastName.trim().length < 2) {
+      newErrors.lastName = "Soyad en az 2 karakter olmalıdır";
+    } else if (!/^[a-zA-ZğüşıöçĞÜŞİÖÇ\s]+$/.test(formData.lastName)) {
+      newErrors.lastName = "Soyad sadece harf içermelidir";
+    }
+
+    // Email validasyonu
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) {
+      newErrors.email = "E-posta alanı zorunludur";
+    } else if (!emailRegex.test(formData.email)) {
+      newErrors.email = "Geçerli bir e-posta adresi giriniz";
+    }
+
+    // Telefon validasyonu
+    const phoneRegex = /^[0-9+\s\-()]+$/;
+    if (!formData.phone.trim()) {
+      newErrors.phone = "Telefon alanı zorunludur";
+    } else if (formData.phone.replace(/[^0-9]/g, "").length < 10) {
+      newErrors.phone = "Geçerli bir telefon numarası giriniz";
+    } else if (!phoneRegex.test(formData.phone)) {
+      newErrors.phone = "Telefon numarası sadece rakam ve özel karakterler içerebilir";
+    }
+
+    // Mesaj validasyonu (opsiyonel ama varsa kontrol et)
+    if (formData.message && formData.message.length > 1000) {
+      newErrors.message = "Mesaj en fazla 1000 karakter olabilir";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Form gönderme işlemi buraya eklenebilir
+
+    // Honeypot kontrolü - bot tespiti
+    if (formData.websiteUrl !== "") {
+      // Bot tespit edildi - sessizce başarılı gibi göster
+      setIsSubmitting(true);
+      setTimeout(() => {
+        setSubmitStatus({ type: "success", message: "Mesajınız başarıyla gönderildi." });
+        setIsSubmitting(false);
+      }, 1000);
+      return;
+    }
+
+    // Form validasyonu
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({ type: "success", message: data.message });
+        // Formu temizle
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+          websiteUrl: "",
+        });
+      } else {
+        setSubmitStatus({ type: "error", message: data.message });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: "Bir hata oluştu. Lütfen tekrar deneyin.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <div
-      className="h-screen w-full bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center px-6 font-quicksand"
+      className="min-h-screen w-full bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center px-6 py-12 font-quicksand"
       id="iletisim"
     >
-      <div className="max-w-5xl w-full grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-5xl w-full grid md:grid-cols-2 gap-8 items-center">
         {/* Sol Taraf - Başlık ve Açıklama */}
         <div className="space-y-6">
           <div className="space-y-4">
@@ -88,13 +200,13 @@ const ContactForm = () => {
         </div>
 
         {/* Sağ Taraf - Form */}
-        <div className="bg-white rounded-3xl shadow-xl p-8 md:p-10">
-          <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="bg-white rounded-3xl shadow-xl p-6 md:p-8">
+          <form onSubmit={handleSubmit} className="space-y-4">
             {/* Ad */}
-            <div className="space-y-2">
+            <div className="space-y-1.5">
               <label
                 htmlFor="firstName"
-                className="block font-medium text-gray-700 ml-1"
+                className="block font-medium text-gray-700 ml-1 text-sm"
               >
                 {t("firstName")}
               </label>
@@ -105,16 +217,23 @@ const ContactForm = () => {
                 value={formData.firstName}
                 onChange={handleChange}
                 required
-                className="w-full px-5 py-4 rounded-2xl border border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100 outline-none transition-all duration-200 text-gray-800"
+                className={`w-full px-4 py-3 rounded-2xl border transition-all duration-200 text-gray-800 outline-none ${
+                  errors.firstName
+                    ? "border-red-300 focus:border-red-400 focus:ring-4 focus:ring-red-100"
+                    : "border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100"
+                }`}
                 placeholder={t("firstNamePlaceholder")}
               />
+              {errors.firstName && (
+                <p className="text-red-600 text-xs ml-1">{errors.firstName}</p>
+              )}
             </div>
 
             {/* Soyad */}
-            <div className="space-y-2">
+            <div className="space-y-1.5">
               <label
                 htmlFor="lastName"
-                className="block ml-1 font-medium text-gray-700"
+                className="block ml-1 font-medium text-gray-700 text-sm"
               >
                 {t("lastName")}
               </label>
@@ -125,16 +244,23 @@ const ContactForm = () => {
                 value={formData.lastName}
                 onChange={handleChange}
                 required
-                className="w-full px-5 py-4 rounded-2xl border border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100 outline-none transition-all duration-200 text-gray-800"
+                className={`w-full px-4 py-3 rounded-2xl border transition-all duration-200 text-gray-800 outline-none ${
+                  errors.lastName
+                    ? "border-red-300 focus:border-red-400 focus:ring-4 focus:ring-red-100"
+                    : "border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100"
+                }`}
                 placeholder={t("lastNamePlaceholder")}
               />
+              {errors.lastName && (
+                <p className="text-red-600 text-xs ml-1">{errors.lastName}</p>
+              )}
             </div>
 
             {/* Email */}
-            <div className="space-y-2">
+            <div className="space-y-1.5">
               <label
                 htmlFor="email"
-                className="block ml-1 font-medium text-gray-700"
+                className="block ml-1 font-medium text-gray-700 text-sm"
               >
                 {t("email")}
               </label>
@@ -145,16 +271,23 @@ const ContactForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-5 py-4 rounded-2xl border border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100 outline-none transition-all duration-200 text-gray-800"
+                className={`w-full px-4 py-3 rounded-2xl border transition-all duration-200 text-gray-800 outline-none ${
+                  errors.email
+                    ? "border-red-300 focus:border-red-400 focus:ring-4 focus:ring-red-100"
+                    : "border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100"
+                }`}
                 placeholder={t("emailPlaceholder")}
               />
+              {errors.email && (
+                <p className="text-red-600 text-xs ml-1">{errors.email}</p>
+              )}
             </div>
 
             {/* Telefon */}
-            <div className="space-y-2">
+            <div className="space-y-1.5">
               <label
                 htmlFor="phone"
-                className="block ml-1 font-medium text-gray-700"
+                className="block ml-1 font-medium text-gray-700 text-sm"
               >
                 {t("phone")}
               </label>
@@ -165,17 +298,82 @@ const ContactForm = () => {
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className="w-full px-5 py-4 rounded-2xl border border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100 outline-none transition-all duration-200 text-gray-800"
+                className={`w-full px-4 py-3 rounded-2xl border transition-all duration-200 text-gray-800 outline-none ${
+                  errors.phone
+                    ? "border-red-300 focus:border-red-400 focus:ring-4 focus:ring-red-100"
+                    : "border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100"
+                }`}
                 placeholder={t("phonePlaceholder")}
               />
+              {errors.phone && (
+                <p className="text-red-600 text-xs ml-1">{errors.phone}</p>
+              )}
             </div>
+
+            {/* Görüşleriniz */}
+            <div className="space-y-1.5">
+              <label
+                htmlFor="message"
+                className="block ml-1 font-medium text-gray-700 text-sm"
+              >
+                {t("message")}
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                rows="3"
+                className={`w-full px-4 py-3 rounded-2xl border transition-all duration-200 text-gray-800 resize-none outline-none ${
+                  errors.message
+                    ? "border-red-300 focus:border-red-400 focus:ring-4 focus:ring-red-100"
+                    : "border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100"
+                }`}
+                placeholder={t("messagePlaceholder")}
+              />
+              {errors.message && (
+                <p className="text-red-600 text-xs ml-1">{errors.message}</p>
+              )}
+            </div>
+
+            {/* Honeypot field - hidden from users, visible to bots */}
+            <div className="hidden" aria-hidden="true">
+              <label htmlFor="websiteUrl">Website URL</label>
+              <input
+                type="text"
+                id="websiteUrl"
+                name="websiteUrl"
+                value={formData.websiteUrl}
+                onChange={handleChange}
+                tabIndex="-1"
+                autoComplete="off"
+              />
+            </div>
+
+            {/* Status Messages */}
+            {submitStatus && (
+              <div
+                className={`p-3 rounded-2xl text-center font-medium text-sm ${
+                  submitStatus.type === "success"
+                    ? "bg-green-50 text-green-700 border border-green-200"
+                    : "bg-red-50 text-red-700 border border-red-200"
+                }`}
+              >
+                {submitStatus.message}
+              </div>
+            )}
 
             {/* Submit Button */}
             <button
               type="submit"
-              className="w-full bg-gray-800 text-white py-4 rounded-2xl font-semibold text-lg hover:bg-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+              disabled={isSubmitting}
+              className={`w-full py-3.5 rounded-2xl font-semibold text-base transition-all duration-300 shadow-lg ${
+                isSubmitting
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : "bg-gray-800 text-white hover:bg-gray-900 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+              }`}
             >
-              {t("submit")}
+              {isSubmitting ? t("submitting") || "Gönderiliyor..." : t("submit")}
             </button>
           </form>
         </div>
