@@ -101,10 +101,10 @@ const FloorInfo = () => {
               key={floor.id}
               className="flex flex-col lg:flex-row items-center gap-6 md:gap-8 lg:gap-12"
             >
-              {/* Resim - Sol taraf (2/3) */}
+              {/* Resim - Sol taraf */}
               <div
                 ref={(el) => (imagesRef.current[index] = el)}
-                className="w-full lg:w-4/5"
+                className="w-full lg:w-3/5"
               >
                 <div className="relative overflow-hidden rounded-xl md:rounded-2xl shadow-2xl bg-white">
                   <img
@@ -115,16 +115,16 @@ const FloorInfo = () => {
                 </div>
               </div>
 
-              {/* Açıklama - Sağ taraf (1/3) */}
+              {/* Açıklama - Sağ taraf */}
               <div
                 ref={(el) => (textsRef.current[index] = el)}
-                className="w-full lg:w-1/5"
+                className="w-full lg:w-2/5"
               >
                 <div className="space-y-3 md:space-y-4">
-                  <h3 className="text-2xl md:text-4xl lg:text-6xl font-bold text-yesil text-center lg:text-left">
+                  <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-yesil text-center lg:text-left">
                     {floor.title}
                   </h3>
-                  <p className="text-lg md:text-xl lg:text-2xl text-kahverengi text-balance text-center lg:text-left">
+                  <p className="text-lg md:text-xl lg:text-xl text-kahverengi text-balance text-center lg:text-left leading-relaxed">
                     {floor.description}
                   </p>
                 </div>
