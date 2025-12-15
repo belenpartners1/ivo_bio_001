@@ -94,69 +94,52 @@ const TechnicalSection = () => {
   return (
     <div
       ref={sectionRef}
-      className="h-screen w-full p-2 relative bg-gri font-quicksand"
+      className="h-screen w-full p-1 sm:p-2 relative bg-gri font-quicksand"
       id="teknik"
     >
       {technicalData.map((item, index) => (
         <div
           key={item.id}
           ref={(el) => (panelsRef.current[index] = el)}
-          className="absolute inset-0 w-full h-full p-2"
+          className="absolute inset-0 w-full h-full p-1 sm:p-2"
           style={{
             zIndex: index === 0 ? 1 : 0,
           }}
         >
-          <div className="grid grid-cols-3 gap-2 h-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-1 sm:gap-2 h-full">
             {/* Sol Kolon - Yazı */}
             <div
-              className="left-content col-span-1 px-6 py-24 bg-white rounded-3xl flex flex-col justify-between h-full relative border border-gri/90"
+              className="left-content col-span-1 px-3 py-4 sm:px-4 sm:py-8 md:px-6 md:py-24 bg-white rounded-2xl sm:rounded-3xl flex flex-col justify-between h-full relative border border-gri/90 overflow-y-auto md:overflow-visible"
               style={{
                 transform: index === 0 ? "translateY(0%)" : "translateY(100%)",
               }}
             >
-              <h1 className="text-4xl text-center font-extrabold text-gray-700">
+              <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl text-center font-extrabold text-gray-700">
                 {item.title}
               </h1>
-              <div className="w-full h-[2px] bg-gray-300 mt-2"></div>
+              <div className="w-full h-[1px] sm:h-[2px] bg-gray-300 mt-1 sm:mt-2"></div>
 
-              <div className="flex flex-col items-center my-2">
-                {/* <div className="w-full h-[2px] bg-gray-300 my-6"></div> */}
-                {/* <p className="font-bold text-gray-600 text-justify leading-relaxed text-base my-16">
-                  {item.description}
-                </p> */}
+              <div className="flex flex-col items-center my-1 sm:my-2">
                 <p
-                  className="font-bold text-xl text-kahverengi text-start leading-relaxed my-16"
+                  className="font-bold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-kahverengi text-start leading-relaxed my-2 sm:my-4 md:my-8 lg:my-16"
                   dangerouslySetInnerHTML={{ __html: item.description }}
                 />
-                <div className="w-40 h-[2px] bg-gray-300 my-6"></div>
+                <div className="w-20 sm:w-32 md:w-40 h-[1px] sm:h-[2px] bg-gray-300 my-2 sm:my-4 md:my-6"></div>
               </div>
 
-              {/* Buton geçici olarak devre dışı - ileride kullanım için */}
-              {/* <div className="flex justify-center mt-6">
-                <button
-                  onClick={() => {
-                    setSelectedVideo({ url: item.videoUrl, title: item.title });
-                    setIsModalOpen(true);
-                  }}
-                  className="w-full px-6 py-4 bg-gray-700 text-white font-bold rounded-xl hover:bg-gray-800 transition-all hover:shadow-xl transform cursor-pointer"
-                >
-                  Detaylı İncele
-                </button>
-              </div> */}
-
-              {/* Alt dekoratif çizgiler */}
-              <div className="absolute w-[2px] h-20 bg-gray-300 bottom-0 left-20"></div>
-              <div className="absolute w-[2px] h-20 bg-gray-300 bottom-0 right-20"></div>
+              {/* Alt dekoratif çizgiler - mobilde gizle */}
+              <div className="hidden md:block absolute w-[2px] h-20 bg-gray-300 bottom-0 left-20"></div>
+              <div className="hidden md:block absolute w-[2px] h-20 bg-gray-300 bottom-0 right-20"></div>
 
               {/* Sayfa numarası */}
-              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-kahverengi font-bold border-b-2">
+              <div className="absolute bottom-2 sm:bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 text-kahverengi font-bold border-b-2 text-xs sm:text-sm md:text-base">
                 {index + 1} / {technicalData.length}
               </div>
             </div>
 
             {/* Sağ Kolon - Görsel veya Video */}
             <div
-              className="right-content col-span-2 bg-white h-full relative flex justify-center items-center overflow-hidden rounded-3xl"
+              className="right-content col-span-1 md:col-span-2 bg-white h-full relative flex justify-center items-center overflow-hidden rounded-2xl sm:rounded-3xl"
               style={{
                 transform: index === 0 ? "translateY(0%)" : "translateY(100%)",
               }}
@@ -168,13 +151,13 @@ const TechnicalSection = () => {
                   loop
                   muted
                   playsInline
-                  className="w-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               ) : (
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               )}
             </div>

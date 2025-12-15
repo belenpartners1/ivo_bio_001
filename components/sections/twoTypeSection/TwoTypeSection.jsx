@@ -109,14 +109,14 @@ const TwoTypeSection = () => {
     }
   }, [activeHover]);
 
-  return (
+return (
     <>
       {/* Main season balance section */}
       <div
         ref={sectionRef}
         className="relative h-screen w-full overflow-hidden font-quicksand"
       >
-        <div className="absolute inset-4 overflow-hidden rounded-4xl">
+        <div className="absolute inset-2 sm:inset-4 overflow-hidden rounded-3xl sm:rounded-4xl">
           {/* Summer (Left) Image - Full coverage */}
           <div
             ref={leftImageRef}
@@ -136,12 +136,9 @@ const TwoTypeSection = () => {
             {/* Summer Text Overlay */}
             <div
               ref={leftTextRef}
-              className="absolute bottom-12 left-12 p-8 max-w-md bg-white/15 backdrop-blur-2xl border border-white/20 rounded-3xl shadow-2xl opacity-0 translate-y-5"
+              className="absolute bottom-4 left-4 sm:bottom-8 sm:left-8 md:bottom-12 md:left-12 p-3 sm:p-5 md:p-8 max-w-xs sm:max-w-sm md:max-w-md bg-white/15 backdrop-blur-2xl border border-white/20 rounded-2xl sm:rounded-3xl shadow-2xl opacity-0 translate-y-5"
             >
-              {/* <h2 className="text-2xl font-black text-white mb-4 drop-shadow-lg">
-                YAZ
-              </h2> */}
-              <p className="text-white/90 font-bold leading-relaxed drop-shadow-md">
+              <p className="text-white/90 font-bold text-xs sm:text-sm md:text-base leading-relaxed drop-shadow-md">
                 {t("summer")}
               </p>
             </div>
@@ -159,7 +156,7 @@ const TwoTypeSection = () => {
           >
             <Image
               src="/yandan_kis.webp"
-              alt="Summer"
+              alt="Winter"
               className="w-full h-full object-cover"
               width={1920}
               height={1080}
@@ -168,12 +165,9 @@ const TwoTypeSection = () => {
             {/* Winter Text Overlay */}
             <div
               ref={rightTextRef}
-              className="absolute bottom-12 right-12 p-8 max-w-md bg-white/15 backdrop-blur-2xl border border-white/20 rounded-3xl shadow-2xl opacity-0 translate-y-5"
+              className="absolute bottom-4 right-4 sm:bottom-8 sm:right-8 md:bottom-12 md:right-12 p-3 sm:p-5 md:p-8 max-w-xs sm:max-w-sm md:max-w-md bg-white/15 backdrop-blur-2xl border border-white/20 rounded-2xl sm:rounded-3xl shadow-2xl opacity-0 translate-y-5"
             >
-              {/* <h2 className="text-2xl font-black text-white mb-4 drop-shadow-lg">
-                KIŞ
-              </h2> */}
-              <p className="text-white/90 font-bold leading-relaxed drop-shadow-md">
+              <p className="text-white/90 font-bold text-xs sm:text-sm md:text-base leading-relaxed drop-shadow-md">
                 {t("winter")}
               </p>
             </div>
