@@ -107,6 +107,7 @@ export default function FloorPlan() {
       className="flex flex-col justify-center items-center font-quicksand"
       id="plan"
     >
+      {/* Header Section */}
       <div className="text-center text-white font-quicksand">
         <h2 className="text-5xl md:text-[100px] font-bold mb-4">
           <span className="text-yesil"> {t("header1")} </span>
@@ -114,9 +115,12 @@ export default function FloorPlan() {
         </h2>
       </div>
 
-      <div className="text-center text-kahverengi text-4xl font-quicksand max-w-4xl mt-10">
+      {/* Description Section */}
+      <div className="text-center text-kahverengi text-2xl md:text-4xl font-quicksand max-w-4xl mt-10">
         <p className="font-quicksand">{t("description")}</p>
       </div>
+
+      {/* Floor Plan Section */}
       <div
         ref={containerRef}
         className="relative w-full mx-auto aspect-[3/2] flex flex-col justify-center items-center"
@@ -140,9 +144,9 @@ export default function FloorPlan() {
           >
             {/* Hotspot - Pulse animasyonu ekleyelim */}
             <div className="relative">
-              <div className="absolute inset-0 w-8 h-8 bg-sari rounded-full animate-ping opacity-75" />
+              <div className="absolute inset-0 md:w-8 md:h-8 w-6 h-6 bg-sari rounded-full animate-ping opacity-75" />
               <div
-                className="relative flex justify-center items-center w-8 h-8 bg-sari   rounded-full shadow-lg border-2 border-white 
+                className="relative flex justify-center items-center md:w-8 md:h-8 w-6 h-6 bg-sari   rounded-full shadow-lg border-2 border-white
               hover:scale-125 hover:bg-yesil transition-all duration-300 select-none"
               >
                 <p className="text-kahverengi">{spot.id}</p>
@@ -154,7 +158,7 @@ export default function FloorPlan() {
             <div
               ref={(el) => (infoRef.current[index] = el)}
               className="absolute left-1/2 -translate-x-1/2 mt-6
-    w-64 
+    w-64
     bg-gradient-to-br from-gray-900/70 to-gray-800/40
     backdrop-blur-xl border border-white/10
     shadow-2xl rounded-2xl p-5 text-white
@@ -188,7 +192,9 @@ export default function FloorPlan() {
           </div>
         ))}
 
-        <div className="absolute -translate-x-1/2 -translate-y-1/2 top-5/6 left-1/2 text-gray-800 font-quicksand font-bold mt-2">
+        {/* Info Text Area */}
+
+        <div className="hidden md:block md:absolute md:-translate-x-1/2 md:-translate-y-1/2 md:top-5/6 md:left-1/2 text-gray-800 font-quicksand font-bold mt-2">
           <ul className="grid grid-cols-1 md:grid-cols-3 gap-1 rounded-2xl p-2">
             <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
               1-) {t("list.0.label")} {t("list.0.area")}
@@ -223,6 +229,44 @@ export default function FloorPlan() {
             </li>
           </ul>
         </div>
+      </div>
+
+      {/* Information Plan Text */}
+
+      <div className="md:hidden w-full max-w-6xl mx-auto text-gray-800 font-quicksand font-bold mt-2">
+        <ul className="grid grid-cols-1 md:grid-cols-3 gap-1 rounded-2xl p-2">
+          <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
+            1-) {t("list.0.label")} {t("list.0.area")}
+          </li>
+
+          <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
+            2-) {t("list.1.label")} {t("list.1.area")}
+          </li>
+
+          <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
+            3-) {t("list.2.label")} {t("list.2.area")}
+          </li>
+
+          <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
+            4-) {t("list.3.label")} {t("list.3.area")}
+          </li>
+
+          <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
+            5-) {t("list.4.label")} {t("list.4.area")}
+          </li>
+          <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
+            6-) {t("list.5.label")} {t("list.5.area")}
+          </li>
+          <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
+            7-) {t("list.6.label")} {t("list.6.area")}
+          </li>
+          <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
+            8-) {t("list.7.label")} {t("list.7.area")}
+          </li>
+          <li className="p-2 flex items-center justify-center border-b md:border-b-0 md:border-r border-yesil">
+            9-) {t("list.8.label")} {t("list.8.area")}
+          </li>
+        </ul>
       </div>
     </div>
   );

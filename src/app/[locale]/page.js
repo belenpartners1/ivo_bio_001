@@ -59,7 +59,7 @@ const Home = () => {
       {/* <HorizontalScroll /> */}
       <PlanSection />
       <PricingSection />
-      <ProductColorSelector />
+      {/* <ProductColorSelector /> */}
       <ContactForm />
       <GallerySection />
       <FaqSection />

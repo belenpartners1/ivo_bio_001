@@ -90,11 +90,11 @@ const PricingSection = () => {
               className="group"
             >
               <div className="h-full rounded-4xl bg-white text-kahverengi transition-all duration-500 overflow-hidden shadow-lg border border-yesil flex flex-col p-6">
-                <div className="w-full flex justify-center items-center overflow-hidden">
+                <div className="w-full flex justify-center items-center overflow-hidden p-2">
                   <img
                     src={plan.image}
                     alt={t(`plans.${plan.index}.name`)}
-                    className="max-w-80 object-cover"
+                    className="w-full p-2 object-cover"
                   />
                 </div>
 
