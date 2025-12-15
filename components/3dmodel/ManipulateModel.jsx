@@ -25,7 +25,7 @@ export default function ManipulateModel() {
   };
 
   return (
-    <div className="w-full h-screen flex bg-white overflow-hidden">
+    <div className="w-full h-screen flex bg-white overflow-hidden rounded-b-4xl">
       <div className="w-full h-full relative cursor-grab active:cursor-grabbing">
         <Canvas camera={{ position: [-8, 6, 14], fov: 60 }}>
           <ambientLight intensity={0.5} />
