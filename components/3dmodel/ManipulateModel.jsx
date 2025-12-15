@@ -4,6 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF, Environment } from "@react-three/drei";
 import { Suspense, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 function Model() {
   const { scene } = useGLTF("/3dmodels/ivo_bio_3d2.glb");
@@ -27,7 +28,7 @@ export default function ManipulateModel() {
   return (
     <div className="w-full h-screen flex bg-white overflow-hidden rounded-b-4xl">
       <div className="w-full h-full relative cursor-grab active:cursor-grabbing">
-        <Canvas camera={{ position: [-8, 6, 14], fov: 60 }}>
+        <Canvas camera={{ position: [-8, 6, 14], fov: 60 }} className="z-10">
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 5]} intensity={1} />
 
@@ -47,8 +48,12 @@ export default function ManipulateModel() {
           />
         </Canvas>
 
+        <div className="absolute w-3/4 left-1/2 transform -translate-x-1/2 top-40 flex items-center font-quicksand opacity-20 ">
+          <Image src="/logo_yesil.png" alt="logo" width={2000} height={2000} />
+        </div>
+
         {/* Zoom Control Slider */}
-        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex items-center gap-4 bg-white/90 backdrop-blur-sm rounded-full shadow-lg px-6 py-4 font-quicksand">
+        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex items-center gap-4 bg-white/90 backdrop-blur-sm rounded-full shadow-lg px-6 py-4 font-quicksand z-20">
           <span className="font-quicksand font-semibold text-gray-700 whitespace-nowrap">
             {t("zoomOut")}
           </span>

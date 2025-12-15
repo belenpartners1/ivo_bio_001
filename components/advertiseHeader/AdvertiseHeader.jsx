@@ -33,10 +33,10 @@ const AdvertiseHeader = () => {
       name: t("ivoBioModels"),
       id: "modeller",
     },
-    {
-      name: t("ivoBioPersonal"),
-      id: "kisisel",
-    },
+    // {
+    //   name: t("ivoBioPersonal"),
+    //   id: "kisisel",
+    // },
     {
       name: t("contact"),
       id: "iletisim",
