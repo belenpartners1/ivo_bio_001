@@ -50,7 +50,7 @@ const GallerySection = () => {
 
   return (
     <div
-      className="py-12 md:py-16 lg:py-20 px-4 md:px-6 font-quicksand bg-gradient-to-b from-white to-gray-50"
+      className="py-12 md:py-16 lg:py-20 px-4 md:px-6 font-quicksand bg-gradient-to-b rounded-4xl from-white to-gray-50"
       id="galeri"
     >
       <div className="max-w-7xl mx-auto">

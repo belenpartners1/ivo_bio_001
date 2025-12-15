@@ -68,7 +68,8 @@ const ContactForm = () => {
     } else if (formData.phone.replace(/[^0-9]/g, "").length < 10) {
       newErrors.phone = "Geçerli bir telefon numarası giriniz";
     } else if (!phoneRegex.test(formData.phone)) {
-      newErrors.phone = "Telefon numarası sadece rakam ve özel karakterler içerebilir";
+      newErrors.phone =
+        "Telefon numarası sadece rakam ve özel karakterler içerebilir";
     }
 
     // Mesaj validasyonu (opsiyonel ama varsa kontrol et)
@@ -88,7 +89,10 @@ const ContactForm = () => {
       // Bot tespit edildi - sessizce başarılı gibi göster
       setIsSubmitting(true);
       setTimeout(() => {
-        setSubmitStatus({ type: "success", message: "Mesajınız başarıyla gönderildi." });
+        setSubmitStatus({
+          type: "success",
+          message: "Mesajınız başarıyla gönderildi.",
+        });
         setIsSubmitting(false);
       }, 1000);
       return;
@@ -139,7 +143,7 @@ const ContactForm = () => {
 
   return (
     <div
-      className="min-h-screen w-full bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center px-4 md:px-6 py-8 md:py-12 font-quicksand"
+      className="min-h-screen w-full bg-gri flex items-center justify-center px-4 md:px-6 py-8 md:py-12 font-quicksand"
       id="iletisim"
     >
       <div className="max-w-5xl w-full grid md:grid-cols-2 gap-6 md:gap-8 items-center">
@@ -148,7 +152,9 @@ const ContactForm = () => {
           <div className="space-y-3 md:space-y-4">
             <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900">
               {t("title")}
-              <span className="block text-gray-500 mt-1 md:mt-2">{t("subtitle")}</span>
+              <span className="block text-gray-500 mt-1 md:mt-2">
+                {t("subtitle")}
+              </span>
             </h2>
             <p className="text-base md:text-lg text-gray-500 leading-relaxed">
               {t("description1")}
@@ -176,7 +182,9 @@ const ContactForm = () => {
                   />
                 </svg>
               </div>
-              <span className="text-sm md:text-base lg:text-lg break-all">info@belenandpartners.com</span>
+              <span className="text-sm md:text-base lg:text-lg break-all">
+                info@belenandpartners.com
+              </span>
             </div>
             <div className="flex items-center gap-3 md:gap-4 text-gray-600">
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0">
@@ -194,7 +202,9 @@ const ContactForm = () => {
                   />
                 </svg>
               </div>
-              <span className="text-sm md:text-base lg:text-lg">+90 312 473 56 50</span>
+              <span className="text-sm md:text-base lg:text-lg">
+                +90 312 473 56 50
+              </span>
             </div>
           </div>
         </div>
@@ -373,7 +383,9 @@ const ContactForm = () => {
                   : "bg-gray-800 text-white hover:bg-gray-900 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
               }`}
             >
-              {isSubmitting ? t("submitting") || "Gönderiliyor..." : t("submit")}
+              {isSubmitting
+                ? t("submitting") || "Gönderiliyor..."
+                : t("submit")}
             </button>
           </form>
         </div>

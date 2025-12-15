@@ -98,7 +98,7 @@ const FaqSection = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="faq-item bg-white/20 backdrop-blur-lg border border-white/10 rounded-xl md:rounded-2xl overflow-hidden transition-all duration-300 hover:bg-white/10 hover:border-kahverengi"
+              className="faq-item bg-white backdrop-blur-lg border border-white/10 rounded-xl md:rounded-2xl overflow-hidden transition-all duration-300 hover:bg-white/80 hover:border-kahverengi"
             >
               <button
                 onClick={() => toggleFaq(index)}
