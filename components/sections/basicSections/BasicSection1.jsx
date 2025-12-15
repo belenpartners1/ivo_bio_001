@@ -92,14 +92,17 @@ const BasicSection1 = () => {
       ref={sectionRef}
       className="h-screen w-full flex justify-center items-center relative"
     >
-      <div className="flex flex-col gap-2 text-center">
+      <div className="flex flex-col gap-2 text-center md:p-20 p-10">
         <p
           ref={title1Ref}
-          className="text-[120px] text-yesil font-quicksand font-bold"
+          className="text-[100px] md:text-[120px] text-yesil font-quicksand font-bold"
         >
           {t("header")}
         </p>
-        <p ref={title2Ref} className="text-[80px] font-quicksand text-white">
+        <p
+          ref={title2Ref}
+          className="text-[60px]  md:text-[80px] font-quicksand text-white"
+        >
           {t("title")}
         </p>
       </div>

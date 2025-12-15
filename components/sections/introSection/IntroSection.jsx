@@ -110,62 +110,49 @@ const IntroSection = () => {
       {/* Başlık - Scroll ile kaybolacak */}
       <div
         ref={titleRef}
-        className="h-screen flex flex-col items-center justify-center gap-10 sticky top-0 z-10 p-20"
+        className="h-screen flex flex-col items-center justify-center gap-10 sticky top-0 z-10 md:p-20 p-10"
       >
-        <h1 className="font-quicksand text-[170px] font-bold text-center leading-tight text-white">
+        <h1 className="font-quicksand text-[100px] md:text-[170px] font-bold text-center leading-tight text-white">
           <span className="text-yesil"> {t("header1")}</span> <br />
           {t("header2")}
         </h1>
-        {/* <p className=" max-w-4xl text-justify font-quicksand text-2xl font-bold text-kahverengi">
-          İVO Bio, ister şehir merkezinde ister kırsalda, isterse ekstrem iklim
-          koşullarında olsun her yerde konforlu yaşam sunmak için tasarlanan
-          yeni nesil bir yapıdır. Geniş iç hacmi, yüksek yalıtımlı gövdesi ve
-          gelişmiş iklimlendirme sistemleri sayesinde yazın çöl sıcaklarında,
-          kışın kutup soğuklarında bile ideal yaşam sıcaklığını korur. Dayanıklı
-          yapısı ve modüler tasarımı sayesinde farklı arazi ve kullanım
-          ihtiyaçlarına kolayca uyum sağlar. Hem modern bir şehir hayatına
-          entegre olabilir hem de doğadan uzakta bağımsız bir yaşam alanı
-          oluşturabilir. İVO Bio, sizi bulunduğunuz yere değil, sizin
-          ihtiyaçlarınıza göre şekillenen esnek ve güvenli bir yaşam deneyimiyle
-          tanıştırır
-        </p> */}
       </div>
 
-      {sections.map((section, index) => (
+{sections.map((section, index) => (
         <div
           key={index}
           ref={(el) => (sectionsRef.current[index] = el)}
-          className="h-screen w-full flex items-center px-20 gap-10 relative z-20"
+          className="h-screen w-full flex flex-col md:flex-row items-center px-4 sm:px-8 md:px-12 lg:px-20 gap-4 sm:gap-6 md:gap-10 relative z-20"
         >
           {/* Sol Kısım */}
           {section.position === "left" && (
-            <div className="flex-2 flex flex-col gap-6">
-              <h2 className="text-6xl font-bold text-white font-quicksand text-left">
+            <div className="flex-2 flex flex-col gap-2 sm:gap-4 md:gap-6 order-2 md:order-1">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white font-quicksand text-center md:text-left">
                 {t(section.title)}
               </h2>
-              <p className="text-2xl text-white font-quicksand font-semibold ">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white font-quicksand font-semibold text-center md:text-left">
                 {t(section.subtitle)}
               </p>
             </div>
           )}
 
           {/* Orta - Card */}
-          <div className="flex-8 flex justify-center">
+          <div className="flex-8 flex justify-center w-full md:w-auto order-1 md:order-2">
             <Image
               src={section.image}
               alt="Picture of the author"
               width={1920}
               height={1080}
-              className="object-cover rounded-4xl shadow-2xl w-6xl"
+              className="object-cover rounded-2xl sm:rounded-3xl md:rounded-4xl shadow-2xl w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:w-6xl"
             />
           </div>
           {/* Sağ Kısım */}
           {section.position === "right" && (
-            <div className="flex-2 flex flex-col gap-6">
-              <h2 className="text-6xl font-bold text-white font-quicksand text-left">
+            <div className="flex-2 flex flex-col gap-2 sm:gap-4 md:gap-6 order-2 md:order-3">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white font-quicksand text-center md:text-left">
                 {t(section.title)}
               </h2>
-              <p className="text-2xl text-white font-quicksand font-semibold">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-white font-quicksand font-semibold text-center md:text-left">
                 {t(section.subtitle)}
               </p>
             </div>

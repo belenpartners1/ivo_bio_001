@@ -136,7 +136,7 @@ const AdvertiseHeader = () => {
           />
 
           {/* Sağ Kısım: Menü Butonu */}
-          <div className="flex items-center justify-center gap-2 sm:gap-4">
+          <div className="flex items-center justify-end gap-2 sm:gap-4 shrink-0">
             <LanguageSwitcher />
             <div className="flex flex-col items-end relative">
               <button
