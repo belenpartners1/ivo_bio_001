@@ -108,7 +108,7 @@ const AdvertiseHeader = () => {
   return (
     <div className="w-full flex flex-col fixed top-0 z-50">
       <div className="w-full">
-        <div className="flex justify-between items-center px-6 py-2">
+        <div className="flex justify-between items-center px-2 sm:px-4 md:px-6 py-2">
           {/* Sol Kısım: Logo */}
           {/* <div className="bg-white/10 backdrop-blur-xl shadow-lg rounded-4xl border border-white/20">
             <Image
@@ -132,10 +132,11 @@ const AdvertiseHeader = () => {
             alt="Logo"
             width={240}
             height={160}
+            className="w-32 h-auto sm:w-48 md:w-60"
           />
 
           {/* Sağ Kısım: Menü Butonu */}
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex items-center justify-center gap-2 sm:gap-4">
             <LanguageSwitcher />
             <div className="flex flex-col items-end relative">
               <button

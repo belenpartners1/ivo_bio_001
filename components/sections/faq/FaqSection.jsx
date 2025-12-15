@@ -12,7 +12,7 @@ const FaqSection = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const t = useTranslations("faq");
 
-  const faqs = Array.from({ length: 7 }, (_, i) => ({
+  const faqs = Array.from({ length: 6 }, (_, i) => ({
     question: t(`questions.${i}.question`),
     answer: t(`questions.${i}.answer`),
   }));

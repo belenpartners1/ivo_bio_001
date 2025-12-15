@@ -59,12 +59,12 @@ export default function LanguageSwitcher() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         disabled={isPending}
-        className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-200 border border-white/20"
+        className="flex items-center gap-2 px-2 sm:px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-200 border border-white/20"
       >
         <span className="flex items-center">{currentLanguage?.flag}</span>
-        <span className="text-gray-800  ">{currentLanguage?.name}</span>
+        <span className="text-gray-800 hidden sm:inline">{currentLanguage?.name}</span>
         <svg
-          className={`w-4 h-4 transition-transform ${
+          className={`w-4 h-4 transition-transform hidden sm:block ${
             isOpen ? "rotate-180" : ""
           }`}
           fill="none"
