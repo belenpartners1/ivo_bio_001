@@ -139,31 +139,31 @@ const ContactForm = () => {
 
   return (
     <div
-      className="min-h-screen w-full bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center px-6 py-12 font-quicksand"
+      className="min-h-screen w-full bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center px-4 md:px-6 py-8 md:py-12 font-quicksand"
       id="iletisim"
     >
-      <div className="max-w-5xl w-full grid md:grid-cols-2 gap-8 items-center">
+      <div className="max-w-5xl w-full grid md:grid-cols-2 gap-6 md:gap-8 items-center">
         {/* Sol Taraf - Başlık ve Açıklama */}
-        <div className="space-y-6">
-          <div className="space-y-4">
-            <h2 className="text-5xl md:text-6xl font-bold text-gray-900">
+        <div className="space-y-4 md:space-y-6">
+          <div className="space-y-3 md:space-y-4">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900">
               {t("title")}
-              <span className="block text-gray-500">{t("subtitle")}</span>
+              <span className="block text-gray-500 mt-1 md:mt-2">{t("subtitle")}</span>
             </h2>
-            <p className="text-lg text-gray-500 leading-relaxed">
+            <p className="text-base md:text-lg text-gray-500 leading-relaxed">
               {t("description1")}
             </p>
-            <p className="text-lg text-gray-500 leading-relaxed">
+            <p className="text-base md:text-lg text-gray-500 leading-relaxed">
               {t("description2")}
             </p>
           </div>
 
           {/* İletişim Bilgileri */}
-          <div className="space-y-4 pt-8">
-            <div className="flex items-center gap-4 text-gray-600">
-              <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center">
+          <div className="space-y-3 md:space-y-4 pt-4 md:pt-8">
+            <div className="flex items-center gap-3 md:gap-4 text-gray-600">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0">
                 <svg
-                  className="w-6 h-6"
+                  className="w-5 h-5 md:w-6 md:h-6"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -176,12 +176,12 @@ const ContactForm = () => {
                   />
                 </svg>
               </div>
-              <span className="text-lg">info@belenandpartners.com</span>
+              <span className="text-sm md:text-base lg:text-lg break-all">info@belenandpartners.com</span>
             </div>
-            <div className="flex items-center gap-4 text-gray-600">
-              <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center">
+            <div className="flex items-center gap-3 md:gap-4 text-gray-600">
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-white shadow-sm flex items-center justify-center shrink-0">
                 <svg
-                  className="w-6 h-6"
+                  className="w-5 h-5 md:w-6 md:h-6"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -194,19 +194,19 @@ const ContactForm = () => {
                   />
                 </svg>
               </div>
-              <span className="text-lg">+90 312 473 56 50</span>
+              <span className="text-sm md:text-base lg:text-lg">+90 312 473 56 50</span>
             </div>
           </div>
         </div>
 
         {/* Sağ Taraf - Form */}
-        <div className="bg-white rounded-3xl shadow-xl p-6 md:p-8">
-          <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="bg-white rounded-2xl md:rounded-3xl shadow-xl p-5 md:p-6 lg:p-8">
+          <form onSubmit={handleSubmit} className="space-y-3.5 md:space-y-4">
             {/* Ad */}
-            <div className="space-y-1.5">
+            <div className="space-y-1 md:space-y-1.5">
               <label
                 htmlFor="firstName"
-                className="block font-medium text-gray-700 ml-1 text-sm"
+                className="block font-medium text-gray-700 ml-1 text-xs md:text-sm"
               >
                 {t("firstName")}
               </label>
@@ -217,10 +217,10 @@ const ContactForm = () => {
                 value={formData.firstName}
                 onChange={handleChange}
                 required
-                className={`w-full px-4 py-3 rounded-2xl border transition-all duration-200 text-gray-800 outline-none ${
+                className={`w-full px-3 md:px-4 py-2.5 md:py-3 rounded-xl md:rounded-2xl border transition-all duration-200 text-gray-800 text-sm md:text-base outline-none ${
                   errors.firstName
-                    ? "border-red-300 focus:border-red-400 focus:ring-4 focus:ring-red-100"
-                    : "border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100"
+                    ? "border-red-300 focus:border-red-400 focus:ring-2 md:focus:ring-4 focus:ring-red-100"
+                    : "border-gray-200 focus:border-gray-400 focus:ring-2 md:focus:ring-4 focus:ring-gray-100"
                 }`}
                 placeholder={t("firstNamePlaceholder")}
               />
@@ -230,10 +230,10 @@ const ContactForm = () => {
             </div>
 
             {/* Soyad */}
-            <div className="space-y-1.5">
+            <div className="space-y-1 md:space-y-1.5">
               <label
                 htmlFor="lastName"
-                className="block ml-1 font-medium text-gray-700 text-sm"
+                className="block ml-1 font-medium text-gray-700 text-xs md:text-sm"
               >
                 {t("lastName")}
               </label>
@@ -244,10 +244,10 @@ const ContactForm = () => {
                 value={formData.lastName}
                 onChange={handleChange}
                 required
-                className={`w-full px-4 py-3 rounded-2xl border transition-all duration-200 text-gray-800 outline-none ${
+                className={`w-full px-3 md:px-4 py-2.5 md:py-3 rounded-xl md:rounded-2xl border transition-all duration-200 text-gray-800 text-sm md:text-base outline-none ${
                   errors.lastName
-                    ? "border-red-300 focus:border-red-400 focus:ring-4 focus:ring-red-100"
-                    : "border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100"
+                    ? "border-red-300 focus:border-red-400 focus:ring-2 md:focus:ring-4 focus:ring-red-100"
+                    : "border-gray-200 focus:border-gray-400 focus:ring-2 md:focus:ring-4 focus:ring-gray-100"
                 }`}
                 placeholder={t("lastNamePlaceholder")}
               />
@@ -257,10 +257,10 @@ const ContactForm = () => {
             </div>
 
             {/* Email */}
-            <div className="space-y-1.5">
+            <div className="space-y-1 md:space-y-1.5">
               <label
                 htmlFor="email"
-                className="block ml-1 font-medium text-gray-700 text-sm"
+                className="block ml-1 font-medium text-gray-700 text-xs md:text-sm"
               >
                 {t("email")}
               </label>
@@ -271,10 +271,10 @@ const ContactForm = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className={`w-full px-4 py-3 rounded-2xl border transition-all duration-200 text-gray-800 outline-none ${
+                className={`w-full px-3 md:px-4 py-2.5 md:py-3 rounded-xl md:rounded-2xl border transition-all duration-200 text-gray-800 text-sm md:text-base outline-none ${
                   errors.email
-                    ? "border-red-300 focus:border-red-400 focus:ring-4 focus:ring-red-100"
-                    : "border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100"
+                    ? "border-red-300 focus:border-red-400 focus:ring-2 md:focus:ring-4 focus:ring-red-100"
+                    : "border-gray-200 focus:border-gray-400 focus:ring-2 md:focus:ring-4 focus:ring-gray-100"
                 }`}
                 placeholder={t("emailPlaceholder")}
               />
@@ -284,10 +284,10 @@ const ContactForm = () => {
             </div>
 
             {/* Telefon */}
-            <div className="space-y-1.5">
+            <div className="space-y-1 md:space-y-1.5">
               <label
                 htmlFor="phone"
-                className="block ml-1 font-medium text-gray-700 text-sm"
+                className="block ml-1 font-medium text-gray-700 text-xs md:text-sm"
               >
                 {t("phone")}
               </label>
@@ -298,10 +298,10 @@ const ContactForm = () => {
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className={`w-full px-4 py-3 rounded-2xl border transition-all duration-200 text-gray-800 outline-none ${
+                className={`w-full px-3 md:px-4 py-2.5 md:py-3 rounded-xl md:rounded-2xl border transition-all duration-200 text-gray-800 text-sm md:text-base outline-none ${
                   errors.phone
-                    ? "border-red-300 focus:border-red-400 focus:ring-4 focus:ring-red-100"
-                    : "border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100"
+                    ? "border-red-300 focus:border-red-400 focus:ring-2 md:focus:ring-4 focus:ring-red-100"
+                    : "border-gray-200 focus:border-gray-400 focus:ring-2 md:focus:ring-4 focus:ring-gray-100"
                 }`}
                 placeholder={t("phonePlaceholder")}
               />
@@ -311,10 +311,10 @@ const ContactForm = () => {
             </div>
 
             {/* Görüşleriniz */}
-            <div className="space-y-1.5">
+            <div className="space-y-1 md:space-y-1.5">
               <label
                 htmlFor="message"
-                className="block ml-1 font-medium text-gray-700 text-sm"
+                className="block ml-1 font-medium text-gray-700 text-xs md:text-sm"
               >
                 {t("message")}
               </label>
@@ -324,10 +324,10 @@ const ContactForm = () => {
                 value={formData.message}
                 onChange={handleChange}
                 rows="3"
-                className={`w-full px-4 py-3 rounded-2xl border transition-all duration-200 text-gray-800 resize-none outline-none ${
+                className={`w-full px-3 md:px-4 py-2.5 md:py-3 rounded-xl md:rounded-2xl border transition-all duration-200 text-gray-800 text-sm md:text-base resize-none outline-none ${
                   errors.message
-                    ? "border-red-300 focus:border-red-400 focus:ring-4 focus:ring-red-100"
-                    : "border-gray-200 focus:border-gray-400 focus:ring-4 focus:ring-gray-100"
+                    ? "border-red-300 focus:border-red-400 focus:ring-2 md:focus:ring-4 focus:ring-red-100"
+                    : "border-gray-200 focus:border-gray-400 focus:ring-2 md:focus:ring-4 focus:ring-gray-100"
                 }`}
                 placeholder={t("messagePlaceholder")}
               />
@@ -353,7 +353,7 @@ const ContactForm = () => {
             {/* Status Messages */}
             {submitStatus && (
               <div
-                className={`p-3 rounded-2xl text-center font-medium text-sm ${
+                className={`p-2.5 md:p-3 rounded-xl md:rounded-2xl text-center font-medium text-xs md:text-sm ${
                   submitStatus.type === "success"
                     ? "bg-green-50 text-green-700 border border-green-200"
                     : "bg-red-50 text-red-700 border border-red-200"
@@ -367,7 +367,7 @@ const ContactForm = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`w-full py-3.5 rounded-2xl font-semibold text-base transition-all duration-300 shadow-lg ${
+              className={`w-full py-3 md:py-3.5 rounded-xl md:rounded-2xl font-semibold text-sm md:text-base transition-all duration-300 shadow-lg ${
                 isSubmitting
                   ? "bg-gray-400 cursor-not-allowed"
                   : "bg-gray-800 text-white hover:bg-gray-900 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"

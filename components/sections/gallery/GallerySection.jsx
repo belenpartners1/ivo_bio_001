@@ -50,19 +50,19 @@ const GallerySection = () => {
 
   return (
     <div
-      className="py-20 px-4 font-quicksand bg-gradient-to-b from-white to-gray-50"
+      className="py-12 md:py-16 lg:py-20 px-4 md:px-6 font-quicksand bg-gradient-to-b from-white to-gray-50"
       id="galeri"
     >
       <div className="max-w-7xl mx-auto">
         {/* Title */}
-        <div className="text-center mb-12">
-          <h1 className="text-5xl md:text-[100px] font-bold text-yesil mb-4">
+        <div className="text-center mb-8 md:mb-10 lg:mb-12">
+          <h1 className="text-4xl md:text-6xl lg:text-[100px] font-bold text-yesil mb-2 md:mb-4">
             {t("title")}
           </h1>
         </div>
 
         {/* Main Image Container */}
-        <div className="relative w-full aspect-video mb-6 bg-gray-100 rounded-3xl overflow-hidden shadow-2xl">
+        <div className="relative w-full aspect-video mb-4 md:mb-6 bg-gray-100 rounded-2xl md:rounded-3xl overflow-hidden shadow-xl md:shadow-2xl">
           <Image
             src={images[selectedIndex].url}
             alt={`${t("imageAlt")} ${selectedIndex + 1}`}
@@ -73,7 +73,7 @@ const GallerySection = () => {
           />
 
           {/* Image Counter */}
-          <div className="absolute bottom-4 right-4 bg-black/60 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium">
+          <div className="absolute bottom-2 right-2 md:bottom-4 md:right-4 bg-black/60 backdrop-blur-sm text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium">
             {selectedIndex + 1} / {images.length}
           </div>
 
@@ -84,11 +84,11 @@ const GallerySection = () => {
                 prev === 0 ? images.length - 1 : prev - 1
               )
             }
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white p-3 rounded-full transition-all duration-300 border border-white/30"
+            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white p-2 md:p-3 rounded-full transition-all duration-300 border border-white/30"
             aria-label="Previous"
           >
             <svg
-              className="w-6 h-6"
+              className="w-5 h-5 md:w-6 md:h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -108,11 +108,11 @@ const GallerySection = () => {
                 prev === images.length - 1 ? 0 : prev + 1
               )
             }
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white p-3 rounded-full transition-all duration-300 border border-white/30"
+            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-white/20 hover:bg-white/40 backdrop-blur-sm text-white p-2 md:p-3 rounded-full transition-all duration-300 border border-white/30"
             aria-label="Next"
           >
             <svg
-              className="w-6 h-6"
+              className="w-5 h-5 md:w-6 md:h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -131,7 +131,7 @@ const GallerySection = () => {
         <div className="relative">
           <div
             ref={thumbnailRef}
-            className="flex gap-3 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 pb-4 px-2"
+            className="flex gap-2 md:gap-3 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 pb-3 md:pb-4 px-1 md:px-2"
             style={{
               scrollbarWidth: "thin",
               scrollbarColor: "#9ca3af #e5e7eb",
@@ -141,9 +141,9 @@ const GallerySection = () => {
               <button
                 key={image.id}
                 onClick={() => handleThumbnailClick(index)}
-                className={`relative flex-shrink-0 w-28 h-20 rounded-xl overflow-hidden transition-all duration-300 ${
+                className={`relative shrink-0 w-20 h-14 md:w-28 md:h-20 rounded-lg md:rounded-xl overflow-hidden transition-all duration-300 ${
                   selectedIndex === index
-                    ? "ring-4 ring-yesil scale-105 shadow-xl"
+                    ? "ring-3 md:ring-4 ring-yesil scale-105 shadow-xl"
                     : "ring-2 ring-gray-300 hover:ring-gray-400 opacity-70 hover:opacity-100"
                 }`}
               >
@@ -152,12 +152,12 @@ const GallerySection = () => {
                   alt={`${t("imageAlt")} ${index + 1}`}
                   fill
                   className="object-cover"
-                  sizes="112px"
+                  sizes="(max-width: 768px) 80px, 112px"
                 />
                 {selectedIndex === index && (
                   <div className="absolute inset-0 bg-yesil/20 flex items-center justify-center">
                     <svg
-                      className="w-8 h-8 text-white drop-shadow-lg"
+                      className="w-6 h-6 md:w-8 md:h-8 text-white drop-shadow-lg"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >

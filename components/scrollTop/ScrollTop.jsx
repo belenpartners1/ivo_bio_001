@@ -12,7 +12,10 @@ const ScrollTop = () => {
   useEffect(() => {
     // Scroll pozisyonuna göre butonun görünürlüğünü kontrol et
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
+      // Mobilde 100px, tablet ve üstünde 300px
+      const threshold = window.innerWidth < 768 ? 100 : 300;
+
+      if (window.pageYOffset > threshold) {
         setIsVisible(true);
       } else {
         setIsVisible(false);

@@ -83,37 +83,37 @@ const FaqSection = () => {
   return (
     <div
       ref={sectionRef}
-      className="relative h-screen w-ful bg-gri flex items-center justify-center overflow-hidden font-quicksand"
+      className="relative min-h-screen w-full bg-gri flex items-center justify-center overflow-hidden font-quicksand py-12 md:py-16"
       id="sss"
     >
-      <div className="relative z-10 max-w-7xl w-full px-5 md:px-7">
+      <div className="relative z-10 max-w-4xl w-full px-4 md:px-6 lg:px-8">
         {/* Title */}
-        <h2 className="faq-title text-3xl md:text-5xl font-bold text-white/90 text-center mb-6 md:mb-8">
+        <h2 className="faq-title text-3xl md:text-4xl lg:text-5xl font-bold text-white/90 text-center mb-6 md:mb-8 lg:mb-10">
           {t("title")}
           <span className="bg-clip-text"> {t("subtitle")}</span>
         </h2>
 
         {/* FAQ Items */}
-        <div className="space-y-2">
+        <div className="space-y-3 md:space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="faq-item bg-white/20 backdrop-blur-lg border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:bg-white/10 hover:border-kahverengi"
+              className="faq-item bg-white/20 backdrop-blur-lg border border-white/10 rounded-xl md:rounded-2xl overflow-hidden transition-all duration-300 hover:bg-white/10 hover:border-kahverengi"
             >
               <button
                 onClick={() => toggleFaq(index)}
-                className="w-full px-4 md:px-6 py-4 md:py-5 text-left flex items-center justify-between group cursor-pointer"
+                className="w-full px-4 md:px-6 py-3.5 md:py-4 lg:py-5 text-left flex items-center justify-between gap-3 group cursor-pointer"
               >
-                <span className="text-lg md:text-xl font-semibold text-kahverengi group-hover:text-kahverengi transition-colors">
+                <span className="text-base md:text-lg lg:text-xl font-semibold text-kahverengi group-hover:text-kahverengi transition-colors pr-2">
                   {faq.question}
                 </span>
                 <div
-                  className={`w-8 h-8 rounded-full bg-kahverengi flex items-center justify-center transition-transform duration-300 ${
+                  className={`w-7 h-7 md:w-8 md:h-8 shrink-0 rounded-full bg-kahverengi flex items-center justify-center transition-transform duration-300 ${
                     activeIndex === index ? "rotate-180" : ""
                   }`}
                 >
                   <svg
-                    className="w-5 h-5 text-bej"
+                    className="w-4 h-4 md:w-5 md:h-5 text-bej"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -129,10 +129,10 @@ const FaqSection = () => {
               </button>
               <div
                 className={`overflow-hidden transition-all duration-300 ${
-                  activeIndex === index ? "max-h-96" : "max-h-0"
+                  activeIndex === index ? "max-h-[500px]" : "max-h-0"
                 }`}
               >
-                <div className="px-6 md:px-8 pb-5 md:pb-6 text-kahverengi text-base md:text-lg leading-relaxed">
+                <div className="px-4 md:px-6 lg:px-8 pb-4 md:pb-5 lg:pb-6 text-kahverengi text-sm md:text-base lg:text-lg leading-relaxed">
                   {faq.answer}
                 </div>
               </div>
