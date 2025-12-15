@@ -136,7 +136,7 @@ return (
             {/* Summer Text Overlay */}
             <div
               ref={leftTextRef}
-              className="absolute bottom-4 left-4 sm:bottom-8 sm:left-8 md:bottom-12 md:left-12 p-3 sm:p-5 md:p-8 max-w-xs sm:max-w-sm md:max-w-md bg-white/15 backdrop-blur-2xl border border-white/20 rounded-2xl sm:rounded-3xl shadow-2xl opacity-0 translate-y-5"
+              className="hidden md:block absolute bottom-4 left-4 sm:bottom-8 sm:left-8 md:bottom-12 md:left-12 p-3 sm:p-5 md:p-8 max-w-xs sm:max-w-sm md:max-w-md bg-white/15 backdrop-blur-2xl border border-white/20 rounded-2xl sm:rounded-3xl shadow-2xl opacity-0 translate-y-5"
             >
               <p className="text-white/90 font-bold text-xs sm:text-sm md:text-base leading-relaxed drop-shadow-md">
                 {t("summer")}
@@ -165,7 +165,7 @@ return (
             {/* Winter Text Overlay */}
             <div
               ref={rightTextRef}
-              className="absolute bottom-4 right-4 sm:bottom-8 sm:right-8 md:bottom-12 md:right-12 p-3 sm:p-5 md:p-8 max-w-xs sm:max-w-sm md:max-w-md bg-white/15 backdrop-blur-2xl border border-white/20 rounded-2xl sm:rounded-3xl shadow-2xl opacity-0 translate-y-5"
+              className="hidden md:block absolute bottom-4 right-4 sm:bottom-8 sm:right-8 md:bottom-12 md:right-12 p-3 sm:p-5 md:p-8 max-w-xs sm:max-w-sm md:max-w-md bg-white/15 backdrop-blur-2xl border border-white/20 rounded-2xl sm:rounded-3xl shadow-2xl opacity-0 translate-y-5"
             >
               <p className="text-white/90 font-bold text-xs sm:text-sm md:text-base leading-relaxed drop-shadow-md">
                 {t("winter")}
