@@ -61,12 +61,12 @@ const ScrollTop = () => {
     <button
       ref={buttonRef}
       onClick={scrollToTop}
-      className="fixed bottom-6 right-6 w-13 h-13 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl shadow-lg hover:shadow-2xl hover:bg-white/30 transition-all duration-300 flex items-center justify-center z-50 opacity-0 cursor-pointer group"
+      className="fixed bottom-4 right-4 md:bottom-6 md:right-6 w-12 h-12 md:w-14 md:h-14 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl shadow-lg hover:shadow-2xl hover:bg-white/30 transition-all duration-300 flex items-center justify-center z-50 opacity-0 cursor-pointer group"
       aria-label="Yukarı git"
     >
       <FiArrowUp
-        className="text-black/80 transform group-hover:-translate-y-1 transition-transform duration-300 rounded-3xl"
-        size={20}
+        className="text-black/80 transform group-hover:-translate-y-1 transition-transform duration-300"
+        size={24}
       />
     </button>
   );
