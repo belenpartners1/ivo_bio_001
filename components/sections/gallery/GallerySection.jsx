@@ -10,7 +10,7 @@ const GallerySection = () => {
   const t = useTranslations("gallery");
 
   // 66 adet görsel
-  const images = Array.from({ length: 42 }, (_, i) => ({
+  const images = Array.from({ length: 13 }, (_, i) => ({
     id: i,
     url: `/gallery/1 (${i + 1}).webp`,
   }));

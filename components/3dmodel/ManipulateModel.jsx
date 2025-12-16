@@ -48,8 +48,13 @@ export default function ManipulateModel() {
           />
         </Canvas>
 
-        <div className="absolute w-3/4 left-1/2 transform -translate-x-1/2 top-40 flex items-center font-quicksand opacity-20 ">
-          <Image src="/logo_yesil.png" alt="logo" width={2000} height={2000} />
+        <div className="absolute w-3/4 left-1/2 transform -translate-x-1/2 top-24 flex items-center font-quicksand opacity-20 ">
+          <Image
+            src="/logo_yesil_buyuk.png"
+            alt="logo"
+            width={2200}
+            height={2200}
+          />
         </div>
 
         {/* Zoom Control Slider */}
