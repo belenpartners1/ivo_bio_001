@@ -56,8 +56,8 @@ const Footer = () => {
   ];
 
   const contactInfo = {
-    phone: "+90 312 473 56 50",
-    email: "info@belenandpartners.com",
+    phone: "+90 555 157 42 18",
+    email: "info@b-ivo.com",
     address:
       "Cepa Ofis Kule Mustafa Kemal Mahallesi Eskişehir Yolu 7. Km. 2123 Sokak No:2/D Kat:11 No:1103, Çankaya – ANKARA",
   };
@@ -103,7 +103,9 @@ const Footer = () => {
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 tracking-tight">
                 {t("company")}
               </h2>
-              <p className="text-white text-2xl md:text-3xl lg:text-4xl mb-3 md:mb-4 font-quicksand">{t("brandTitle")}</p>
+              <p className="text-white text-2xl md:text-3xl lg:text-4xl mb-3 md:mb-4 font-quicksand">
+                {t("brandTitle")}
+              </p>
               <p className="text-white text-sm md:text-base leading-relaxed max-w-md">
                 {t("brandDescription")}
               </p>
@@ -175,9 +177,9 @@ const Footer = () => {
           <Image
             src="/belen_logo.png"
             alt="Logo"
-            width={200}
+            width={120}
             height={67}
-            className="w-40 md:w-52 lg:w-[300px] h-auto"
+            className="w-40 md:w-52 lg:w-[200px] h-auto"
           />
           <div className="w-40 h-[0.2px] md:w-[0.2px] md:h-32 lg:h-40 bg-white"></div>
           <Image
@@ -185,7 +187,7 @@ const Footer = () => {
             alt="Logo"
             width={200}
             height={67}
-            className="w-40 md:w-52 lg:w-[300px] h-auto"
+            className="w-40 md:w-52 lg:w-[280px] h-auto"
           />
         </div>
 

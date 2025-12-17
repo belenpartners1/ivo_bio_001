@@ -183,7 +183,7 @@ const ContactForm = () => {
                 </svg>
               </div>
               <span className="text-sm md:text-base lg:text-lg break-all">
-                info@belenandpartners.com
+                info@b-ivo.com
               </span>
             </div>
             <div className="flex items-center gap-3 md:gap-4 text-gray-600">
@@ -203,7 +203,7 @@ const ContactForm = () => {
                 </svg>
               </div>
               <span className="text-sm md:text-base lg:text-lg">
-                +90 312 473 56 50
+                +90 555 157 42 18
               </span>
             </div>
           </div>
