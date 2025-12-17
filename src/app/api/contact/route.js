@@ -1,271 +1,229 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-export async function POST(request) {
-  try {
-    const body = await request.json();
-    const { firstName, lastName, email, phone, message, websiteUrl } = body;
+const formatName = (str) => {
+  if (!str) return "";
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+};
 
-    // Honeypot kontrolü - bot tespiti
-    if (websiteUrl && websiteUrl.trim() !== "") {
-      // Bot tespit edildi - başarılı gibi göster ama email gönderme
+// Honeypot kontrolü
+const isBot = (website) => {
+  // Honeypot alanlardan biri doldurulmuşsa bot demektir
+  if (website && website.trim() !== "") {
+    console.log("🤖 BOT TESPİTİ: 'website' alanı doldurulmuş");
+    return true;
+  }
+  return false;
+};
+
+export async function POST(req) {
+  try {
+    const {
+      firstName: rawFirstName,
+      lastName: rawLastName,
+      phone,
+      email,
+      message,
+      websiteUrl,
+    } = await req.json();
+
+    // Honeypot kontrolü - Bot ise fake başarı dönür
+    if (isBot(websiteUrl)) {
+      console.log("⚠️  BOT TESPİT EDİLDİ - FAKE 200 YANITI GÖNDERİLİYOR");
       return NextResponse.json(
-        {
-          success: true,
-          message: "Mesajınız başarıyla gönderildi.",
-        },
+        { success: true, message: "Mesajınız başarıyla gönderildi." },
         { status: 200 }
       );
     }
 
-    // Zorunlu alanları kontrol et
-    if (!firstName || !lastName || !email || !phone) {
-      return NextResponse.json(
-        {
-          success: false,
-          message: "Ad, Soyad, Email ve Telefon alanları zorunludur.",
-        },
-        { status: 400 }
-      );
-    }
+    const firstName = formatName(rawFirstName);
+    const lastName = formatName(rawLastName);
 
-    // Ad validasyonu
-    if (typeof firstName !== "string" || firstName.trim().length < 2) {
-      return NextResponse.json(
-        {
-          success: false,
-          message: "Ad en az 2 karakter olmalıdır.",
-        },
-        { status: 400 }
-      );
-    }
+    // Input validation
+    const errors = {};
+    if (!firstName) errors.firstName = "Ad alanı zorunludur";
+    if (!lastName) errors.lastName = "Soyad alanı zorunludur";
+    if (!phone) errors.phone = "Telefon alanı zorunludur";
+    if (!email) errors.email = "E-posta alanı zorunludur";
 
-    if (firstName.trim().length > 50) {
-      return NextResponse.json(
-        {
-          success: false,
-          message: "Ad en fazla 50 karakter olabilir.",
-        },
-        { status: 400 }
-      );
-    }
-
-    // Tehlikeli karakterleri kontrol et (XSS prevention)
-    const dangerousCharsRegex = /<|>|&lt;|&gt;|script|onclick|onerror/i;
-    if (dangerousCharsRegex.test(firstName)) {
-      return NextResponse.json(
-        {
-          success: false,
-          message: "Ad geçersiz karakterler içeriyor.",
-        },
-        { status: 400 }
-      );
-    }
-
-    // Soyad validasyonu
-    if (typeof lastName !== "string" || lastName.trim().length < 2) {
-      return NextResponse.json(
-        {
-          success: false,
-          message: "Soyad en az 2 karakter olmalıdır.",
-        },
-        { status: 400 }
-      );
-    }
-
-    if (lastName.trim().length > 50) {
-      return NextResponse.json(
-        {
-          success: false,
-          message: "Soyad en fazla 50 karakter olabilir.",
-        },
-        { status: 400 }
-      );
-    }
-
-    if (dangerousCharsRegex.test(lastName)) {
-      return NextResponse.json(
-        {
-          success: false,
-          message: "Soyad geçersiz karakterler içeriyor.",
-        },
-        { status: 400 }
-      );
-    }
-
-    // Email validasyonu
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        {
-          success: false,
-          message: "Geçerli bir email adresi giriniz.",
-        },
-        { status: 400 }
-      );
-    }
-
-    if (email.length > 100) {
-      return NextResponse.json(
-        {
-          success: false,
-          message: "Email adresi çok uzun.",
-        },
-        { status: 400 }
-      );
-    }
-
-    // Telefon validasyonu
-    const cleanPhone = phone.replace(/[^0-9]/g, "");
-    if (cleanPhone.length < 10 || cleanPhone.length > 15) {
-      return NextResponse.json(
-        {
-          success: false,
-          message: "Geçerli bir telefon numarası giriniz.",
-        },
-        { status: 400 }
-      );
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    if (email && !emailRegex.test(email)) {
+      errors.email = "Geçerli bir e-posta adresi giriniz";
     }
 
     const phoneRegex = /^[0-9+\s\-()]+$/;
-    if (!phoneRegex.test(phone)) {
+    const cleanPhone = phone ? phone.replace(/[^0-9]/g, "") : "";
+    if (phone && (cleanPhone.length < 10 || !phoneRegex.test(phone))) {
+      errors.phone = "Geçerli bir telefon numarası giriniz";
+    }
+
+    if (message && message.length > 1000) {
+      errors.message = "Mesaj en fazla 1000 karakter olabilir";
+    }
+
+    if (Object.keys(errors).length > 0) {
+      return NextResponse.json({ success: false, errors }, { status: 400 });
+    }
+
+    // ENV kontrolü
+    if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
+      console.error("❌ SMTP env değerleri bulunamadı!");
       return NextResponse.json(
-        {
-          success: false,
-          message: "Telefon numarası geçersiz karakterler içeriyor.",
-        },
-        { status: 400 }
+        { success: false, error: "Sunucu yapılandırma hatası" },
+        { status: 500 }
       );
     }
 
-    // Mesaj validasyonu (opsiyonel)
-    if (message) {
-      if (typeof message !== "string") {
-        return NextResponse.json(
-          {
-            success: false,
-            message: "Mesaj formatı geçersiz.",
-          },
-          { status: 400 }
-        );
-      }
-
-      if (message.length > 1000) {
-        return NextResponse.json(
-          {
-            success: false,
-            message: "Mesaj en fazla 1000 karakter olabilir.",
-          },
-          { status: 400 }
-        );
-      }
-
-      if (dangerousCharsRegex.test(message)) {
-        return NextResponse.json(
-          {
-            success: false,
-            message: "Mesaj geçersiz karakterler içeriyor.",
-          },
-          { status: 400 }
-        );
-      }
-    }
-
-    // Nodemailer transporter oluştur
-    const transporter = nodemailer.createTransport({
-      host: process.env.EMAIL_HOST,
-      port: parseInt(process.env.EMAIL_PORT),
-      secure: process.env.EMAIL_PORT === "465", // SSL için true
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
+    console.log("🔧 SMTP Ayarları:", {
+      host: process.env.SMTP_HOST,
+      port: process.env.SMTP_PORT,
+      user: process.env.SMTP_USER,
+      hasPassword: !!process.env.SMTP_PASS,
     });
 
-    // Email içeriğini hazırla
-    const mailOptions = {
-      from: process.env.EMAIL_FROM,
-      to: process.env.EMAIL_TO,
-      subject: `Yeni İletişim Formu Mesajı - ${firstName} ${lastName}`,
+    // Gmail SMTP yapılandırması
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+      tls: {
+        rejectUnauthorized: false,
+        minVersion: "TLSv1.2",
+        ciphers: "SSLv3",
+      },
+      connectionTimeout: 20000,
+      greetingTimeout: 20000,
+      socketTimeout: 20000,
+      logger: true,
+      debug: true,
+    });
+
+    // SMTP bağlantısını test et
+    console.log("🔍 SMTP bağlantısı test ediliyor...");
+    try {
+      await transporter.verify();
+      console.log("✅ SMTP bağlantısı başarılı");
+    } catch (verifyError) {
+      console.error("❌ SMTP verify hatası:", verifyError);
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Mail sunucusuna bağlanılamadı",
+          details:
+            process.env.NODE_ENV === "development"
+              ? verifyError.message
+              : undefined,
+        },
+        { status: 500 }
+      );
+    }
+
+    // Mesaj satırı
+    const messageRow = message
+      ? `<tr>
+          <td style="padding: 10px; font-weight: bold; background: #f3f4f6;">Görüşler</td>
+          <td style="padding: 10px; background: #fff; white-space: pre-wrap;">${message}</td>
+        </tr>`
+      : "";
+
+    const mailData = {
+      from: `"İletişim Formu" <${process.env.SMTP_USER}>`,
+      to: "info@b-ivo.com",
+      replyTo: `"${firstName} ${lastName}" <${email}>`,
+      subject: `${firstName} ${lastName} - İletişim Formu Mesajı`,
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #333; border-bottom: 2px solid #4a5568; padding-bottom: 10px;">
-            Yeni İletişim Formu Mesajı
-          </h2>
-
-          <div style="background-color: #f7fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="color: #2d3748; margin-top: 0;">Gönderen Bilgileri</h3>
-
-            <p style="margin: 10px 0;">
-              <strong style="color: #4a5568;">Ad Soyad:</strong>
-              <span style="color: #2d3748;">${firstName} ${lastName}</span>
-            </p>
-
-            <p style="margin: 10px 0;">
-              <strong style="color: #4a5568;">Email:</strong>
-              <a href="mailto:${email}" style="color: #3182ce;">${email}</a>
-            </p>
-
-            <p style="margin: 10px 0;">
-              <strong style="color: #4a5568;">Telefon:</strong>
-              <a href="tel:${phone}" style="color: #3182ce;">${phone}</a>
-            </p>
-          </div>
-
-          ${
-            message
-              ? `
-          <div style="background-color: #fff; padding: 20px; border-left: 4px solid #4a5568; margin: 20px 0;">
-            <h3 style="color: #2d3748; margin-top: 0;">Görüşler</h3>
-            <p style="color: #4a5568; line-height: 1.6; white-space: pre-wrap;">${message}</p>
-          </div>
-          `
-              : ""
-          }
-
-          <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e2e8f0; color: #718096; font-size: 12px;">
-            <p>Bu mesaj belenandpartners.com web sitesindeki iletişim formundan gönderilmiştir.</p>
-            <p>Gönderim Tarihi: ${new Date().toLocaleString("tr-TR", {
-              timeZone: "Europe/Istanbul",
-            })}</p>
-          </div>
-        </div>
+<!doctype html>
+<html lang='tr'>
+<head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'></head>
+<body style='margin:0;background:#fff;font-family:Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#1f2937;'>
+  <table role='presentation' width='100%' cellpadding='0' cellspacing='0' style='background:#fff;padding:24px 0;'>
+    <tr>
+      <td align='center'>
+        <table role='presentation' width='620' cellpadding='0' cellspacing='0' style='background:#ffffff;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;box-shadow:0 6px 16px rgba(0,0,0,.06);'>
+          <tr>
+            <td style='padding:24px 28px 8px 28px;'>
+              <h1 style='margin:0 0 12px 0;font-size:22px;line-height:1.3;color:#0f47c1;'>B-IVO İletişim Formu</h1>
+            </td>
+          </tr>
+          <tr>
+            <td style='padding:0 28px 8px 28px;'>
+              <table width='100%' cellpadding='0' cellspacing='0' style='border-collapse:separate;border-spacing:0;'>
+                <tr>
+                  <td style='background:#f3f4f6;padding:10px 12px;border:1px solid #e5e7eb;width:38%;font-weight:600;font-size:13px;color:#374151;'>Ad Soyad:</td>
+                  <td style='padding:10px 12px;border:1px solid #e5e7eb;font-size:13px;color:#111827;'>${firstName} ${lastName}</td>
+                </tr>
+                <tr>
+                  <td style='background:#f3f4f6;padding:10px 12px;border:1px solid #e5e7eb;font-weight:600;font-size:13px;color:#374151;'>E-posta:</td>
+                  <td style='padding:10px 12px;border:1px solid #e5e7eb;font-size:13px;'>
+                    <a href='mailto:${email}' style='color:#0f47c1;text-decoration:none;'>${email}</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td style='background:#f3f4f6;padding:10px 12px;border:1px solid #e5e7eb;font-weight:600;font-size:13px;color:#374151;'>Telefon:</td>
+                  <td style='padding:10px 12px;border:1px solid #e5e7eb;font-size:13px;'>
+                    <a href='tel:${phone}' style='color:#0f47c1;text-decoration:none;'>${phone}</a>
+                  </td>
+                </tr>
+                ${messageRow}
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style='padding:10px 28px 22px 28px;'>
+              <div style='font-size:11px;color:#6b7280;text-align:center;'>Bu e-posta, b-ivo.com web sitesindeki iletişim formundan otomatik gelmiştir.</div>
+              <div style='font-size:11px;color:#6b7280;text-align:center;margin-top:8px;'>Gönderim Tarihi: ${new Date().toLocaleString(
+                "tr-TR",
+                {
+                  timeZone: "Europe/Istanbul",
+                }
+              )}</div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
       `,
-      text: `
-Yeni İletişim Formu Mesajı
-
-Gönderen Bilgileri:
-Ad Soyad: ${firstName} ${lastName}
-Email: ${email}
-Telefon: ${phone}
-
-${message ? `Görüşler:\n${message}\n` : ""}
-
-Bu mesaj belenandpartners.com web sitesindeki iletişim formundan gönderilmiştir.
-Gönderim Tarihi: ${new Date().toLocaleString("tr-TR", {
-        timeZone: "Europe/Istanbul",
-      })}
-      `,
+      text: `Yeni İletişim Formu Mesajı\n\nAd Soyad: ${firstName} ${lastName}\nE-posta: ${email}\nTelefon: ${phone}${
+        message ? `\n\nGörüşler:\n${message}` : ""
+      }\n\nBu mesaj b-ivo.com web sitesindeki iletişim formundan gönderilmiştir.\nGönderim Tarihi: ${new Date().toLocaleString(
+        "tr-TR",
+        {
+          timeZone: "Europe/Istanbul",
+        }
+      )}`,
     };
 
-    // Email gönder
-    await transporter.sendMail(mailOptions);
+    // Mail gönder
+    console.log("📧 Mail gönderiliyor...");
+    await transporter.sendMail(mailData);
+    console.log("✅ Mail başarıyla gönderildi");
 
     return NextResponse.json(
-      {
-        success: true,
-        message: "Mesajınız başarıyla gönderildi.",
-      },
+      { success: true, message: "Mesajınız başarıyla gönderildi." },
       { status: 200 }
     );
   } catch (error) {
-    console.error("Email gönderme hatası:", error);
+    console.error("❌ Form gönderimi hatası:", error);
 
     return NextResponse.json(
       {
         success: false,
-        message: "Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.",
-        error: process.env.NODE_ENV === "development" ? error.message : undefined,
+        error: "Mesaj gönderilirken bir hata oluştu",
+        details:
+          process.env.NODE_ENV === "development"
+            ? error.message
+            : "Lütfen daha sonra tekrar deneyin",
       },
       { status: 500 }
     );
