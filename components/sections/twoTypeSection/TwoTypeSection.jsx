@@ -109,7 +109,7 @@ const TwoTypeSection = () => {
     }
   }, [activeHover]);
 
-return (
+  return (
     <>
       {/* Main season balance section */}
       <div
@@ -142,6 +142,13 @@ return (
                 {t("summer")}
               </p>
             </div>
+
+            {/* Temperature indicator - Top Left */}
+            <div className="absolute top-4 left-4 sm:top-6 sm:left-6 md:top-14 md:left-14">
+              <p className="text-white/80 font-bold text-lg sm:text-xl md:text-4xl drop-shadow-lg">
+                +60°C
+              </p>
+            </div>
           </div>
 
           {/* Winter (Right) Image - Full coverage */}
@@ -169,6 +176,13 @@ return (
             >
               <p className="text-white/90 font-bold text-xs sm:text-sm md:text-base leading-relaxed drop-shadow-md">
                 {t("winter")}
+              </p>
+            </div>
+
+            {/* Temperature indicator - Top Right */}
+            <div className="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-14 md:right-14">
+              <p className="text-white/80 font-bold text-lg sm:text-xl md:text-4xl drop-shadow-lg">
+                -50°C
               </p>
             </div>
           </div>

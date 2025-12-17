@@ -54,7 +54,7 @@ const Home = () => {
       <BasicSection1 />
       <TechnicalSection />
       <TwoTypeSection />
-      <Yekpare />
+      {/* <Yekpare /> */}
       <BasicSection2 />
       {/* <HorizontalScroll /> */}
       <PlanSection />
