@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import path from "path";
 
 const formatName = (str) => {
   if (!str) return "";
@@ -134,6 +135,14 @@ export async function POST(req) {
         </tr>`
       : "";
 
+    // Logo dosyasını oku
+    const logoPath = path.join(process.cwd(), 'public', 'icons', 'full_icon.png');
+    const logoAttachment = {
+      filename: 'logo.png',
+      path: logoPath,
+      cid: 'logo@b-ivo'
+    };
+
     const mailData = {
       from: `"İletişim Formu" <${process.env.SMTP_USER}>`,
       to: "info@b-ivo.com",
@@ -149,8 +158,9 @@ export async function POST(req) {
       <td align='center'>
         <table role='presentation' width='620' cellpadding='0' cellspacing='0' style='background:#ffffff;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;box-shadow:0 6px 16px rgba(0,0,0,.06);'>
           <tr>
-            <td style='padding:24px 28px 8px 28px;'>
-              <h1 style='margin:0 0 12px 0;font-size:22px;line-height:1.3;color:#0f47c1;'>B-IVO İletişim Formu</h1>
+            <td style='padding:24px 28px 16px 28px;text-align:center;'>
+              <img src='cid:logo@b-ivo' alt='B-IVO Logo' style='height:60px;width:auto;margin-bottom:16px;' />
+              <h1 style='margin:0 0 12px 0;font-size:22px;line-height:1.3;color:#a4b49f;'>B-IVO İletişim Formu</h1>
             </td>
           </tr>
           <tr>
@@ -202,6 +212,7 @@ export async function POST(req) {
           timeZone: "Europe/Istanbul",
         }
       )}`,
+      attachments: [logoAttachment]
     };
 
     // Mail gönder
