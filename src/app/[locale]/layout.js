@@ -1,10 +1,10 @@
 import { Geist, Geist_Mono, Quicksand } from "next/font/google";
 import "../globals.css";
 import AdvertiseHeader from "../../../components/advertiseHeader/AdvertiseHeader";
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
-import { notFound } from 'next/navigation';
-import { routing } from '@/i18n/routing';
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,8 +27,12 @@ export function generateStaticParams() {
 }
 
 export const metadata = {
-  title: "IVO Bio - Digital Identity Card",
-  description: "Smart NFC card for instant sharing of your contact information",
+  title: "İVO BİO – Yeni Nesil Modüler Yaşam",
+  description:
+    "Doğayla uyumlu, enerji verimli ve akıllı yaşam sistemleriyle tasarlanan İVO BİO modülleri; ferah yaşam alanı, her mevsim konforlu ve sürdürülebilir bir deneyim sunar.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default async function LocaleLayout({ children, params }) {
@@ -44,7 +48,7 @@ export default async function LocaleLayout({ children, params }) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+    <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${quicksand.variable} antialiased relative selection:bg-yesil overflow-hidden`}
       >
