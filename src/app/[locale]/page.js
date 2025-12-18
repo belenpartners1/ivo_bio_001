@@ -21,6 +21,7 @@ import PricingSection from "../../../components/sections/pricing/PricingSection"
 import PlanSection from "../../../components/sections/planSection/PlanSection";
 import ManipulateModel from "../../../components/3dmodel/ManipulateModel";
 import Yekpare from "../../../components/sections/yekpareSection/Yekpare";
+import InnerSideSection from "../../../components/sections/icmekan/InnerSideSection";
 
 const Home = () => {
   useEffect(() => {
@@ -59,6 +60,7 @@ const Home = () => {
       {/* <HorizontalScroll /> */}
       <PlanSection />
       <PricingSection />
+      <InnerSideSection />
       {/* <ProductColorSelector /> */}
       <ContactForm />
       <GallerySection />
