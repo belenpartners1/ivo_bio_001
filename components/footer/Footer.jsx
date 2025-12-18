@@ -157,7 +157,7 @@ const Footer = () => {
                         <h3 className="text-xs md:text-sm font-semibold text-gray-400 mb-1 uppercase tracking-wider">
                           {link.label}
                         </h3>
-                        <p className="text-white text-sm md:text-base font-medium break-words transition-colors duration-300">
+                        <p className="text-kahverengi text-sm md:text-base font-medium break-words transition-colors duration-300">
                           {link.value}
                         </p>
                       </div>
@@ -197,14 +197,14 @@ const Footer = () => {
             <p className="text-gray-500 text-xs md:text-sm text-center md:text-left">
               {t("copyright")}
             </p>
-            <div className="flex gap-4 md:gap-6 text-xs md:text-sm text-gray-500">
+            {/* <div className="flex gap-4 md:gap-6 text-xs md:text-sm text-gray-500">
               <span className="hover:text-gray-300 cursor-pointer transition-colors">
                 {t("privacy")}
               </span>
               <span className="hover:text-gray-300 cursor-pointer transition-colors">
                 {t("terms")}
               </span>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

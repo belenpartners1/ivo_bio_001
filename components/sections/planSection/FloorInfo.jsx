@@ -139,7 +139,7 @@ const FloorInfo = () => {
                       </div>
 
                       {/* Description */}
-                      <p className="text-base md:text-lg lg:text-xl text-white/90 text-left leading-relaxed">
+                      <p className="text-base md:text-lg lg:text-xl text-kahverengi text-left leading-relaxed">
                         {floor.description}
                       </p>
 

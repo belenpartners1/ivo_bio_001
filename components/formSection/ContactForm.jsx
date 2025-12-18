@@ -150,7 +150,7 @@ const ContactForm = () => {
         {/* Sol Taraf - Başlık ve Açıklama */}
         <div className="space-y-4 md:space-y-6">
           <div className="space-y-3 md:space-y-4">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-yesil">
               {t("title")}
               <span className="block text-gray-500 mt-1 md:mt-2">
                 {t("subtitle")}
@@ -380,7 +380,7 @@ const ContactForm = () => {
               className={`w-full py-3 md:py-3.5 rounded-xl md:rounded-2xl font-semibold text-sm md:text-base transition-all duration-300 shadow-lg ${
                 isSubmitting
                   ? "bg-gray-400 cursor-not-allowed"
-                  : "bg-gray-800 text-white hover:bg-gray-900 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+                  : "bg-yesil text-white hover:bg-yesil/80 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
               }`}
             >
               {isSubmitting
