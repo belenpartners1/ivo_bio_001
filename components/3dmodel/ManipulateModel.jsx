@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 function Model() {
-  const { scene } = useGLTF("/3dmodels/ivo_bio_3d2.glb");
+  const { scene } = useGLTF("/3dmodels/output/IVO_Remesh_3.gltf");
   return <primitive object={scene} scale={1} />;
 }
 
