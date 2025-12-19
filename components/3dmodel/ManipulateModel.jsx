@@ -2,9 +2,13 @@
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF, Environment } from "@react-three/drei";
-import { Suspense, useRef, useState } from "react";
+import { Suspense, useRef, useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Model() {
   const { scene } = useGLTF("/3dmodels/output/IVO_Remesh_3.gltf");
@@ -14,7 +18,26 @@ function Model() {
 export default function ManipulateModel() {
   const t = useTranslations("manipulateModel");
   const controlsRef = useRef();
+  const sectionRef = useRef();
   const [zoomLevel, setZoomLevel] = useState(1);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top top",
+      end: "+=100%", // Ekran yüksekliği kadar pin'li kalır
+      pin: true,
+      pinSpacing: true,
+      scrub: 1,
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
 
   const handleZoomChange = (e) => {
     const newZoom = parseFloat(e.target.value);
@@ -26,7 +49,7 @@ export default function ManipulateModel() {
   };
 
   return (
-    <div className="w-full h-screen flex bg-white overflow-hidden rounded-b-4xl">
+    <div ref={sectionRef} className="w-full h-screen flex bg-white overflow-hidden rounded-b-4xl">
       <div className="w-full h-full relative cursor-grab active:cursor-grabbing">
         <Canvas camera={{ position: [-8, 6, 14], fov: 60 }} className="z-10">
           <ambientLight intensity={0.5} />
