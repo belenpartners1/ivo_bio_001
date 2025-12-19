@@ -139,18 +139,20 @@ const IntroSection = () => {
             )}
 
             {/* Orta - Card */}
-            <div
-              className={`flex-12 flex justify-center bg-white/30 w-full md:w-auto order-1 md:order-2 max-h-[40vh] md:max-h-none ${
-                section.position === "left" ? "md:pr-24" : "md:pl-24"
-              }`}
-            >
+            <div className="flex-12 flex w-full md:w-auto order-1 md:order-2 max-h-[40vh] md:max-h-none">
+              {section.position === "right" && (
+                <div className="hidden md:block md:w-1/12 bg-white"></div>
+              )}
               <Image
                 src={section.image}
                 alt="Picture of the author"
                 width={1920}
                 height={1080}
-                className="object-cover shadow-2xl w-full h-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl"
+                className="object-cover shadow-2xl w-full md:w-11/12 h-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl"
               />
+              {section.position === "left" && (
+                <div className="hidden md:block md:w-1/12 bg-white/30"></div>
+              )}
             </div>
             {/* Sağ Kısım */}
             {section.position === "right" && (
