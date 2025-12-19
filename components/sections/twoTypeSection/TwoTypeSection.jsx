@@ -144,8 +144,8 @@ const TwoTypeSection = () => {
             </div>
 
             {/* Temperature indicator - Top Left */}
-            <div className="absolute top-4 left-4 sm:top-6 sm:left-6 md:top-14 md:left-14">
-              <p className="text-white/80 font-bold text-lg sm:text-xl md:text-4xl drop-shadow-lg">
+            <div className="absolute left-4 sm:left-6 top-2/5  md:top-1/4 md:left-14">
+              <p className="text-white/80 font-bold text-4xl md:text-[100px] drop-shadow-lg opacity-80">
                 +60°C
               </p>
             </div>
@@ -180,8 +180,8 @@ const TwoTypeSection = () => {
             </div>
 
             {/* Temperature indicator - Top Right */}
-            <div className="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-14 md:right-14">
-              <p className="text-white/80 font-bold text-lg sm:text-xl md:text-4xl drop-shadow-lg">
+            <div className="absolute right-4 sm:right-6 top-2/5  md:top-1/4 md:right-14">
+              <p className="text-white/80 font-bold text-4xl md:text-[100px] drop-shadow-lg opacity-80">
                 -50°C
               </p>
             </div>

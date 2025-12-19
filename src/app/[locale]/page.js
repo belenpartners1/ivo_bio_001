@@ -46,7 +46,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bg-gri flex flex-col">
+    <div className="bg-gri flex flex-col overflow-hidden">
       <HeaderSection />
       <ManipulateModel />
       <IntroSection />

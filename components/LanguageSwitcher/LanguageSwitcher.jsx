@@ -79,7 +79,7 @@ export default function LanguageSwitcher() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         disabled={isPending}
-        className="flex items-center gap-2 px-2 sm:px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all duration-200 border border-white/20"
+        className="flex items-center gap-2 px-2 sm:px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all shadow-lg  duration-200 border border-gri"
       >
         <span className="text-gray-800 font-semibold">
           {currentLanguage?.name}
@@ -107,20 +107,20 @@ export default function LanguageSwitcher() {
             className="fixed inset-0 z-10"
             onClick={() => setIsOpen(false)}
           />
-          <div className="absolute right-0 mt-2 w-24 bg-white rounded-lg shadow-lg overflow-hidden z-20 border border-gray-200">
+          <div className="absolute right-0 mt-2 w-24 bg-white/10 backdrop-blur-sm shadow-lg rounded-lg overflow-hidden z-20 border border-gri">
             {languages.map((language) => (
               <button
                 key={language.code}
                 onClick={() => onSelectChange(language.code)}
                 disabled={isPending}
-                className={`w-full flex items-center gap-3 px-4 py-3 hover:bg-gray-100 transition-colors ${
+                className={`w-full flex items-center gap-3 px-4 py-3 hover:bg-white/20 transition-all duration-200 border-b last:border-b-0 border-gri ${
                   currentLocale === language.code
-                    ? "bg-gray-50 font-medium"
+                    ? "bg-white/20 font-medium"
                     : ""
                 }`}
               >
                 {/* <span className="flex items-center">{language.flag}</span> */}
-                <span className="text-gray-800 font-semibold">
+                <span className="text-black font-semibold">
                   {language.name}
                 </span>
                 {currentLocale === language.code && (

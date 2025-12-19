@@ -19,9 +19,19 @@ export default function ManipulateModel() {
   const t = useTranslations("manipulateModel");
   const controlsRef = useRef();
   const sectionRef = useRef();
+  const canvasRef = useRef();
   const [zoomLevel, setZoomLevel] = useState(1);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Mobil cihaz kontrolü
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
     const section = sectionRef.current;
     if (!section) return;
 
@@ -35,9 +45,48 @@ export default function ManipulateModel() {
     });
 
     return () => {
+      window.removeEventListener("resize", checkMobile);
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
+
+  useEffect(() => {
+    if (!isMobile || !canvasRef.current) return;
+
+    const canvasContainer = canvasRef.current;
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    const handleTouchStart = (e) => {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    };
+
+    const handleTouchMove = (e) => {
+      const touchEndX = e.touches[0].clientX;
+      const touchEndY = e.touches[0].clientY;
+      const deltaX = Math.abs(touchEndX - touchStartX);
+      const deltaY = Math.abs(touchEndY - touchStartY);
+
+      // Yatay hareket daha fazlaysa (sağa-sola), scroll'u engelle
+      if (deltaX > deltaY) {
+        e.preventDefault();
+      }
+      // Dikey hareket daha fazlaysa (yukarı-aşağı), scroll devam etsin
+    };
+
+    canvasContainer.addEventListener("touchstart", handleTouchStart, {
+      passive: true,
+    });
+    canvasContainer.addEventListener("touchmove", handleTouchMove, {
+      passive: false,
+    });
+
+    return () => {
+      canvasContainer.removeEventListener("touchstart", handleTouchStart);
+      canvasContainer.removeEventListener("touchmove", handleTouchMove);
+    };
+  }, [isMobile]);
 
   const handleZoomChange = (e) => {
     const newZoom = parseFloat(e.target.value);
@@ -50,7 +99,7 @@ export default function ManipulateModel() {
 
   return (
     <div ref={sectionRef} className="w-full h-screen flex bg-white overflow-hidden rounded-b-4xl">
-      <div className="w-full h-full relative cursor-grab active:cursor-grabbing">
+      <div ref={canvasRef} className="w-full h-full relative cursor-grab active:cursor-grabbing">
         <Canvas camera={{ position: [-8, 6, 14], fov: 60 }} className="z-10">
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 5]} intensity={1} />
