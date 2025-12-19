@@ -158,6 +158,7 @@ const IntroSection = () => {
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white font-quicksand text-right">
                   {t(section.title)}
                 </h2>
+                <div className="w-full h-[0.5px] bg-white"></div>
                 <p className="text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl text-slate-500 font-quicksand text-right">
                   {t(section.subtitle)}
                 </p>

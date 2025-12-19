@@ -130,21 +130,21 @@ const AdvertiseHeader = () => {
         <div className="flex justify-between items-center px-2 sm:px-4 md:px-6 py-2">
           {/* Sol Kısım: Logo */}
           <div className="bg-white/10 backdrop-blur-xl shadow-lg rounded-2xl border border-white/20">
-            {/* <Image
+            <Image
               src="/ivo_bio_logoSVG_v2.svg"
               alt="Logo"
               width={160}
               height={160}
-              className="px-4 py-2"
-            /> */}
+              className="px-8 py-2"
+            />
 
-            <Image
+            {/* <Image
               src="/ivo_siyah.png"
               alt="Logo"
               width={200}
               height={160}
               className=""
-            />
+            /> */}
           </div>
 
           {/* <Image
