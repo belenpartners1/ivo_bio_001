@@ -128,10 +128,11 @@ const IntroSection = () => {
             {/* Sol Kısım */}
             {section.position === "left" && (
               <div className="flex-4 flex flex-col gap-3 sm:gap-4 md:gap-6 order-2 md:order-1 p-4 md:p-8">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white font-quicksand text-center md:text-left">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white font-quicksand text-left">
                   {t(section.title)}
                 </h2>
-                <p className="text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl text-slate-500 font-quicksand  md:text-left text-justify">
+                <div className="w-full h-[0.5px] bg-white"></div>
+                <p className="text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl text-slate-500 font-quicksand text-left">
                   {t(section.subtitle)}
                 </p>
               </div>
@@ -139,7 +140,7 @@ const IntroSection = () => {
 
             {/* Orta - Card */}
             <div
-              className={`flex-12 flex justify-center bg-white w-full md:w-auto order-1 md:order-2 max-h-[40vh] md:max-h-none ${
+              className={`flex-12 flex justify-center bg-white/30 w-full md:w-auto order-1 md:order-2 max-h-[40vh] md:max-h-none ${
                 section.position === "left" ? "md:pr-24" : "md:pl-24"
               }`}
             >
@@ -154,10 +155,10 @@ const IntroSection = () => {
             {/* Sağ Kısım */}
             {section.position === "right" && (
               <div className="flex-4 flex flex-col gap-3 sm:gap-4 md:gap-6 order-2 md:order-3 p-4 md:p-8">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white font-quicksand text-center md:text-left">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white font-quicksand text-right">
                   {t(section.title)}
                 </h2>
-                <p className="text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl text-slate-500 font-quicksand text-center md:text-left">
+                <p className="text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl text-slate-500 font-quicksand text-right">
                   {t(section.subtitle)}
                 </p>
               </div>
