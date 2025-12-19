@@ -5,7 +5,6 @@ import { gsap } from "gsap";
 import { TiThMenu } from "react-icons/ti";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import { useTranslations } from "next-intl";
-import IvoLogo from "../IvoLogo/IvoLogo";
 
 const AdvertiseHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -137,17 +136,15 @@ const AdvertiseHeader = () => {
               width={160}
               height={160}
               className="px-4 py-2"
-            />
-
-            <Image
-              src="/icons/light_icon.png"
-              alt="Logo"
-              width={240}
-              height={160}
-              className=""
             /> */}
 
-            <IvoLogo />
+            <Image
+              src="/ivo_siyah.png"
+              alt="Logo"
+              width={200}
+              height={160}
+              className=""
+            />
           </div>
 
           {/* <Image

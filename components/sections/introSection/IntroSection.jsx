@@ -118,45 +118,51 @@ const IntroSection = () => {
         </h1>
       </div>
 
-{sections.map((section, index) => (
+      {sections.map((section, index) => (
         <div
           key={index}
           ref={(el) => (sectionsRef.current[index] = el)}
-          className="h-screen w-full flex flex-col md:flex-row items-center justify-center px-4 sm:px-8 md:px-12 lg:px-20 gap-4 sm:gap-6 md:gap-10 relative z-20"
+          className="h-screen w-full "
         >
-          {/* Sol Kısım */}
-          {section.position === "left" && (
-            <div className="flex-1 flex flex-col gap-3 sm:gap-4 md:gap-6 order-2 md:order-1">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white font-quicksand text-center md:text-left">
-                {t(section.title)}
-              </h2>
-              <p className="text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl text-white font-quicksand font-semibold text-center md:text-left">
-                {t(section.subtitle)}
-              </p>
-            </div>
-          )}
+          <div className="flex flex-col md:flex-row items-center justify-center bg-white/30 relative z-20">
+            {/* Sol Kısım */}
+            {section.position === "left" && (
+              <div className="flex-4 flex flex-col gap-3 sm:gap-4 md:gap-6 order-2 md:order-1 p-4 md:p-8">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white font-quicksand text-center md:text-left">
+                  {t(section.title)}
+                </h2>
+                <p className="text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl text-slate-500 font-quicksand  md:text-left text-justify">
+                  {t(section.subtitle)}
+                </p>
+              </div>
+            )}
 
-          {/* Orta - Card */}
-          <div className="flex-12 flex justify-center w-full md:w-auto order-1 md:order-2 max-h-[40vh] md:max-h-none">
-            <Image
-              src={section.image}
-              alt="Picture of the author"
-              width={1920}
-              height={1080}
-              className="object-cover rounded-2xl sm:rounded-3xl md:rounded-4xl shadow-2xl w-full h-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl"
-            />
-          </div>
-          {/* Sağ Kısım */}
-          {section.position === "right" && (
-            <div className="flex-1 flex flex-col gap-3 sm:gap-4 md:gap-6 order-2 md:order-3">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white font-quicksand text-center md:text-left">
-                {t(section.title)}
-              </h2>
-              <p className="text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl text-white font-quicksand font-semibold text-center md:text-left">
-                {t(section.subtitle)}
-              </p>
+            {/* Orta - Card */}
+            <div
+              className={`flex-12 flex justify-center bg-white w-full md:w-auto order-1 md:order-2 max-h-[40vh] md:max-h-none ${
+                section.position === "left" ? "md:pr-24" : "md:pl-24"
+              }`}
+            >
+              <Image
+                src={section.image}
+                alt="Picture of the author"
+                width={1920}
+                height={1080}
+                className="object-cover shadow-2xl w-full h-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl"
+              />
             </div>
-          )}
+            {/* Sağ Kısım */}
+            {section.position === "right" && (
+              <div className="flex-4 flex flex-col gap-3 sm:gap-4 md:gap-6 order-2 md:order-3 p-4 md:p-8">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white font-quicksand text-center md:text-left">
+                  {t(section.title)}
+                </h2>
+                <p className="text-base sm:text-lg md:text-lg lg:text-xl xl:text-2xl text-slate-500 font-quicksand text-center md:text-left">
+                  {t(section.subtitle)}
+                </p>
+              </div>
+            )}
+          </div>
         </div>
       ))}
     </div>
