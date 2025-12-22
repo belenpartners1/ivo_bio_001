@@ -38,7 +38,7 @@ const VideoIntroSection = () => {
     ScrollTrigger.create({
       trigger: section,
       start: "top top",
-      end: "+=100%", // Ekran yüksekliği kadar pin'li kalır
+      end: "+=100%",
       pin: true,
       pinSpacing: true,
       scrub: 1,
