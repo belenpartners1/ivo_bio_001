@@ -292,17 +292,17 @@
     "imageAlt": "Galeri Görseli"
   },
   "footer": {
+    "mainTitle": "IVObio",
     "company": "BELEN & PARTNERS",
-    "brandTitle": "İVO Bio",
-    "brandDescription": "İVO Bio bir Belen & Partners markasıdır.",
-    "description": "Modern mimari çözümler ve sürdürülebilir tasarımlarla geleceği birlikte inşa ediyoruz. Her projede estetik, işlevsellik ve çevre dostu yaklaşımı bir araya getiriyoruz.",
-    "contactTitle": "İletişim",
-    "phone": "Telefon",
-    "email": "Mail",
-    "address": "Adres",
-    "copyright": "© 2025 Belen & Partners. Tüm hakları saklıdır.",
-    "privacy": "Gizlilik Politikası",
-    "terms": "Kullanım Koşulları"
+    "brandSuffix": "markasıdır.",
+    "description": "Modern mimari çözümler ve sürdürülebilir tasarımlarla geleceği birlikte inşa ediyoruz.",
+    "descriptionExtended": "Her projede estetik, işlevsellik ve çevre dostu yaklaşımı bir araya getiriyoruz.",
+    "addressLabel": "ADRES",
+    "addressValue": "Cepa Ofis Kule Mustafa Kemal Mahallesi Eskişehir Yolu 7. Km. 2123 Sokak No: 2/D Kat: 11 No: 1103 Çankaya/ANKARA",
+    "emailLabel": "MAIL",
+    "emailValue": "info@ivo-bio.com",
+    "phoneLabel": "TELEFON",
+    "phoneValue": "+90 555 157 42 15"
   },
   "faq": {
     "title": "Sıkça Sorulan",

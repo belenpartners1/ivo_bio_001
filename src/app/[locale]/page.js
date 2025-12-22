@@ -22,7 +22,6 @@ import PlanSection from "../../../components/sections/planSection/PlanSection";
 import ManipulateModel from "../../../components/3dmodel/ManipulateModel";
 import Yekpare from "../../../components/sections/yekpareSection/Yekpare";
 import InnerSideSection from "../../../components/sections/icmekan/InnerSideSection";
-import Try from "../../../components/sections/try/Try";
 
 const Home = () => {
   useEffect(() => {
@@ -50,16 +49,17 @@ const Home = () => {
     <div className="bg-gri flex flex-col overflow-hidden">
       <HeaderSection />
       <ManipulateModel />
-      <Try />
       <IntroSection />
       {/* <ScrollVideo /> */}
       <VideoIntroSection />
+      <div className="w-full h-40"></div>
       <BasicSection1 />
       <TechnicalSection />
       <TwoTypeSection />
       {/* <Yekpare /> */}
       <BasicSection2 />
       {/* <HorizontalScroll /> */}
+      <div className="w-full h-40"></div>
       <PlanSection />
       <PricingSection />
       <InnerSideSection />

@@ -291,17 +291,17 @@
     "imageAlt": "Gallery Image"
   },
   "footer": {
+    "mainTitle": "IVObio",
     "company": "BELEN & PARTNERS",
-    "brandTitle": "IVO Bio",
-    "brandDescription": "IVO Bio is a Belen & Partners brand.",
-    "description": "We build the future together with modern architectural solutions and sustainable designs. In every project, we bring together aesthetics, functionality, and an environmentally friendly approach.",
-    "contactTitle": "Contact",
-    "phone": "Phone",
-    "email": "Email",
-    "address": "Address",
-    "copyright": "© 2025 Belen & Partners. All rights reserved.",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Use"
+    "brandSuffix": "brand.",
+    "description": "We build the future with modern architectural solutions and sustainable designs.",
+    "descriptionExtended": "In every project, we bring together aesthetics, functionality, and an environmentally friendly approach.",
+    "addressLabel": "ADDRESS",
+    "addressValue": "Cepa Ofis Kule Mustafa Kemal Mahallesi Eskişehir Yolu 7. Km. 2123 Sokak No: 2/D Floor: 11 No: 1103 Çankaya/ANKARA",
+    "emailLabel": "EMAIL",
+    "emailValue": "info@ivo-bio.com",
+    "phoneLabel": "PHONE",
+    "phoneValue": "+90 555 157 42 15"
   },
   "faq": {
     "title": "Frequently Asked",

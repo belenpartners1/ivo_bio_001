@@ -70,7 +70,7 @@ const InnerSideSection = () => {
   return (
     <div
       ref={sectionRef}
-      className="relative min-h-screen w-full overflow-hidden font-quicksand"
+      className="relative min-h-screen w-full overflow-hidden font-quicksand my-40"
       id="ic-mekan"
     >
       {/* Background Video - Full Screen */}

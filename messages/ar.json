@@ -292,16 +292,17 @@
     "imageAlt": "صورة المعرض"
   },
   "footer": {
+    "mainTitle": "IVObio",
     "company": "BELEN & PARTNERS",
-    "brandTitle": "إيفو بيو",
-    "brandDescription": "إيفو بيو علامة تجارية تابعة لـ Belen & Partners",
-    "description": "نبني المستقبل بحلول معمارية حديثة وتصميمات مستدامة تجمع بين الجمال والوظيفة.",
-    "contactTitle": "تواصل",
-    "phone": "هاتف",
-    "email": "بريد",
-    "address": "العنوان",
-    "privacy": "سياسة الخصوصية",
-    "terms": "شروط الاستخدام"
+    "brandSuffix": "علامة تجارية.",
+    "description": "نبني المستقبل بحلول معمارية حديثة وتصميمات مستدامة.",
+    "descriptionExtended": "في كل مشروع، نجمع بين الجمال والوظيفة والنهج الصديق للبيئة.",
+    "addressLabel": "العنوان",
+    "addressValue": "Cepa Ofis Kule Mustafa Kemal Mahallesi Eskişehir Yolu 7. Km. 2123 Sokak No: 2/D الطابق: 11 رقم: 1103 Çankaya/ANKARA",
+    "emailLabel": "البريد الإلكتروني",
+    "emailValue": "info@ivo-bio.com",
+    "phoneLabel": "الهاتف",
+    "phoneValue": "+90 555 157 42 15"
   },
   "faq": {
     "title": "الأسئلة",

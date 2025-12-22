@@ -218,6 +218,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import {
   FaTwitter,
   FaLinkedinIn,
@@ -227,21 +228,21 @@ import {
 } from "react-icons/fa";
 
 const IvoFooter = () => {
+  const t = useTranslations("footer");
+
   return (
     <footer className="w-full bg-[#dbe0e3] p-6 md:p-12 flex justify-center items-center min-h-[500px]">
       <div className="max-w-7xl w-full">
         {/* Üst Metin Alanı */}
         <div className="mb-8 pl-2">
           <h2 className="text-2xl md:text-4xl font-bold text-gray-700 tracking-wide">
-            IVObio
+            {t("mainTitle")}
           </h2>
           <h3 className=" text-gray-700  text-2xl md:text-4xl mb-4">
-            <span className=" text-white">BELEN & PARTNERS</span> markasıdır.
+            <span className=" text-white">{t("company")}</span> {t("brandSuffix")}
           </h3>
           <p className="text-gray-500 text-sm md:text-base max-w-3xl leading-relaxed">
-            Modern mimari çözümler ve sürdürülebilir tasarımlarla geleceği
-            birlikte inşa ediyoruz. <br /> Her projede estetik, işlevsellik ve
-            çevre dostu yaklaşımı bir araya getiriyoruz.
+            {t("description")} <br /> {t("descriptionExtended")}
           </p>
         </div>
 
@@ -286,12 +287,11 @@ const IvoFooter = () => {
                       className="text-white text-lg mb-1"
                       size={36}
                     />
-                    <p className=" text-white md:text-lg">ADRES</p>
+                    <p className=" text-white md:text-lg">{t("addressLabel")}</p>
                   </div>
                   <div>
                     <p className="leading-snug text-right">
-                      Cepa Ofis Kule Mustafa Kemal Mahallesi Eskişehir Yolu 7.
-                      Km. 2123 Sokak No: 2/D Kat: 11 No: 1103 Çankaya/ANKARA
+                      {t("addressValue")}
                     </p>
                   </div>
                 </div>
@@ -300,14 +300,14 @@ const IvoFooter = () => {
                 <div className="flex flex-col items-start gap-2">
                   <div className="flex items-end justify-center gap-1">
                     <FaEnvelope className="text-white text-lg mb-1" size={36} />
-                    <p className=" text-white md:text-lg">MAIL</p>
+                    <p className=" text-white md:text-lg">{t("emailLabel")}</p>
                   </div>
                   <div>
                     <a
-                      href="mailto:info@ivo-bio.com"
+                      href={`mailto:${t("emailValue")}`}
                       className="leading-snug hover:text-gray-700"
                     >
-                      info@ivo-bio.com
+                      {t("emailValue")}
                     </a>
                   </div>
                 </div>
@@ -316,14 +316,14 @@ const IvoFooter = () => {
                 <div className="flex flex-col items-start gap-2">
                   <div className="flex items-end justify-center gap-1">
                     <FaPhoneAlt className="text-white text-lg mb-1" size={36} />
-                    <p className=" text-white md:text-lg">TELEFON</p>
+                    <p className=" text-white md:text-lg">{t("phoneLabel")}</p>
                   </div>
                   <div>
                     <a
-                      href="tel:+905551574215"
+                      href={`tel:${t("phoneValue").replace(/\s/g, "")}`}
                       className="leading-snug hover:text-gray-700"
                     >
-                      +90 555 157 42 15
+                      {t("phoneValue")}
                     </a>
                   </div>
                 </div>
