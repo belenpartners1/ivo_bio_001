@@ -103,21 +103,31 @@ export default function FloorPlan() {
   );
 
   return (
-    <div
-      className="flex flex-col justify-center items-center font-quicksand"
-      id="plan"
-    >
-      {/* Header Section */}
-      <div className="text-center text-white font-quicksand">
-        <h2 className="text-5xl md:text-[100px] font-bold mb-4">
-          <span className="text-yesil"> {t("header1")} </span>
-          {t("header2")}
-        </h2>
-      </div>
+    <div className="flex flex-col font-quicksand" id="plan">
+      <div className="h-screen w-full relative overflow-hidden">
+        <Image
+          src="/ivo_yerlesim.svg"
+          alt="plan"
+          className="h-full w-auto object-cover object-left"
+          width={1920}
+          height={1080}
+          priority
+        />
 
-      {/* Description Section */}
-      <div className="text-center text-kahverengi text-2xl md:text-4xl font-quicksand max-w-4xl mt-10">
-        <p className="font-quicksand">{t("description")}</p>
+        <div className="absolute bottom-20 right-24 flex flex-col justify-start items-start max-w-2xl">
+          {/* Header Section */}
+          <div className="text-left text-gray-700 font-quicksand">
+            <h2 className="text-2xl md:text-[40px] font-bold">
+              {/* <span className="text-yesil"> {t("header1")} </span> */}
+              {t("header2")}
+            </h2>
+          </div>
+
+          {/* Description Section */}
+          <div className="text-left text-gray-700 text-xl md:text-2xl font-quicksand">
+            <p className="font-quicksand">{t("description")}</p>
+          </div>
+        </div>
       </div>
 
       {/* Floor Plan Section */}

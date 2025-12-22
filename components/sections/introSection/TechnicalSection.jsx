@@ -109,32 +109,33 @@ const TechnicalSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-1 sm:gap-2 h-full">
             {/* Sol Kolon - Yazı */}
             <div
-              className="left-content col-span-1 px-3 py-4 sm:px-4 sm:py-8 md:px-6 md:py-24 bg-white rounded-2xl sm:rounded-3xl flex flex-col justify-between h-full relative border border-gri/90 overflow-y-auto md:overflow-visible"
+              className="left-content col-span-1 px-4 pt-4 sm:px-6 sm:pt-8 md:px-10 md:pt-24 bg-white rounded-2xl sm:rounded-3xl flex flex-col justify-center h-full relative border border-gri/90 overflow-y-auto md:overflow-visible"
               style={{
                 transform: index === 0 ? "translateY(0%)" : "translateY(100%)",
               }}
             >
-              <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl text-center font-extrabold text-gray-700">
+              <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl text-start font-extrabold text-gray-700 my-2 md:my-4">
                 {item.title}
               </h1>
-              <div className="w-full h-[1px] sm:h-[2px] bg-gray-300 mt-1 sm:mt-2"></div>
 
-              <div className="flex flex-col items-center my-1 sm:my-2">
+              <div className="w-48 md:w-80 h-[1px] sm:h-[2px] bg-gray-300 my-2 md:my-4 "></div>
+
+              <div className="flex flex-col items-center my-2 md:my-4">
                 <p
-                  className="font-bold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-kahverengi text-start leading-relaxed my-2 sm:my-4 md:my-8 lg:my-16"
+                  className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-700 text-start leading-relaxed "
                   dangerouslySetInnerHTML={{ __html: item.description }}
                 />
-                <div className="w-20 sm:w-32 md:w-40 h-[1px] sm:h-[2px] bg-gray-300 my-2 sm:my-4 md:my-6"></div>
+                {/* <div className="w-20 sm:w-32 md:w-40 h-[1px] sm:h-[2px] bg-gray-300 my-2  md:my-4"></div> */}
               </div>
 
               {/* Alt dekoratif çizgiler - mobilde gizle */}
-              <div className="hidden md:block absolute w-[2px] h-20 bg-gray-300 bottom-0 left-20"></div>
-              <div className="hidden md:block absolute w-[2px] h-20 bg-gray-300 bottom-0 right-20"></div>
+              {/* <div className="hidden md:block absolute w-[2px] h-20 bg-gray-300 bottom-0 left-20"></div>
+              <div className="hidden md:block absolute w-[2px] h-20 bg-gray-300 bottom-0 right-20"></div> */}
 
               {/* Sayfa numarası */}
-              <div className="absolute bottom-2 sm:bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 text-kahverengi font-bold border-b-2 text-xs sm:text-sm md:text-base">
+              {/* <div className="absolute bottom-2 sm:bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 text-kahverengi font-bold border-b-2 text-xs sm:text-sm md:text-base">
                 {index + 1} / {technicalData.length}
-              </div>
+              </div> */}
             </div>
 
             {/* Sağ Kolon - Görsel veya Video */}

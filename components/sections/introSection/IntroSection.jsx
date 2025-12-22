@@ -35,11 +35,12 @@ const IntroSection = () => {
       gsap.to(section, {
         scrollTrigger: {
           trigger: section,
-          start: "top top",
-          end: isLastSection ? "bottom center" : "bottom top",
+          start: "center center",
+          end: isLastSection ? "bottom center" : "+=100%",
           scrub: 1,
           pin: !isLastSection,
           pinSpacing: false,
+          markers: true,
         },
         scale: isLastSection ? 1 : 0.8,
         opacity: isLastSection ? 1 : 0,
@@ -148,12 +149,13 @@ const IntroSection = () => {
                 alt="Picture of the author"
                 width={1920}
                 height={1080}
-                className="object-cover shadow-2xl w-full md:w-11/12 h-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl"
+                className="object-cover shadow-2xl w-full md:w-11/12 h-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-7xl"
               />
               {section.position === "left" && (
                 <div className="hidden md:block md:w-1/12 bg-white"></div>
               )}
             </div>
+
             {/* Sağ Kısım */}
             {section.position === "right" && (
               <div className="flex-4 flex flex-col gap-3 sm:gap-4 md:gap-6 order-2 md:order-3 p-4 md:p-8">
