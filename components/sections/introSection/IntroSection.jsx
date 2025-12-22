@@ -151,7 +151,7 @@ const IntroSection = () => {
                 className="object-cover shadow-2xl w-full md:w-11/12 h-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl"
               />
               {section.position === "left" && (
-                <div className="hidden md:block md:w-1/12 bg-white/30"></div>
+                <div className="hidden md:block md:w-1/12 bg-white"></div>
               )}
             </div>
             {/* Sağ Kısım */}
