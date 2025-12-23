@@ -137,7 +137,7 @@ export default function FloorPlan() {
       >
         {/* Container'a aspect-ratio ekleyerek responsive boyutlandırma */}
         <Image
-          src="/kesitler/plan-3-arkaplansiz3.webp"
+          src="/kesitler/plan-3-arkaplansiz2.webp"
           alt="İç mimari plan"
           fill
           className="object-contain"
