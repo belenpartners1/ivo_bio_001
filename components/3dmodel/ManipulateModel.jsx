@@ -63,6 +63,16 @@ export default function ManipulateModel() {
     };
 
     const handleTouchMove = (e) => {
+      // Slider üzerinde yapılan dokunuşları kontrol et
+      const target = e.target;
+      const isSlider = target.classList.contains('slider') ||
+                       target.closest('.slider-container');
+
+      // Eğer slider'a dokunuluyorsa, hiçbir şey yapma (slider'ın kendi işlevselliği çalışsın)
+      if (isSlider) {
+        return;
+      }
+
       const touchEndX = e.touches[0].clientX;
       const touchEndY = e.touches[0].clientY;
       const deltaX = Math.abs(touchEndX - touchStartX);
@@ -134,7 +144,7 @@ export default function ManipulateModel() {
         </div>
 
         {/* Zoom Control Slider */}
-        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex items-center gap-4 bg-white/90 backdrop-blur-sm rounded-full shadow-lg px-6 py-4 font-quicksand z-20">
+        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex items-center gap-4 bg-white/90 backdrop-blur-sm rounded-full shadow-lg px-6 py-4 font-quicksand z-20 slider-container">
           <span className="font-quicksand font-semibold text-gray-700 whitespace-nowrap">
             {t("zoomOut")}
           </span>
