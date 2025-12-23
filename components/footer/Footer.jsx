@@ -293,14 +293,14 @@ const IvoFooter = () => {
                     </p>
                   </div>
                   <div>
-                    <p className="leading-snug text-right">
+                    <p className="leading-snug text-left">
                       {t("addressValue")}
                     </p>
                   </div>
                 </div>
 
                 {/* Mail */}
-                <div className="flex flex-col items-start gap-2">
+                <div className="flex flex-col items-start md:items-center gap-2">
                   <div className="flex items-end justify-center gap-1">
                     <FaEnvelope className="text-white text-lg mb-1" size={36} />
                     <p className=" text-white md:text-lg">{t("emailLabel")}</p>
