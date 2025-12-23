@@ -35,7 +35,7 @@ const IntroSection = () => {
       gsap.to(section, {
         scrollTrigger: {
           trigger: section,
-          start: "center center",
+          start: "35% center",
           end: isLastSection ? "bottom center" : "+=100%",
           scrub: 1,
           pin: !isLastSection,
