@@ -114,17 +114,17 @@ export default function FloorPlan() {
           priority
         />
 
-        <div className="absolute bottom-20 md:right-24 right-10 flex flex-col justify-start items-start max-w-2xl">
+        <div className="absolute bottom-20 md:right-24 pl-4 md:pl-0 flex flex-col justify-start items-start max-w-2xl">
           {/* Header Section */}
           <div className="text-left text-gray-700 font-quicksand">
-            <h2 className="text-2xl md:text-[40px] font-bold">
+            <h2 className="text-xl md:text-[40px] font-bold">
               {/* <span className="text-yesil"> {t("header1")} </span> */}
               {t("header2")}
             </h2>
           </div>
 
           {/* Description Section */}
-          <div className="text-left text-gray-700 text-xl md:text-2xl font-quicksand">
+          <div className="text-left text-gray-700 text-lg md:text-2xl font-quicksand">
             <p className="font-quicksand">{t("description")}</p>
           </div>
         </div>

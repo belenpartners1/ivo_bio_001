@@ -128,11 +128,11 @@ const IntroSection = () => {
             {/* Sol Kısım */}
             {section.position === "left" && (
               <div className="flex-4 flex flex-col gap-3 sm:gap-4 md:gap-6 order-2 md:order-1 p-4 md:p-8">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white font-quicksand text-left">
+                <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white font-quicksand text-left">
                   {t(section.title)}
                 </h2>
                 <div className="w-full h-[0.5px] bg-white"></div>
-                <p className="text-lg md:text-lg lg:text-xl xl:text-2xl text-slate-500 font-quicksand text-left">
+                <p className="text-xl xl:text-2xl text-slate-500 font-quicksand text-left">
                   {t(section.subtitle)}
                 </p>
               </div>
@@ -158,11 +158,11 @@ const IntroSection = () => {
             {/* Sağ Kısım */}
             {section.position === "right" && (
               <div className="flex-4 flex flex-col gap-3 sm:gap-4 md:gap-6 order-2 md:order-3 p-4 md:p-8">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white font-quicksand text-right">
+                <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white font-quicksand text-right">
                   {t(section.title)}
                 </h2>
                 <div className="w-full h-[0.5px] bg-white"></div>
-                <p className="text-lg md:text-lg lg:text-xl xl:text-2xl text-slate-500 font-quicksand text-right">
+                <p className="text-xl xl:text-2xl text-slate-500 font-quicksand text-right">
                   {t(section.subtitle)}
                 </p>
               </div>
