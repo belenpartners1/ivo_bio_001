@@ -40,6 +40,19 @@ const Home = () => {
 
     requestAnimationFrame(raf);
 
+    // Dil değişiminden sonra scroll pozisyonunu geri yükle
+    const savedScrollPosition = sessionStorage.getItem('scrollPosition');
+    if (savedScrollPosition) {
+      const scrollY = parseInt(savedScrollPosition, 10);
+
+      // Lenis ve DOM hazır olana kadar bekle
+      setTimeout(() => {
+        window.scrollTo(0, scrollY);
+        lenis.scrollTo(scrollY, { immediate: true, force: true });
+        sessionStorage.removeItem('scrollPosition');
+      }, 100);
+    }
+
     return () => {
       lenis.destroy(); // Component unmount olduğunda Lenis'i yok et
     };

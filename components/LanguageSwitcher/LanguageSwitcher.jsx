@@ -86,6 +86,12 @@ export default function LanguageSwitcher() {
   const currentLanguage = languages.find((lang) => lang.code === currentLocale);
 
   function onSelectChange(nextLocale) {
+    // Mevcut scroll pozisyonunu kaydet
+    const currentScrollY = window.scrollY;
+
+    // sessionStorage'a kaydet (sayfa reload olursa bile hatırlar)
+    sessionStorage.setItem('scrollPosition', currentScrollY.toString());
+
     startTransition(() => {
       router.replace(pathname, { locale: nextLocale, scroll: false });
       setIsOpen(false);
