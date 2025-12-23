@@ -232,14 +232,15 @@ const IvoFooter = () => {
 
   return (
     <footer className="w-full bg-[#dbe0e3] p-6 md:p-12 flex justify-center items-center min-h-[500px]">
-      <div className="max-w-7xl w-full">
+      <div className="container w-full">
         {/* Üst Metin Alanı */}
-        <div className="mb-8 pl-2">
+        <div className="mb-4 pl-2">
           <h2 className="text-2xl md:text-4xl font-bold text-gray-700 tracking-wide">
             {t("mainTitle")}
           </h2>
           <h3 className=" text-gray-700  text-2xl md:text-4xl mb-4">
-            <span className=" text-white">{t("company")}</span> {t("brandSuffix")}
+            <span className=" text-white">{t("company")}</span>{" "}
+            {t("brandSuffix")}
           </h3>
           <p className="text-gray-500 text-sm md:text-base max-w-3xl leading-relaxed">
             {t("description")} <br /> {t("descriptionExtended")}
@@ -247,10 +248,18 @@ const IvoFooter = () => {
         </div>
 
         {/* Gri Kart Alanı */}
-        <div className="bg-[#cfd4d8] rounded-[40px] p-8 md:p-12 relative shadow-sm overflow-hidden">
-          <div className="flex flex-col md:flex-row h-full">
+        <div
+          className="relative overflow-hidden px-24 py-12"
+          style={{
+            backgroundImage: "url(/6.png)",
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <div className="flex flex-col md:flex-row h-full ">
             {/* SOL TARAFTAKİ İÇERİK (İletişim & Sosyal Medya) */}
-            <div className="w-full md:w-1/2 flex flex-col justify-between space-y-8 md:space-y-0 md:pr-12">
+            <div className="w-full md:w-1/2 flex flex-col justify-between space-y-8 md:space-y-0">
               {/* Sosyal Medya İkonları */}
               <div className="flex space-x-4">
                 <a
@@ -287,7 +296,9 @@ const IvoFooter = () => {
                       className="text-white text-lg mb-1"
                       size={36}
                     />
-                    <p className=" text-white md:text-lg">{t("addressLabel")}</p>
+                    <p className=" text-white md:text-lg">
+                      {t("addressLabel")}
+                    </p>
                   </div>
                   <div>
                     <p className="leading-snug text-right">
@@ -352,7 +363,7 @@ const IvoFooter = () => {
                 <Image
                   src="/ivo_cercevesiz_beyaz.png"
                   alt="Logo"
-                  width={240}
+                  width={280}
                   height={67}
                   className="w-40 md:w-80 lg:w-[400px] h-auto"
                 />
