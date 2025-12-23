@@ -129,7 +129,7 @@ const AdvertiseHeader = () => {
       <div className="w-full">
         <div className="flex justify-between items-center px-2 sm:px-4 md:px-6 py-2">
           {/* Sol Kısım: Logo */}
-          <div className="bg-white/10 backdrop-blur-xl shadow-lg rounded-2xl border border-white/20">
+          <div className="bg-white/10 backdrop-blur-xl shadow-lg rounded-xl border border-white/20">
             <Image
               src="/ivo_bio_logoSVG_v2.svg"
               alt="Logo"
@@ -164,7 +164,7 @@ const AdvertiseHeader = () => {
             >
               <button
                 onClick={toggleMenu}
-                className={`flex items-center gap-2 px-2 sm:px-4 py-2.5 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all shadow-lg duration-200 border border-gri cursor-pointer
+                className={`flex items-center gap-2 px-2 sm:px-4 py-2.5 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/20 transition-all shadow-lg duration-200 border border-gri cursor-pointer
                 ${isOpen ? "bg-white/20" : ""}
                 focus:outline-none`}
               >

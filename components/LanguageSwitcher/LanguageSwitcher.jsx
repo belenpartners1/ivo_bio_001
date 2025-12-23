@@ -79,7 +79,7 @@ export default function LanguageSwitcher() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         disabled={isPending}
-        className="flex items-center gap-2 px-2 sm:px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg hover:bg-white/20 transition-all shadow-lg  duration-200 border border-gri"
+        className="flex items-center gap-2 px-2 sm:px-4 py-2 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/20 transition-all shadow-lg  duration-200 border border-gri"
       >
         <span className="text-gray-800 font-semibold">
           {currentLanguage?.name}
@@ -125,7 +125,7 @@ export default function LanguageSwitcher() {
                 </span>
                 {currentLocale === language.code && (
                   <svg
-                    className="w-4 h-4 ml-auto text-green-600"
+                    className="w-4 h-4 ml-auto text-yesil"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
