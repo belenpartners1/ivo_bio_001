@@ -113,7 +113,7 @@ const IntroSection = () => {
         ref={titleRef}
         className="h-screen flex flex-col items-center justify-center gap-10 sticky top-0 z-10 md:p-20 p-10"
       >
-        <h1 className="font-quicksand text-[100px] md:text-[170px] font-bold text-center leading-tight text-white">
+        <h1 className="font-quicksand text-[80px] md:text-[170px] font-bold text-center leading-tight text-white">
           <span className="text-yesil"> {t("header1")}</span> <br />
           {t("header2")}
         </h1>

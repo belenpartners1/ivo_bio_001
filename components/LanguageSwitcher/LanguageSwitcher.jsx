@@ -54,7 +54,25 @@ const languages = [
       </svg>
     ),
   },
-  // { code: 'ar', name: 'العربية', flag: '🇸🇦' }
+  {
+    code: "ar",
+    name: "AR",
+    flag: (
+      <svg
+        className="w-6 h-4"
+        viewBox="0 0 36 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="36" height="24" fill="#165e3a" />
+        <rect width="36" height="16" fill="white" />
+        <rect width="36" height="8" fill="black" />
+        <path
+          d="M10,12 L14,8 L14,11 L18,11 L18,13 L14,13 L14,16 Z"
+          fill="#165e3a"
+        />
+      </svg>
+    ),
+  },
 ];
 
 export default function LanguageSwitcher() {
