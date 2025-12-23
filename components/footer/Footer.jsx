@@ -248,15 +248,7 @@ const IvoFooter = () => {
         </div>
 
         {/* Gri Kart Alanı */}
-        <div
-          className="relative overflow-hidden px-24 py-12"
-          style={{
-            backgroundImage: "url(/6.png)",
-            backgroundSize: "contain",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
+        <div className="relative overflow-hidden px-4 md:px-20 py-6 md:py-12 md:bg-[url('/6.png')] md:bg-contain md:bg-center md:bg-no-repeat">
           <div className="flex flex-col md:flex-row h-full ">
             {/* SOL TARAFTAKİ İÇERİK (İletişim & Sosyal Medya) */}
             <div className="w-full md:w-1/2 flex flex-col justify-between space-y-8 md:space-y-0">
@@ -278,7 +270,7 @@ const IvoFooter = () => {
 
               {/* Küçük Logo (BELEN & PARTNERS) */}
 
-              <div className="opacity-60 mt-32">
+              <div className="opacity-60 mt-4 md:mt-20">
                 <Image
                   src="/belen_logo_beyaz.png"
                   alt="Logo"
@@ -370,6 +362,13 @@ const IvoFooter = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="mt-8 pt-4 border-t border-gray-400/30 text-center">
+          <p className="text-gray-500 text-xs md:text-sm">
+            {t("copyright", { year: new Date().getFullYear() })}
+          </p>
         </div>
       </div>
     </footer>

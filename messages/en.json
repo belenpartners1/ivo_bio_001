@@ -299,9 +299,10 @@
     "addressLabel": "ADDRESS",
     "addressValue": "Cepa Ofis Kule Mustafa Kemal Mahallesi Eskişehir Yolu 7. Km. 2123 Sokak No: 2/D Floor: 11 No: 1103 Çankaya/ANKARA",
     "emailLabel": "EMAIL",
-    "emailValue": "info@ivo-bio.com",
+    "emailValue": "info@b-ivo.com",
     "phoneLabel": "PHONE",
-    "phoneValue": "+90 555 157 42 15"
+    "phoneValue": "+90 555 157 42 15",
+    "copyright": "© {year} IVO Bio. All rights reserved."
   },
   "faq": {
     "title": "Frequently Asked",
