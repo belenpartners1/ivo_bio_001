@@ -109,9 +109,9 @@
     "hotspots": [
       {
         "id": 1,
-        "title": "Yaşam Alanı",
-        "area": "28.50 m²",
-        "desc": "Geniş ve ferah yaşam alanı, doğal ışığın hâkim olduğu konforlu bir atmosfer sunar."
+        "title": "Giriş Sahanlığı",
+        "area": "6.00 m²",
+        "desc": "Evin ilk karşılama noktası."
       },
       {
         "id": 2,
@@ -121,40 +121,40 @@
       },
       {
         "id": 3,
+        "title": "Yaşam Alanı",
+        "area": "28.50 m²",
+        "desc": "Geniş ve ferah yaşam alanı, doğal ışığın hâkim olduğu konforlu bir atmosfer sunar."
+      },
+      {
+        "id": 4,
         "title": "Yatak Odası",
         "area": "7.00 m²",
         "desc": "Dinlenme odaklı kompakt yapısıyla düzenli ve sakin bir yaşam alanı oluşturur."
       },
       {
-        "id": 4,
+        "id": 5,
         "title": "Banyo",
         "area": "6.00 m²",
         "desc": "Modern ve ergonomik tasarımıyla günlük ihtiyaçlara pratik çözümler sunar."
       },
       {
-        "id": 5,
+        "id": 6,
         "title": "Ebeveyn Yatak Odası",
         "area": "13.00 m²",
         "desc": "Geniş kullanım alanı ve düzenli depolama fırsatlarıyla konforlu bir özel yaşam odasıdır."
       },
       {
-        "id": 6,
+        "id": 7,
         "title": "Tesisat Odası",
         "area": "3.00 m²",
         "desc": "Erişime uygun teknik alan."
-      },
-      {
-        "id": 7,
-        "title": "Giriş Sahanlığı",
-        "area": "6.00 m²",
-        "desc": ""
       }
     ],
     "list": [
       {
         "id": 1,
-        "label": "Yaşam Alanı",
-        "area": "28.50 m²"
+        "label": "Giriş Sahanlığı",
+        "area": "6.00 m²"
       },
       {
         "id": 2,
@@ -163,29 +163,30 @@
       },
       {
         "id": 3,
-        "label": "Yatak Odası",
-        "area": "6.90 m²"
+        "label": "Yaşam Alanı",
+        "area": "28.50 m²"
       },
       {
         "id": 4,
+        "label": "Yatak Odası",
+        "area": "7.00 m²"
+      },
+      {
+        "id": 5,
         "label": "Banyo",
         "area": "6.00 m²"
       },
       {
-        "id": 5,
+        "id": 6,
         "label": "Ebeveyn Y.Odası",
         "area": "13.00 m²"
       },
       {
-        "id": 6,
+        "id": 7,
         "label": "Tesisat Odası",
         "area": "3.00 m²"
       },
-      {
-        "id": 7,
-        "label": "Giriş Sahanlığı",
-        "area": "6.00 m²"
-      },
+
       {
         "id": 8,
         "label": "Net",

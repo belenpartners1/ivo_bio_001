@@ -94,7 +94,7 @@ const TechnicalSection = () => {
   return (
     <div
       ref={sectionRef}
-      className="h-screen w-full p-1 sm:p-2 relative bg-gri font-quicksand"
+      className="h-screen w-full p-1 sm:p-2 relative bg-gri font-quicksand bg-white"
       id="teknik"
     >
       {technicalData.map((item, index) => (
@@ -109,7 +109,7 @@ const TechnicalSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-1 sm:gap-2 h-full">
             {/* Sol Kolon - Yazı */}
             <div
-              className="left-content col-span-1 px-4 pt-4 sm:px-6 sm:pt-8 md:px-10 md:pt-24 bg-white rounded-2xl sm:rounded-3xl flex flex-col justify-center h-full relative border border-gri/90 overflow-y-auto md:overflow-visible"
+              className="left-content col-span-1 px-4 pt-4 sm:px-6 sm:pt-8 md:px-10 md:pt-24 bg-white flex flex-col justify-center h-full relative overflow-y-auto md:overflow-visible"
               style={{
                 transform: index === 0 ? "translateY(0%)" : "translateY(100%)",
               }}
@@ -140,7 +140,7 @@ const TechnicalSection = () => {
 
             {/* Sağ Kolon - Görsel veya Video */}
             <div
-              className="right-content col-span-1 md:col-span-2 bg-white h-full relative flex justify-center items-center overflow-hidden rounded-2xl sm:rounded-3xl"
+              className="right-content col-span-1 md:col-span-2 bg-white h-full relative flex justify-center items-center overflow-hidden"
               style={{
                 transform: index === 0 ? "translateY(0%)" : "translateY(100%)",
               }}

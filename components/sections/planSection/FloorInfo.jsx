@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTranslations } from "next-intl";
+import PricingSection from "../pricing/PricingSection";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -101,6 +102,8 @@ const FloorInfo = () => {
           </h2>
           <p className="text-xl md:text-3xl lg:text-4xl">{t("subheader")}</p>
         </div>
+
+        <PricingSection />
 
         <div className="space-y-16 md:space-y-20 lg:space-y-32">
           {floorData.map((floor, index) => (

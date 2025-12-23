@@ -108,45 +108,45 @@
     "hotspots": [
       {
         "id": 1,
-        "title": "Living Area",
-        "area": "28.50 m²",
-        "desc": "A spacious and airy living area offering a comfortable atmosphere dominated by natural light."
+        "title": "Entrance Shelf",
+        "area": "6.00 m²",
+        "desc": "The home's first welcoming point."
       },
       {
         "id": 2,
-        "title": "Entrance Hallway",
+        "title": "Entrance Hallway - Corridor",
         "area": "8.50 m²",
         "desc": "A functional and comfortable welcoming area that strengthens the home's first impression."
       },
       {
         "id": 3,
+        "title": "Living Area",
+        "area": "28.50 m²",
+        "desc": "A spacious and airy living area offering a comfortable atmosphere dominated by natural light."
+      },
+      {
+        "id": 4,
         "title": "Bedroom",
         "area": "7.00 m²",
         "desc": "Creates an organized and peaceful living space with its compact, rest-oriented structure."
       },
       {
-        "id": 4,
+        "id": 5,
         "title": "Bathroom",
         "area": "6.00 m²",
         "desc": "Offers practical solutions to daily needs with its modern and ergonomic design."
       },
       {
-        "id": 5,
+        "id": 6,
         "title": "Master Bedroom",
         "area": "13.00 m²",
         "desc": "A comfortable private living room with a spacious usage area and organized storage opportunities."
       },
       {
-        "id": 6,
+        "id": 7,
         "title": "Installation Room",
         "area": "3.00 m²",
         "desc": "Accessible technical area."
-      },
-      {
-        "id": 7,
-        "title": "Entrance Shelf",
-        "area": "6.00 m²",
-        "desc": ""
       }
     ],
     "list": [

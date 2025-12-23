@@ -17,7 +17,6 @@ import Footer from "../../../components/footer/Footer";
 import ContactForm from "../../../components/formSection/ContactForm";
 import ScrollTop from "../../../components/scrollTop/ScrollTop";
 import ScrollVideo from "../../../components/scrollVideo/ScrollVideo";
-import PricingSection from "../../../components/sections/pricing/PricingSection";
 import PlanSection from "../../../components/sections/planSection/PlanSection";
 import ManipulateModel from "../../../components/3dmodel/ManipulateModel";
 import Yekpare from "../../../components/sections/yekpareSection/Yekpare";
@@ -41,7 +40,7 @@ const Home = () => {
     requestAnimationFrame(raf);
 
     // Dil değişiminden sonra scroll pozisyonunu geri yükle
-    const savedScrollPosition = sessionStorage.getItem('scrollPosition');
+    const savedScrollPosition = sessionStorage.getItem("scrollPosition");
     if (savedScrollPosition) {
       const scrollY = parseInt(savedScrollPosition, 10);
 
@@ -49,7 +48,7 @@ const Home = () => {
       setTimeout(() => {
         window.scrollTo(0, scrollY);
         lenis.scrollTo(scrollY, { immediate: true, force: true });
-        sessionStorage.removeItem('scrollPosition');
+        sessionStorage.removeItem("scrollPosition");
       }, 100);
     }
 
@@ -74,7 +73,6 @@ const Home = () => {
       {/* <HorizontalScroll /> */}
       <div className="w-full h-40"></div>
       <PlanSection />
-      <PricingSection />
       <InnerSideSection />
       {/* <ProductColorSelector /> */}
       <ContactForm />
