@@ -40,7 +40,6 @@ const IntroSection = () => {
           scrub: 1,
           pin: !isLastSection,
           pinSpacing: false,
-          markers: true,
         },
         scale: isLastSection ? 1 : 0.8,
         opacity: isLastSection ? 1 : 0,
