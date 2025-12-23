@@ -88,7 +88,7 @@ const FaqSection = () => {
     >
       <div className="relative z-10 max-w-4xl w-full px-4 md:px-6 lg:px-8">
         {/* Title */}
-        <h2 className="text-center  text-4xl md:text-6xl lg:text-[80px] font-bold text-yesil mb-2 md:mb-4">
+        <h2 className="faq-title text-center  text-4xl md:text-6xl lg:text-[80px] font-bold text-yesil mb-2 md:mb-4">
           {t("title")}
           <span className="bg-clip-text"> {t("subtitle")}</span>
         </h2>

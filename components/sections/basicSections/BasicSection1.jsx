@@ -18,11 +18,15 @@ const BasicSection1 = () => {
   const t = useTranslations("basicSection.firstOne");
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
+    const createAnimations = () => {
+      // Mobil için daha erken trigger
+      const isMobile = window.innerWidth < 768;
+      const startPosition = isMobile ? "top 80%" : "top top";
+
       // Pin animasyonu
       ScrollTrigger.create({
         trigger: sectionRef.current,
-        start: "top top",
+        start: startPosition,
         end: "+=100%",
         pin: true,
         pinSpacing: true,
@@ -32,7 +36,7 @@ const BasicSection1 = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top top",
+          start: startPosition,
           end: "+=100%",
           scrub: 1,
         },
@@ -42,7 +46,7 @@ const BasicSection1 = () => {
       tl.to(
         leftSvgRef.current,
         {
-          x: "-14vw", // Ekranın 2/5'inde kalması için sola kayar
+          x: isMobile ? "-18vw" : "-14vw", // Mobilde daha fazla kayar
           duration: 2,
           ease: "power2.inOut",
         },
@@ -53,7 +57,7 @@ const BasicSection1 = () => {
       tl.to(
         rightSvgRef.current,
         {
-          x: "14vw", // Ekranın 2/5'inde kalması için sağa kayar
+          x: isMobile ? "18vw" : "14vw", // Mobilde daha fazla kayar
           duration: 2,
           ease: "power2.inOut",
         },
@@ -83,9 +87,25 @@ const BasicSection1 = () => {
         },
         1.3
       );
+    };
+
+    const ctx = gsap.context(() => {
+      createAnimations();
     }, sectionRef);
 
-    return () => ctx.revert();
+    // Resize listener - ekran boyutu değiştiğinde animasyonları yeniden oluştur
+    const handleResize = () => {
+      ctx.revert();
+      ScrollTrigger.refresh();
+      createAnimations();
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      ctx.revert();
+    };
   }, []);
 
   return (

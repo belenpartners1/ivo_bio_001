@@ -114,9 +114,13 @@ export default function ManipulateModel() {
             enableZoom={false}
             enablePan={false}
             enableRotate={true}
-            minPolarAngle={Math.PI / 6}
-            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={isMobile ? Math.PI / 3 : Math.PI / 6}
+            maxPolarAngle={isMobile ? Math.PI / 3 : Math.PI / 2}
             rotateSpeed={0.5}
+            touches={{
+              ONE: isMobile ? 2 : 0, // Mobilde tek parmak ile sadece yatay döndürme
+              TWO: 0,
+            }}
           />
         </Canvas>
 
