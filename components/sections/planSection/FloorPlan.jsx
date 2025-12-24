@@ -114,7 +114,7 @@ export default function FloorPlan() {
           priority
         />
 
-        <div className="absolute bottom-20 md:right-24 pl-4 md:pl-0 flex flex-col justify-start items-start max-w-2xl">
+        <div className="absolute bottom-20 md:right-24 p-4 md:p-0 flex flex-col justify-start items-start max-w-2xl">
           {/* Header Section */}
           <div className="text-left text-gray-700 font-quicksand">
             <h2 className="text-xl md:text-[40px] font-bold">

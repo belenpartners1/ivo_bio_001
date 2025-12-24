@@ -4,8 +4,8 @@ import React from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import {
-  FaTwitter,
   FaLinkedinIn,
+  FaInstagram,
   FaMapMarkerAlt,
   FaEnvelope,
   FaPhoneAlt,
@@ -39,16 +39,20 @@ const IvoFooter = () => {
               {/* Sosyal Medya İkonları */}
               <div className="flex space-x-4">
                 <a
-                  href="#"
-                  className="bg-white p-2 rounded-lg transition-colors text-gri"
-                >
-                  <FaTwitter size={30} />
-                </a>
-                <a
-                  href="#"
-                  className="bg-white p-2 rounded-lg transition-colors text-gri"
+                  href="https://www.linkedin.com/company/belenandpartners/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white p-2 rounded-lg transition-colors text-gri hover:text-gray-700"
                 >
                   <FaLinkedinIn size={30} />
+                </a>
+                <a
+                  href="https://www.instagram.com/ivo_modular/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white p-2 rounded-lg transition-colors text-gri hover:text-gray-700"
+                >
+                  <FaInstagram size={30} />
                 </a>
               </div>
 
