@@ -171,7 +171,7 @@ const BasicSection2 = () => {
       tl.to(
         leftSvgRef.current,
         {
-          x: isMobile ? "-18vw" : "-14vw", // Mobilde daha fazla kayar
+          x: isMobile ? "-24vw" : "-14vw", // Mobilde daha fazla kayar
           duration: 2,
           ease: "power2.inOut",
         },
@@ -182,7 +182,7 @@ const BasicSection2 = () => {
       tl.to(
         rightSvgRef.current,
         {
-          x: isMobile ? "18vw" : "14vw", // Mobilde daha fazla kayar
+          x: isMobile ? "24vw" : "14vw", // Mobilde daha fazla kayar
           duration: 2,
           ease: "power2.inOut",
         },
