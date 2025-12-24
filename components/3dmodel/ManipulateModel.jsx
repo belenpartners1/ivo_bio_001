@@ -56,10 +56,22 @@ export default function ManipulateModel() {
     const canvasContainer = canvasRef.current;
     let touchStartX = 0;
     let touchStartY = 0;
+    let isRotating = false;
 
     const handleTouchStart = (e) => {
+      // Slider üzerinde yapılan dokunuşları kontrol et
+      const target = e.target;
+      const isSlider = target.classList.contains('slider') ||
+                       target.closest('.slider-container');
+
+      if (isSlider) {
+        isRotating = false;
+        return;
+      }
+
       touchStartX = e.touches[0].clientX;
       touchStartY = e.touches[0].clientY;
+      isRotating = false;
     };
 
     const handleTouchMove = (e) => {
@@ -78,11 +90,20 @@ export default function ManipulateModel() {
       const deltaX = Math.abs(touchEndX - touchStartX);
       const deltaY = Math.abs(touchEndY - touchStartY);
 
-      // Yatay hareket daha fazlaysa (sağa-sola), scroll'u engelle
-      if (deltaX > deltaY) {
+      // Eğer kullanıcı belirgin şekilde yatay hareket yapıyorsa rotasyon aktif olsun
+      if (!isRotating && deltaX > 10 && deltaX > deltaY * 1.5) {
+        isRotating = true;
+      }
+
+      // Sadece rotasyon aktifse scroll'u engelle
+      if (isRotating && deltaX > deltaY) {
         e.preventDefault();
       }
-      // Dikey hareket daha fazlaysa (yukarı-aşağı), scroll devam etsin
+      // Dikey hareket daha fazlaysa veya rotasyon aktif değilse, scroll devam etsin
+    };
+
+    const handleTouchEnd = () => {
+      isRotating = false;
     };
 
     canvasContainer.addEventListener("touchstart", handleTouchStart, {
@@ -91,10 +112,14 @@ export default function ManipulateModel() {
     canvasContainer.addEventListener("touchmove", handleTouchMove, {
       passive: false,
     });
+    canvasContainer.addEventListener("touchend", handleTouchEnd, {
+      passive: true,
+    });
 
     return () => {
       canvasContainer.removeEventListener("touchstart", handleTouchStart);
       canvasContainer.removeEventListener("touchmove", handleTouchMove);
+      canvasContainer.removeEventListener("touchend", handleTouchEnd);
     };
   }, [isMobile]);
 
@@ -127,10 +152,6 @@ export default function ManipulateModel() {
             minPolarAngle={isMobile ? Math.PI / 3 : Math.PI / 6}
             maxPolarAngle={isMobile ? Math.PI / 3 : Math.PI / 2}
             rotateSpeed={0.5}
-            touches={{
-              ONE: isMobile ? 2 : 0, // Mobilde tek parmak ile sadece yatay döndürme
-              TWO: 0,
-            }}
           />
         </Canvas>
 
