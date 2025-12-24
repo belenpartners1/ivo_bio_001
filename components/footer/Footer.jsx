@@ -6,6 +6,8 @@ import { useTranslations } from "next-intl";
 import {
   FaLinkedinIn,
   FaInstagram,
+  FaFacebookF,
+  FaYoutube,
   FaMapMarkerAlt,
   FaEnvelope,
   FaPhoneAlt,
@@ -37,7 +39,7 @@ const IvoFooter = () => {
             {/* SOL TARAFTAKİ İÇERİK (İletişim & Sosyal Medya) */}
             <div className="w-full md:w-1/2 flex flex-col justify-between space-y-8 md:space-y-0">
               {/* Sosyal Medya İkonları */}
-              <div className="flex space-x-4">
+              <div className="flex flex-wrap gap-4">
                 <a
                   href="https://www.linkedin.com/company/belenandpartners/"
                   target="_blank"
@@ -47,12 +49,28 @@ const IvoFooter = () => {
                   <FaLinkedinIn size={30} />
                 </a>
                 <a
-                  href="https://www.instagram.com/ivo_modular/"
+                  href="https://www.instagram.com/ivomodular/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white p-2 rounded-lg transition-colors text-gri hover:text-gray-700"
                 >
                   <FaInstagram size={30} />
+                </a>
+                <a
+                  href="https://www.facebook.com/ivomodular/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white p-2 rounded-lg transition-colors text-gri hover:text-gray-700"
+                >
+                  <FaFacebookF size={30} />
+                </a>
+                <a
+                  href="https://www.youtube.com/@ivo_moduler"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white p-2 rounded-lg transition-colors text-gri hover:text-gray-700"
+                >
+                  <FaYoutube size={30} />
                 </a>
               </div>
 
