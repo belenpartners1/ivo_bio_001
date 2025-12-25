@@ -91,12 +91,13 @@ export default function ManipulateModel() {
       const deltaY = Math.abs(touchEndY - touchStartY);
 
       // Eğer kullanıcı belirgin şekilde yatay hareket yapıyorsa rotasyon aktif olsun
-      if (!isRotating && deltaX > 10 && deltaX > deltaY * 1.5) {
+      // Daha yüksek threshold ile sadece gerçekten yatay kaydırmalarda aktif olsun
+      if (!isRotating && deltaX > 20 && deltaX > deltaY * 2) {
         isRotating = true;
       }
 
-      // Sadece rotasyon aktifse scroll'u engelle
-      if (isRotating && deltaX > deltaY) {
+      // Sadece rotasyon aktifse ve yatay hareket daha fazlaysa scroll'u engelle
+      if (isRotating && deltaX > deltaY * 1.5) {
         e.preventDefault();
       }
       // Dikey hareket daha fazlaysa veya rotasyon aktif değilse, scroll devam etsin
