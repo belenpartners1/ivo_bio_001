@@ -90,7 +90,7 @@ export default function LanguageSwitcher() {
     const currentScrollY = window.scrollY;
 
     // sessionStorage'a kaydet (sayfa reload olursa bile hatırlar)
-    sessionStorage.setItem('scrollPosition', currentScrollY.toString());
+    sessionStorage.setItem("scrollPosition", currentScrollY.toString());
 
     startTransition(() => {
       router.replace(pathname, { locale: nextLocale, scroll: false });
@@ -109,7 +109,7 @@ export default function LanguageSwitcher() {
           {currentLanguage?.name}
         </span>
         <svg
-          className={`w-4 h-4 transition-transform ${
+          className={`w-4 h-4 transition-transform text-black ${
             isOpen ? "rotate-180" : ""
           }`}
           fill="none"
@@ -149,7 +149,7 @@ export default function LanguageSwitcher() {
                 </span>
                 {currentLocale === language.code && (
                   <svg
-                    className="w-4 h-4 ml-auto text-yesil"
+                    className="w-4 h-4 ml-auto text-black"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >

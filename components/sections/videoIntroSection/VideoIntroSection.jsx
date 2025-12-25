@@ -127,7 +127,7 @@ const VideoIntroSection = () => {
       <video
         ref={videoRef}
         src={videoSrc}
-        poster="/icons/full_icon.png"
+        poster="/videotemplate.webp"
         playsInline
         className="w-full h-full object-cover "
       />

@@ -107,7 +107,7 @@ const HeaderSection = () => {
       {isMobile ? (
         // Mobil görünüm - tek görsel, parallax yok
         <Image
-          src="/sonmobil1.jpg"
+          src="/sonmobil00.webp"
           alt="header mobile"
           fill
           className="object-cover select-none"
