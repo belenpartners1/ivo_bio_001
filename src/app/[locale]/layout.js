@@ -33,6 +33,43 @@ export const metadata = {
   icons: {
     icon: "/favicon.png",
   },
+  openGraph: {
+    title: "İVO BİO – Yeni Nesil Modüler Yaşam",
+    description:
+      "Doğayla uyumlu, enerji verimli ve akıllı yaşam sistemleriyle tasarlanan İVO BİO modülleri; ferah yaşam alanı, her mevsim konforlu ve sürdürülebilir bir deneyim sunar.",
+    images: [
+      {
+        url: "/favicon.png",
+        width: 800,
+        height: 600,
+        alt: "İVO BİO Logo",
+      },
+    ],
+    type: "website",
+    siteName: "İVO BİO",
+    locale: "tr_TR",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "İVO BİO – Yeni Nesil Modüler Yaşam",
+    description:
+      "Doğayla uyumlu, enerji verimli ve akıllı yaşam sistemleriyle tasarlanan İVO BİO modülleri; ferah yaşam alanı, her mevsim konforlu ve sürdürülebilir bir deneyim sunar.",
+    images: ["/favicon.png"],
+  },
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default async function LocaleLayout({ children, params }) {
