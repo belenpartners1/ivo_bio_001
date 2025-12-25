@@ -1,6 +1,7 @@
 {
   "header": {
     "tagline": "Your natural life path...",
+    "downloadButton": "Download Catalog",
     "menu": {
       "whatIsIvoBio": "What is IVO Bio?",
       "promotionalFilm": "Promotional Film",
@@ -10,7 +11,8 @@
       "ivoBioPersonal": "IVO Bio Personal",
       "contact": "Contact",
       "gallery": "Gallery",
-      "faq": "Frequently Asked Questions"
+      "faq": "Frequently Asked Questions",
+      "downloadCatalog": "Download Catalog"
     }
   },
   "manipulateModel": {

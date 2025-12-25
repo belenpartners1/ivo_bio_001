@@ -60,7 +60,9 @@ const Home = () => {
   return (
     <div className="bg-gri flex flex-col overflow-hidden">
       <HeaderSection />
-      <ManipulateModel />
+      <div className="hidden md:block">
+        <ManipulateModel />
+      </div>
       <IntroSection />
       {/* <ScrollVideo /> */}
       <VideoIntroSection />

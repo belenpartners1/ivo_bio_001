@@ -3,52 +3,58 @@ import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { TiThMenu } from "react-icons/ti";
+import { BsDownload } from "react-icons/bs";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import { useTranslations } from "next-intl";
 
 const AdvertiseHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const t = useTranslations("header.menu");
+  const t = useTranslations("header");
 
   // Menü öğeleri - artık obje formatında ve id içeriyor
   const menuItems = [
     {
-      name: t("whatIsIvoBio"),
+      name: t("menu.whatIsIvoBio"),
       id: "intro",
     },
     {
-      name: t("promotionalFilm"),
+      name: t("menu.promotionalFilm"),
       id: "tanitim-filmi",
     },
     {
-      name: t("ivoBioTechnical"),
+      name: t("menu.ivoBioTechnical"),
       id: "teknik",
     },
     {
-      name: t("ivoBioPlan"),
+      name: t("menu.ivoBioPlan"),
       id: "plan",
     },
     {
-      name: t("ivoBioModels"),
+      name: t("menu.ivoBioModels"),
       id: "modeller",
     },
     // {
-    //   name: t("ivoBioPersonal"),
+    //   name: t("menu.ivoBioPersonal"),
     //   id: "kisisel",
     // },
     {
-      name: t("contact"),
+      name: t("menu.contact"),
       id: "iletisim",
     },
     {
-      name: t("gallery"),
+      name: t("menu.gallery"),
       id: "galeri",
     },
     {
-      name: t("faq"),
+      name: t("menu.faq"),
       id: "sss",
     },
+    // {
+    //   name: t("menu.downloadCatalog"),
+    //   id: "katalog",
+    //   isDownload: true,
+    // },
   ];
 
   const menuRef = useRef(null);
@@ -68,6 +74,27 @@ const AdvertiseHeader = () => {
       });
       // Menüyü kapat
       setIsOpen(false);
+    }
+  };
+
+  // PDF indirme fonksiyonu
+  const handleDownloadCatalog = () => {
+    const link = document.createElement("a");
+    link.href = "/ivo_katalog.pdf";
+    link.download = "ivo_katalog.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    // Menüyü kapat
+    setIsOpen(false);
+  };
+
+  // Menü öğesi tıklama işleyicisi
+  const handleMenuItemClick = (item) => {
+    if (item.isDownload) {
+      handleDownloadCatalog();
+    } else {
+      handleScrollToSection(item.id);
     }
   };
 
@@ -157,6 +184,17 @@ const AdvertiseHeader = () => {
 
           {/* Sağ Kısım: Menü Butonu */}
           <div className="flex items-center justify-end gap-2 sm:gap-4 shrink-0">
+            {/* Download Button */}
+            <button
+              onClick={handleDownloadCatalog}
+              className="flex items-center gap-2 px-2 sm:px-4 py-2.5 bg-white/10 backdrop-blur-sm rounded-xl hover:bg-white/20 transition-all shadow-lg duration-200 border border-gri cursor-pointer focus:outline-none"
+            >
+              <BsDownload size={20} className="text-black/80" />
+              <span className="hidden sm:inline text-black/80 font-quicksand font-semibold whitespace-nowrap">
+                {t("downloadButton")}
+              </span>
+            </button>
+
             <LanguageSwitcher />
             <div
               ref={menuContainerRef}
@@ -181,7 +219,7 @@ const AdvertiseHeader = () => {
                 {menuItems.map((item, index) => (
                   <div
                     key={index}
-                    onClick={() => handleScrollToSection(item.id)}
+                    onClick={() => handleMenuItemClick(item)}
                     className="p-4 text-black/80 font-quicksand font-semibold text-center cursor-pointer whitespace-nowrap hover:bg-white/20 transition-all duration-200 border-b last:border-b-0 border-gri"
                   >
                     {item.name}

@@ -1,6 +1,7 @@
 {
   "header": {
     "tagline": "أسلوب حياتك الطبيعي...",
+    "downloadButton": "تحميل الكتالوج",
     "menu": {
       "whatIsIvoBio": "ما هو إيفو بيو؟",
       "promotionalFilm": "الفيلم الترويجي",
@@ -10,7 +11,8 @@
       "ivoBioPersonal": "إيفو بيو الشخصي",
       "contact": "تواصل معنا",
       "gallery": "المعرض",
-      "faq": "الأسئلة الشائعة"
+      "faq": "الأسئلة الشائعة",
+      "downloadCatalog": "تحميل الكتالوج"
     }
   },
   "manipulateModel": {

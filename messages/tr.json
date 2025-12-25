@@ -1,6 +1,7 @@
 {
   "header": {
     "tagline": "Doğal yaşam çizginiz...",
+    "downloadButton": "Katalog İndir",
     "menu": {
       "whatIsIvoBio": "İVO Bio Nedir?",
       "promotionalFilm": "Tanıtım Filmi",
@@ -10,7 +11,8 @@
       "ivoBioPersonal": "İVO Bio Kişisel",
       "contact": "İletişim",
       "gallery": "Galeri",
-      "faq": "Sıkça Sorulan Sorular"
+      "faq": "Sıkça Sorulan Sorular",
+      "downloadCatalog": "Katalog İndir"
     }
   },
   "manipulateModel": {
