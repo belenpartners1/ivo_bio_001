@@ -243,8 +243,8 @@ export default function FloorPlan3() {
       </div>
 
       {/* Main Container: Floor Plan + Information Side by Side */}
-      <div className="w-full h-screen flex items-center justify-center px-4 py-8">
-        <div className="w-full h-full max-w-7xl flex flex-col lg:flex-row gap-6 items-center">
+      <div className="w-full h-screen flex items-center justify-center px-2 py-4">
+        <div className="w-full h-full max-w-7xl flex flex-col lg:flex-row gap-10 items-center">
           {/* Floor Plan Section - Sol taraf */}
           <div
             ref={containerRef}
