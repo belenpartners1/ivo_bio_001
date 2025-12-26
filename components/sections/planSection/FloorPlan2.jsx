@@ -213,7 +213,7 @@ export default function FloorPlan2() {
                 {/* Information Box - 3D transform ve glassmorphism */}
                 <div
                   ref={(el) => (infoRef.current[index] = el)}
-                  className="absolute left-1/2 -translate-x-1/2 mt-6 w-64 bg-gradient-to-br from-gray-900/70 to-gray-800/40 backdrop-blur-xl border border-white/10 shadow-2xl rounded-2xl p-5 text-white opacity-0 pointer-events-none before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-br before:from-gray-700/40 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
+                  className="absolute left-1/2 -translate-x-1/2 mt-6 w-64 bg-gradient-to-br from-gray-900 to-gray-800 border border-white/20 shadow-2xl rounded-2xl p-5 text-white opacity-0 pointer-events-none"
                   style={{
                     transformStyle: "preserve-3d",
                     perspective: "1000px",
@@ -232,8 +232,8 @@ export default function FloorPlan2() {
           </div>
 
           {/* Information Plan Text - Sağ taraf */}
-          <div className="w-full flex justify-center items-center lg:w-2/5 h-full overflow-y-auto text-gray-800 font-quicksand font-bold">
-            <div className="flex flex-col justify-start items-center">
+          <div className="w-full lg:w-2/5 h-full overflow-y-auto text-gray-800 font-quicksand font-bold px-2 lg:px-0">
+            <div className="w-full flex flex-col justify-start items-start">
               <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-2 mb-4">
                 <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
                   <div className="flex items-center gap-2 min-w-0">

@@ -167,15 +167,7 @@ export default function FloorPlan() {
 
             <div
               ref={(el) => (infoRef.current[index] = el)}
-              className="absolute left-1/2 -translate-x-1/2 mt-6
-    w-64
-    bg-gradient-to-br from-gray-900/70 to-gray-800/40
-    backdrop-blur-xl border border-white/10
-    shadow-2xl rounded-2xl p-5 text-white
-    opacity-0 pointer-events-none
-    before:absolute before:inset-0 before:rounded-2xl
-    before:bg-gradient-to-br before:from-gray-700/40 before:to-transparent
-    before:opacity-0 hover:before:opacity-100 before:transition-opacity"
+              className="absolute left-1/2 -translate-x-1/2 mt-6 w-64 bg-gradient-to-br from-gray-900 to-gray-800 border border-white/20 shadow-2xl rounded-2xl p-5 text-white opacity-0 pointer-events-none"
               style={{
                 transformStyle: "preserve-3d",
                 perspective: "1000px",

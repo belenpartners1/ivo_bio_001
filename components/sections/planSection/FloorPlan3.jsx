@@ -248,7 +248,7 @@ export default function FloorPlan3() {
           {/* Floor Plan Section - Sol taraf */}
           <div
             ref={containerRef}
-            className="relative w-full lg:w-2/3 h-full flex flex-col justify-center items-center"
+            className="relative w-full lg:w-2/3 h-[70vh] lg:h-full flex flex-col justify-center items-center"
           >
             <Image
               src="/kesitler/ivo33-arkaplansiz.webp"
@@ -277,7 +277,7 @@ export default function FloorPlan3() {
                 {/* Information Box - 3D transform ve glassmorphism */}
                 <div
                   ref={(el) => (infoRef.current[index] = el)}
-                  className="absolute left-1/2 -translate-x-1/2 mt-6 w-64 bg-gradient-to-br from-gray-900/70 to-gray-800/40 backdrop-blur-xl border border-white/10 shadow-2xl rounded-2xl p-5 text-white opacity-0 pointer-events-none before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-br before:from-gray-700/40 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity"
+                  className="absolute left-1/2 -translate-x-1/2 mt-6 w-64 bg-gradient-to-br from-gray-900 to-gray-800 border border-white/20 shadow-2xl rounded-2xl p-5 text-white opacity-0 pointer-events-none"
                   style={{
                     transformStyle: "preserve-3d",
                     perspective: "1000px",
@@ -296,237 +296,261 @@ export default function FloorPlan3() {
           </div>
 
           {/* Information Plan Text - Sağ taraf */}
-          <div className="w-full flex flex-col justify-start items-center lg:w-2/5 h-full overflow-y-auto text-gray-800 font-quicksand font-bold">
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-2 mb-4">
-              <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="font-bold shrink-0">1-)</span>
-                  <span className="flex-1 truncate">{t("list.0.label")}</span>
-                </div>
-                <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
-                  {t("list.0.area")}
-                </span>
-              </div>
-
-              <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="font-bold shrink-0">2-)</span>
-                  <span className="flex-1 truncate">{t("list.1.label")}</span>
-                </div>
-                <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
-                  {t("list.1.area")}
-                </span>
-              </div>
-
-              <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="font-bold shrink-0">3-)</span>
-                  <span className="flex-1 truncate">{t("list.2.label")}</span>
-                </div>
-                <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
-                  {t("list.2.area")}
-                </span>
-              </div>
-
-              <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="font-bold shrink-0">4-)</span>
-                  <span className="flex-1 truncate">{t("list.3.label")}</span>
-                </div>
-                <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
-                  {t("list.3.area")}
-                </span>
-              </div>
-
-              <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="font-bold shrink-0">5-)</span>
-                  <span className="flex-1 truncate">{t("list.4.label")}</span>
-                </div>
-                <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
-                  {t("list.4.area")}
-                </span>
-              </div>
-
-              <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="font-bold shrink-0">6-)</span>
-                  <span className="flex-1 truncate">{t("list.5.label")}</span>
-                </div>
-                <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
-                  {t("list.5.area")}
-                </span>
-              </div>
-
-              <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="font-bold shrink-0">7-)</span>
-                  <span className="flex-1 truncate">{t("list.6.label")}</span>
-                </div>
-                <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
-                  {t("list.6.area")}
-                </span>
-              </div>
-
-              <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="font-bold shrink-0">8-)</span>
-                  <span className="flex-1 truncate">{t("list.7.label")}</span>
-                </div>
-                <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
-                  {t("list.7.area")}
-                </span>
-              </div>
-
-              <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="font-bold shrink-0">9-)</span>
-                  <span className="flex-1 truncate">{t("list.8.label")}</span>
-                </div>
-                <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
-                  {t("list.8.area")}
-                </span>
-              </div>
-
-              <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="font-bold shrink-0">10-)</span>
-                  <span className="flex-1 truncate">{t("list.9.label")}</span>
-                </div>
-                <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
-                  {t("list.9.area")}
-                </span>
-              </div>
-
-              <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="font-bold shrink-0">11-)</span>
-                  <span className="flex-1 truncate">{t("list.10.label")}</span>
-                </div>
-                <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
-                  {t("list.10.area")}
-                </span>
-              </div>
-
-              <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="font-bold shrink-0">12-)</span>
-                  <span className="flex-1 truncate">{t("list.11.label")}</span>
-                </div>
-                <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
-                  {t("list.11.area")}
-                </span>
-              </div>
-
-              <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="font-bold shrink-0">13-)</span>
-                  <span className="flex-1 truncate">{t("list.12.label")}</span>
-                </div>
-                <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
-                  {t("list.12.area")}
-                </span>
-              </div>
-
-              <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="font-bold shrink-0">14-)</span>
-                  <span className="flex-1 truncate">{t("list.13.label")}</span>
-                </div>
-                <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
-                  {t("list.13.area")}
-                </span>
-              </div>
-
-              <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="font-bold shrink-0">15-)</span>
-                  <span className="flex-1 truncate">{t("list.14.label")}</span>
-                </div>
-                <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
-                  {t("list.14.area")}
-                </span>
-              </div>
-
-              <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="font-bold shrink-0">16-)</span>
-                  <span className="flex-1 truncate">{t("list.15.label")}</span>
-                </div>
-                <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
-                  {t("list.15.area")}
-                </span>
-              </div>
-
-              <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="font-bold shrink-0">17-)</span>
-                  <span className="flex-1 truncate">{t("list.16.label")}</span>
-                </div>
-                <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
-                  {t("list.16.area")}
-                </span>
-              </div>
-
-              <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="font-bold shrink-0">18-)</span>
-                  <span className="flex-1 truncate">{t("list.17.label")}</span>
-                </div>
-                <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
-                  {t("list.17.area")}
-                </span>
-              </div>
-
-              <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="font-bold shrink-0">19-)</span>
-                  <span className="flex-1 truncate">{t("list.18.label")}</span>
-                </div>
-                <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
-                  {t("list.18.area")}
-                </span>
-              </div>
-
-              <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="font-bold shrink-0">20-)</span>
-                  <span className="flex-1 truncate">{t("list.19.label")}</span>
-                </div>
-                <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
-                  {t("list.19.area")}
-                </span>
-              </div>
-
-              <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
-                <div className="flex items-center gap-2 min-w-0">
-                  <span className="font-bold shrink-0">21-)</span>
-                  <span className="flex-1 truncate">{t("list.20.label")}</span>
-                </div>
-                <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
-                  {t("list.20.area")}
-                </span>
-              </div>
-            </div>
-
-            {/* Toplam Alanlar - Alt kısım */}
-            <div className="w-full mt-6 pt-4 border-t-2 border-yesil">
-              <div className="flex flex-col gap-3">
-                <div className="p-3 flex items-center justify-between rounded-lg bg-gray-50 border-2 border-yesil">
-                  <span className="font-bold text-base">
-                    {t("list.21.label")}
-                  </span>
-                  <span className="text-yesil font-bold text-base">
-                    {t("list.21.area")}
+          <div className="w-full lg:w-2/5 h-full overflow-y-auto text-gray-800 font-quicksand font-bold px-2 lg:px-0">
+            <div className="w-full flex flex-col justify-start items-start">
+              <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-2 mb-4">
+                <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-bold shrink-0">1-)</span>
+                    <span className="flex-1 truncate">{t("list.0.label")}</span>
+                  </div>
+                  <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
+                    {t("list.0.area")}
                   </span>
                 </div>
-                <div className="p-3 flex items-center justify-between bg-gray-50 rounded-lg border-2 border-yesil">
-                  <span className="font-bold text-base">
-                    {t("list.22.label")}
+
+                <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-bold shrink-0">2-)</span>
+                    <span className="flex-1 truncate">{t("list.1.label")}</span>
+                  </div>
+                  <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
+                    {t("list.1.area")}
                   </span>
-                  <span className="text-yesil font-bold text-base">
-                    {t("list.22.area")}
+                </div>
+
+                <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-bold shrink-0">3-)</span>
+                    <span className="flex-1 truncate">{t("list.2.label")}</span>
+                  </div>
+                  <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
+                    {t("list.2.area")}
                   </span>
+                </div>
+
+                <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-bold shrink-0">4-)</span>
+                    <span className="flex-1 truncate">{t("list.3.label")}</span>
+                  </div>
+                  <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
+                    {t("list.3.area")}
+                  </span>
+                </div>
+
+                <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-bold shrink-0">5-)</span>
+                    <span className="flex-1 truncate">{t("list.4.label")}</span>
+                  </div>
+                  <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
+                    {t("list.4.area")}
+                  </span>
+                </div>
+
+                <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-bold shrink-0">6-)</span>
+                    <span className="flex-1 truncate">{t("list.5.label")}</span>
+                  </div>
+                  <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
+                    {t("list.5.area")}
+                  </span>
+                </div>
+
+                <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-bold shrink-0">7-)</span>
+                    <span className="flex-1 truncate">{t("list.6.label")}</span>
+                  </div>
+                  <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
+                    {t("list.6.area")}
+                  </span>
+                </div>
+
+                <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-bold shrink-0">8-)</span>
+                    <span className="flex-1 truncate">{t("list.7.label")}</span>
+                  </div>
+                  <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
+                    {t("list.7.area")}
+                  </span>
+                </div>
+
+                <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-bold shrink-0">9-)</span>
+                    <span className="flex-1 truncate">{t("list.8.label")}</span>
+                  </div>
+                  <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
+                    {t("list.8.area")}
+                  </span>
+                </div>
+
+                <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-bold shrink-0">10-)</span>
+                    <span className="flex-1 truncate">{t("list.9.label")}</span>
+                  </div>
+                  <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
+                    {t("list.9.area")}
+                  </span>
+                </div>
+
+                <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-bold shrink-0">11-)</span>
+                    <span className="flex-1 truncate">
+                      {t("list.10.label")}
+                    </span>
+                  </div>
+                  <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
+                    {t("list.10.area")}
+                  </span>
+                </div>
+
+                <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-bold shrink-0">12-)</span>
+                    <span className="flex-1 truncate">
+                      {t("list.11.label")}
+                    </span>
+                  </div>
+                  <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
+                    {t("list.11.area")}
+                  </span>
+                </div>
+
+                <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-bold shrink-0">13-)</span>
+                    <span className="flex-1 truncate">
+                      {t("list.12.label")}
+                    </span>
+                  </div>
+                  <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
+                    {t("list.12.area")}
+                  </span>
+                </div>
+
+                <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-bold shrink-0">14-)</span>
+                    <span className="flex-1 truncate">
+                      {t("list.13.label")}
+                    </span>
+                  </div>
+                  <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
+                    {t("list.13.area")}
+                  </span>
+                </div>
+
+                <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-bold shrink-0">15-)</span>
+                    <span className="flex-1 truncate">
+                      {t("list.14.label")}
+                    </span>
+                  </div>
+                  <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
+                    {t("list.14.area")}
+                  </span>
+                </div>
+
+                <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-bold shrink-0">16-)</span>
+                    <span className="flex-1 truncate">
+                      {t("list.15.label")}
+                    </span>
+                  </div>
+                  <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
+                    {t("list.15.area")}
+                  </span>
+                </div>
+
+                <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-bold shrink-0">17-)</span>
+                    <span className="flex-1 truncate">
+                      {t("list.16.label")}
+                    </span>
+                  </div>
+                  <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
+                    {t("list.16.area")}
+                  </span>
+                </div>
+
+                <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-bold shrink-0">18-)</span>
+                    <span className="flex-1 truncate">
+                      {t("list.17.label")}
+                    </span>
+                  </div>
+                  <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
+                    {t("list.17.area")}
+                  </span>
+                </div>
+
+                <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-bold shrink-0">19-)</span>
+                    <span className="flex-1 truncate">
+                      {t("list.18.label")}
+                    </span>
+                  </div>
+                  <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
+                    {t("list.18.area")}
+                  </span>
+                </div>
+
+                <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-bold shrink-0">20-)</span>
+                    <span className="flex-1 truncate">
+                      {t("list.19.label")}
+                    </span>
+                  </div>
+                  <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
+                    {t("list.19.area")}
+                  </span>
+                </div>
+
+                <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <span className="font-bold shrink-0">21-)</span>
+                    <span className="flex-1 truncate">
+                      {t("list.20.label")}
+                    </span>
+                  </div>
+                  <span className="text-yesil font-bold ml-2 whitespace-nowrap shrink-0">
+                    {t("list.20.area")}
+                  </span>
+                </div>
+              </div>
+
+              {/* Toplam Alanlar - Alt kısım */}
+              <div className="w-full mt-6 pt-4 border-t-2 border-yesil">
+                <div className="flex flex-col gap-3">
+                  <div className="p-3 flex items-center justify-between rounded-lg bg-gray-50 border-2 border-yesil">
+                    <span className="font-bold text-base">
+                      {t("list.21.label")}
+                    </span>
+                    <span className="text-yesil font-bold text-base">
+                      {t("list.21.area")}
+                    </span>
+                  </div>
+                  <div className="p-3 flex items-center justify-between bg-gray-50 rounded-lg border-2 border-yesil">
+                    <span className="font-bold text-base">
+                      {t("list.22.label")}
+                    </span>
+                    <span className="text-yesil font-bold text-base">
+                      {t("list.22.area")}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -536,5 +560,3 @@ export default function FloorPlan3() {
     </div>
   );
 }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
