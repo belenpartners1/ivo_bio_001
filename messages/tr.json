@@ -104,103 +104,6 @@
     "yekpareFirst": "İVO Bio yekpare gövdesiyle",
     "yekpareSecond": "kesintisiz bir yaşam konsepti sunar."
   },
-  "floorPlan": {
-    "header1": "İVO Bio",
-    "header2": "Yerleşim Planı",
-    "description": "72.00 m² net kullanım alanına sahip İVO Bio, 90.00 m² brüt alana sahiptir. 2+1 açık mutfak konseptinde özenle tasarlanmıştır. Ferah oturma alanı ve işlevsel depolama çözümleriyle konforlu bir yaşam sunacak şekilde planlanmıştır.",
-    "hotspots": [
-      {
-        "id": 1,
-        "title": "Giriş Sahanlığı",
-        "area": "6.00 m²",
-        "desc": "Evin ilk karşılama noktası."
-      },
-      {
-        "id": 2,
-        "title": "Giriş Holü - Koridor",
-        "area": "8.50 m²",
-        "desc": "Evin ilk izlenimini güçlendiren fonksiyonel ve rahat bir karşılama alanıdır."
-      },
-      {
-        "id": 3,
-        "title": "Yaşam Alanı",
-        "area": "28.50 m²",
-        "desc": "Geniş ve ferah yaşam alanı, doğal ışığın hâkim olduğu konforlu bir atmosfer sunar."
-      },
-      {
-        "id": 4,
-        "title": "Yatak Odası",
-        "area": "7.00 m²",
-        "desc": "Dinlenme odaklı kompakt yapısıyla düzenli ve sakin bir yaşam alanı oluşturur."
-      },
-      {
-        "id": 5,
-        "title": "Banyo",
-        "area": "6.00 m²",
-        "desc": "Modern ve ergonomik tasarımıyla günlük ihtiyaçlara pratik çözümler sunar."
-      },
-      {
-        "id": 6,
-        "title": "Ebeveyn Yatak Odası",
-        "area": "13.00 m²",
-        "desc": "Geniş kullanım alanı ve düzenli depolama fırsatlarıyla konforlu bir özel yaşam odasıdır."
-      },
-      {
-        "id": 7,
-        "title": "Tesisat Odası",
-        "area": "3.00 m²",
-        "desc": "Erişime uygun teknik alan."
-      }
-    ],
-    "list": [
-      {
-        "id": 1,
-        "label": "Giriş Sahanlığı",
-        "area": "6.00 m²"
-      },
-      {
-        "id": 2,
-        "label": "Giriş Holü - Koridor",
-        "area": "8.50 m²"
-      },
-      {
-        "id": 3,
-        "label": "Yaşam Alanı",
-        "area": "28.50 m²"
-      },
-      {
-        "id": 4,
-        "label": "Yatak Odası",
-        "area": "7.00 m²"
-      },
-      {
-        "id": 5,
-        "label": "Banyo",
-        "area": "6.00 m²"
-      },
-      {
-        "id": 6,
-        "label": "Ebeveyn Y.Odası",
-        "area": "13.00 m²"
-      },
-      {
-        "id": 7,
-        "label": "Tesisat Odası",
-        "area": "3.00 m²"
-      },
-
-      {
-        "id": 8,
-        "label": "Net",
-        "area": "72.00 m²"
-      },
-      {
-        "id": 9,
-        "label": "Brüt",
-        "area": "90.00 m²"
-      }
-    ]
-  },
   "floorInfo": {
     "header1": "İVO Bio",
     "header2": "Modelleri",
@@ -341,5 +244,515 @@
   },
   "innerside": {
     "title": "İç Mekan Opsiyonları"
+  },
+  "floorPlan": {
+    "header1": "İVO Bio",
+    "header2": "Yerleşim Planı",
+    "description": "72.00 m² net kullanım alanına sahip İVO Bio, 90.00 m² brüt alana sahiptir. 2+1 açık mutfak konseptinde özenle tasarlanmıştır. Ferah oturma alanı ve işlevsel depolama çözümleriyle konforlu bir yaşam sunacak şekilde planlanmıştır.",
+    "hotspots": [
+      {
+        "id": 1,
+        "title": "Giriş Sahanlığı",
+        "area": "6.00 m²",
+        "desc": "Evin ilk karşılama noktası."
+      },
+      {
+        "id": 2,
+        "title": "Giriş Holü - Koridor",
+        "area": "8.50 m²",
+        "desc": "Evin ilk izlenimini güçlendiren fonksiyonel ve rahat bir karşılama alanıdır."
+      },
+      {
+        "id": 3,
+        "title": "Yaşam Alanı",
+        "area": "28.50 m²",
+        "desc": "Geniş ve ferah yaşam alanı, doğal ışığın hâkim olduğu konforlu bir atmosfer sunar."
+      },
+      {
+        "id": 4,
+        "title": "Yatak Odası",
+        "area": "7.00 m²",
+        "desc": "Dinlenme odaklı kompakt yapısıyla düzenli ve sakin bir yaşam alanı oluşturur."
+      },
+      {
+        "id": 5,
+        "title": "Banyo",
+        "area": "6.00 m²",
+        "desc": "Modern ve ergonomik tasarımıyla günlük ihtiyaçlara pratik çözümler sunar."
+      },
+      {
+        "id": 6,
+        "title": "Ebeveyn Yatak Odası",
+        "area": "13.00 m²",
+        "desc": "Geniş kullanım alanı ve düzenli depolama fırsatlarıyla konforlu bir özel yaşam odasıdır."
+      },
+      {
+        "id": 7,
+        "title": "Tesisat Odası",
+        "area": "3.00 m²",
+        "desc": "Erişime uygun teknik alan."
+      }
+    ],
+    "list": [
+      {
+        "id": 1,
+        "label": "Giriş Sahanlığı",
+        "area": "6.00 m²"
+      },
+      {
+        "id": 2,
+        "label": "Giriş Holü - Koridor",
+        "area": "8.50 m²"
+      },
+      {
+        "id": 3,
+        "label": "Yaşam Alanı",
+        "area": "28.50 m²"
+      },
+      {
+        "id": 4,
+        "label": "Yatak Odası",
+        "area": "7.00 m²"
+      },
+      {
+        "id": 5,
+        "label": "Banyo",
+        "area": "6.00 m²"
+      },
+      {
+        "id": 6,
+        "label": "Ebeveyn Y.Odası",
+        "area": "13.00 m²"
+      },
+      {
+        "id": 7,
+        "label": "Tesisat Odası",
+        "area": "3.00 m²"
+      },
+
+      {
+        "id": 8,
+        "label": "Net",
+        "area": "72.00 m²"
+      },
+      {
+        "id": 9,
+        "label": "Brüt",
+        "area": "90.00 m²"
+      }
+    ]
+  },
+  "floorPlan2": {
+    "header1": "İVO Bio",
+    "header2": "Twin",
+    "description": "169.00 m² net kullanım alanına sahip bu yaşam alanı, açık ve dengeli plan kurgusuyla özenle tasarlanmıştır. Geniş yaşam alanları, fonksiyonel dolaşım çözümleri ve iyi ayrıştırılmış özel hacimleriyle konforlu ve nitelikli bir yaşam sunacak şekilde planlanmıştır.",
+    "hotspots": [
+      {
+        "id": 1,
+        "title": "Giriş Sahanlığı",
+        "area": "6.00 m²",
+        "desc": "Evin ilk karşılama noktası, misafirlerinizi sıcak bir şekilde ağırlar."
+      },
+      {
+        "id": 2,
+        "title": "Rüzgarlık",
+        "area": "13.00 m²",
+        "desc": "Geniş ve fonksiyonel geçiş alanı, konforlu bir giriş deneyimi sunar."
+      },
+      {
+        "id": 3,
+        "title": "Giriş Holü",
+        "area": "19.00 m²",
+        "desc": "Ferah ve şık tasarımıyla evin ilk izlenimini güçlendirir."
+      },
+      {
+        "id": 4,
+        "title": "Yaşam Alanı",
+        "area": "47.00 m²",
+        "desc": "Geniş ve aydınlık yaşam alanı, ailenizle kaliteli zaman geçirmeniz için idealdir."
+      },
+      {
+        "id": 5,
+        "title": "Mutfak",
+        "area": "13.00 m²",
+        "desc": "Modern ve işlevsel mutfak, günlük ihtiyaçlarınızı karşılamak için tasarlanmıştır."
+      },
+      {
+        "id": 6,
+        "title": "Sahanlık",
+        "area": "6.00 m²",
+        "desc": "Bahçe alanına açılan sahanlık."
+      },
+      {
+        "id": 7,
+        "title": "Koridor",
+        "area": "9.00 m²",
+        "desc": "Akıcı dolaşım için tasarlanmış fonksiyonel geçiş alanı."
+      },
+      {
+        "id": 8,
+        "title": "Ebeveyn Yatak Odası",
+        "area": "13.00 m²",
+        "desc": "Geniş ve konforlu özel yaşam alanınız, huzurlu bir dinlenme sunar."
+      },
+      {
+        "id": 9,
+        "title": "Giyinme Odası",
+        "area": "4.00 m²",
+        "desc": "Düzenli depolama imkanı sunan şık giyinme odası."
+      },
+      {
+        "id": 10,
+        "title": "Ebeveyn Banyo",
+        "area": "4.00 m²",
+        "desc": "Özel banyo alanı, modern tesisat ve ergonomik tasarımla donatılmıştır."
+      },
+      {
+        "id": 11,
+        "title": "Genel Banyo",
+        "area": "6.00 m²",
+        "desc": "Tüm aile için kullanışlı ve modern tasarımlı ortak banyo."
+      },
+      {
+        "id": 12,
+        "title": "Yatak Odası",
+        "area": "13.00 m²",
+        "desc": "Rahat ve sessiz yatak odası, dinlenme odaklı kompakt yapısıyla konfor sunar."
+      },
+      {
+        "id": 13,
+        "title": "Yatak Odası",
+        "area": "16.00 m²",
+        "desc": "Geniş ve ferah yatak odası, kişisel alanınız için ideal boyutta."
+      }
+    ],
+    "list": [
+      {
+        "id": 1,
+        "label": "Giriş Sahanlığı",
+        "area": "6.00 m²"
+      },
+      {
+        "id": 2,
+        "label": "Rüzgarlık",
+        "area": "13.00 m²"
+      },
+      {
+        "id": 3,
+        "label": "Giriş Holü",
+        "area": "19.00 m²"
+      },
+      {
+        "id": 4,
+        "label": "Yaşam Alanı",
+        "area": "47.00 m²"
+      },
+      {
+        "id": 5,
+        "label": "Mutfak",
+        "area": "13.00 m²"
+      },
+      {
+        "id": 6,
+        "label": "Sahanlık",
+        "area": "6.00 m²"
+      },
+      {
+        "id": 7,
+        "label": "Koridor",
+        "area": "9.00 m²"
+      },
+      {
+        "id": 8,
+        "label": "Ebeveyn Yatak Odası",
+        "area": "13.00 m²"
+      },
+      {
+        "id": 9,
+        "label": "Giyinme Odası",
+        "area": "4.00 m²"
+      },
+      {
+        "id": 10,
+        "label": "Ebeveyn Banyo",
+        "area": "4.00 m²"
+      },
+      {
+        "id": 11,
+        "label": "Genel Banyo",
+        "area": "6.00 m²"
+      },
+      {
+        "id": 12,
+        "label": "Yatak Odası",
+        "area": "13.00 m²"
+      },
+      {
+        "id": 13,
+        "label": "Yatak Odası",
+        "area": "16.00 m²"
+      },
+      {
+        "id": 14,
+        "label": "Net Kullanım Alanı",
+        "area": "169.00 m²"
+      },
+      {
+        "id": 15,
+        "label": "Brüt Alan",
+        "area": "225.00 m²"
+      }
+    ]
+  },
+  "floorPlan3": {
+    "header1": "İVO Bio",
+    "header2": "Maxi",
+    "description": "247,50 m² net kullanım alanına sahip bu daire, ferahlık ve mekânsal bütünlüğü esas alan bir plan kurgusuyla tasarlanmıştır. Geniş ve aydınlık yaşam alanları, akıcı ve işlevsel dolaşım çözümleriyle desteklenirken; özel hacimler sosyal alanlardan dengeli biçimde ayrılarak konforlu, düzenli ve nitelikli bir yaşam deneyimi sunulmuştur.",
+    "hotspots": [
+      {
+        "id": 1,
+        "title": "Giriş Sahanlığı",
+        "area": "6.00 m²",
+        "desc": "Evin ilk karşılama noktası, misafirlerinizi sıcak bir şekilde ağırlar."
+      },
+      {
+        "id": 2,
+        "title": "Rüzgarlık",
+        "area": "7.00 m²",
+        "desc": "Fonksiyonel geçiş alanı, konforlu bir giriş deneyimi sunar."
+      },
+      {
+        "id": 3,
+        "title": "Giriş Holü",
+        "area": "12.00 m²",
+        "desc": "Şık tasarımıyla evin ilk izlenimini güçlendirir."
+      },
+      {
+        "id": 4,
+        "title": "Yaşam Alanı",
+        "area": "47.00 m²",
+        "desc": "Geniş ve aydınlık yaşam alanı, ailenizle kaliteli zaman geçirmeniz için ideal."
+      },
+      {
+        "id": 5,
+        "title": "Mutfak",
+        "area": "13.00 m²",
+        "desc": "Modern ve işlevsel mutfak, günlük ihtiyaçlarınızı karşılamak için tasarlanmıştır."
+      },
+      {
+        "id": 6,
+        "title": "Koridor",
+        "area": "7.00 m²",
+        "desc": "Akıcı dolaşım için tasarlanmış fonksiyonel geçiş alanı."
+      },
+      {
+        "id": 7,
+        "title": "Oturma Odası",
+        "area": "19.00 m²",
+        "desc": "Rahat ve konforlu oturma alanı, dinlenme ve eğlence için ideal."
+      },
+      {
+        "id": 8,
+        "title": "Koridor",
+        "area": "9.00 m²",
+        "desc": "Yaşam alanlarını birbirine bağlayan düzenli koridor."
+      },
+      {
+        "id": 9,
+        "title": "Yatak Odası",
+        "area": "16.70 m²",
+        "desc": "Geniş ve ferah yatak odası, kişisel alanınız için ideal boyutta."
+      },
+      {
+        "id": 10,
+        "title": "Yatak Odası",
+        "area": "13.00 m²",
+        "desc": "Rahat ve sessiz yatak odası, dinlenme odaklı kompakt yapısıyla konfor sunar."
+      },
+      {
+        "id": 11,
+        "title": "Genel Banyo",
+        "area": "6.00 m²",
+        "desc": "Tüm aile için kullanışlı ve modern tasarımlı ortak banyo."
+      },
+      {
+        "id": 12,
+        "title": "Ebeveyn Yatak Odası",
+        "area": "15.50 m²",
+        "desc": "Geniş ve konforlu özel yaşam alanınız, huzurlu bir dinlenme sunar."
+      },
+      {
+        "id": 13,
+        "title": "Giyinme Odası",
+        "area": "4.00 m²",
+        "desc": "Düzenli depolama imkanı sunan şık giyinme odası."
+      },
+      {
+        "id": 14,
+        "title": "Ebeveyn Banyo",
+        "area": "4.00 m²",
+        "desc": "Özel banyo alanı, modern tesisat ve ergonomik tasarımla donatılmıştır."
+      },
+
+      {
+        "id": 15,
+        "title": "Koridor",
+        "area": "9.00 m²",
+        "desc": "Üst kat odalarını birbirine bağlayan akıcı geçiş alanı."
+      },
+      {
+        "id": 16,
+        "title": "Ebeveyn Yatak Odası",
+        "area": "15.50 m²",
+        "desc": "Konforlu yatak odası, huzurlu bir dinlenme alanı sunar."
+      },
+      {
+        "id": 17,
+        "title": "Giyinme Odası",
+        "area": "4.00 m²",
+        "desc": "Düzenli depolama imkanı sunan şık giyinme odası."
+      },
+      {
+        "id": 18,
+        "title": "Ebeveyn Banyo",
+        "area": "4.00 m²",
+        "desc": "Özel banyo alanı, modern tesisat ve ergonomik tasarımla donatılmıştır."
+      },
+      {
+        "id": 19,
+        "title": "Genel Banyo",
+        "area": "6.00 m²",
+        "desc": "Genişletilmiş banyo alanı, tüm aile için kullanışlı ve modern tasarımlı ortak banyo."
+      },
+      {
+        "id": 20,
+        "title": "Yatak Odası",
+        "area": "13.00 m²",
+        "desc": "Konforlu yatak odası, huzurlu bir dinlenme alanı sunar."
+      },
+      {
+        "id": 21,
+        "title": "Yatak Odası",
+        "area": "16.70 m²",
+        "desc": "Geniş ve ferah yatak odası, kişisel konforu maksimize eder."
+      }
+    ],
+    "list": [
+      {
+        "id": 1,
+        "label": "Giriş Sahanlığı",
+        "area": "6.00 m²"
+      },
+      {
+        "id": 2,
+        "label": "Rüzgarlık",
+        "area": "7.00 m²"
+      },
+      {
+        "id": 3,
+        "label": "Giriş Holü",
+        "area": "12.00 m²"
+      },
+      {
+        "id": 4,
+        "label": "Yaşam Alanı",
+        "area": "47.00 m²"
+      },
+      {
+        "id": 5,
+        "label": "Mutfak",
+        "area": "13.00 m²"
+      },
+      {
+        "id": 6,
+        "label": "Koridor",
+        "area": "7.00 m²"
+      },
+      {
+        "id": 7,
+        "label": "Oturma Odası",
+        "area": "19.00 m²"
+      },
+      {
+        "id": 8,
+        "label": "Koridor",
+        "area": "9.00 m²"
+      },
+      {
+        "id": 9,
+        "label": "Yatak Odası",
+        "area": "16.70 m²"
+      },
+      {
+        "id": 10,
+        "label": "Yatak Odası",
+        "area": "13.00 m²"
+      },
+      {
+        "id": 11,
+        "label": "Genel Banyo",
+        "area": "6.00 m²"
+      },
+      {
+        "id": 12,
+        "label": "Ebeveyn Yatak Odası",
+        "area": "15.50 m²"
+      },
+      {
+        "id": 13,
+        "label": "Giyinme Odası",
+        "area": "4.00 m²"
+      },
+      {
+        "id": 14,
+        "label": "Ebeveyn Banyo",
+        "area": "4.00 m²"
+      },
+      {
+        "id": 15,
+        "label": "Koridor",
+        "area": "9.00 m²"
+      },
+      {
+        "id": 16,
+        "label": "Ebeveyn Yatak Odası",
+        "area": "15.50 m²"
+      },
+      {
+        "id": 17,
+        "label": "Giyinme Odası",
+        "area": "4.00 m²"
+      },
+      {
+        "id": 18,
+        "label": "Ebeveyn Banyo",
+        "area": "4.00 m²"
+      },
+      {
+        "id": 19,
+        "label": "Genel Banyo",
+        "area": "6.00 m²"
+      },
+      {
+        "id": 20,
+        "label": "Yatak Odası",
+        "area": "13.00 m²"
+      },
+      {
+        "id": 21,
+        "label": "Yatak Odası",
+        "area": "16.70 m²"
+      },
+      {
+        "id": 22,
+        "label": "Net Kullanım Alanı",
+        "area": "247.50 m²"
+      },
+      {
+        "id": 23,
+        "label": "Brüt Alan",
+        "area": "320.00 m²"
+      }
+    ]
   }
 }

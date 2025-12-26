@@ -339,5 +339,417 @@
   },
   "innerside": {
     "title": "Interior Design Options"
+  },
+  "floorPlan2": {
+    "header1": "IVO Bio",
+    "header2": "Twin",
+    "description": "With 169.00 m² of net usable area, this living space is carefully designed with an open and balanced floor plan. It offers a comfortable and high-quality lifestyle with spacious living areas, functional circulation solutions, and well-separated private spaces.",
+    "hotspots": [
+      {
+        "id": 1,
+        "title": "Entrance Landing",
+        "area": "6.00 m²",
+        "desc": "The home's first welcoming point, warmly greeting your guests."
+      },
+      {
+        "id": 2,
+        "title": "Vestibule",
+        "area": "13.00 m²",
+        "desc": "A spacious and functional transition area offering a comfortable entrance experience."
+      },
+      {
+        "id": 3,
+        "title": "Entrance Hall",
+        "area": "19.00 m²",
+        "desc": "Strengthens the home's first impression with its airy and elegant design."
+      },
+      {
+        "id": 4,
+        "title": "Living Area",
+        "area": "47.00 m²",
+        "desc": "A spacious and bright living area, ideal for spending quality time with your family."
+      },
+      {
+        "id": 5,
+        "title": "Kitchen",
+        "area": "13.00 m²",
+        "desc": "A modern and functional kitchen designed to meet your daily needs."
+      },
+      {
+        "id": 6,
+        "title": "Landing",
+        "area": "6.00 m²",
+        "desc": "Landing area opening to the garden."
+      },
+      {
+        "id": 7,
+        "title": "Corridor",
+        "area": "9.00 m²",
+        "desc": "A functional transition area designed for smooth circulation."
+      },
+      {
+        "id": 8,
+        "title": "Master Bedroom",
+        "area": "13.00 m²",
+        "desc": "Your spacious and comfortable private living space offers peaceful relaxation."
+      },
+      {
+        "id": 9,
+        "title": "Dressing Room",
+        "area": "4.00 m²",
+        "desc": "An elegant dressing room offering organized storage opportunities."
+      },
+      {
+        "id": 10,
+        "title": "Master Bathroom",
+        "area": "4.00 m²",
+        "desc": "Private bathroom area equipped with modern fixtures and ergonomic design."
+      },
+      {
+        "id": 11,
+        "title": "Main Bathroom",
+        "area": "6.00 m²",
+        "desc": "Practical and modern shared bathroom for the entire family."
+      },
+      {
+        "id": 12,
+        "title": "Bedroom",
+        "area": "13.00 m²",
+        "desc": "A comfortable and quiet bedroom offering rest-oriented compact comfort."
+      },
+      {
+        "id": 13,
+        "title": "Bedroom",
+        "area": "16.00 m²",
+        "desc": "A spacious and airy bedroom, ideal size for your personal space."
+      }
+    ],
+    "list": [
+      {
+        "id": 1,
+        "label": "Entrance Landing",
+        "area": "6.00 m²"
+      },
+      {
+        "id": 2,
+        "label": "Vestibule",
+        "area": "13.00 m²"
+      },
+      {
+        "id": 3,
+        "label": "Entrance Hall",
+        "area": "19.00 m²"
+      },
+      {
+        "id": 4,
+        "label": "Living Area",
+        "area": "47.00 m²"
+      },
+      {
+        "id": 5,
+        "label": "Kitchen",
+        "area": "13.00 m²"
+      },
+      {
+        "id": 6,
+        "label": "Landing",
+        "area": "6.00 m²"
+      },
+      {
+        "id": 7,
+        "label": "Corridor",
+        "area": "9.00 m²"
+      },
+      {
+        "id": 8,
+        "label": "Master Bedroom",
+        "area": "13.00 m²"
+      },
+      {
+        "id": 9,
+        "label": "Dressing Room",
+        "area": "4.00 m²"
+      },
+      {
+        "id": 10,
+        "label": "Master Bathroom",
+        "area": "4.00 m²"
+      },
+      {
+        "id": 11,
+        "label": "Main Bathroom",
+        "area": "6.00 m²"
+      },
+      {
+        "id": 12,
+        "label": "Bedroom",
+        "area": "13.00 m²"
+      },
+      {
+        "id": 13,
+        "label": "Bedroom",
+        "area": "16.00 m²"
+      },
+      {
+        "id": 14,
+        "label": "Net Usable Area",
+        "area": "169.00 m²"
+      },
+      {
+        "id": 15,
+        "label": "Gross Area",
+        "area": "225.00 m²"
+      }
+    ]
+  },
+  "floorPlan3": {
+    "header1": "IVO Bio",
+    "header2": "Maxi",
+    "description": "With 247.50 m² of net usable area, this residence is designed with a floor plan that emphasizes spaciousness and spatial integrity. Spacious and bright living areas are supported by smooth and functional circulation solutions, while private spaces are balanced and separated from social areas to provide a comfortable, organized, and high-quality living experience.",
+    "hotspots": [
+      {
+        "id": 1,
+        "title": "Entrance Landing",
+        "area": "6.00 m²",
+        "desc": "The home's first welcoming point, warmly greeting your guests."
+      },
+      {
+        "id": 2,
+        "title": "Vestibule",
+        "area": "7.00 m²",
+        "desc": "A functional transition area offering a comfortable entrance experience."
+      },
+      {
+        "id": 3,
+        "title": "Entrance Hall",
+        "area": "12.00 m²",
+        "desc": "Strengthens the home's first impression with its elegant design."
+      },
+      {
+        "id": 4,
+        "title": "Living Area",
+        "area": "47.00 m²",
+        "desc": "A spacious and bright living area, ideal for spending quality time with your family."
+      },
+      {
+        "id": 5,
+        "title": "Kitchen",
+        "area": "13.00 m²",
+        "desc": "A modern and functional kitchen designed to meet your daily needs."
+      },
+      {
+        "id": 6,
+        "title": "Corridor",
+        "area": "7.00 m²",
+        "desc": "A functional transition area designed for smooth circulation."
+      },
+      {
+        "id": 7,
+        "title": "Sitting Room",
+        "area": "19.00 m²",
+        "desc": "A comfortable and cozy sitting area, ideal for relaxation and entertainment."
+      },
+      {
+        "id": 8,
+        "title": "Corridor",
+        "area": "9.00 m²",
+        "desc": "An organized corridor connecting living areas."
+      },
+      {
+        "id": 9,
+        "title": "Bedroom",
+        "area": "16.70 m²",
+        "desc": "A spacious and airy bedroom, ideal size for your personal space."
+      },
+      {
+        "id": 10,
+        "title": "Bedroom",
+        "area": "13.00 m²",
+        "desc": "A comfortable and quiet bedroom offering rest-oriented compact comfort."
+      },
+      {
+        "id": 11,
+        "title": "Main Bathroom",
+        "area": "6.00 m²",
+        "desc": "Practical and modern shared bathroom for the entire family."
+      },
+      {
+        "id": 12,
+        "title": "Master Bedroom",
+        "area": "15.50 m²",
+        "desc": "Your spacious and comfortable private living space offers peaceful relaxation."
+      },
+      {
+        "id": 13,
+        "title": "Dressing Room",
+        "area": "4.00 m²",
+        "desc": "An elegant dressing room offering organized storage opportunities."
+      },
+      {
+        "id": 14,
+        "title": "Master Bathroom",
+        "area": "4.00 m²",
+        "desc": "Private bathroom area equipped with modern fixtures and ergonomic design."
+      },
+      {
+        "id": 15,
+        "title": "Corridor",
+        "area": "9.00 m²",
+        "desc": "A smooth transition area connecting upper floor rooms."
+      },
+      {
+        "id": 16,
+        "title": "Master Bedroom",
+        "area": "15.50 m²",
+        "desc": "A comfortable bedroom offering a peaceful relaxation area."
+      },
+      {
+        "id": 17,
+        "title": "Dressing Room",
+        "area": "4.00 m²",
+        "desc": "An elegant dressing room offering organized storage opportunities."
+      },
+      {
+        "id": 18,
+        "title": "Master Bathroom",
+        "area": "4.00 m²",
+        "desc": "Private bathroom area equipped with modern fixtures and ergonomic design."
+      },
+      {
+        "id": 19,
+        "title": "Main Bathroom",
+        "area": "6.00 m²",
+        "desc": "Extended bathroom area, practical and modern shared bathroom for the entire family."
+      },
+      {
+        "id": 20,
+        "title": "Bedroom",
+        "area": "13.00 m²",
+        "desc": "A comfortable bedroom offering a peaceful relaxation area."
+      },
+      {
+        "id": 21,
+        "title": "Bedroom",
+        "area": "16.70 m²",
+        "desc": "A spacious and airy bedroom maximizing personal comfort."
+      }
+    ],
+    "list": [
+      {
+        "id": 1,
+        "label": "Entrance Landing",
+        "area": "6.00 m²"
+      },
+      {
+        "id": 2,
+        "label": "Vestibule",
+        "area": "7.00 m²"
+      },
+      {
+        "id": 3,
+        "label": "Entrance Hall",
+        "area": "12.00 m²"
+      },
+      {
+        "id": 4,
+        "label": "Living Area",
+        "area": "47.00 m²"
+      },
+      {
+        "id": 5,
+        "label": "Kitchen",
+        "area": "13.00 m²"
+      },
+      {
+        "id": 6,
+        "label": "Corridor",
+        "area": "7.00 m²"
+      },
+      {
+        "id": 7,
+        "label": "Sitting Room",
+        "area": "19.00 m²"
+      },
+      {
+        "id": 8,
+        "label": "Corridor",
+        "area": "9.00 m²"
+      },
+      {
+        "id": 9,
+        "label": "Bedroom",
+        "area": "16.70 m²"
+      },
+      {
+        "id": 10,
+        "label": "Bedroom",
+        "area": "13.00 m²"
+      },
+      {
+        "id": 11,
+        "label": "Main Bathroom",
+        "area": "6.00 m²"
+      },
+      {
+        "id": 12,
+        "label": "Master Bedroom",
+        "area": "15.50 m²"
+      },
+      {
+        "id": 13,
+        "label": "Dressing Room",
+        "area": "4.00 m²"
+      },
+      {
+        "id": 14,
+        "label": "Master Bathroom",
+        "area": "4.00 m²"
+      },
+      {
+        "id": 15,
+        "label": "Corridor",
+        "area": "9.00 m²"
+      },
+      {
+        "id": 16,
+        "label": "Master Bedroom",
+        "area": "15.50 m²"
+      },
+      {
+        "id": 17,
+        "label": "Dressing Room",
+        "area": "4.00 m²"
+      },
+      {
+        "id": 18,
+        "label": "Master Bathroom",
+        "area": "4.00 m²"
+      },
+      {
+        "id": 19,
+        "label": "Main Bathroom",
+        "area": "6.00 m²"
+      },
+      {
+        "id": 20,
+        "label": "Bedroom",
+        "area": "13.00 m²"
+      },
+      {
+        "id": 21,
+        "label": "Bedroom",
+        "area": "16.70 m²"
+      },
+      {
+        "id": 22,
+        "label": "Net Usable Area",
+        "area": "247.50 m²"
+      },
+      {
+        "id": 23,
+        "label": "Gross Area",
+        "area": "320.00 m²"
+      }
+    ]
   }
 }
