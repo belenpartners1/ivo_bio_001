@@ -232,7 +232,7 @@ export default function FloorPlan2() {
           </div>
 
           {/* Information Plan Text - Sağ taraf */}
-          <div className="w-full lg:w-2/5 h-full overflow-y-auto text-gray-800 font-quicksand font-bold px-2 lg:px-0 flex items-center">
+          <div className="w-full lg:w-2/5 h-full overflow-y-auto text-gray-800 font-quicksand font-bold px-2 lg:px-0 flex items-start lg:items-center py-4 lg:py-0">
             <div className="w-full flex flex-col justify-start items-start">
               <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-2 mb-4">
                 <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">

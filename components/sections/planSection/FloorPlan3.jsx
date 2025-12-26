@@ -56,7 +56,7 @@ export default function FloorPlan3() {
     {
       id: 6,
       top: "62%",
-      left: "41%",
+      left: "40%",
       title: t("hotspots.5.title"),
       area: t("hotspots.5.area"),
       desc: t("hotspots.5.desc"),
@@ -71,7 +71,7 @@ export default function FloorPlan3() {
     },
     {
       id: 8,
-      top: "80%",
+      top: "82%",
       left: "52%",
       title: t("hotspots.7.title"),
       area: t("hotspots.7.area"),
@@ -80,14 +80,14 @@ export default function FloorPlan3() {
     {
       id: 9,
       top: "84%",
-      left: "68%",
+      left: "70%",
       title: t("hotspots.8.title"),
       area: t("hotspots.8.area"),
       desc: t("hotspots.8.desc"),
     },
     {
       id: 10,
-      top: "89%",
+      top: "91%",
       left: "58%",
       title: t("hotspots.9.title"),
       area: t("hotspots.9.area"),
@@ -95,7 +95,7 @@ export default function FloorPlan3() {
     },
     {
       id: 11,
-      top: "89%",
+      top: "90%",
       left: "46%",
       title: t("hotspots.10.title"),
       area: t("hotspots.10.area"),
@@ -103,15 +103,15 @@ export default function FloorPlan3() {
     },
     {
       id: 12,
-      top: "84%",
-      left: "28%",
+      top: "86%",
+      left: "26%",
       title: t("hotspots.11.title"),
       area: t("hotspots.11.area"),
       desc: t("hotspots.11.desc"),
     },
     {
       id: 13,
-      top: "85%",
+      top: "86%",
       left: "36%",
       title: t("hotspots.12.title"),
       area: t("hotspots.12.area"),
@@ -119,7 +119,7 @@ export default function FloorPlan3() {
     },
     {
       id: 14,
-      top: "92%",
+      top: "94%",
       left: "38%",
       title: t("hotspots.13.title"),
       area: t("hotspots.13.area"),
@@ -127,7 +127,7 @@ export default function FloorPlan3() {
     },
     {
       id: 15,
-      top: "20%",
+      top: "19%",
       left: "45%",
       title: t("hotspots.14.title"),
       area: t("hotspots.14.area"),
@@ -135,8 +135,8 @@ export default function FloorPlan3() {
     },
     {
       id: 16,
-      top: "16%",
-      left: "27%",
+      top: "15%",
+      left: "26%",
       title: t("hotspots.15.title"),
       area: t("hotspots.15.area"),
       desc: t("hotspots.15.desc"),
@@ -151,7 +151,7 @@ export default function FloorPlan3() {
     },
     {
       id: 18,
-      top: "8%",
+      top: "6%",
       left: "36%",
       title: t("hotspots.17.title"),
       area: t("hotspots.17.area"),
@@ -159,15 +159,15 @@ export default function FloorPlan3() {
     },
     {
       id: 19,
-      top: "12%",
-      left: "45%",
+      top: "10%",
+      left: "44%",
       title: t("hotspots.18.title"),
       area: t("hotspots.18.area"),
       desc: t("hotspots.18.desc"),
     },
     {
       id: 20,
-      top: "11%",
+      top: "9%",
       left: "58%",
       title: t("hotspots.19.title"),
       area: t("hotspots.19.area"),
@@ -175,8 +175,8 @@ export default function FloorPlan3() {
     },
     {
       id: 21,
-      top: "16%",
-      left: "67%",
+      top: "14%",
+      left: "68%",
       title: t("hotspots.20.title"),
       area: t("hotspots.20.area"),
       desc: t("hotspots.20.desc"),
@@ -248,10 +248,10 @@ export default function FloorPlan3() {
           {/* Floor Plan Section - Sol taraf */}
           <div
             ref={containerRef}
-            className="relative w-full lg:w-2/3 h-[70vh] lg:h-full flex flex-col justify-center items-center"
+            className="relative w-full lg:w-2/3 h-full flex flex-col justify-center items-center"
           >
             <Image
-              src="/kesitler/ivo33-arkaplansiz.webp"
+              src="/kesitler/ivo333-arkaplansiz.webp"
               alt="İç mimari plan"
               fill
               className="object-contain"
@@ -296,7 +296,7 @@ export default function FloorPlan3() {
           </div>
 
           {/* Information Plan Text - Sağ taraf */}
-          <div className="w-full lg:w-2/5 h-full overflow-y-auto text-gray-800 font-quicksand font-bold px-2 lg:px-0 flex items-center">
+          <div className="w-full lg:w-2/5 h-full overflow-y-auto text-gray-800 font-quicksand font-bold px-2 lg:px-0 flex items-start lg:items-center py-4 lg:py-0">
             <div className="w-full flex flex-col justify-start items-start">
               <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-2 mb-4">
                 <div className="p-2 flex items-center justify-between border-l-4 border-yesil bg-gray-50 rounded-r-lg hover:bg-yesil/10 transition-colors">
