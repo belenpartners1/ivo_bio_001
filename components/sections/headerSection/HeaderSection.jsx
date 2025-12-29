@@ -137,7 +137,7 @@ const HeaderSection = () => {
           />
         </>
       )}
-      <div className="absolute top-2/6 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-10 container mx-auto select-none">
+      <div className="absolute top-2/7 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center z-10 container mx-auto select-none">
         <p
           ref={textRef}
           className="text-[14vw] md:text-[8vw] lg:text-[130px]
