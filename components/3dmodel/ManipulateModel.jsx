@@ -260,6 +260,16 @@ export default function ManipulateModel() {
   const centerModelRef = useRef(); // Merkez model referansı
 
   useEffect(() => {
+    // İlk yüklemede merkezi ayarla
+    if (centerModelRef.current) {
+      gsap.set(centerModelRef.current, {
+        xPercent: -50,
+        yPercent: -50,
+      });
+    }
+  }, []);
+
+  useEffect(() => {
     // Mobil cihaz kontrolü
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -379,7 +389,7 @@ export default function ManipulateModel() {
 
     // Slide-out animasyonu (sağa kayarak çık)
     gsap.to(centerModel, {
-      xPercent: 50,
+      x: "100%",
       opacity: 0,
       duration: 0.5,
       ease: "power2.in",
@@ -387,11 +397,11 @@ export default function ManipulateModel() {
         setCurrentModelIndex((prev) => (prev === 0 ? models.length - 1 : prev - 1));
 
         // Modeli soldan getir
-        gsap.set(centerModel, { xPercent: -50, opacity: 0 });
+        gsap.set(centerModel, { x: "-100%", opacity: 0 });
 
         // Slide-in animasyonu
         gsap.to(centerModel, {
-          xPercent: 0,
+          x: "0%",
           opacity: 1,
           duration: 0.5,
           ease: "power2.out",
@@ -409,7 +419,7 @@ export default function ManipulateModel() {
 
     // Slide-out animasyonu (sola kayarak çık)
     gsap.to(centerModel, {
-      xPercent: -50,
+      x: "-100%",
       opacity: 0,
       duration: 0.5,
       ease: "power2.in",
@@ -417,11 +427,11 @@ export default function ManipulateModel() {
         setCurrentModelIndex((prev) => (prev === models.length - 1 ? 0 : prev + 1));
 
         // Modeli sağdan getir
-        gsap.set(centerModel, { xPercent: 50, opacity: 0 });
+        gsap.set(centerModel, { x: "100%", opacity: 0 });
 
         // Slide-in animasyonu
         gsap.to(centerModel, {
-          xPercent: 0,
+          x: "0%",
           opacity: 1,
           duration: 0.5,
           ease: "power2.out",
@@ -472,7 +482,7 @@ export default function ManipulateModel() {
         {/* Orta Model (Büyük - Döndürülebilir) */}
         <div
           ref={centerModelRef}
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full z-10"
+          className="absolute left-1/2 top-1/2 w-full h-full z-10"
         >
           <Canvas camera={{ position: [-8, 6, 14], fov: 60 }}>
             <ambientLight intensity={0.5} />
