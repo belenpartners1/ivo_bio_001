@@ -256,6 +256,8 @@ export default function ManipulateModel() {
   const [zoomLevel, setZoomLevel] = useState(1);
   const [isMobile, setIsMobile] = useState(false);
   const [currentModelIndex, setCurrentModelIndex] = useState(1); // Ortadaki model (Standard)
+  const [isAnimating, setIsAnimating] = useState(false); // Animasyon durumu
+  const centerModelRef = useRef(); // Merkez model referansı
 
   useEffect(() => {
     // Mobil cihaz kontrolü
@@ -370,11 +372,63 @@ export default function ManipulateModel() {
   };
 
   const handlePrevModel = () => {
-    setCurrentModelIndex((prev) => (prev === 0 ? models.length - 1 : prev - 1));
+    if (isAnimating || !centerModelRef.current) return;
+
+    setIsAnimating(true);
+    const centerModel = centerModelRef.current;
+
+    // Slide-out animasyonu (sağa kayarak çık)
+    gsap.to(centerModel, {
+      xPercent: 50,
+      opacity: 0,
+      duration: 0.5,
+      ease: "power2.in",
+      onComplete: () => {
+        setCurrentModelIndex((prev) => (prev === 0 ? models.length - 1 : prev - 1));
+
+        // Modeli soldan getir
+        gsap.set(centerModel, { xPercent: -50, opacity: 0 });
+
+        // Slide-in animasyonu
+        gsap.to(centerModel, {
+          xPercent: 0,
+          opacity: 1,
+          duration: 0.5,
+          ease: "power2.out",
+          onComplete: () => setIsAnimating(false)
+        });
+      }
+    });
   };
 
   const handleNextModel = () => {
-    setCurrentModelIndex((prev) => (prev === models.length - 1 ? 0 : prev + 1));
+    if (isAnimating || !centerModelRef.current) return;
+
+    setIsAnimating(true);
+    const centerModel = centerModelRef.current;
+
+    // Slide-out animasyonu (sola kayarak çık)
+    gsap.to(centerModel, {
+      xPercent: -50,
+      opacity: 0,
+      duration: 0.5,
+      ease: "power2.in",
+      onComplete: () => {
+        setCurrentModelIndex((prev) => (prev === models.length - 1 ? 0 : prev + 1));
+
+        // Modeli sağdan getir
+        gsap.set(centerModel, { xPercent: 50, opacity: 0 });
+
+        // Slide-in animasyonu
+        gsap.to(centerModel, {
+          xPercent: 0,
+          opacity: 1,
+          duration: 0.5,
+          ease: "power2.out",
+          onComplete: () => setIsAnimating(false)
+        });
+      }
+    });
   };
 
   // Modellerin indekslerini hesapla
@@ -416,7 +470,10 @@ export default function ManipulateModel() {
         </div>
 
         {/* Orta Model (Büyük - Döndürülebilir) */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full z-10">
+        <div
+          ref={centerModelRef}
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full z-10"
+        >
           <Canvas camera={{ position: [-8, 6, 14], fov: 60 }}>
             <ambientLight intensity={0.5} />
             <directionalLight position={[10, 10, 5]} intensity={1} />
