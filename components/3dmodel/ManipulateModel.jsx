@@ -238,9 +238,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 // 3 farklı model
 const models = [
-  { path: "/3dmodels/output/IVO_Twing.gltf", name: "IVO Comfort Twin" },
+  { path: "/3dmodels/output/Scale_2.gltf", name: "IVO Maxi Comfort" },
   { path: "/3dmodels/output/IVO_Remesh_3.gltf", name: "IVO Comfort" },
-  { path: "/3dmodels/output/IVO_Threes.gltf", name: "IVO Comfort Maxi" },
+  { path: "/3dmodels/output/Scale_1.gltf", name: "IVO Twin Comfort" },
 ];
 
 function Model({ modelPath }) {
@@ -397,7 +397,7 @@ export default function ManipulateModel() {
           className="absolute left-4 top-1/2 -translate-y-1/2 w-48 h-48 md:w-64 md:h-64 opacity-50 hover:opacity-75 transition-opacity cursor-pointer z-30 bg-gri/30 rounded-3xl"
           onClick={handlePrevModel}
         >
-          <Canvas camera={{ position: [-8, 6, 28], fov: 90 }}>
+          <Canvas camera={{ position: [-8, 6, 15], fov: 90 }}>
             <ambientLight intensity={0.5} />
             <directionalLight position={[10, 10, 5]} intensity={1} />
             <Suspense fallback={null}>
@@ -440,10 +440,10 @@ export default function ManipulateModel() {
 
         {/* Sağ Model (Küçük) */}
         <div
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-48 h-48 md:w-64 md:h-64 opacity-50 hover:opacity-75 transition-opacity cursor-pointer z-30"
+          className="absolute right-4 top-1/2 -translate-y-1/2 w-48 h-48 md:w-64 md:h-64 opacity-50 hover:opacity-75 transition-opacity cursor-pointer z-30 bg-gri/30 rounded-3xl"
           onClick={handleNextModel}
         >
-          <Canvas camera={{ position: [-8, 6, 28], fov: 90 }}>
+          <Canvas camera={{ position: [-8, 6, 15], fov: 90 }}>
             <ambientLight intensity={0.5} />
             <directionalLight position={[10, 10, 5]} intensity={1} />
             <Suspense fallback={null}>
