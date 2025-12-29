@@ -154,47 +154,48 @@
     "list": [
       {
         "id": 1,
-        "label": "Living Area",
-        "area": "28.50 m²"
+        "label": "Entrance Landing",
+        "area": "6.00 m²"
       },
       {
         "id": 2,
-        "label": "Entrance Hallway",
+        "label": "Entrance Hallway - Corridor",
         "area": "8.50 m²"
       },
       {
         "id": 3,
-        "label": "Bedroom",
-        "area": "6.90 m²"
+        "label": "Living Area",
+        "area": "28.50 m²"
       },
       {
         "id": 4,
+        "label": "Bedroom",
+        "area": "7.00 m²"
+      },
+      {
+        "id": 5,
         "label": "Bathroom",
         "area": "6.00 m²"
       },
       {
-        "id": 5,
-        "label": "Master Bedroom",
+        "id": 6,
+        "label": "M.Bedroom",
         "area": "13.00 m²"
       },
       {
-        "id": 6,
+        "id": 7,
         "label": "Installation Room",
         "area": "3.00 m²"
       },
-      {
-        "id": 7,
-        "label": "Entrance Shelf",
-        "area": "6.00 m²"
-      },
+
       {
         "id": 8,
-        "label": "Net",
+        "label": "Net Usable Area",
         "area": "72.00 m²"
       },
       {
         "id": 9,
-        "label": "Gross",
+        "label": "Gross Area",
         "area": "90.00 m²"
       }
     ]

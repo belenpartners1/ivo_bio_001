@@ -321,7 +321,7 @@
       },
       {
         "id": 6,
-        "label": "Ebeveyn Y.Odası",
+        "label": "E.Yatak Odası",
         "area": "13.00 m²"
       },
       {
@@ -332,12 +332,12 @@
 
       {
         "id": 8,
-        "label": "Net",
+        "label": "Net Kullanım Alanı",
         "area": "72.00 m²"
       },
       {
         "id": 9,
-        "label": "Brüt",
+        "label": "Brüt Alan",
         "area": "90.00 m²"
       }
     ]
