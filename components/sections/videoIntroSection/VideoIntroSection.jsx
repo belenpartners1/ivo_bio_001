@@ -284,16 +284,9 @@
 
 "use client";
 
-import { useEffect, useRef } from "react";
 import { useLocale } from "next-intl";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const VideoIntroSection = () => {
-  const sectionRef = useRef(null);
-  const iframeRef = useRef(null);
   const locale = useLocale();
 
   // Dil seçimine göre YouTube video URL'i
@@ -304,44 +297,19 @@ const VideoIntroSection = () => {
       ? "https://www.youtube.com/embed/AG5jRnE1jQ8?si=oTOHwntBkPerdCXj"
       : "https://www.youtube.com/embed/1gNb2H6JAtk?si=JIywF2cUo4nbXsER";
 
-  useEffect(() => {
-    const section = sectionRef.current;
-    const iframe = iframeRef.current;
-
-    if (!section || !iframe) return;
-
-    // Pin animasyonu - section yukarıda sabitlenir
-    ScrollTrigger.create({
-      trigger: section,
-      start: "top top",
-      end: "+=100%",
-      pin: true,
-      pinSpacing: true,
-      scrub: 1,
-    });
-
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
-
   return (
     <div
-      ref={sectionRef}
-      className="h-screen w-full flex items-center justify-center relative overflow-hidden bg-gri"
+      className="h-screen w-full flex items-center justify-center bg-gri py-12"
       id="tanitim-filmi"
     >
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <iframe
-          ref={iframeRef}
           src={videoUrl}
           title="YouTube video player"
           frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen={true}
-          webkitallowfullscreen="true"
-          mozallowfullscreen="true"
+          allowFullScreen
           className="w-full aspect-video rounded-lg shadow-2xl"
         />
       </div>
