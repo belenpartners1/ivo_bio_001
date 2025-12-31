@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
-import Lenis from "lenis";
+// import { useEffect } from "react";
+// import Lenis from "lenis";
 import HeaderSection from "../../../components/sections/headerSection/HeaderSection";
 import ProductColorSelector from "../../../components/sections/customSection/ProductColorSelector";
 import IntroSection from "../../../components/sections/introSection/IntroSection";
@@ -23,39 +23,39 @@ import Yekpare from "../../../components/sections/yekpareSection/Yekpare";
 import InnerSideSection from "../../../components/sections/icmekan/InnerSideSection";
 
 const Home = () => {
-  useEffect(() => {
-    const lenis = new Lenis({
-      autoRaf: true, // Lenis'in otomatik olarak animasyonu kontrol etmesini sağla
-      duration: 1.1, // Scroll hızı
-      easing: (t) => t, // Scroll easing fonksiyonu
-      smoothWheel: true, // Mouse wheel scroll'ı smooth hale getir
-      smoothTouch: true, // Touch screen scroll'ı smooth hale getir
-    });
+  // useEffect(() => {
+  //   const lenis = new Lenis({
+  //     autoRaf: true, // Lenis'in otomatik olarak animasyonu kontrol etmesini sağla
+  //     duration: 1.1, // Scroll hızı
+  //     easing: (t) => t, // Scroll easing fonksiyonu
+  //     smoothWheel: true, // Mouse wheel scroll'ı smooth hale getir
+  //     smoothTouch: true, // Touch screen scroll'ı smooth hale getir
+  //   });
 
-    function raf(time) {
-      lenis.raf(time); // Lenis'in raf fonksiyonunu çalıştır
-      requestAnimationFrame(raf); // Bu fonksiyonu sürekli tekrar et
-    }
+  //   function raf(time) {
+  //     lenis.raf(time); // Lenis'in raf fonksiyonunu çalıştır
+  //     requestAnimationFrame(raf); // Bu fonksiyonu sürekli tekrar et
+  //   }
 
-    requestAnimationFrame(raf);
+  //   requestAnimationFrame(raf);
 
-    // Dil değişiminden sonra scroll pozisyonunu geri yükle
-    const savedScrollPosition = sessionStorage.getItem("scrollPosition");
-    if (savedScrollPosition) {
-      const scrollY = parseInt(savedScrollPosition, 10);
+  //   // Dil değişiminden sonra scroll pozisyonunu geri yükle
+  //   const savedScrollPosition = sessionStorage.getItem("scrollPosition");
+  //   if (savedScrollPosition) {
+  //     const scrollY = parseInt(savedScrollPosition, 10);
 
-      // Lenis ve DOM hazır olana kadar bekle
-      setTimeout(() => {
-        window.scrollTo(0, scrollY);
-        lenis.scrollTo(scrollY, { immediate: true, force: true });
-        sessionStorage.removeItem("scrollPosition");
-      }, 100);
-    }
+  //     // Lenis ve DOM hazır olana kadar bekle
+  //     setTimeout(() => {
+  //       window.scrollTo(0, scrollY);
+  //       lenis.scrollTo(scrollY, { immediate: true, force: true });
+  //       sessionStorage.removeItem("scrollPosition");
+  //     }, 100);
+  //   }
 
-    return () => {
-      lenis.destroy(); // Component unmount olduğunda Lenis'i yok et
-    };
-  }, []);
+  //   return () => {
+  //     lenis.destroy(); // Component unmount olduğunda Lenis'i yok et
+  //   };
+  // }, []);
 
   return (
     <div className="bg-gri flex flex-col overflow-hidden">
