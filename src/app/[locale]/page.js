@@ -21,21 +21,22 @@ import InnerSideSection from "../../../components/sections/icmekan/InnerSideSect
 
 const Home = () => {
   return (
-    <div className="bg-gri flex flex-col overflow-hidden">
+    <div className="bg-gri flex flex-col overflow-hidden gap-40">
       <HeaderSection />
       <div className="hidden md:block">
         <ManipulateModel />
       </div>
       <IntroSection />
       <VideoIntroSection />
-      <div className="w-full h-40"></div>
+      {/* <div className="w-full h-40"></div> */}
       <BasicSection1 />
-      <div className="w-full h-40"></div>
+      {/* <div className="w-full h-40"></div> */}
       <TechnicalSection />
+      {/* <div className="w-full h-40"></div> */}
       <TwoTypeSection />
-      <div className="w-full h-40"></div>
+      {/* <div className="w-full h-40"></div> */}
       <BasicSection2 />
-      <div className="w-full h-40"></div>
+      {/* <div className="w-full h-40"></div> */}
       <PlanSection />
       <InnerSideSection />
       {/* <ProductColorSelector /> */}
