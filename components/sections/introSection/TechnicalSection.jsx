@@ -13,6 +13,7 @@ const TechnicalSection = () => {
   const panelsRef = useRef([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   // JSON'dan tüm technicalData array'ini çek
   const t = useTranslations();
@@ -28,10 +29,18 @@ const TechnicalSection = () => {
 
   useEffect(() => {
     // Mobil kontrolü
-    const isMobile = window.innerWidth <= 768;
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
 
     // Mobilde animasyon çalıştırma
-    if (isMobile) return;
+    if (isMobile) {
+      window.removeEventListener("resize", checkMobile);
+      return;
+    }
 
     const ctx = gsap.context(() => {
       const panels = panelsRef.current;
@@ -94,30 +103,39 @@ const TechnicalSection = () => {
       });
     }, sectionRef);
 
-    return () => ctx.revert();
-  }, []);
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+      ctx.revert();
+    };
+  }, [isMobile]);
 
   return (
     <div
       ref={sectionRef}
-      className="h-screen w-full p-1 sm:p-2 relative bg-gri font-quicksand bg-white"
+      className={`w-full p-1 sm:p-2 font-quicksand bg-white ${
+        isMobile ? "min-h-screen" : "h-screen relative"
+      }`}
       id="teknik"
     >
       {technicalData.map((item, index) => (
         <div
           key={item.id}
           ref={(el) => (panelsRef.current[index] = el)}
-          className="absolute inset-0 w-full h-full p-1 sm:p-2"
+          className={`w-full p-1 sm:p-2 ${
+            isMobile
+              ? "relative min-h-screen"
+              : "absolute inset-0 h-full"
+          }`}
           style={{
-            zIndex: index === 0 ? 1 : 0,
+            zIndex: isMobile ? "auto" : index === 0 ? 1 : 0,
           }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-1 sm:gap-2 h-full">
+          <div className={`grid grid-cols-1 md:grid-cols-3 gap-1 sm:gap-2 ${isMobile ? "min-h-screen" : "h-full"}`}>
             {/* Sol Kolon - Yazı */}
             <div
               className="left-content col-span-1 px-4 pt-4 sm:px-6 sm:pt-8 md:px-10 md:pt-24 bg-white flex flex-col justify-center h-full relative overflow-y-auto md:overflow-visible"
               style={{
-                transform: index === 0 ? "translateY(0%)" : "translateY(100%)",
+                transform: isMobile ? "translateY(0%)" : (index === 0 ? "translateY(0%)" : "translateY(100%)"),
               }}
             >
               <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl text-start font-extrabold text-gray-700 my-2 md:my-4">
@@ -131,24 +149,14 @@ const TechnicalSection = () => {
                   className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-700 text-start leading-relaxed "
                   dangerouslySetInnerHTML={{ __html: item.description }}
                 />
-                {/* <div className="w-20 sm:w-32 md:w-40 h-[1px] sm:h-[2px] bg-gray-300 my-2  md:my-4"></div> */}
               </div>
-
-              {/* Alt dekoratif çizgiler - mobilde gizle */}
-              {/* <div className="hidden md:block absolute w-[2px] h-20 bg-gray-300 bottom-0 left-20"></div>
-              <div className="hidden md:block absolute w-[2px] h-20 bg-gray-300 bottom-0 right-20"></div> */}
-
-              {/* Sayfa numarası */}
-              {/* <div className="absolute bottom-2 sm:bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 text-kahverengi font-bold border-b-2 text-xs sm:text-sm md:text-base">
-                {index + 1} / {technicalData.length}
-              </div> */}
             </div>
 
             {/* Sağ Kolon - Görsel veya Video */}
             <div
               className="right-content col-span-1 md:col-span-2 bg-white h-full relative flex justify-center items-center overflow-hidden"
               style={{
-                transform: index === 0 ? "translateY(0%)" : "translateY(100%)",
+                transform: isMobile ? "translateY(0%)" : (index === 0 ? "translateY(0%)" : "translateY(100%)"),
               }}
             >
               {item.video ? (
