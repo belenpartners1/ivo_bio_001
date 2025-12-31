@@ -19,6 +19,12 @@ const TwoTypeSection = () => {
   const t = useTranslations("twoType");
 
   useEffect(() => {
+    // Mobil kontrolü
+    const isMobile = window.innerWidth <= 768;
+
+    // Mobilde animasyon çalıştırma
+    if (isMobile) return;
+
     const section = sectionRef.current;
 
     ScrollTrigger.create({
@@ -36,6 +42,12 @@ const TwoTypeSection = () => {
   }, []);
 
   useEffect(() => {
+    // Mobil kontrolü
+    const isMobile = window.innerWidth <= 768;
+
+    // Mobilde hover animasyonları çalıştırma
+    if (isMobile) return;
+
     if (activeHover === "left") {
       // Left expansion animation
       gsap.to(leftImageRef.current, {

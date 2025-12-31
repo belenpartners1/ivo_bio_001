@@ -45,7 +45,7 @@ const BasicSection2 = () => {
       tl.to(
         leftSvgRef.current,
         {
-          x: "-14vw",
+          x: isMobile ? "-24vw" : "-14vw",
           duration: 2,
           ease: "power2.inOut",
         },
@@ -56,7 +56,7 @@ const BasicSection2 = () => {
       tl.to(
         rightSvgRef.current,
         {
-          x: "14vw",
+          x: isMobile ? "24vw" : "14vw",
           duration: 2,
           ease: "power2.inOut",
         },
