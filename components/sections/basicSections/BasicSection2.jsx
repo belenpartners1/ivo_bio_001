@@ -20,7 +20,7 @@ const BasicSection2 = () => {
     const createAnimations = () => {
       // Mobil için daha erken trigger
       const isMobile = window.innerWidth < 768;
-      const startPosition = isMobile ? "top 80%" : "top top";
+      const startPosition = isMobile ? "top bottom" : "top top";
 
       // Pin animasyonu
       ScrollTrigger.create({
@@ -37,7 +37,7 @@ const BasicSection2 = () => {
           trigger: sectionRef.current,
           start: startPosition,
           end: "+=100%",
-          scrub: 1,
+          scrub: isMobile ? 0.5 : 1, // Mobilde daha hızlı tepki için düşük scrub
         },
       });
 
