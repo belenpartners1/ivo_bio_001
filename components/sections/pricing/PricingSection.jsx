@@ -10,7 +10,23 @@ const PricingSection = () => {
   const t = useTranslations("pricing");
 
   useEffect(() => {
-    // GSAP animasyonları için hazırlık
+    // Mobil kontrolü
+    const isMobile = window.innerWidth <= 768;
+
+    // Mobilde animasyon çalıştırma
+    if (isMobile) {
+      // Mobilde kartları direkt göster
+      const cards = cardsRef.current;
+      cards.forEach((card) => {
+        if (card) {
+          card.style.opacity = "1";
+          card.style.transform = "translateY(0)";
+        }
+      });
+      return;
+    }
+
+    // Desktop için animasyon
     const cards = cardsRef.current;
 
     // Kartları başlangıçta görünmez yap

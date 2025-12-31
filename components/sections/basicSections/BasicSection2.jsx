@@ -18,13 +18,9 @@ const BasicSection2 = () => {
 
   useEffect(() => {
     const createAnimations = () => {
-      // Mobil kontrolü
+      // Mobil için daha erken trigger
       const isMobile = window.innerWidth < 768;
-
-      // Mobilde animasyon çalıştırma
-      if (isMobile) return;
-
-      const startPosition = "top top";
+      const startPosition = isMobile ? "top 80%" : "top top";
 
       // Pin animasyonu
       ScrollTrigger.create({
