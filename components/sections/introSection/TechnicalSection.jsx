@@ -27,6 +27,12 @@ const TechnicalSection = () => {
     : [];
 
   useEffect(() => {
+    // Mobil kontrolü
+    const isMobile = window.innerWidth <= 768;
+
+    // Mobilde animasyon çalıştırma
+    if (isMobile) return;
+
     const ctx = gsap.context(() => {
       const panels = panelsRef.current;
 

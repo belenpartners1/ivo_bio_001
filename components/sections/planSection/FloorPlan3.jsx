@@ -186,6 +186,12 @@ export default function FloorPlan3() {
   // GSAP hover animasyonu - useGSAP kullanarak daha performanslı
   useGSAP(
     () => {
+      // Mobil kontrolü
+      const isMobile = window.innerWidth <= 768;
+
+      // Mobilde animasyon çalıştırma
+      if (isMobile) return;
+
       hotspots.forEach((spot, index) => {
         const el = infoRef.current[index];
         if (!el) return;

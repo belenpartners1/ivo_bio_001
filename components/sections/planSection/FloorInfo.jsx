@@ -34,6 +34,12 @@ const FloorInfo = () => {
   ];
 
   useEffect(() => {
+    // Mobil kontrolü
+    const isMobile = window.innerWidth <= 768;
+
+    // Mobilde animasyon çalıştırma
+    if (isMobile) return;
+
     const ctx = gsap.context(() => {
       imagesRef.current.forEach((img, index) => {
         gsap.fromTo(
