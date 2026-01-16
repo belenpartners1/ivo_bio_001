@@ -89,9 +89,6 @@ const AdvertiseHeader = () => {
     //setIsOpen(false);
   //};
 
-  const handleDownloadCatalog = () => {
-  alert("Katalog şu anda güncellenmektedir.");
-};
 
 
   // Menü öğesi tıklama işleyicisi
