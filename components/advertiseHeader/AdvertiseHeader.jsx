@@ -78,16 +78,21 @@ const AdvertiseHeader = () => {
   };
 
   // PDF indirme fonksiyonu
-  const handleDownloadCatalog = () => {
-    const link = document.createElement("a");
-    link.href = "/ivo_katalog.pdf";
-    link.download = "ivo_katalog.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+ // const handleDownloadCatalog = () => {
+   // const link = document.createElement("a");
+    //link.href = "/ivo_katalog.pdf";
+    //link.download = "ivo_katalog.pdf";
+    //document.body.appendChild(link);
+    //link.click();
+    //document.body.removeChild(link);
     // Menüyü kapat
-    setIsOpen(false);
-  };
+    //setIsOpen(false);
+  //};
+
+  const handleDownloadCatalog = () => {
+  alert("Katalog şu anda güncellenmektedir.");
+};
+
 
   // Menü öğesi tıklama işleyicisi
   const handleMenuItemClick = (item) => {
